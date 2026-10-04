@@ -1,0 +1,16 @@
+# YD-MS-CNS-001 — Consent & Privacy
+
+Statut : `autonomy-profile-draft-critical`
+
+- Données possédées : PurposeGrant, consent/restriction state, privacy requests, retention rules et références de finalité. Données très sensibles.
+- Datastore : autoritatif privé, migrations privées, historique nécessaire aux preuves; aucun accès DB externe.
+- Backup/restore : chiffré, indépendant, test obligatoire. Une restauration doit préserver l’ordre des révocations et déclencher réconciliation des consommateurs.
+- IAM : `brendolys-customers` pour droits/demandes du sujet, `brendolys-internal` pour fonctions privacy strictement autorisées, M2M pour décisions de traitement. `brendolys-networks` uniquement si une finalité réseau documentée l’exige.
+- API/événements : PrivacyDecision, ConsentChanged, PrivacyRestrictionChanged, PrivacyRequested. Révocations prioritaires.
+- Réseau : DNS interne; endpoints sujet via edge. Flux sortants minimaux vers Audit/Notification selon finalité. Aucun datastore public.
+- Sécurité : fail-closed pour traitements non indispensables lorsque décision requise indisponible; chiffrement et audit renforcés; aucune donnée personnelle complète dans événements.
+- Résilience : haute criticité candidate C1. Cache de décision révocable seulement avec borne de fraîcheur définie. Aucun fail-open par défaut.
+- Scaling : clé `subject/purpose`; lectures décisionnelles séparables sans dupliquer l’autorité.
+- Repo candidat : `brendolys-ydiase-consent-privacy`; workload identity, secrets, certificats et pipeline propres.
+- Runbook/DR : corruption de grants, retard de révocation, indisponibilité IAM, replay d’événements, restauration et propagation des restrictions.
+- Gates : base légale/finalités par pays, RPO/RTO/SLO, rétention, audience/scopes/rôles, test restore, SLO de propagation de révocation.
