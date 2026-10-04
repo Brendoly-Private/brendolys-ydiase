@@ -18,7 +18,7 @@ Chaque frontière autonome possède :
 6. un runtime et une configuration propres
 7. un datastore possédé lorsqu’elle détient des données persistantes
 8. ses migrations et son schéma privés
-9. une politique backup/restore testée
+9. une politique backup/restore ou reconstruction testée selon la nature des données
 10. RPO, RTO et SLO définis selon criticité
 11. ses contrats API/événements/projections enregistrés
 12. une identité machine propre
@@ -33,7 +33,7 @@ Chaque frontière autonome possède :
 21. rollback indépendant
 22. mode dégradé documenté
 23. runbook d’incident
-24. plan de reprise et test de restauration
+24. plan de reprise et test de restauration ou reconstruction
 25. politique de rétention et suppression
 26. procédure de retrait/decommission
 27. registre des dépendances autorisées et interdites
@@ -65,7 +65,33 @@ Chaque frontière persistante définit : classification des données, fréquence
 
 Une sauvegarde non testée n’est pas considérée comme capacité de reprise. La restauration d’un microservice ne doit pas exiger la restauration coordonnée de tous les autres. Les incohérences post-restore sont traitées par replay, réconciliation ou reconstruction de projections documentés.
 
-Les projections reconstructibles peuvent avoir une politique différente des sources autoritatives.
+### 5.1 Frontières `AUTH`
+
+Les données autoritatives exigent une sauvegarde et une restauration indépendantes testées. Le RPO mesure la perte maximale admissible des données autoritatives et le RTO la durée maximale de reprise du service.
+
+### 5.2 Frontières `MIXED`
+
+La partie autoritative suit les exigences `AUTH`. Les projections et index reconstruisibles suivent les exigences `DERIVED`. Le profil identifie explicitement les données de chaque catégorie afin qu’une restauration ne transforme jamais une projection en source de vérité.
+
+### 5.3 Frontières `DERIVED`
+
+Une frontière `DERIVED` ne doit pas recevoir artificiellement une obligation de sauvegarde identique à une source autoritative lorsque son état peut être reconstruit intégralement depuis des sources gouvernées.
+
+Son gate de reprise exige au minimum :
+
+- sources autoritatives ou projections d’entrée identifiées et versionnées
+- watermark, checkpoint ou position de replay permettant de borner la reconstruction
+- procédure de reconstruction complète documentée et automatisable
+- test périodique de reconstruction complète
+- RTO de reconstruction mesuré
+- objectif de fraîcheur après reprise
+- traitement des suppressions, révocations et corrections pendant le replay
+- contrôle d’intégrité entre état reconstruit et sources
+- mode dégradé pendant la reconstruction
+
+Le RPO d’une frontière purement `DERIVED` s’exprime par rapport à la capacité de rejouer les sources et à leur propre rétention. Si aucune donnée dérivée irremplaçable n’existe, la perte du datastore dérivé peut être acceptable jusqu’au dernier état entièrement reconstruisible. Toute donnée non reconstruisible fait perdre le statut `DERIVED` pur et impose une classification `MIXED` ou `AUTH`.
+
+Pour YDIASE, cette règle s’applique notamment aux frontières actuellement classées `DERIVED`, dont Search & Discovery, Feed, Knowledge Graph, Analytics et Retrieval & Grounding. Chaque profil doit déclarer son mécanisme concret de rebuild avant production.
 
 ## 6. API, événements et DNS
 
@@ -153,6 +179,8 @@ Les faits de sécurité et actions sensibles sont transmis à `YD-PLT-AUD-001` s
 
 Aucune valeur universelle n’est inventée. Chaque service reçoit une classe de criticité puis des objectifs mesurables. Les valeurs sont approuvées avant passage en production. Les services dépendants ne peuvent exiger un SLO supérieur à celui que leur fournisseur déclare sans ADR de mitigation.
 
+Pour une frontière `DERIVED`, le RTO inclut explicitement le temps de reconstruction jusqu’à un état exploitable et l’objectif de fraîcheur associé. Le RPO ne doit pas être interprété comme une obligation de sauvegarder une copie reconstructible si les sources et checkpoints permettent un replay conforme.
+
 ## 20. Mode dégradé
 
 Chaque fiche précise ce que le service fait lorsque IAM, broker, datastore secondaire, moteur AI, Search, Analytics, Notification ou une dépendance métier est indisponible. Les comportements possibles sont : fail-closed, fail-open explicitement autorisé, lecture stale bornée, mise en file, réponse partielle ou indisponibilité contrôlée.
@@ -162,6 +190,8 @@ Les décisions de sécurité et privacy ne passent jamais en fail-open par défa
 ## 21. DR et tests
 
 Le plan DR identifie perte de zone/serveur, corruption logique, suppression accidentelle, compromission, perte de datastore et indisponibilité d’une dépendance externe. Les procédures sont testées à fréquence définie selon criticité.
+
+Pour une frontière `DERIVED`, le test DR peut prendre la forme d’une destruction contrôlée de l’état dérivé suivie d’une reconstruction depuis les sources autorisées, avec mesure du temps de reprise, de la fraîcheur et de l’intégrité obtenue.
 
 ## 22. Retrait
 
@@ -180,7 +210,7 @@ Chaque `YD-MS-*` et `YD-PLT-*` reçoit une `AUTONOMY_PROFILE.md` ou section équ
 - datastore(s) owned
 - migration owner
 - data classification
-- backup policy / restore procedure / last restore test
+- backup policy / restore or rebuild procedure / last restore or rebuild test
 - RPO / RTO / SLO / criticality
 - internal API / external API / events / projections
 - internal DNS / external DNS if any
@@ -204,9 +234,13 @@ Chaque `YD-MS-*` et `YD-PLT-*` reçoit une `AUTONOMY_PROFILE.md` ou section équ
 - decommission checklist
 - open ADRs
 
+Les frontières `DERIVED` ajoutent : sources de reconstruction, checkpoint/watermark, procédure de rebuild, dernier test de rebuild, durée mesurée de rebuild, freshness obtenue et contrôle d’intégrité post-rebuild.
+
 ## 24. Gates
 
 Un service ne passe pas `ready-for-production` si une ligne obligatoire de son profil reste inconnue sans ADR ou dérogation datée. Les valeurs `TBD` sont permises pendant la conception mais bloquent les gates auxquels elles se rapportent.
+
+Une frontière `DERIVED` ne passe pas `ready-for-production` sans test de reconstruction réussi. Une frontière déclarée `DERIVED` qui contient une donnée irremplaçable doit être reclassée avant ce gate.
 
 ## 25. Application
 
