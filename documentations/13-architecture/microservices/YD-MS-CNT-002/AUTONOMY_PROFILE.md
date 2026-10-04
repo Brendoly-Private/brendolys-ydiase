@@ -2,11 +2,17 @@
 
 Statut : `autonomy-profile-draft`
 
-- Autorité : aucune vérité métier; feed et ranking dérivés.
-- C3, backup DERIVED. C/N/I/M2M.
-- Dépendances : CNT, COM, MOD; SPN injecté comme placement séparé, jamais dans score organique.
-- Panne : feed chronologique/simplifié ou indisponibilité contrôlée; reconstruction depuis projections.
-- Sécurité : suppression/modération prioritaire, minimisation profilage, aucune copie durable inutile de PII.
-- Scaling : lecture élevée, cache et partitions reconstruisibles.
-- Repo : `brendolys-ydiase-feed`.
-- Gate : règles ranking, séparation sponsoring, freshness, reconstruction, SLO.
+- Classification : `DERIVED`, criticité C3. État actuel : `REBUILD-UNVERIFIED`.
+- Autorité : aucune vérité métier; feed, ranking et caches sont dérivés. SPN reste une entrée sponsorisée séparée du score organique.
+- Sources : CNT, COM et décisions MOD; SPN uniquement comme placement explicitement étiqueté. Contrats/versions et rétention à inscrire au Contract Registry.
+- Checkpoint/watermark : position distincte par flux/partition; le feed ne peut pas déclarer FRESH si CNT/COM/MOD requis n’ont pas convergé.
+- Replay : idempotent, supporte doublons, hors ordre, suppressions de contenu, retraits/modération et corrections. Les décisions de retrait priment sur un ancien ranking.
+- Reconstruction : FULL_REBUILD des projections/rankings; PARTIAL_REBUILD par partition/surface/cohorte autorisée; CATCH_UP depuis checkpoints.
+- Fraîcheur : `FRESH`, `STALE-ACCEPTABLE`, `EXPIRED`, `UNKNOWN`; seuils TBD-PREPROD. Un feed stale peut basculer vers une surface simplifiée seulement dans la limite documentée.
+- Intégrité : absence d’objets supprimés/modérés, pas de doublons, séparation sponsorisé/organique, cohérence des versions de contenu.
+- Panne : feed chronologique/simplifié ou indisponibilité contrôlée; aucune dépendance au Feed pour valider un fait métier.
+- Sécurité : minimisation du profilage, aucune copie durable inutile de PII, suppressions/modération prioritaires.
+- Scaling : lecture élevée, caches/partitions reconstruisibles, capacité de rebuild séparée.
+- IAM : C/N/I/M2M. Repo : `brendolys-ydiase-feed`.
+- DR/test : perte totale de l’état + FULL_REBUILD testé avant production.
+- Gates : contrats/versions/rétention sources; ranking; séparation SPN; watermark; FULL_REBUILD; `REBUILDABLE`; fraîcheur; RTO/SLO.
