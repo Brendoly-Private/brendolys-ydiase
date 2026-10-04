@@ -1,18 +1,15 @@
 # YD-SVC-LAB-001 — Labor Signals Service
 
-`domain: marche-travail` · `phase: P3` · `documentation: D1` · `implementation: not-started`
+`domain: marche-travail` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter les observations du marché : offres, besoins déclarés, enquêtes, signaux institutionnels, économiques et informels selon leur nature.
+## Agrégats possédés
+`LaborSignal`, `ObservedDemandSignal`, `DeclaredNeedSignal`, `InstitutionalSignal`, `EconomicSignal`, `SignalObservation`.
 
-## Frontière DDD
-Propriétaire candidat de `LaborSignal` et de son type. Une observation ne devient jamais seule une vérité sur le marché.
+## Source autoritative
+YD-SVC-LAB-001 pour les signaux normalisés YDIASE; la source externe reste attribuée via provenance.
 
-## Dépendances
-Data Acquisition, Data Provenance, Data Quality, Country Configuration.
+## Données consommées
+Raw acquisitions (DAT-002), provenance/quality, occupation/skill refs, employer refs, territory/config.
 
-## Verdict DDD
-`KEEP-SEPARATE`. C’est la frontière entre observation et analyse.
-
-## Activation
-Après typologie des signaux et provenance validées.
+## Incohérences
+Une offre publiée ne doit pas être assimilée automatiquement au marché réel; le type de signal doit rester explicite.

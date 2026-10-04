@@ -1,18 +1,15 @@
 # YD-SVC-OPP-001 — Opportunity Service
 
-`domain: opportunites-recrutement` · `phase: P4` · `documentation: D1` · `implementation: not-started`
+`domain: opportunites-recrutement` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter les opportunités publiées ou collectées : emploi, stage, programme et catégories autorisées.
+## Agrégats possédés
+`Opportunity`, `OpportunityVersion`, `OpportunityRequirement`, `OpportunityPublication`.
 
-## Frontière DDD
-Propriétaire candidat de `Opportunity` et de ses versions. L’employeur reste possédé par Employer Service.
+## Source autoritative
+YD-SVC-OPP-001.
 
-## Dépendances
-Employer, Data Provenance, Country Configuration.
+## Données consommées
+Employer (EMP-001), occupation/skills, location/config, provenance/quality, partner feeds.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Cycle de publication et expiration propres.
-
-## Activation
-Après modèle de provenance, validité et retrait défini.
+## Incohérences
+Les offres externes gardent leur provenance; OPP-001 devient autoritatif seulement pour la représentation YDIASE publiée.

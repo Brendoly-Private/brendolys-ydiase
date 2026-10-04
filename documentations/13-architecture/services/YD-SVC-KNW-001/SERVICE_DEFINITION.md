@@ -1,18 +1,15 @@
 # YD-SVC-KNW-001 — Knowledge Graph Service
 
-`domain: knowledge` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: knowledge` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Maintenir une représentation relationnelle gouvernée entre entités publiées de YDIASE.
+## Agrégats possédés
+`KnowledgeNodeProjection`, `KnowledgeEdge`, `SemanticAssertion`, `GraphVersion`.
 
-## Frontière DDD
-Ne devient pas source unique des données opérationnelles. Les domaines restent autoritatifs.
+## Source autoritative
+YD-SVC-KNW-001 pour relations sémantiques propres au graphe; domaines restent autoritatifs sur leurs entités.
 
-## Dépendances
-Education, Skills, Careers, Labor, Data Provenance.
+## Données consommées
+Education, skills, careers, labor, opportunities, taxonomies, provenance/quality.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Modèle relationnel et charge de traversée spécifiques.
-
-## Activation
-Après identifiants stables et contrats de projection validés.
+## Incohérences
+`KnowledgeNodeProjection` est une projection. Le graphe ne doit jamais devenir owner de `Institution`, `Program`, `Skill`, `Occupation` ou `Opportunity`.

@@ -1,18 +1,15 @@
 # YD-SVC-API-001 — External API Management Service
 
-`domain: economie-produit` · `phase: P7` · `documentation: D1` · `implementation: not-started`
+`domain: economie-produit` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Gérer produits API externes, clients, droits, quotas, versions et exposition gouvernée.
+## Agrégats possédés
+`APIProduct`, `APIClient`, `APISubscription`, `APIQuotaPolicy`, `APIUsageRecord`.
 
-## Frontière DDD
-Ne possède pas les données exposées. Applique les politiques définies par les domaines sources.
+## Source autoritative
+YD-SVC-API-001.
 
-## Dépendances
-Entitlements, Audit & Trace, Data Product, services sources.
+## Données consommées
+Entitlements, identity/access, exposed domain contracts, billing, audit.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Surface externe et gouvernance de contrats propres.
-
-## Activation
-Après premier produit API approuvé.
+## Incohérences
+Une API publique n’est pas owner des données qu’elle expose. API entitlement et BIL entitlement doivent avoir une règle de priorité unique en D3.

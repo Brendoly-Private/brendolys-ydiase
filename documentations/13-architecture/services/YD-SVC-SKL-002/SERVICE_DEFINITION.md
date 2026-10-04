@@ -1,18 +1,15 @@
 # YD-SVC-SKL-002 — User Skills Profile Service
 
-`domain: competences-connaissances` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: competences-connaissances` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter les compétences attribuées à une personne, leur niveau, preuve, origine et historique.
+## Agrégats possédés
+`UserSkill`, `SkillEvidence`, `SkillAssessmentState`, `SkillHistory`.
 
-## Frontière DDD
-Propriétaire candidat de `UserSkill` et `SkillEvidence`. Consomme le référentiel Skills Knowledge.
+## Source autoritative
+YD-SVC-SKL-002 pour l’état individuel de compétence.
 
-## Exclusions
-Ne crée pas la taxonomie des compétences et ne calcule pas seul les recommandations.
+## Données consommées
+ProfileRef (PRF), SkillRef (SKL-001), assessments (ASM-001), education/experience evidence (PRF-002), consent (CNS-001).
 
-## Verdict DDD
-`KEEP-SEPARATE`. Données personnelles et cycle de vie distincts du référentiel public.
-
-## Activation
-Après modèle de preuve et consentement validés.
+## Incohérences
+Les résultats d’assessment restent ASM-001; SKL-002 ne conserve que l’état de compétence dérivé et sa preuve.

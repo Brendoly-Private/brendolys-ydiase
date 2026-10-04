@@ -1,18 +1,15 @@
 # YD-SVC-DAT-004 — Data Quality & Validation Service
 
-`domain: data` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: data` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Contrôler qualité, cohérence, corroboration, confiance et workflow de validation.
+## Agrégats possédés
+`QualityAssessment`, `ValidationCase`, `Anomaly`, `CorroborationCase`, `ValidationDecision`.
 
-## Frontière DDD
-Produit évaluations de qualité et décisions de validation. Ne réécrit pas silencieusement les assertions sources.
+## Source autoritative
+YD-SVC-DAT-004 pour qualité et décisions de validation, jamais pour l’objet métier.
 
-## Dépendances
-Data Provenance, Reference & Taxonomy, domaines propriétaires.
+## Données consommées
+Raw/domain records, provenance, validation rules, reference taxonomies.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Règles transverses et workflow humain/automatique propres.
-
-## Activation
-Avant publication de données collectées.
+## Incohérences
+À D3, préciser qui possède les règles de validation métier: domaine ou DAT-004. Recommandation: domaine définit, DAT-004 exécute les contrôles transversaux.

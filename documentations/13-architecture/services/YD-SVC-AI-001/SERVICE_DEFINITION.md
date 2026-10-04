@@ -1,18 +1,15 @@
 # YD-SVC-AI-001 — AI Gateway Service
 
-`domain: ai` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: ai` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Contrôler l’accès aux modèles IA, politiques, quotas, modèles autorisés et contexte transmis.
+## Agrégats possédés
+`AIRequest`, `AIExecutionPolicy`, `ModelEndpointRegistration`, `AIUsageRecord`.
 
-## Frontière DDD
-Ne devient jamais source de vérité métier. Ne possède pas les documents ou données utilisés pour contextualiser un modèle.
+## Source autoritative
+YD-SVC-AI-001 pour contrôle et exécution IA.
 
-## Dépendances
-Consent & Privacy, Audit & Trace, Retrieval & Grounding, AI Verification.
+## Données consommées
+Identity/access, consent, entitlements, approved model config, audit policies.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Point de contrôle de sécurité et gouvernance IA.
-
-## Activation
-ADR, évaluation et politique Data obligatoires.
+## Incohérences
+Le registre des modèles n’est pas encore un service séparé. À réévaluer si MLOps devient un domaine autonome.

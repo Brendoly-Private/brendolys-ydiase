@@ -1,18 +1,15 @@
 # YD-SVC-ANL-002 — Institution Intelligence Service
 
-`domain: analytics` · `phase: P6` · `documentation: D1` · `implementation: not-started`
+`domain: analytics` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Produire analyses et indicateurs destinés aux établissements selon leurs droits.
+## Agrégats possédés
+`InstitutionInsight`, `InstitutionBenchmark`, `InstitutionReportSnapshot`.
 
-## Frontière DDD
-Produit des vues analytiques B2B. Ne modifie pas les catalogues Education.
+## Source autoritative
+YD-SVC-ANL-002 pour produit analytique institutionnel.
 
-## Dépendances
-Analytics, Institution Catalog, Labor Market Intelligence, Billing/Entitlements.
+## Données consommées
+Institution/program/curriculum, labor intelligence, analytics aggregates, entitlements.
 
-## Verdict DDD
-`KEEP-PRODUCT-BOUNDARY`. Peut partager le moteur Analytics tout en gardant contrats et droits propres.
-
-## Activation
-Après définition du produit Institution et règles de confidentialité.
+## Incohérences
+Chevauchement possible avec INT-001: ANL-002 calcule l’analyse spécialisée; INT-001 l’assemble en produit commercial éditorial.

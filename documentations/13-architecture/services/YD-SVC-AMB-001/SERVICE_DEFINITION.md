@@ -1,18 +1,15 @@
 # YD-SVC-AMB-001 — Ambassador Network Service
 
-`domain: partenaires-ecosysteme` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: partenaires-ecosysteme` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Gérer ambassadeurs, mandats, rattachements, renouvellements et contributions de collecte.
+## Agrégats possédés
+`AmbassadorMandate`, `AmbassadorAssignment`, `AmbassadorTerm`, `AmbassadorContribution`.
 
-## Frontière DDD
-Propriétaire candidat de `AmbassadorMandate`. Les données collectées passent par Data Acquisition et Data Quality avant publication.
+## Source autoritative
+YD-SVC-AMB-001.
 
-## Dépendances
-Partner, Institution Catalog, Data Acquisition, Audit & Trace.
+## Données consommées
+Person identity/profile, partner/institution refs, collected submission refs, audit.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Le réseau terrain possède son propre cycle de mandat.
-
-## Activation
-Après règles de nomination, preuve et contrôle validées.
+## Incohérences
+L’ambassadeur ne devient pas owner des données qu’il collecte; il porte mandat et contribution.

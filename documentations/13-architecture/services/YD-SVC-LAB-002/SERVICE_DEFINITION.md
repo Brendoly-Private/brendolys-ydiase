@@ -1,18 +1,15 @@
 # YD-SVC-LAB-002 — Labor Market Intelligence Service
 
-`domain: marche-travail` · `phase: P4` · `documentation: D1` · `implementation: not-started`
+`domain: marche-travail` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Transformer des signaux gouvernés en indicateurs de demande, tension, évolution sectorielle et territoriale.
+## Agrégats possédés
+`LaborMarketIndicator`, `LaborMarketSnapshot`, `DemandSupplyMeasure`, `TensionMeasure`, `SectorTerritoryAnalysis`.
 
-## Frontière DDD
-Produit des indicateurs analytiques avec provenance et période. Ne confond jamais offres observées et marché réel.
+## Source autoritative
+YD-SVC-LAB-002 pour les indicateurs dérivés publiés.
 
-## Dépendances
-Labor Signals, Data Quality, Reference & Taxonomy, Analytics.
+## Données consommées
+Labor signals, occupations, skills, opportunities, analytics aggregates, territory/reference data.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Logique analytique et responsabilité métier propres.
-
-## Activation
-Après seuils de qualité et couverture documentés.
+## Incohérences
+Doit exposer méthodologie/version des indicateurs; ne réécrit jamais LAB-001.

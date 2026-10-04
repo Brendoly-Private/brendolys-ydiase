@@ -1,18 +1,15 @@
 # YD-SVC-EMP-001 — Employer Service
 
-`domain: opportunites-recrutement` · `phase: P4` · `documentation: D1` · `implementation: not-started`
+`domain: opportunites-recrutement` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Référencer les organisations employeuses et leurs informations validées.
+## Agrégats possédés
+`Employer`, `EmployerPresence`, `EmployerVerification`, `EmployerProfile`.
 
-## Frontière DDD
-Propriétaire candidat de `Employer`. Ne possède ni opportunités ni campagnes de recrutement.
+## Source autoritative
+YD-SVC-EMP-001.
 
-## Dépendances
-Partner, Country Configuration, Data Provenance.
+## Données consommées
+Identity/account refs, partner data, country/territory, provenance/quality.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Référentiel organisationnel réutilisé par plusieurs contextes.
-
-## Activation
-Après règles de validation des organisations.
+## Incohérences
+Employer Workspace et Talent & Recruitment ne doivent pas dupliquer `Employer`.

@@ -1,18 +1,15 @@
 # YD-SVC-PRF-002 — Education & Experience Profile Service
 
-`domain: identite-profils` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: identite-profils` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter l’historique éducatif, professionnel et les acquis déclarés d’une personne.
+## Agrégats possédés
+`EducationRecord`, `ExperienceRecord`, `AchievementClaim`, `ProfileEvidenceLink`.
 
-## Frontière DDD
-Propriétaire candidat de `EducationHistory` et `ExperienceHistory`. Consomme établissements, programmes, qualifications et employeurs.
+## Source autoritative
+YD-SVC-PRF-002 pour l’historique individuel déclaré ou vérifié.
 
-## Exclusions
-Ne valide pas les référentiels externes et ne possède pas le catalogue Education.
+## Données consommées
+ProfileRef (PRF-001), Institution/Program/Qualification (EDU), Skill taxonomy (SKL-001), provenance (DAT-003).
 
-## Verdict DDD
-`REVIEW-SPLIT`. Peut rester avec Profile au pilote puis être isolé si volume, confidentialité ou cycle de vie divergent.
-
-## Activation
-Après modèle d’historique et règles de preuve validés.
+## Incohérences
+Ne doit pas devenir propriétaire des établissements, programmes, qualifications ou compétences de référence.

@@ -1,18 +1,15 @@
 # YD-SVC-ANL-003 — Employer Intelligence Service
 
-`domain: analytics` · `phase: P6` · `documentation: D1` · `implementation: not-started`
+`domain: analytics` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Produire analyses B2B sur compétences, recrutement et signaux disponibles pour les employeurs.
+## Agrégats possédés
+`EmployerInsight`, `TalentMarketSnapshot`, `RecruitmentInsight`.
 
-## Frontière DDD
-N’expose que des résultats compatibles avec finalités, agrégation et droits d’usage.
+## Source autoritative
+YD-SVC-ANL-003 pour produit analytique employeur.
 
-## Dépendances
-Analytics, Employer, Labor Market Intelligence, Consent & Privacy, Entitlements.
+## Données consommées
+Employer/recruitment, labor intelligence, skills/occupation aggregates, analytics, entitlements.
 
-## Verdict DDD
-`KEEP-PRODUCT-BOUNDARY`. Moteur partagé possible, contrat B2B distinct.
-
-## Activation
-Après politique d’agrégation et produit Employer validés.
+## Incohérences
+Même frontière à préserver avec INT-001: calcul analytique ici, édition/livraison commerciale là-bas.

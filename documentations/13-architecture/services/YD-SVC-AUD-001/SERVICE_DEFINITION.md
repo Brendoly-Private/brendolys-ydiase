@@ -1,18 +1,15 @@
 # YD-SVC-AUD-001 — Audit & Trace Service
 
-`domain: plateforme-gouvernance` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: plateforme-gouvernance` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Conserver les traces fonctionnelles des actions sensibles et preuves nécessaires à l’audit.
+## Agrégats possédés
+`AuditEvent`, `AuditTrail`, `SensitiveActionRecord`, `AuditExport`.
 
-## Frontière DDD
-Ne remplace pas l’observabilité technique. Les traces sont protégées contre modification non autorisée.
+## Source autoritative
+YD-SVC-AUD-001 pour traces fonctionnelles et sensibles.
 
-## Dépendances
-Identity & Access, services critiques.
+## Données consommées
+Events/actions des services, identity refs, security context.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Responsabilité transverse et exigences de conservation propres.
-
-## Activation
-Dès le pilote pour les actions sensibles.
+## Incohérences
+À distinguer de logs techniques/observabilité. AUD porte preuve fonctionnelle et conformité, pas télémétrie générale.

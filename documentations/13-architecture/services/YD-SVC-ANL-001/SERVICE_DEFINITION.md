@@ -1,18 +1,15 @@
 # YD-SVC-ANL-001 — Analytics Service
 
-`domain: analytics` · `phase: P3` · `documentation: D1` · `implementation: not-started`
+`domain: analytics` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Produire agrégations, indicateurs internes et mesures gouvernées à partir de données autorisées.
+## Agrégats possédés
+`MetricDefinition`, `AnalyticalDataset`, `AggregateSnapshot`, `AnalysisRun`.
 
-## Frontière DDD
-Ne possède pas les faits métier sources. Ses jeux analytiques sont dérivés et reproductibles.
+## Source autoritative
+YD-SVC-ANL-001 pour métriques et datasets dérivés.
 
-## Dépendances
-Data Quality, domaines sources, Audit & Trace.
+## Données consommées
+Projections gouvernées des domaines autorisés, provenance/quality, country/reference data.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Charge analytique distincte des transactions.
-
-## Activation
-Après définitions d’indicateurs et politiques d’accès validées.
+## Incohérences
+Les datasets analytiques ne doivent pas devenir source opérationnelle des domaines.

@@ -1,18 +1,15 @@
 # YD-SVC-DAT-003 — Data Provenance Service
 
-`domain: data` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: data` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Tracer origine, preuve, transformations, versions et chaîne de responsabilité d’une assertion.
+## Agrégats possédés
+`ProvenanceRecord`, `AssertionLineage`, `EvidenceRecord`, `TransformationLineage`.
 
-## Frontière DDD
-Propriétaire candidat des métadonnées de provenance. Ne décide pas seul de la validité métier.
+## Source autoritative
+YD-SVC-DAT-003 pour provenance et lignée.
 
-## Dépendances
-Data Source Registry, Audit & Trace.
+## Données consommées
+Raw records, domain publication IDs, validation decisions, source registry.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Capacité transverse à forte valeur probatoire.
-
-## Activation
-Avec le premier flux Data exploitable.
+## Incohérences
+Ne doit pas devenir un stockage maître des objets métier; il conserve preuves et liens.

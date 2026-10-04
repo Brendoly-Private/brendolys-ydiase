@@ -1,18 +1,15 @@
 # YD-SVC-SKL-001 — Skills Knowledge Service
 
-`domain: competences-connaissances` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: competences-connaissances` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter le référentiel des compétences, connaissances, relations, synonymes et versions.
+## Agrégats possédés
+`Skill`, `KnowledgeConcept`, `SkillRelation`, `SkillTaxonomyMapping`.
 
-## Frontière DDD
-Propriétaire candidat de `Skill` et `KnowledgeConcept`. Ne possède pas les compétences attribuées aux personnes.
+## Source autoritative
+YD-SVC-SKL-001.
 
-## Dépendances
-Reference & Taxonomy, Data Provenance.
+## Données consommées
+Taxonomies (DAT-005), curricula/modules (EDU-003), occupations (CAR-001), provenance (DAT-003).
 
-## Verdict DDD
-`KEEP-SEPARATE`. Référentiel partagé par Education, Careers, Matching et Learning.
-
-## Activation
-Après taxonomie initiale gouvernée.
+## Incohérences
+Ne doit jamais posséder `UserSkill`. Risque de boucle sémantique avec CAR-001 à limiter par références stables.

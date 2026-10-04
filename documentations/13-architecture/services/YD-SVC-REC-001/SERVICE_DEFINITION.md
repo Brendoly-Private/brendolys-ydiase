@@ -1,18 +1,15 @@
 # YD-SVC-REC-001 — Recommendation Service
 
-`domain: orientation-recommandation` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: orientation-recommandation` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Calculer des recommandations classées et explicables à partir de données autorisées.
+## Agrégats possédés
+`RecommendationRun`, `RecommendationSet`, `RecommendationItem`, `RecommendationExplanation`, `RecommendationEvidenceSnapshot`.
 
-## Frontière DDD
-Ne possède aucune source métier. Possède seulement les résultats de recommandation nécessaires à la traçabilité et à l’évaluation.
+## Source autoritative
+YD-SVC-REC-001 pour le résultat calculé et son explication.
 
-## Dépendances
-Profile, Education, Skills, Careers, Assessment selon le cas.
+## Données consommées
+Profile, skills, assessments, programs, occupations, labor signals/intelligence, opportunities, knowledge graph, policy/config.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Évaluation, classement et évolution algorithmique ont un cycle propre.
-
-## Activation
-Après métriques de qualité, explication et biais validées.
+## Incohérences
+Ne doit jamais être source de vérité des données d’entrée. Sponsored Placement ne peut modifier ses scores.

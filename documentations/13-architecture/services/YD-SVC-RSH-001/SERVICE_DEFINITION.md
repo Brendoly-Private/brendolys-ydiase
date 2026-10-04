@@ -1,18 +1,15 @@
 # YD-SVC-RSH-001 — Academic Research Topic Service
 
-`domain: contenu-communaute-learning` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: contenu-communaute-learning` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Proposer des sujets académiques reliés à une discipline, des compétences et des besoins observés.
+## Agrégats possédés
+`ResearchTopic`, `ResearchTopicVersion`, `TopicRecommendation`.
 
-## Frontière DDD
-Les propositions restent des suggestions documentées. Le service ne valide pas scientifiquement un mémoire ou une recherche.
+## Source autoritative
+YD-SVC-RSH-001 pour sujets édités ou générés puis validés.
 
-## Dépendances
-Program Catalog, Curriculum & Module, Skills Knowledge, Labor Market Intelligence.
+## Données consommées
+Programs/modules, skills/knowledge, occupations, labor intelligence, content, AI outputs vérifiés.
 
-## Verdict DDD
-`MERGE-CANDIDATE` avec Recommendation si aucun workflow académique propre n’émerge.
-
-## Activation
-Après règles de provenance et limites d’usage validées.
+## Incohérences
+Un sujet généré par IA ne devient publiable qu’après règles de validation explicites.

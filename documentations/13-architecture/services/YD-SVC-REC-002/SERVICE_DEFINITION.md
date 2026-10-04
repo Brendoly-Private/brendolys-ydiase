@@ -1,18 +1,15 @@
 # YD-SVC-REC-002 — Application Service
 
-`domain: opportunites-recrutement` · `phase: P4` · `documentation: D1` · `implementation: not-started`
+`domain: opportunites-recrutement` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter candidatures, statuts, historique et interactions de suivi autorisées.
+## Agrégats possédés
+`Application`, `ApplicationStatusHistory`, `ApplicationSubmission`, `CandidateResponse`.
 
-## Frontière DDD
-Propriétaire candidat de `Application`. Ne possède ni l’opportunité ni le profil candidat.
+## Source autoritative
+YD-SVC-REC-002.
 
-## Dépendances
-Opportunity, Profile, Employer, Notification, Consent & Privacy.
+## Données consommées
+OpportunityRef, candidate Identity/Profile refs, employer refs, consent/privacy.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Données personnelles et workflow transactionnel distincts.
-
-## Activation
-Après règles de conservation, accès candidat/employeur et audit validés.
+## Incohérences
+Le préfixe `REC` entre en collision sémantique avec Recommendation. À renommer ultérieurement en préfixe candidature (`APP`) sans réutiliser l’identifiant historique.

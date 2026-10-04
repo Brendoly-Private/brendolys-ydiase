@@ -1,18 +1,15 @@
 # YD-SVC-MOD-001 — Moderation Service
 
-`domain: plateforme-gouvernance` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: plateforme-gouvernance` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Gérer signalements, décisions de modération, règles et preuves pour contenus et interactions.
+## Agrégats possédés
+`ModerationCase`, `ModerationDecision`, `PolicyViolation`, `Appeal`.
 
-## Frontière DDD
-Ne possède pas les contenus sources. Possède les dossiers et décisions de modération.
+## Source autoritative
+YD-SVC-MOD-001.
 
-## Dépendances
-Content, Community, Audit & Trace, Identity.
+## Données consommées
+Content/community/marketplace/sponsored objects, identity refs, moderation policy, audit.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Workflow sensible et transverse.
-
-## Activation
-Avant activation des fonctions communautaires.
+## Incohérences
+La politique de modération n’a pas encore d’owner explicite. À décider en D3 entre MOD et gouvernance documentaire/configuration.

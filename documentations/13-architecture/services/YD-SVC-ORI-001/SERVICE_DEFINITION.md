@@ -1,15 +1,15 @@
 # YD-SVC-ORI-001 — Orientation Service
 
-`domain: orientation-recommandation` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: orientation-recommandation` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Orchestrer un dossier d’orientation éducative ou professionnelle et conserver ses décisions explicables.
+## Agrégats possédés
+`OrientationCase`, `OrientationObjective`, `OrientationConstraintSet`, `OrientationDecisionRecord`.
 
-## Frontière DDD
-Propriétaire candidat de `OrientationCase` et `OrientationDecision`. Consomme profils, évaluations, Education, Careers et Recommendation.
+## Source autoritative
+YD-SVC-ORI-001 pour le dossier d’orientation.
 
-## Verdict DDD
-`KEEP-SEPARATE`. C’est le contexte métier central d’orientation, distinct du moteur de classement.
+## Données consommées
+Profile, education, skills, assessments, programs, occupations, labor intelligence, recommendation outputs, consent.
 
-## Activation
-Après critères d’orientation, explication et audit validés.
+## Incohérences
+Orientation orchestre une décision mais ne doit pas absorber Recommendation ni les sources métier.

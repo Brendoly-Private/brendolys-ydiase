@@ -1,15 +1,15 @@
 # YD-SVC-CAR-003 — Career Transition Service
 
-`domain: metiers-carrieres` · `phase: P3` · `documentation: D1` · `implementation: not-started`
+`domain: metiers-carrieres` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Modéliser reconversions, passerelles et écarts entre situation actuelle et métier cible.
+## Agrégats possédés
+`TransitionCase`, `TransitionGap`, `TransitionPlan`, `TransitionOption`.
 
-## Frontière DDD
-Produit `TransitionScenario` et `GapAnalysis` candidats. Consomme profils, compétences et métiers.
+## Source autoritative
+YD-SVC-CAR-003.
 
-## Verdict DDD
-`KEEP-LOGICAL`. Frontière fonctionnelle claire, déploiement autonome à confirmer par charge et équipe.
+## Données consommées
+Current/target occupation (CAR-001), user skills (SKL-002), learning/program options (LRN/EDU), labor intelligence (LAB-002).
 
-## Activation
-Après règles de transition et qualité des relations compétences-métiers validées.
+## Incohérences
+La frontière avec CAR-002 doit rester nette: CAR-003 traite la transition entre états, CAR-002 la trajectoire.

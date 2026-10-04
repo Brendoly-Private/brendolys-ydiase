@@ -1,18 +1,15 @@
 # YD-SVC-AI-003 — AI Verification Service
 
-`domain: ai` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: ai` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Évaluer sorties IA selon preuves disponibles, règles, risques et niveaux de confiance.
+## Agrégats possédés
+`AIVerificationCase`, `ClaimCheck`, `AIConfidenceAssessment`, `VerificationDecision`.
 
-## Frontière DDD
-Ne transforme pas une génération en fait autoritatif. Produit un statut de vérification et des motifs.
+## Source autoritative
+YD-SVC-AI-003 pour résultat de vérification IA.
 
-## Dépendances
-AI Gateway, Retrieval & Grounding, Data Provenance.
+## Données consommées
+AI outputs, grounding bundles, provenance, domain truths, policy rules.
 
-## Verdict DDD
-`MERGE-CANDIDATE` dans AI Gateway au pilote, frontière logique conservée.
-
-## Activation
-Avant tout usage IA ayant effet sur une recommandation utilisateur.
+## Incohérences
+Un verdict IA ne remplace pas une validation métier DAT-004 ou humaine lorsque celle-ci est requise.

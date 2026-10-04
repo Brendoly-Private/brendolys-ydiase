@@ -1,18 +1,15 @@
 # YD-SVC-SRH-001 — Search & Discovery Service
 
-`domain: plateforme` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: plateforme` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Fournir une recherche transverse sur les projections publiables de YDIASE.
+## Agrégats possédés
+`SearchIndexDefinition`, `SearchDocumentProjection`, `SearchQuerySession` si persistée.
 
-## Frontière DDD
-Ne possède aucune donnée métier autoritative. Maintient des index ou projections reconstruisibles.
+## Source autoritative
+SRH-001 uniquement pour configuration et index de recherche; les domaines restent autoritatifs pour les documents projetés.
 
-## Dépendances
-Education, Skills, Careers, Opportunities, Content selon activation.
+## Données consommées
+Institutions, programs, modules, occupations, opportunities, content, learning, états de publication.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Charge, indexation et disponibilité divergent des domaines sources.
-
-## Activation
-Après contrats de projection et politique de visibilité validés.
+## Incohérences
+Un index n’est jamais une source métier. Toute réindexation doit pouvoir repartir des sources autoritatives.

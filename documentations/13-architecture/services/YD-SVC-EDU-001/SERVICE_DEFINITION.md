@@ -1,18 +1,15 @@
 # YD-SVC-EDU-001 — Institution Catalog Service
 
-`domain: education-institutions` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: education-institutions` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter établissements, campus, types, statut, localisation et versions validées.
+## Agrégats possédés
+`Institution`, `Campus`, `InstitutionStatus`, `InstitutionPresence`.
 
-## Frontière DDD
-Propriétaire candidat de `Institution` et `Campus`. Ne possède ni programmes, ni curricula, ni relation de partenariat.
+## Source autoritative
+YD-SVC-EDU-001 après validation et publication YDIASE.
 
-## Dépendances
-Country Configuration, Data Provenance, Data Quality.
+## Données consommées
+Source records (DAT-002/003), taxonomies (DAT-005), country/territory (CFG-001), partner/institution claims (PRT-001/INS-001).
 
-## Verdict DDD
-`KEEP-SEPARATE`. Référentiel central réutilisé par plusieurs domaines.
-
-## Activation
-Après modèle institutionnel et sources Burkina validés.
+## Incohérences
+INS-001 peut soumettre des changements mais ne possède jamais `Institution`.

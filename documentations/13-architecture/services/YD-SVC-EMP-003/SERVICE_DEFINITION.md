@@ -1,18 +1,15 @@
 # YD-SVC-EMP-003 — Employer Workspace Service
 
-`domain: partenaires-ecosysteme` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: partenaires-ecosysteme` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Fournir aux employeurs un espace de gestion des opportunités, campagnes et produits autorisés.
+## Agrégats possédés
+`EmployerWorkspace`, `EmployerMembership`, `EmployerWorkspacePreference`.
 
-## Frontière DDD
-Orchestre les services B2B sans devenir propriétaire des opportunités, candidatures ou profils.
+## Source autoritative
+YD-SVC-EMP-003 pour workspace; EMP/OPP/REC restent autoritatifs sur objets métier.
 
-## Dépendances
-Employer, Opportunity, Talent & Recruitment, Billing, Identity.
+## Données consommées
+Employer, opportunities, campaigns, applications, intelligence products, access/entitlements.
 
-## Verdict DDD
-`KEEP-AS-BFF-CANDIDATE`. Peut devenir couche d’expérience plutôt que microservice métier.
-
-## Activation
-Après besoins B2B et contrats interservices validés.
+## Incohérences
+Doit rester façade métier/BFF et ne pas répliquer la propriété des domaines sous-jacents.

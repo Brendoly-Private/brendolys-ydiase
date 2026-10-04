@@ -1,18 +1,15 @@
 # YD-SVC-PRT-001 — Partner Service
 
-`domain: partenaires-ecosysteme` · `phase: P3` · `documentation: D1` · `implementation: not-started`
+`domain: partenaires-ecosysteme` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter partenaires, conventions, rôles, périmètres et états de relation avec YDIASE.
+## Agrégats possédés
+`Partner`, `Partnership`, `Agreement`, `PartnerRole`, `PartnerAccessScope`.
 
-## Frontière DDD
-Propriétaire candidat de `PartnerRelationship`. Ne remplace ni Institution Catalog ni Employer Service.
+## Source autoritative
+YD-SVC-PRT-001.
 
-## Dépendances
-Institution Catalog, Employer, Audit & Trace.
+## Données consommées
+Organization refs, identity/access, country config, audit.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Relation contractuelle distincte de l’entité organisationnelle.
-
-## Activation
-Après modèle de partenariat et responsabilités validés.
+## Incohérences
+À D3, clarifier si `Partner` référence une organisation générique ou duplique Institution/Employer.

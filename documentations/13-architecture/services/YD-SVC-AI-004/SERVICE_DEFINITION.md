@@ -1,18 +1,15 @@
 # YD-SVC-AI-004 — AI Orchestration Service
 
-`domain: ai` · `phase: P6` · `documentation: D1` · `implementation: not-started`
+`domain: ai` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Orchestrer modèles, outils et tâches IA autorisées selon politiques et contexte.
+## Agrégats possédés
+`AIWorkflow`, `AITask`, `AIWorkflowRun`, `AIExecutionPlan`.
 
-## Frontière DDD
-Ne possède aucune vérité métier. Coordonne des capacités IA sous contrôle du Gateway.
+## Source autoritative
+YD-SVC-AI-004 pour orchestration.
 
-## Dépendances
-AI Gateway, Retrieval & Grounding, AI Verification, Audit & Trace.
+## Données consommées
+AI Gateway, retrieval, verification, domain tool contracts, access/consent.
 
-## Verdict DDD
-`KEEP-FUTURE`. Ne pas isoler avant plusieurs modèles ou workflows nécessitant une orchestration propre.
-
-## Activation
-ADR obligatoire avec besoin mesuré.
+## Incohérences
+Ne doit pas contourner AI Gateway ni appeler directement des données interdites par CNS/entitlements.

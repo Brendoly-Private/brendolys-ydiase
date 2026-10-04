@@ -1,18 +1,15 @@
 # YD-SVC-AI-002 — Retrieval & Grounding Service
 
-`domain: ai` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: ai` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Fournir aux usages IA des connaissances autorisées, traçables et contextualisées.
+## Agrégats possédés
+`RetrievalCorpusDefinition`, `GroundingIndex`, `RetrievalRun`, `GroundingBundle`.
 
-## Frontière DDD
-Ne devient pas source de vérité. Produit des contextes dérivés à partir de sources autoritatives.
+## Source autoritative
+YD-SVC-AI-002 pour index et bundles; sources métier restent autoritatives.
 
-## Dépendances
-AI Gateway, Search, Knowledge Graph, Data Provenance.
+## Données consommées
+Knowledge graph, search projections, validated domain data, provenance/quality, access policy.
 
-## Verdict DDD
-`KEEP-LOGICAL`. Déploiement séparé à confirmer selon charge et modèles.
-
-## Activation
-Après politiques d’accès aux corpus et citations internes validées.
+## Incohérences
+Risque de duplication avec SRH-001. SRH sert la recherche produit; AI-002 sert le grounding contrôlé. Mutualisation technique possible sans fusion métier.

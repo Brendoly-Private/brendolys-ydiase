@@ -1,18 +1,15 @@
 # YD-SVC-INS-001 — Institution Workspace Service
 
-`domain: partenaires-ecosysteme` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: partenaires-ecosysteme` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Fournir aux établissements un espace de proposition et maintenance de leurs informations.
+## Agrégats possédés
+`InstitutionWorkspace`, `InstitutionMembership`, `InstitutionSubmission`, `ValidationWorkflow`.
 
-## Frontière DDD
-Ne devient pas source autoritative par simple saisie. Toute modification suit provenance et validation.
+## Source autoritative
+YD-SVC-INS-001 pour workspace/workflow; EDU reste autoritatif après publication.
 
-## Dépendances
-Institution Catalog, Program Catalog, Curriculum & Module, Data Quality, Identity.
+## Données consommées
+Institution catalog, identity/access, partner agreement, data submissions, audit.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Surface B2B et workflow de contribution propres.
-
-## Activation
-Après délégation, contrôle et workflow de publication validés.
+## Incohérences
+Toute modification d’Institution/Program doit passer par validation puis publication dans EDU, pas par écriture directe.

@@ -1,18 +1,21 @@
 # YD-SVC-PRF-001 — Profile Service
 
-`domain: identite-profils` · `phase: P1` · `documentation: D1` · `implementation: not-started` · `activation: inactive`
+`domain: identite-profils` · `phase: P1` · `documentation: D2` · `implementation: not-started` · `activation: inactive`
 
 ## Mission
 Porter le profil courant, les préférences, objectifs et contraintes déclarées d’une personne.
 
+## Agrégats possédés
+`UserProfile`, `Preference`, `Goal`, `DeclaredConstraint`.
+
+## Source autoritative
+YD-SVC-PRF-001.
+
+## Données consommées
+IdentityRef (IDN-001), consent/privacy (CNS-001), country configuration (CFG-001).
+
 ## Frontière DDD
-Propriétaire candidat de `UserProfile`, `Preference` et `Goal`. Ne possède ni identité d’accès, ni historique académique détaillé, ni compétences validées.
+Ne possède ni identité d’accès, ni historique académique détaillé, ni compétences individuelles.
 
-## Dépendances
-Identity & Access, Consent & Privacy, Country Configuration.
-
-## Verdict DDD
-`KEEP-SEPARATE`. Frontière métier stable entre identité technique et profil métier.
-
-## Activation
-Après règles de consentement, modèle de profil et droits d’accès validés.
+## Incohérences
+Aucune propriété concurrente détectée. Toute préférence de confidentialité doit rester CNS-001.

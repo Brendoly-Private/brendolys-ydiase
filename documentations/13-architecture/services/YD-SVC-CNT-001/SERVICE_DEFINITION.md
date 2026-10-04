@@ -1,18 +1,15 @@
 # YD-SVC-CNT-001 — Content Service
 
-`domain: contenu-communaute-learning` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: contenu-communaute-learning` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter les contenus éditoriaux et médias publiés dans YDIASE.
+## Agrégats possédés
+`ContentItem`, `ContentVersion`, `Publication`, `ContentAssetRef`.
 
-## Frontière DDD
-Propriétaire candidat de `ContentItem`, versions et statut éditorial. Ne possède pas le classement du feed.
+## Source autoritative
+YD-SVC-CNT-001.
 
-## Dépendances
-Moderation, Audit & Trace, Country Configuration.
+## Données consommées
+Author/Profile refs, taxonomy, moderation state, provenance pour contenu externe.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Cycle éditorial et stockage média propres.
-
-## Activation
-Après politique éditoriale, droits de contenu et modération validés.
+## Incohérences
+Les fichiers binaires peuvent vivre en object storage mais CNT-001 reste owner des métadonnées métier.

@@ -1,18 +1,15 @@
 # YD-SVC-DPR-001 — Data Product Service
 
-`domain: economie-produit` · `phase: P7` · `documentation: D1` · `implementation: not-started`
+`domain: economie-produit` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Définir et publier des produits de données agrégées, gouvernées et autorisées.
+## Agrégats possédés
+`DataProduct`, `DataProductVersion`, `DatasetRelease`, `DataLicense`, `DataProductDelivery`.
 
-## Frontière DDD
-Aucune donnée personnelle brute ne devient un produit commercial. Les sources restent possédées par leurs domaines.
+## Source autoritative
+YD-SVC-DPR-001 pour le produit publié; données sources restent leurs domaines.
 
-## Dépendances
-Analytics, Data Provenance, Data Quality, Consent & Privacy, External API Management.
+## Données consommées
+Approved aggregated datasets, analytics, provenance/quality, privacy policy, entitlements.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Gouvernance produit et droits d’usage propres.
-
-## Activation
-Après revue juridique, confidentialité et valeur du produit.
+## Incohérences
+Aucune donnée personnelle brute ne peut devenir un produit. Les droits d’usage et règles d’agrégation doivent bloquer la publication.

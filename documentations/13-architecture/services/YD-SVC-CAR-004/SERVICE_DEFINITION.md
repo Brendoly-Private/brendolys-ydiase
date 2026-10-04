@@ -1,18 +1,15 @@
 # YD-SVC-CAR-004 — Career Simulation Service
 
-`domain: metiers-carrieres` · `phase: P3` · `documentation: D1` · `implementation: not-started`
+`domain: metiers-carrieres` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Simuler des scénarios professionnels à partir d’hypothèses explicites.
+## Agrégats possédés
+`CareerSimulation`, `SimulationScenario`, `SimulationAssumption`, `SimulationResult`.
 
-## Frontière DDD
-Produit des simulations non autoritatives. Ne modifie ni profil, ni marché, ni référentiels.
+## Source autoritative
+YD-SVC-CAR-004 pour les simulations, jamais pour les faits source.
 
-## Dépendances
-Career Path, Career Transition, Labor Market Intelligence.
+## Données consommées
+Career paths (CAR-002), transitions (CAR-003), labor intelligence/forecast (LAB), user state (PRF/SKL), education (EDU).
 
-## Verdict DDD
-`MERGE-CANDIDATE` avec Career Path au début. Isolation future si calcul, charge ou cycle de publication le demandent.
-
-## Activation
-Après règles de simulation et avertissements d’incertitude validés.
+## Incohérences
+Les résultats doivent conserver hypothèses et versions des entrées afin d’éviter une fausse vérité prédictive.

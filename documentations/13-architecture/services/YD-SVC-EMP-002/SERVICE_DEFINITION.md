@@ -1,18 +1,15 @@
 # YD-SVC-EMP-002 — Talent & Recruitment Service
 
-`domain: opportunites-recrutement` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: opportunites-recrutement` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Gérer viviers, recherches de talents et campagnes de recrutement côté organisation.
+## Agrégats possédés
+`TalentPool`, `RecruitmentCampaign`, `CandidateSelection`, `RecruitmentPipeline`.
 
-## Frontière DDD
-Propriétaire candidat de `RecruitmentCampaign` et `TalentPoolDefinition`. Ne possède pas les profils individuels.
+## Source autoritative
+YD-SVC-EMP-002.
 
-## Dépendances
-Employer, Application, Opportunity Matching, Consent & Privacy.
+## Données consommées
+Employer, opportunities/applications, permitted profile/skill projections, matching results, consent.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Workflow B2B et règles d’accès spécifiques.
-
-## Activation
-Après politique d’accès recruteur et finalités de traitement validées.
+## Incohérences
+Les profils candidats restent PRF/SKL; ce service ne doit stocker que projections autorisées et états de recrutement.

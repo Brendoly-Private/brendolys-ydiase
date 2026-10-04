@@ -1,18 +1,15 @@
 # YD-SVC-ASM-001 — Assessment Service
 
-`domain: orientation-recommandation` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: orientation-recommandation` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Administrer évaluations, réponses, scores et versions d’instruments autorisés.
+## Agrégats possédés
+`AssessmentDefinition`, `AssessmentSession`, `AssessmentResponse`, `AssessmentResult`.
 
-## Frontière DDD
-Propriétaire candidat de `Assessment`, `AssessmentVersion`, `ResponseSet` et `Score`. Ne produit pas seul la décision d’orientation.
+## Source autoritative
+YD-SVC-ASM-001.
 
-## Dépendances
-Profile, Consent & Privacy, Audit & Trace.
+## Données consommées
+Identity/Profile refs, consent (CNS-001), skills taxonomy (SKL-001), country rules (CFG-001).
 
-## Verdict DDD
-`KEEP-SEPARATE`. Versionnement, sensibilité et reproductibilité exigent une frontière dédiée.
-
-## Activation
-Après validation méthodologique, sécurité et règles applicables aux mineurs.
+## Incohérences
+Un résultat d’évaluation n’est pas une compétence acquise; SKL-002 décide de son intégration dans l’état de compétence.

@@ -1,18 +1,15 @@
 # YD-SVC-CNT-002 — Feed Service
 
-`domain: contenu-communaute-learning` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: contenu-communaute-learning` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Composer un fil personnalisé éducatif et professionnel à partir de contenus autorisés.
+## Agrégats possédés
+`FeedDefinition`, `FeedCandidateSet`, `FeedRankingRun`, `UserFeedState`.
 
-## Frontière DDD
-Ne possède pas les contenus sources. Possède uniquement règles et résultats de composition nécessaires au feed.
+## Source autoritative
+YD-SVC-CNT-002 pour état et ranking du feed.
 
-## Dépendances
-Content, Profile, Recommendation, Moderation.
+## Données consommées
+Content, user preferences, community relations, learning/opportunities, recommendation signals, moderation.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Charge de lecture et logique de classement spécifiques.
-
-## Activation
-Après politique de classement, transparence et sécurité mineurs validées.
+## Incohérences
+Ne doit pas devenir un second Recommendation Service. Son ranking reste limité au feed.

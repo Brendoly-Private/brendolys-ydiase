@@ -1,18 +1,15 @@
 # YD-SVC-COM-001 — Community Service
 
-`domain: contenu-communaute-learning` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: contenu-communaute-learning` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Gérer interactions communautaires autorisées, relations et échanges sociaux de YDIASE.
+## Agrégats possédés
+`CommunityRelation`, `Follow`, `Reaction`, `Comment`, `CommunityThread`.
 
-## Frontière DDD
-Propriétaire candidat des interactions sociales. Ne possède ni identité ni contenu éditorial de référence.
+## Source autoritative
+YD-SVC-COM-001.
 
-## Dépendances
-Identity, Profile, Moderation, Notification, Consent & Privacy.
+## Données consommées
+Identity/Profile refs, content refs, moderation, privacy settings.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Risque de modération et charge propres.
-
-## Activation
-Après politique communautaire, protection des mineurs et modération validées.
+## Incohérences
+Les règles de confidentialité restent CNS; la modération reste MOD.

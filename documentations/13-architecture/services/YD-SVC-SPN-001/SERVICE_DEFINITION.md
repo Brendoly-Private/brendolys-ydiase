@@ -1,18 +1,15 @@
 # YD-SVC-SPN-001 — Sponsored Placement Service
 
-`domain: economie-produit` · `phase: P6` · `documentation: D1` · `implementation: not-started`
+`domain: economie-produit` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Gérer placements sponsorisés avec séparation explicite des recommandations d’orientation.
+## Agrégats possédés
+`SponsoredCampaign`, `SponsoredPlacement`, `SponsorshipBudget`, `PlacementDelivery`.
 
-## Frontière DDD
-Ne modifie jamais les scores d’orientation, de matching ou d’intelligence.
+## Source autoritative
+YD-SVC-SPN-001.
 
-## Dépendances
-Content, Marketplace, Entitlements, Audit & Trace.
+## Données consommées
+Advertiser/partner, eligible inventory, billing, moderation.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Séparation économique nécessaire pour préserver l’intégrité des recommandations.
-
-## Activation
-Après politique d’étiquetage, ciblage et exclusions validée.
+## Incohérences
+Interdiction architecturale: aucune écriture ou pondération dans les scores ORI/REC. Le sponsor doit rester identifiable comme tel.

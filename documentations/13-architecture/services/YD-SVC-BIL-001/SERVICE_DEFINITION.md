@@ -1,18 +1,15 @@
 # YD-SVC-BIL-001 — Subscription & Entitlement Service
 
-`domain: economie-produit` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: economie-produit` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter plans, droits fonctionnels, quotas et périodes d’accès.
+## Agrégats possédés
+`Plan`, `Subscription`, `Entitlement`, `Quota`, `EntitlementGrant`.
 
-## Frontière DDD
-Propriétaire candidat de `Subscription` et `Entitlement`. Ne traite pas lui-même les paiements.
+## Source autoritative
+YD-SVC-BIL-001.
 
-## Dépendances
-Identity, Billing, produits commerciaux.
+## Données consommées
+Account/organization refs, product catalog refs, billing status, country config.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Les droits d’accès doivent rester indépendants du fournisseur de paiement.
-
-## Activation
-Après catalogue d’offres et règles de droits validés.
+## Incohérences
+Le « product catalog » commercial n’a pas encore d’owner explicite hors plans/API/Data/Intelligence. À préciser en D3.

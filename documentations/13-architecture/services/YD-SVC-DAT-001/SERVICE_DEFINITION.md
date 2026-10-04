@@ -1,18 +1,15 @@
 # YD-SVC-DAT-001 — Data Source Registry Service
 
-`domain: data` · `phase: P0.1` · `documentation: D1` · `implementation: not-started`
+`domain: data` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Référencer sources, producteurs, territoires, droits, fréquence et conditions d’usage.
+## Agrégats possédés
+`DataSource`, `SourceContract`, `UsageRight`, `SourceTerritoryScope`, `SourceAccessPolicy`.
 
-## Frontière DDD
-Propriétaire candidat de `DataSource` et `UsageRight`. Ne stocke pas nécessairement les données collectées.
+## Source autoritative
+YD-SVC-DAT-001.
 
-## Dépendances
-Country Configuration, Audit & Trace.
+## Données consommées
+Partner agreements, country/legal constraints, audit.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Fondation de provenance et conformité.
-
-## Activation
-Avant toute collecte industrialisée.
+## Incohérences
+Les droits d’usage contractuels détaillés peuvent appartenir juridiquement à PRT; DAT-001 doit référencer le contrat et porter l’autorisation Data opérationnelle.

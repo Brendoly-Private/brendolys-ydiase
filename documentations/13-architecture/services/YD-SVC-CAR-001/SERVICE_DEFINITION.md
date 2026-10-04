@@ -1,18 +1,15 @@
 # YD-SVC-CAR-001 — Occupation & Career Graph Service
 
-`domain: metiers-carrieres` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: metiers-carrieres` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter métiers, professions, familles, relations et liens gouvernés vers compétences et qualifications.
+## Agrégats possédés
+`Occupation`, `OccupationVersion`, `OccupationSkillRequirement`, `OccupationRelation`, `CareerTransitionEdge`.
 
-## Frontière DDD
-Propriétaire candidat de `Occupation` et relations de carrière. Ne possède pas les taxonomies de compétences.
+## Source autoritative
+YD-SVC-CAR-001.
 
-## Dépendances
-Skills Knowledge, Qualification Framework, Reference & Taxonomy.
+## Données consommées
+Skills (SKL-001), qualifications (EDU-004), labor signals (LAB-001), taxonomies (DAT-005), provenance (DAT-003).
 
-## Verdict DDD
-`KEEP-SEPARATE`. Référentiel métier central et multi-pays.
-
-## Activation
-Après première taxonomie métiers et mappings compétences validés.
+## Incohérences
+Le nom « Graph » ne lui donne pas la propriété du Knowledge Graph transversal KNW-001.

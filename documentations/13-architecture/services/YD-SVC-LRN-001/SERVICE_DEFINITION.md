@@ -1,18 +1,15 @@
 # YD-SVC-LRN-001 — Learning Discovery Service
 
-`domain: contenu-communaute-learning` · `phase: P5` · `documentation: D1` · `implementation: not-started`
+`domain: contenu-communaute-learning` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Relier écarts de compétences à des ressources ou formations disponibles.
+## Agrégats possédés
+`LearningResource`, `LearningOfferingRef`, `LearningRecommendationSet`.
 
-## Frontière DDD
-Ne devient pas LMS par défaut. Produit des correspondances entre besoins et offres de learning.
+## Source autoritative
+YD-SVC-LRN-001 pour le catalogue complémentaire YDIASE; le fournisseur externe reste source de ses faits.
 
-## Dépendances
-Skills Knowledge, User Skills Profile, Learning Marketplace, Recommendation.
+## Données consommées
+Skill gaps, programs/modules, skills, marketplace items, provenance/quality.
 
-## Verdict DDD
-`KEEP-LOGICAL`. Peut rester intégré à Recommendation tant que le catalogue commercial reste limité.
-
-## Activation
-Après modèle d’offre de learning et règles de classement validés.
+## Incohérences
+Chevauchement potentiel avec EDU-002 et MKT-001. LRN référence les formations et ressources, il ne possède ni programme académique ni offre commerciale.

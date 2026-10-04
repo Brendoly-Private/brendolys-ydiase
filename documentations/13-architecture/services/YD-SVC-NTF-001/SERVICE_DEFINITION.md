@@ -1,18 +1,15 @@
 # YD-SVC-NTF-001 — Notification Service
 
-`domain: plateforme` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: plateforme` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Distribuer des notifications selon préférences, canaux et règles de priorité.
+## Agrégats possédés
+`Notification`, `DeliveryAttempt`, `NotificationPreferenceProjection`, `NotificationTemplate`.
 
-## Frontière DDD
-Ne décide pas des événements métier à produire. Consomme des demandes de notification et maintient leur état de livraison.
+## Source autoritative
+YD-SVC-NTF-001 pour notification/livraison; préférences maîtres restent PRF/CNS selon type.
 
-## Dépendances
-Identity, Profile, Consent & Privacy.
+## Données consommées
+Identity/contact route, user preferences/consent, événements des domaines producteurs.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Intégrations externes et charge asynchrone spécifiques.
-
-## Activation
-Après politique de canaux et consentement validés.
+## Incohérences
+`NotificationPreferenceProjection` doit rester une projection et ne jamais concurrencer PRF/CNS.

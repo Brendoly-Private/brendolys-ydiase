@@ -1,18 +1,15 @@
 # YD-SVC-EDU-004 — Qualification Framework Service
 
-`domain: education-institutions` · `phase: P2` · `documentation: D1` · `implementation: not-started`
+`domain: education-institutions` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Représenter diplômes, niveaux, prérequis, équivalences et cadres nationaux.
+## Agrégats possédés
+`Qualification`, `QualificationLevel`, `QualificationFramework`, `EquivalenceRule`, `PrerequisiteRule`.
 
-## Frontière DDD
-Propriétaire candidat des qualifications normalisées et correspondances pays. Ne possède pas les programmes qui les délivrent.
+## Source autoritative
+YD-SVC-EDU-004 pour la représentation YDIASE validée; les autorités officielles restent sources externes des cadres réglementaires.
 
-## Dépendances
-Country Configuration, Reference & Taxonomy, Program Catalog.
+## Données consommées
+Country framework (CFG-001), taxonomies (DAT-005), assertions officielles (DAT-002/003).
 
-## Verdict DDD
-`KEEP-SEPARATE`. La variation par pays impose une frontière explicite.
-
-## Activation
-Country Framework du pays validé.
+## Incohérences
+Ne jamais présenter la représentation YDIASE comme autorité réglementaire.

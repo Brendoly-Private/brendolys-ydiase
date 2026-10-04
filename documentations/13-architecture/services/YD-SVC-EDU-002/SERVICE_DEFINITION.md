@@ -1,18 +1,15 @@
 # YD-SVC-EDU-002 — Program Catalog Service
 
-`domain: education-institutions` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: education-institutions` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter filières, formations, programmes, versions, rattachements et états de publication.
+## Agrégats possédés
+`Program`, `ProgramVersion`, `ProgramOffering`, `AdmissionRuleSet`.
 
-## Frontière DDD
-Propriétaire candidat de `Program` et `ProgramVersion`. Référence Institution, Qualification et Curriculum sans les posséder.
+## Source autoritative
+YD-SVC-EDU-002.
 
-## Dépendances
-Institution Catalog, Qualification Framework, Curriculum & Module, Data Provenance.
+## Données consommées
+Institution/Campus (EDU-001), Qualification refs (EDU-004), Curriculum refs (EDU-003), provenance/quality (DAT-003/004), country config (CFG-001).
 
-## Verdict DDD
-`KEEP-SEPARATE`. Historisation et cycle de publication propres.
-
-## Activation
-Avec la cartographie Education du pilote.
+## Incohérences
+Le programme ne doit pas posséder le curriculum. Risque de cycle EDU-002 ↔ EDU-003 à traiter par identifiants et contrats.

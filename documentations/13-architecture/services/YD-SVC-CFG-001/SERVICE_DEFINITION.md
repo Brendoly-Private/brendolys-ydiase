@@ -1,18 +1,15 @@
 # YD-SVC-CFG-001 — Country Configuration Service
 
-`domain: plateforme-gouvernance` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: plateforme-gouvernance` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter paramètres pays, territoires, langues, monnaies et références vers les cadres locaux validés.
+## Agrégats possédés
+`CountryConfiguration`, `Territory`, `LanguageConfiguration`, `CurrencyConfiguration`, `CountryFrameworkBinding`, `LocalPolicyParameter`.
 
-## Frontière DDD
-Ne contient pas toute la réglementation. Fournit la configuration gouvernée nécessaire aux domaines.
+## Source autoritative
+YD-SVC-CFG-001 pour configuration opérationnelle YDIASE; sources officielles externes restent attribuées.
 
-## Dépendances
-Country Frameworks, Reference & Taxonomy, Audit & Trace.
+## Données consommées
+Reference datasets, official country sources, legal/compliance decisions, provenance.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Condition de l’expansion multi-pays sans coder le Burkina comme norme générale.
-
-## Activation
-Avec le premier pays.
+## Incohérences
+Ne doit pas absorber Qualification Framework EDU-004 ni taxonomies DAT-005; il les lie au pays.

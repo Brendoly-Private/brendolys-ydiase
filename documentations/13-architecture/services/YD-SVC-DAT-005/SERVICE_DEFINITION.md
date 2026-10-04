@@ -1,18 +1,15 @@
 # YD-SVC-DAT-005 — Reference & Taxonomy Service
 
-`domain: data` · `phase: P1` · `documentation: D1` · `implementation: not-started`
+`domain: data` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Porter classifications partagées, taxonomies, codes et correspondances transverses.
+## Agrégats possédés
+`ReferenceDataset`, `Taxonomy`, `Classification`, `ReferenceMapping`, `ReferenceVersion`.
 
-## Frontière DDD
-Ne remplace pas les référentiels métier spécialisés. Gère uniquement les référentiels communs et mappings gouvernés.
+## Source autoritative
+YD-SVC-DAT-005 pour référentiels transversaux YDIASE; les référentiels officiels externes gardent leur attribution.
 
-## Dépendances
-Country Configuration, Data Provenance.
+## Données consommées
+Country framework, official/reference sources, provenance/quality.
 
-## Verdict DDD
-`KEEP-SEPARATE`. Réutilisation transverse et versionnement justifient la frontière.
-
-## Activation
-Avec les premiers référentiels multi-domaines.
+## Incohérences
+Ne doit pas absorber les taxonomies métier dont SKL-001 ou EDU-004 sont owners.

@@ -1,18 +1,15 @@
 # YD-SVC-CAR-002 — Career Path Service
 
-`domain: metiers-carrieres` · `phase: P3` · `documentation: D1` · `implementation: not-started`
+`domain: metiers-carrieres` · `documentation: D2` · `implementation: not-started`
 
-## Mission
-Construire et comparer des trajectoires professionnelles à partir des métiers, compétences et qualifications.
+## Agrégats possédés
+`CareerPath`, `CareerPathStep`, `PathScenario`, `PathComparisonState`.
 
-## Frontière DDD
-Produit des trajectoires calculées. Ne possède ni métiers, ni compétences, ni profil utilisateur.
+## Source autoritative
+YD-SVC-CAR-002 pour les trajectoires construites.
 
-## Dépendances
-Occupation & Career Graph, Skills Knowledge, Qualification Framework.
+## Données consommées
+Occupations/edges (CAR-001), profile/skills (PRF/SKL-002), programs (EDU-002), labor intelligence (LAB-002).
 
-## Verdict DDD
-`KEEP-LOGICAL`. À fusionner avec Career Simulation au pilote si l’isolation n’apporte aucune valeur opérationnelle.
-
-## Activation
-Après graphe métier-compétence suffisamment validé.
+## Incohérences
+Ne doit pas dupliquer les fonctions de simulation CAR-004 ni de reconversion CAR-003.
