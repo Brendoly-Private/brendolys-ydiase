@@ -1,5 +1,18 @@
-# YD-SVC-IDN-001 — Identity Service
+# YD-SVC-IDN-001 — Identity & Access Service
 
-`domain: identity` · `phase: P1` · `documentation: D1` · `implementation: not-started`.
+`domain: identite-profils` · `phase: P1` · `documentation: D1` · `implementation: not-started`
 
-Mission : identité et consentements. Ne possède ni profil carrière ni compétences. Source autoritative d’identité ; activation après validation des règles d’accès.
+## Mission
+Porter comptes, identités techniques, authentification, sessions et autorisations d’accès.
+
+## Frontière DDD
+Propriétaire candidat de `Account`, `CredentialBinding`, `Session` et identifiants techniques. Ne possède ni profil métier, ni consentements, ni compétences.
+
+## Dépendances
+Consent & Privacy, Audit & Trace, Country Configuration.
+
+## Verdict DDD
+`KEEP-SEPARATE`. Frontière de sécurité forte et cycle de vie propre.
+
+## Activation
+Avant tout compte utilisateur ou organisationnel.
