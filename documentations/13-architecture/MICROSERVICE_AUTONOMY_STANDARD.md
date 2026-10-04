@@ -4,244 +4,111 @@ Statut : `D3-normative-candidate`
 
 ## 1. Objet
 
-Ce standard définit l’autonomie obligatoire des frontières physiques YDIASE. Il s’applique aux 47 `YD-MS-*` confirmés et, avec adaptations explicites, aux 4 `YD-PLT-*`. Il ne signifie pas qu’un microservice doit posséder un serveur physique complet. Il signifie qu’il doit pouvoir être développé, déployé, sécurisé, observé, sauvegardé, restauré, mis à l’échelle et retiré sans dépendre du cycle de vie d’un autre microservice.
+Ce standard définit l’autonomie obligatoire des frontières physiques YDIASE. Il s’applique aux 47 `YD-MS-*` confirmés et, avec adaptations explicites, aux 4 `YD-PLT-*`.
 
 ## 2. Règles non négociables
 
-Chaque frontière autonome possède :
+Chaque frontière possède un identifiant stable, repository, owners, artefact et CI/CD propres, runtime/configuration, datastore possédé si nécessaire, migrations privées, politique de reprise adaptée à AUTH/MIXED/DERIVED, RPO/RTO/SLO, contrats, identité machine, IAM, secrets/certificats, réseau deny-by-default, chiffrement, observabilité, health/readiness, scaling, rollback, mode dégradé, runbook, DR testé, rétention/suppression, decommission, SBOM et contrôles de sécurité.
 
-1. un identifiant physique stable
-2. un repository Git propre
-3. un owner d’équipe et un suppléant
-4. un artefact de build/version propre
-5. un pipeline CI/CD propre
-6. un runtime et une configuration propres
-7. un datastore possédé lorsqu’elle détient des données persistantes
-8. ses migrations et son schéma privés
-9. une politique backup/restore ou reconstruction testée selon la nature des données
-10. RPO, RTO et SLO définis selon criticité
-11. ses contrats API/événements/projections enregistrés
-12. une identité machine propre
-13. une politique IAM explicite
-14. ses secrets et certificats gérés séparément
-15. des règles réseau minimales et deny-by-default
-16. chiffrement en transit et au repos selon classification
-17. audit, logs, métriques et traces corrélables
-18. health, readiness et dépendances vérifiables
-19. quotas et rate limits lorsque l’exposition le demande
-20. stratégie de scaling propre
-21. rollback indépendant
-22. mode dégradé documenté
-23. runbook d’incident
-24. plan de reprise et test de restauration ou reconstruction
-25. politique de rétention et suppression
-26. procédure de retrait/decommission
-27. registre des dépendances autorisées et interdites
-28. SBOM et politique de dépendances logicielles
-29. scans de vulnérabilités et règles de patching
-30. tests de contrats et de compatibilité
+## 3. Données
 
-## 3. Repository et supply chain
+Chaque microservice est seul propriétaire en écriture de ses agrégats. Aucun autre service ne lit directement son stockage interne. `Database per service` signifie propriété exclusive du schéma, migrations, credentials et cycle de reprise, sans imposer un serveur physique par service.
 
-Convention cible : un repository par frontière physique. Le nom exact sera fixé dans le registre des déploiements, avec convention candidate `brendolys-ydiase-<service-slug>`.
+## 4. Classification de reprise
 
-Le repository contient au minimum : code, README opérationnel, manifestes de build, migrations détenues, tests, contrats publiés par le service, configuration non secrète, runbook, ownership, politique de version et changelog.
+### AUTH
+Les données autoritatives exigent backup et restauration indépendants testés.
 
-Les secrets, clés privées, tokens, mots de passe et sauvegardes n’entrent jamais dans Git.
+### MIXED
+La partie autoritative suit AUTH. Les projections reconstruisibles suivent DERIVED. Le profil sépare les deux catégories.
 
-Chaque build produit un artefact immuable et traçable vers commit, pipeline, SBOM et résultats de contrôles. Une release de service n’exige pas la release simultanée d’un autre service.
+### DERIVED — règle normative
 
-## 4. Données et datastore
+`DERIVED` signifie que l’état persistant n’est jamais la seule copie d’un fait nécessaire au métier et peut être reconstruit intégralement depuis des sources gouvernées.
 
-Chaque microservice est seul propriétaire en écriture de ses agrégats. Aucun autre service ne lit directement ses tables, collections ou fichiers internes.
+#### Éligibilité
+Une frontière n’est DERIVED que si : aucun agrégat autoritatif n’y réside; aucune donnée irremplaçable n’existe uniquement localement; chaque donnée a une chaîne de sources identifiables et versionnées; suppressions, corrections, expirations et révocations sont reproductibles; une perte totale est récupérable sans ressaisie humaine de faits; la fenêtre de replay est prouvable. Toute donnée locale non reconstructible impose `MIXED` ou `AUTH`.
 
-`Database per service` signifie propriété exclusive du schéma, des migrations, des credentials et du cycle backup/restore. Plusieurs services peuvent utiliser un même cluster physique si l’isolation logique, les credentials, quotas, sauvegardes et restaurations indépendantes sont démontrés. Les services de criticité ou sensibilité élevée peuvent imposer une isolation physique par ADR.
+#### Sources de reconstruction
+Pour chaque projection, le profil liste producteurs/sources, contrat/version, partition ou identifiant source, rétention, accès replay/snapshot, règles de suppression/révocation et owner source. « événements des domaines » ne suffit pas au gate production.
 
-Les jointures interservices en base sont interdites. Les besoins transverses utilisent API, événement ou projection gouvernée.
+#### Checkpoint et watermark
+Chaque pipeline maintient un checkpoint ou watermark durable comparable à une position source : offset/partition, séquence, version d’agrégat, timestamp métier protégé contre les trous, snapshot version ou équivalent. Il permet de détecter retard, trou, replay incomplet, source jamais traitée et divergence. Un timestamp local seul est insuffisant. Le checkpoint doit survivre ou être recalculable après perte du datastore dérivé.
 
-## 5. Backup, restore et reprise
+#### Replay
+Le replay est automatisable, borné et reproductible. Il définit point de départ, ordre, parallélisme, doublons, idempotence, événements hors ordre, corrections, tombstones, révocations privacy, erreurs permanentes, quarantaine/DLQ et reprise après interruption. Un doublon ne doit pas modifier le résultat final. La rétention des sources couvre la fenêtre maximale de replay; sinon snapshot gouverné ou mécanisme équivalent obligatoire.
 
-Chaque frontière persistante définit : classification des données, fréquence de backup, type de backup, chiffrement, rétention, localisation, contrôle d’accès, RPO, RTO, procédure de restauration et fréquence de test.
+#### Reconstruction
+Trois opérations sont obligatoires : `FULL_REBUILD` depuis état vide, `PARTIAL_REBUILD` d’un sous-ensemble déterministe et `CATCH_UP` depuis checkpoint valide. Un backup local peut accélérer la reprise mais ne remplace jamais la preuve de reconstructibilité.
 
-Une sauvegarde non testée n’est pas considérée comme capacité de reprise. La restauration d’un microservice ne doit pas exiger la restauration coordonnée de tous les autres. Les incohérences post-restore sont traitées par replay, réconciliation ou reconstruction de projections documentés.
+#### États de reconstructibilité
+- `REBUILDABLE` : sources, replay et FULL_REBUILD testés et conformes
+- `REBUILD-DEGRADED` : reconstruction possible mais RTO ou fraîcheur cible non respecté
+- `REBUILD-BLOCKED` : une dépendance requise empêche la reconstruction
+- `REBUILD-UNVERIFIED` : procédure théorique non encore prouvée
 
-### 5.1 Frontières `AUTH`
+Seul `REBUILDABLE` permet `ready-for-production`.
 
-Les données autoritatives exigent une sauvegarde et une restauration indépendantes testées. Le RPO mesure la perte maximale admissible des données autoritatives et le RTO la durée maximale de reprise du service.
+#### Fraîcheur
+Chaque projection expose `FRESH`, `STALE-ACCEPTABLE`, `EXPIRED` ou `UNKNOWN`. Les seuils numériques sont propres au service et fixés par SLO/ADR. `EXPIRED` et `UNKNOWN` ne sont jamais présentés comme actuels. La fraîcheur est exposée au consommateur lorsqu’elle influence sa décision.
 
-### 5.2 Frontières `MIXED`
+#### Intégrité et convergence
+Après replay/rebuild, des contrôles déterministes vérifient selon le service : comptages, checksums, versions, cardinalités, trous, doublons, références orphelines, tombstones et comparaison avec snapshots gouvernés. La reprise se termine uniquement après convergence vérifiée.
 
-La partie autoritative suit les exigences `AUTH`. Les projections et index reconstruisibles suivent les exigences `DERIVED`. Le profil identifie explicitement les données de chaque catégorie afin qu’une restauration ne transforme jamais une projection en source de vérité.
+#### Schéma
+Tout changement incompatible prévoit rebuild complet, migration déterministe, double projection/version ou remplacement atomique. Aucun consommateur ne doit migrer simultanément par obligation technique.
 
-### 5.3 Frontières `DERIVED`
+#### RPO/RTO
+Le RPO DERIVED dépend de la fenêtre reconstructible des sources, pas de la seule sauvegarde locale. Le RTO inclut runtime, reconstruction jusqu’à état exploitable, catch-up, contrôle d’intégrité et fraîcheur minimale.
 
-Une frontière `DERIVED` ne doit pas recevoir artificiellement une obligation de sauvegarde identique à une source autoritative lorsque son état peut être reconstruit intégralement depuis des sources gouvernées.
+#### Tests
+Avant production puis selon la cadence liée à la criticité, un test contrôlé isole ou supprime l’état dérivé et exécute un FULL_REBUILD. Le rapport mesure durée, volume, positions source, fraîcheur finale, doublons, trous, événements hors ordre, suppressions/révocations, erreurs, convergence, ressources et respect du RTO. Le profil conserve date, résultat, durée, fraîcheur, versions et anomalies. Un échec place le service en `REBUILD-BLOCKED` ou `REBUILD-DEGRADED` et bloque le gate production.
 
-Son gate de reprise exige au minimum :
+#### Reclassification
+Tout fait non reconstructible, décision autoritative, état transactionnel unique ou rétention source insuffisante non compensée déclenche une ADR `DERIVED → MIXED/AUTH` et la mise à jour des exigences de reprise, sécurité et ownership.
 
-- sources autoritatives ou projections d’entrée identifiées et versionnées
-- watermark, checkpoint ou position de replay permettant de borner la reconstruction
-- procédure de reconstruction complète documentée et automatisable
-- test périodique de reconstruction complète
-- RTO de reconstruction mesuré
-- objectif de fraîcheur après reprise
-- traitement des suppressions, révocations et corrections pendant le replay
-- contrôle d’intégrité entre état reconstruit et sources
-- mode dégradé pendant la reconstruction
+## 5. BRENDOLYS Identity
 
-Le RPO d’une frontière purement `DERIVED` s’exprime par rapport à la capacité de rejouer les sources et à leur propre rétention. Si aucune donnée dérivée irremplaçable n’existe, la perte du datastore dérivé peut être acceptable jusqu’au dernier état entièrement reconstruisible. Toute donnée non reconstruisible fait perdre le statut `DERIVED` pur et impose une classification `MIXED` ou `AUTH`.
+BRENDOLYS Identity est l’IAM externe. Realms : `brendolys-internal`, `brendolys-networks`, `brendolys-customers`. Issuer OIDC : `https://sso.godinfradsby.xyz/realms/{realm}/protocol/openid-connect`. Chaque profil déclare realms, audience, clients, scopes, rôles, claims, règles tenant/organisation et comportement IAM indisponible.
 
-Pour YDIASE, cette règle s’applique notamment aux frontières actuellement classées `DERIVED`, dont Search & Discovery, Feed, Knowledge Graph, Analytics et Retrieval & Grounding. Chaque profil doit déclarer son mécanisme concret de rebuild avant production.
+## 6. Réseau et service-to-service
 
-## 6. API, événements et DNS
+Identité workload dédiée. Deny-by-default. Chaque relation déclare caller, callee, audience, scopes machine, protocole, timeout, retry et comportement de panne. Aucun datastore n’est public.
 
-Chaque frontière possède ses contrats. Une API interne ou externe doit être versionnée, authentifiée, autorisée, limitée et observable selon sa classe.
+## 7. Sécurité et observabilité
 
-Un sous-domaine n’est créé que pour une exposition réseau justifiée. L’autonomie n’impose pas 51 domaines publics. Les noms DNS internes et externes doivent rester séparés. Aucun datastore n’est exposé publiquement.
+Secrets isolés, rotation/révocation, TLS pour données non publiques, chiffrement au repos selon classification, threat model, SAST/SCA/image et tests d’autorisation. Logs, métriques, traces, correlation IDs et alertes sont requis. DERIVED expose en plus lag, watermark, freshness state, rebuild state et progression de replay.
 
-Les endpoints publics passent par les contrôles d’edge définis par l’architecture. Les communications internes ne contournent pas les politiques d’identité machine et réseau.
+## 8. Health, résilience et scaling
 
-## 7. BRENDOLYS Identity
+Liveness et readiness sont séparés. Pour DERIVED, readiness distingue runtime disponible et projection suffisamment fraîche. Timeout sur dépendances distantes, retries sûrs/idempotents, backpressure et circuit breakers selon besoin. Le rebuild/catch-up dispose d’un budget de capacité propre.
 
-BRENDOLYS Identity est l’IAM externe de référence. YDIASE ne stocke aucun mot de passe utilisateur.
+## 9. CI/CD et rollback
 
-Realms autorisés :
+Build, test, promotion et rollback indépendants. Les changements de projection DERIVED incluent un test de rebuild de la version cible.
 
-- `brendolys-internal` : employés et équipe interne
-- `brendolys-networks` : ambassadeurs et membres externes des réseaux
-- `brendolys-customers` : élèves, étudiants, professionnels, organisations clientes et utilisateurs clients
+## 10. Audit
 
-Issuer OIDC : `https://sso.godinfradsby.xyz/realms/{realm}/protocol/openid-connect`.
+Les faits sensibles sont transmis à `YD-PLT-AUD-001`. Le producteur reste responsable du fait audité.
 
-Pour chaque microservice, la fiche d’autonomie doit déclarer : realms acceptés, audience, clients autorisés, scopes, rôles, claims minimaux, règles tenant/organisation, politiques de step-up si nécessaires et comportement en indisponibilité IAM.
+## 11. Mode dégradé
 
-Un token valide n’accorde jamais automatiquement une permission métier. L’autorisation reste contrôlée par les politiques du domaine.
+Chaque profil définit fail-closed, stale borné, queue, réponse partielle ou indisponibilité contrôlée. Privacy et sécurité ne passent pas fail-open par défaut. DERIVED ne présente jamais `EXPIRED` ou `UNKNOWN` comme actuel.
 
-## 8. Service-to-service
+## 12. DR
 
-Les appels machine-to-machine utilisent une identité de workload/service dédiée. Les credentials utilisateur ne sont pas réutilisés comme secret permanent de service. Le mécanisme final de workload identity sera choisi par ADR.
+Les scénarios couvrent perte de serveur/zone, corruption, suppression, compromission, perte datastore et dépendance externe. Pour DERIVED, destruction contrôlée de l’état suivie d’un FULL_REBUILD fait partie du test DR.
 
-Chaque relation déclare : caller, callee, audience, scopes machine, protocole, timeout, retry, circuit breaker si nécessaire et comportement de panne.
+## 13. Template obligatoire
 
-## 9. Secrets et certificats
+Chaque profil contient : Boundary ID, services logiques, owners, repository, artefact, runtime, datastores, migrations, classification, reprise, dernier test, RPO/RTO/SLO/criticité, APIs/events/projections, DNS, IAM, workload identity, secrets/certificats, réseau, chiffrement, audit, observabilité, health, quotas, scaling, déploiement/rollback, dépendances/interdictions, mode dégradé, runbook, DR, rétention/suppression, decommission et ADR ouverts.
 
-Chaque frontière a un namespace logique de secrets. L’accès est least-privilege. Rotation, révocation, expiration et audit sont obligatoires. Aucun secret partagé global entre tous les microservices.
+DERIVED ajoute obligatoirement : sources et versions, rétention source, checkpoint/watermark, replay/idempotence, FULL_REBUILD/PARTIAL_REBUILD/CATCH_UP, état REBUILD-*, politique FRESH/STALE-ACCEPTABLE/EXPIRED/UNKNOWN, contrôle d’intégrité, dernier test, durée mesurée, fraîcheur obtenue et anomalies.
 
-Les certificats ont propriétaire, durée, rotation et procédure d’urgence documentés.
+## 14. Gates
 
-## 10. Réseau
+Aucun service ne passe `ready-for-production` avec un champ obligatoire inconnu sans ADR ou dérogation datée. DERIVED exige `REBUILDABLE`, FULL_REBUILD réussi, fenêtre source compatible, watermark vérifiable, replay idempotent, suppressions/révocations prouvées, intégrité réussie et seuils de fraîcheur fixés.
 
-Politique cible : deny-by-default entre workloads. Les flux autorisés dérivent de `DEPENDENCY_MAP.md` et du futur Contract Registry. Un service ne reçoit pas un accès réseau parce qu’il appartient au même cluster.
+## 15. Application
 
-Les flux vers bases, cache, broker, stockage objet, IAM, observabilité et services externes sont explicitement déclarés.
-
-## 11. Chiffrement et classification
-
-TLS est requis pour les communications transportant des données non publiques. Les données au repos suivent la classification définie par sécurité/conformité. Les données personnelles sensibles et très sensibles reçoivent des contrôles renforcés, minimisation et journalisation d’accès.
-
-## 12. Observabilité
-
-Chaque frontière produit : logs structurés, métriques techniques, métriques de service, traces distribuées lorsque pertinentes, identifiants de corrélation, événements de sécurité et alertes reliées à des SLO.
-
-Aucun log ne doit devenir une copie incontrôlée de données personnelles, tokens ou secrets.
-
-## 13. Health et readiness
-
-Chaque déploiement expose des contrôles séparant au minimum : process alive, capacité à recevoir du trafic, état des dépendances critiques et version de build. Une dépendance analytique facultative ne doit pas rendre un service transactionnel indisponible si son mode dégradé le permet.
-
-## 14. Résilience
-
-Chaque dépendance distante possède timeout. Les retries ne sont appliqués qu’aux opérations sûres/idempotentes ou protégées par clé d’idempotence. Les cascades de retries sont interdites.
-
-Le service documente ses bulkheads, limites de concurrence, files d’attente, backpressure, circuit breakers et stratégie de shedding lorsque son profil le justifie.
-
-## 15. Scaling et capacité
-
-Chaque frontière déclare son unité de scaling, ses métriques de saturation, ses limites de ressources et ses contraintes stateful/stateless. Aucun service ne doit exiger le scaling simultané de tout YDIASE.
-
-## 16. CI/CD et environnements
-
-Chaque service peut être construit, testé, promu et rollback indépendamment. Les environnements et promotions sont tracés. Les migrations incompatibles suivent une stratégie expand/migrate/contract ou équivalent documenté.
-
-Un déploiement ne peut pas supposer que tous les consommateurs migrent instantanément.
-
-## 17. Sécurité applicative
-
-Chaque frontière définit threat model proportionnel, validation d’entrée, autorisation objet/action, protections contre abus, politique de dépendances, scans SAST/SCA/image, gestion des vulnérabilités et preuves de correction.
-
-Les services sensibles incluent tests d’accès horizontal/vertical et tests de séparation tenant/organisation lorsque concernés.
-
-## 18. Audit
-
-Les faits de sécurité et actions sensibles sont transmis à `YD-PLT-AUD-001` sans abandonner les logs opérationnels locaux. Le producteur reste responsable de la qualité du fait audité. L’Audit Service ne devient pas owner du fait métier.
-
-## 19. SLO, RTO, RPO et criticité
-
-Aucune valeur universelle n’est inventée. Chaque service reçoit une classe de criticité puis des objectifs mesurables. Les valeurs sont approuvées avant passage en production. Les services dépendants ne peuvent exiger un SLO supérieur à celui que leur fournisseur déclare sans ADR de mitigation.
-
-Pour une frontière `DERIVED`, le RTO inclut explicitement le temps de reconstruction jusqu’à un état exploitable et l’objectif de fraîcheur associé. Le RPO ne doit pas être interprété comme une obligation de sauvegarder une copie reconstructible si les sources et checkpoints permettent un replay conforme.
-
-## 20. Mode dégradé
-
-Chaque fiche précise ce que le service fait lorsque IAM, broker, datastore secondaire, moteur AI, Search, Analytics, Notification ou une dépendance métier est indisponible. Les comportements possibles sont : fail-closed, fail-open explicitement autorisé, lecture stale bornée, mise en file, réponse partielle ou indisponibilité contrôlée.
-
-Les décisions de sécurité et privacy ne passent jamais en fail-open par défaut.
-
-## 21. DR et tests
-
-Le plan DR identifie perte de zone/serveur, corruption logique, suppression accidentelle, compromission, perte de datastore et indisponibilité d’une dépendance externe. Les procédures sont testées à fréquence définie selon criticité.
-
-Pour une frontière `DERIVED`, le test DR peut prendre la forme d’une destruction contrôlée de l’état dérivé suivie d’une reconstruction depuis les sources autorisées, avec mesure du temps de reprise, de la fraîcheur et de l’intégrité obtenue.
-
-## 22. Retrait
-
-Un service ne disparaît pas par suppression de son repository. Le retrait traite consommateurs, contrats, événements, données, backups, DNS, certificats, secrets, IAM clients/scopes, dashboards, alertes, jobs, files, projections et obligations de conservation.
-
-## 23. Template obligatoire par frontière
-
-Chaque `YD-MS-*` et `YD-PLT-*` reçoit une `AUTONOMY_PROFILE.md` ou section équivalente contenant :
-
-- Physical Boundary ID
-- logical services contained
-- business owner / technical owner / backup owner
-- repository
-- build artifact
-- runtime class
-- datastore(s) owned
-- migration owner
-- data classification
-- backup policy / restore or rebuild procedure / last restore or rebuild test
-- RPO / RTO / SLO / criticality
-- internal API / external API / events / projections
-- internal DNS / external DNS if any
-- accepted BRENDOLYS Identity realms
-- OIDC audience / clients / scopes / roles / claims
-- workload identity
-- secrets namespace / certificate policy
-- inbound network flows / outbound network flows
-- encryption requirements
-- audit events
-- logs / metrics / traces / dashboards / alerts
-- liveness / readiness / startup checks
-- quotas / rate limits / concurrency limits
-- scaling unit / autoscaling signals
-- deployment strategy / rollback
-- dependencies / forbidden dependencies
-- degraded modes
-- runbook / incident owner
-- DR procedure / test cadence
-- retention / deletion
-- decommission checklist
-- open ADRs
-
-Les frontières `DERIVED` ajoutent : sources de reconstruction, checkpoint/watermark, procédure de rebuild, dernier test de rebuild, durée mesurée de rebuild, freshness obtenue et contrôle d’intégrité post-rebuild.
-
-## 24. Gates
-
-Un service ne passe pas `ready-for-production` si une ligne obligatoire de son profil reste inconnue sans ADR ou dérogation datée. Les valeurs `TBD` sont permises pendant la conception mais bloquent les gates auxquels elles se rapportent.
-
-Une frontière `DERIVED` ne passe pas `ready-for-production` sans test de reconstruction réussi. Une frontière déclarée `DERIVED` qui contient une donnée irremplaçable doit être reclassée avant ce gate.
-
-## 25. Application
-
-Le standard s’applique immédiatement aux 47 microservices métier et aux 4 composants de plateforme fixés dans `MICROSERVICE_BOUNDARY_REVIEW.md`. Les trois frontières `DEFERRED` reçoivent un profil candidat minimal mais pas de ressources d’exploitation dédiées avant leur ADR d’extraction.
+Le standard s’applique aux 47 microservices métier et aux 4 composants plateforme. Les frontières différées n’obtiennent pas de ressources dédiées avant ADR d’extraction.
