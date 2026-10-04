@@ -1,15 +1,15 @@
-# YD-SVC-REC-002 — Application Service
+# YD-SVC-REC-002 — Application Service — SUPERSEDED
 
-`domain: opportunites-recrutement` · `documentation: D2` · `implementation: not-started`
+`domain: opportunites-recrutement` · `documentation: D2` · `status: SUPERSEDED` · `implementation: not-started`
 
-## Agrégats possédés
-`Application`, `ApplicationStatusHistory`, `ApplicationSubmission`, `CandidateResponse`.
+## Décision
+Cet identifiant historique est retiré avant implémentation afin de supprimer la collision sémantique entre `REC` (Recommendation) et Application.
 
-## Source autoritative
-YD-SVC-REC-002.
+## Successeur obligatoire
+`YD-SVC-APP-001 — Application Service`.
 
-## Données consommées
-OpportunityRef, candidate Identity/Profile refs, employer refs, consent/privacy.
+## Règle de compatibilité documentaire
+`YD-SVC-REC-002` ne doit plus être utilisé dans une nouvelle exigence, dépendance, API, événement ou implémentation. Il reste conservé uniquement pour la traçabilité des documents antérieurs.
 
-## Incohérences
-Le préfixe `REC` entre en collision sémantique avec Recommendation. À renommer ultérieurement en préfixe candidature (`APP`) sans réutiliser l’identifiant historique.
+## Agrégats historiques
+`Application`, `ApplicationStatusHistory`, `ApplicationSubmission`, `CandidateResponse` sont transférés à `YD-SVC-APP-001` avant toute implémentation.
