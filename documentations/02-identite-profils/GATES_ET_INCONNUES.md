@@ -12,12 +12,18 @@ Statut : `DOMAIN-REVIEW-CANDIDATE`
 | provenance/preuve | `DEFINED` | déclaration, preuve, vérification et contradiction distinguées |
 | visibilité vs privacy | `DEFINED` | responsabilités séparées |
 | cycle de vie | `DEFINED` | fermeture IAM ≠ suppression métier |
-| PRF-001 / PRF-002 physique | `ADR-REQUIRED` | revue croisée Education + Skills + Privacy puis ADR |
+| PRF-001 / PRF-002 physique | `DEFINED` | deux frontières autonomes confirmées par ADR le 2026-10-05 |
 | mineurs et représentation | `TBD-PREPROD` | Country Framework Burkina + conformité |
 | règles de rétention par catégorie | `TBD-PREPROD` | politique Privacy/Conformité |
-| méthode de fusion/séparation | `TBD-PREPROD` | seuils de preuve et procédure opérationnelle |
+| méthode de fusion/séparation de personnes | `TBD-PREPROD` | seuils de preuve et procédure opérationnelle |
 | export/portabilité | `TBD-PREPROD` | formats et périmètre après Privacy + Contracts |
 | modèle de décès/incapacité | `TBD-PREPROD` | uniquement si besoin métier/juridique validé |
+
+## Décision PRF
+
+`PRF-001` et `PRF-002` restent deux responsabilités logiques et deviennent deux frontières physiques cibles : `YD-MS-PRF-001` et `YD-MS-PRF-002`.
+
+Le gate `ADR-REQUIRED` est fermé. Toute future fusion exige un nouvel ADR.
 
 ## Inconnues acceptées
 
@@ -27,13 +33,13 @@ Statut : `DOMAIN-REVIEW-CANDIDATE`
 - mécanisme d'événement
 - format d'export final
 - fournisseur IAM futur
-- nombre physique final de microservices du domaine
+- nombre physique final de microservices du domaine après évolutions futures
 
 Ces inconnues ne bloquent pas la définition métier.
 
 ## Blocage actuel
 
-Aucun `TBD-BLOCKING` n'est ouvert pour poursuivre la documentation des domaines. La séparation physique PRF-001/PRF-002 doit toutefois être résolue avant implémentation de production du domaine.
+Aucun `TBD-BLOCKING` n'est ouvert pour poursuivre la documentation des domaines.
 
 ## Condition de validation du domaine 02
 
