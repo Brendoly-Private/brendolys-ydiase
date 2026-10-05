@@ -1,0 +1,36 @@
+apiVersion: knowledge.ydiase/v1
+kind: Microservice
+metadata:
+  id: YD-MS-EDU-004
+  name: qualification-framework
+  title: Qualification Framework
+  status: draft
+spec:
+  domain: YD-DOM-EDU
+  system: YD-SYS-EDU-CATALOG
+  logicalServices:
+    - YD-SVC-EDU-004
+  responsibility: Représentation YDIASE validée des qualifications, niveaux, cadres, équivalences et prérequis applicables.
+  lifecycle:
+    architecture: confirmed
+    implementation: not-started
+    deployment: not-deployed
+    documentation: D2
+  owns:
+    - Qualification
+    - QualificationLevel
+    - QualificationFramework
+    - EquivalenceRule
+    - PrerequisiteRule
+  consumes:
+    - country framework
+    - reference taxonomy
+    - official-source assertions
+  documentation:
+    root: documentations/13-architecture/microservices/YD-MS-EDU-004/
+    sources:
+      - documentations/13-architecture/services/YD-SVC-EDU-004/SERVICE_DEFINITION.md
+      - documentations/13-architecture/DATA_OWNERSHIP_MATRIX.md
+      - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
+  code:
+    status: not-created
