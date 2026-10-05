@@ -10,7 +10,7 @@ Revue contradictoire des fusions retenues dans `MICROSERVICE_BOUNDARY_REVIEW.md`
 
 | Fusion | Verdict | Risque principal | Gate de maintien |
 |---|---|---|---|
-| PRF-001 + PRF-002 | VALIDÉE SOUS CONTRÔLE RENFORCÉ | profil utilisateur trop large et concentration de données personnelles | séparation interne des agrégats, permissions, rétention et audit; revue obligatoire avant production Burkina |
+| PRF-001 + PRF-002 | `SUPERSEDED — SEPARATION PHYSIQUE` | cycles de vie, preuve, rétention, permissions et blast radius divergents | ADR accepté le 2026-10-05 |
 | CAR-002 + CAR-003 | VALIDÉE | divergence future entre trajectoire et transition | contrats internes distincts; extraction si modèles, équipe, charge, SLO ou données divergent |
 | ORI-001 + ORI-002 | VALIDÉE FORTE | Decision Support pourrait devenir transversal | aucune autorité indépendante; extraction si consommation hors Orientation devient structurante |
 | REC-001 + RSH-001 logical | VALIDÉE TEMPORAIRE | Academic Research Topic peut devenir un domaine produit | module, métriques et contrats internes distincts; revue avant activation académique avancée ou multi-pays |
@@ -18,21 +18,18 @@ Revue contradictoire des fusions retenues dans `MICROSERVICE_BOUNDARY_REVIEW.md`
 | INS-001 Workspace en BFF | VALIDÉE PROVISOIRE | workflow institutionnel durable probable | revue DDD obligatoire avant implémentation du workflow institutionnel |
 | ADM-001 en Admin plane | VALIDÉE | super-service privilégié | aucune autorité métier; commandes routées vers owners, contrôle d’accès renforcé et audit systématique |
 
-## PRF-001 + PRF-002 — gate renforcé
+## PRF-001 + PRF-002 — décision superseded
 
-La fusion reste acceptable parce que les deux responsabilités portent sur le même sujet utilisateur. Elle devient interdite si elle conduit à une table ou un modèle unique sans séparation des sous-domaines.
+L'ancienne fusion sous contrôle renforcé n'est plus la cible. La revue métier du domaine `02-identite-profils` a confirmé que le profil courant et l'historique éducatif/professionnel possèdent des sémantiques, temporalités, exigences de preuve, risques de confidentialité et trajectoires de rétention suffisamment distincts pour justifier deux frontières physiques.
 
-Avant `ready-for-production`, le profil physique `YD-MS-PRF-001` devra prouver :
+Décision canonique : `ADR-PRF-001-PRF-002-PHYSICAL-BOUNDARY.md`.
 
-- agrégats Profile Core et Education/Experience séparés dans le modèle
-- scopes d’accès distincts lorsque les usages le demandent
-- politiques de rétention distinctes si les finalités divergent
-- journalisation des accès sensibles
-- minimisation des projections diffusées aux consommateurs
-- interdiction de fournir le dossier complet lorsqu’un consommateur n’a besoin que d’attributs minimaux
-- stratégie d’extraction documentée si charge, sécurité, équipe, droit ou rétention divergent
+Cible :
 
-Décision : pas de séparation immédiate. `PRF-002` reste un module fusionné sous gate de production.
+- `YD-MS-PRF-001 Profile`
+- `YD-MS-PRF-002 Education & Experience Profile`
+
+La fusion ne peut revenir que par un nouvel ADR fondé sur des faits d'exploitation et compatible avec la doctrine de pérennité.
 
 ## CAR-002 + CAR-003
 
@@ -50,32 +47,13 @@ Décision : fusion maintenue. Une consommation massive par d’autres domaines d
 
 `RSH-001` reste un moteur spécialisé de recommandation tant qu’il ne possède pas d’agrégat autoritatif durable.
 
-La fusion cesse d’être valide dès qu’au moins une responsabilité suivante apparaît :
-
-- catalogue autoritatif de sujets de recherche
-- soumission ou validation de sujets
-- gestion d’encadrants
-- gestion de mémoires, thèses ou soutenances
-- workflow académique de validation
-- marketplace ou mise en relation de recherche
-- règles de propriété intellectuelle propres au domaine recherche
-
-Dans ce cas, une nouvelle frontière `Research` devra être étudiée avant implémentation.
+La fusion cesse d’être valide dès qu’au moins une responsabilité suivante apparaît : catalogue autoritatif de sujets de recherche, soumission ou validation de sujets, gestion d’encadrants, gestion de mémoires/thèses/soutenances, workflow académique de validation, marketplace de recherche ou règles de propriété intellectuelle propres au domaine recherche.
 
 Décision : fusion temporaire maintenue.
 
 ## INS-001 — décision avant développement
 
-`INS-001` reste aujourd’hui une façade logique. Le risque est élevé qu’une institution ait demain un workflow durable : revendication d’établissement, vérification, soumission de programme, correction, validation, délégation, publication et historique.
-
-Règle : aucun de ces états ne doit être stocké dans le BFF.
-
-Avant implémentation d’un workflow institutionnel, une revue DDD tranche entre :
-
-1. workflow détenu par les owners EDU lorsque l’état appartient directement à leurs agrégats
-2. microservice dédié `Institution Workflow` si le processus possède cycle de vie, invariants, permissions et audit propres
-
-Décision : BFF maintenu uniquement comme façade. L’apparition d’un workflow durable bloque son implémentation dans le BFF jusqu’à décision DDD.
+`INS-001` reste aujourd’hui une façade logique. Aucun état métier durable ne doit être stocké dans le BFF. Avant implémentation d’un workflow institutionnel, une revue DDD tranche entre ownership EDU et frontière dédiée.
 
 ## EMP-003 et ADM-001
 
@@ -85,7 +63,7 @@ Ces composants ne possèdent aucun état métier autoritatif. Les écritures pas
 
 | Élément | Revue obligatoire | Signal d’alerte |
 |---|---|---|
-| PRF-002 | avant production Burkina puis à chaque changement majeur de privacy | rétention, permissions, équipe ou scaling distincts |
+| PRF-001 / PRF-002 | uniquement si une future proposition veut les refusionner | nouvel ADR obligatoire |
 | RSH-001 | avant fonctions académiques avancées et avant multi-pays | apparition d’un agrégat Research autoritatif |
 | INS-001 | avant tout workflow institutionnel durable | états/invariants propres au processus institutionnel |
 | CAR-003 | avant modèles spécialisés de reconversion | dataset/modèle/SLO distinct |
@@ -93,4 +71,4 @@ Ces composants ne possèdent aucun état métier autoritatif. Les écritures pas
 
 ## Conclusion
 
-Aucune fusion actuelle n’impose une séparation immédiate. Trois gates deviennent normatifs : `PRF-002` avant production Burkina, `RSH-001` avant extension du domaine recherche et `INS-001` avant tout workflow institutionnel durable. Ces décisions devront être reflétées dans les futurs `AUTONOMY_PROFILE.md`, ADR et contrats.
+La fusion PRF est annulée comme cible. Les autres décisions restent sous leurs gates respectifs. Le comptage et les profils d'autonomie doivent être réconciliés avec la nouvelle frontière PRF-002.
