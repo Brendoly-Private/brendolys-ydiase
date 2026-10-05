@@ -1,12 +1,37 @@
 # YD-REQ-XXXX — Titre
 
-## Énoncé
+Statut : `DRAFT`
+Version : `0.1.0`
+Owner : `TBD-PREPROD`
 
-## Origine et capacité
+## Énoncé normatif
 
-## Règles métier et critères de vérification
+## Origine
 
-## Phase, maturité et couverture
+## Domaine et capacité
 
-## Statut et responsable
+## Justification
 
+## Règles métier liées
+
+## Données concernées
+
+## Acteurs et systèmes concernés
+
+## Critères d'acceptation
+
+## Méthode de vérification
+
+## Phase, pays et maturité
+
+## Sécurité, privacy et conformité
+
+## Dépendances
+
+## Exceptions
+
+## Impacts en cas de changement
+
+## Décisions liées
+
+## Statut, responsable et revue
