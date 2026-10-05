@@ -1,0 +1,39 @@
+apiVersion: knowledge.ydiase/v1
+kind: RequirementCatalog
+metadata:
+  id: YD-REQCAT-EDU-001
+  name: education-requirements
+  status: draft
+spec:
+  requirements:
+    - id: YD-REQ-EDU-001
+      statement: Chaque Institution et Campus publié possède une identité stable, un statut, une version et une provenance vérifiable.
+      owner: YD-MS-EDU-001
+      verifies: [Institution, Campus]
+    - id: YD-REQ-EDU-002
+      statement: Un ProgramOffering ne peut être créé sur une InstitutionRef ou CampusRef non validée par EDU-001.
+      owner: YD-MS-EDU-002
+      dependsOn: [YD-API-EDU-001]
+    - id: YD-REQ-EDU-003
+      statement: Un Curriculum peut exister en brouillon mais ne peut être publié sans ProgramRef valide et versionnée.
+      owner: YD-MS-EDU-003
+      dependsOn: [YD-API-EDU-002]
+    - id: YD-REQ-EDU-004
+      statement: EDU-002 ne possède ni ne modifie Curriculum; il consomme uniquement une référence publiée et versionnée.
+      owner: YD-MS-EDU-002
+      dependsOn: [YD-EVT-EDU-003]
+    - id: YD-REQ-EDU-005
+      statement: Les qualifications et équivalences YDIASE sont possédées par EDU-004 et restent rattachées aux sources officielles applicables.
+      owner: YD-MS-EDU-004
+      dependsOn: [YD-EVT-EDU-005]
+    - id: YD-REQ-EDU-006
+      statement: Toute modification autoritative Education publie un événement versionné lorsque des consommateurs externes dépendent de ce changement.
+      owner: YD-DOM-EDU
+      dependsOn: [YD-EVTCAT-EDU-001]
+    - id: YD-REQ-EDU-007
+      statement: Aucune transaction distribuée ne traverse EDU-001, EDU-002, EDU-003 ou EDU-004.
+      owner: YD-DOM-EDU
+    - id: YD-REQ-EDU-008
+      statement: Une donnée Education exploitée conserve provenance, qualité, validité, droits d'usage et version selon les capacités Data YDIASE.
+      owner: YD-DOM-EDU
+      externalDependencies: [DAT-003, DAT-004]
