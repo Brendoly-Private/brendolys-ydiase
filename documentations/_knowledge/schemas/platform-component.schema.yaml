@@ -1,0 +1,30 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/platform-component.schema.yaml
+title: YDIASE Platform Component
+allOf:
+  - $ref: ./common.schema.yaml
+  - type: object
+    properties:
+      kind:
+        const: PlatformComponent
+      spec:
+        type: object
+        required: [responsibility]
+        properties:
+          system:
+            type: string
+            pattern: '^YD-SYS-'
+          responsibility:
+            type: string
+          consumers:
+            type: array
+            items: {type: string}
+          dependencies:
+            type: array
+            items: {type: string}
+          lifecycle:
+            type: object
+          authoritativeDocuments:
+            type: array
+            items: {type: string}
+    required: [kind, spec]
