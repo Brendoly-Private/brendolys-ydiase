@@ -1,0 +1,32 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/data.schema.yaml
+title: YDIASE Data Knowledge Entity
+allOf:
+  - $ref: ./common.schema.yaml
+  - type: object
+    properties:
+      kind:
+        enum: [DataDomain, Aggregate, Entity, DataProduct, Dataset, Taxonomy, DataSource, Schema]
+      spec:
+        type: object
+        required: [definition]
+        properties:
+          definition: {type: string}
+          domain: {type: string}
+          authoritativeOwner: {type: string}
+          sourceOfTruth: {type: string}
+          consumers:
+            type: array
+            items: {type: string}
+          provenance:
+            type: array
+            items: {type: string}
+          classification: {type: string}
+          retention: {type: string}
+          countries:
+            type: array
+            items: {type: string}
+          schemas:
+            type: array
+            items: {type: string}
+    required: [kind, spec]
