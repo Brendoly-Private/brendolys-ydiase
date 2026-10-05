@@ -1,0 +1,22 @@
+apiVersion: knowledge.ydiase/v1
+kind: System
+metadata:
+  id: YD-SYS-EDU-CATALOG
+  name: education-catalog
+  title: Education Catalog System
+  status: draft
+spec:
+  domain: YD-DOM-EDU
+  mission: Fournir la représentation autoritative YDIASE des institutions, programmes, curricula et qualifications tout en conservant leurs frontières physiques distinctes.
+  components:
+    - YD-MS-EDU-001
+    - YD-MS-EDU-002
+    - YD-MS-EDU-003
+    - YD-MS-EDU-004
+  authoritativeDocuments:
+    - documentations/03-education-institutions/README.md
+    - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
+    - documentations/13-architecture/DATA_OWNERSHIP_MATRIX.md
+  notes:
+    - Le System est une abstraction de compréhension et ne fusionne pas les quatre frontières physiques.
+    - Son adoption définitive dépend de la validation K2.
