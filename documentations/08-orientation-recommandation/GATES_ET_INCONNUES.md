@@ -18,6 +18,8 @@ Statut : `DOMAIN-REVIEW-CANDIDATE`
 | Privacy/rétention | TBD-BEFORE-ACTIVE | TBD-BEFORE-ACTIVE | TBD-BEFORE-ACTIVE |
 | IAM/IDOR | TBD-PREPROD | TBD-PREPROD | TBD-PREPROD |
 | BIA/RPO/RTO/restore | TBD-C1 | TBD-C1 | TBD-C1 |
+| biais/équité | N/A | N/A | **METRICS-DEFINED / THRESHOLDS-PENDING** |
+| anti-influence sponsoring | N/A | N/A | **TEST-SUITE-DEFINED / EXECUTION-PENDING** |
 
 ## Prochaine fermeture sémantique
 
@@ -27,4 +29,4 @@ ORI-001 doit définir le cycle du dossier, critères/contraintes, comparaison, d
 
 REC-001 dispose désormais de `../13-architecture/microservices/YD-MS-REC-001/RECOMMENDATION_RANKING_POLICY.md` : pipeline eligibility/scoring/ranking/presentation, evidence snapshot, abstention, explicabilité, incertitude, principes d'équité et séparation absolue du sponsoring sont définis. Les coefficients, métriques d'équité et preuves préproduction restent à valider.
 
-Statut : `DOMAIN-BASELINE-CANDIDATE / REC-RANKING-SEMANTICS-DEFINED`.
+Statut : `DOMAIN-BASELINE-CANDIDATE / REC-RANKING-FAIRNESS-SPONSOR-GUARDS-DEFINED`.
