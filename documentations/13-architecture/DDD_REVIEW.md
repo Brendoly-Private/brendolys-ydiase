@@ -27,7 +27,7 @@ Cette revue évalue les 61 services logiques candidats de `SERVICE_MAP.md`. Elle
 | SKL-001 | KEEP-SEPARATE |
 | SKL-002 | KEEP-SEPARATE |
 | CAR-001 | KEEP-SEPARATE |
-| CAR-002 | KEEP-LOGICAL |
+| CAR-002 | KEEP-SEPARATE — reconciled to physical boundary |
 | CAR-003 | KEEP-LOGICAL |
 | ASM-001 | KEEP-SEPARATE |
 | ORI-001 | KEEP-SEPARATE |
@@ -39,14 +39,14 @@ Cette revue évalue les 61 services logiques candidats de `SERVICE_MAP.md`. Elle
 | LAB-002 | KEEP-SEPARATE |
 | LAB-003 | KEEP-SEPARATE-FUTURE |
 | OPP-001 | KEEP-SEPARATE |
-| OPP-002 | KEEP-LOGICAL |
-| REC-002 | KEEP-SEPARATE |
+| OPP-002 | KEEP-SEPARATE — reconciled to physical boundary |
+| REC-002 | SUPERSEDED → APP-001 |
 | EMP-001 | KEEP-SEPARATE |
 | EMP-002 | KEEP-SEPARATE |
 | CNT-001 | KEEP-SEPARATE |
 | CNT-002 | KEEP-SEPARATE |
 | COM-001 | KEEP-SEPARATE |
-| LRN-001 | KEEP-LOGICAL |
+| LRN-001 | KEEP-SEPARATE — reconciled to physical boundary |
 | RSH-001 | MERGE-CANDIDATE → REC-001 |
 | NTF-001 | KEEP-SEPARATE |
 | PRT-001 | KEEP-SEPARATE |
@@ -63,8 +63,8 @@ Cette revue évalue les 61 services logiques candidats de `SERVICE_MAP.md`. Elle
 | ANL-002 | KEEP-PRODUCT-BOUNDARY |
 | ANL-003 | KEEP-PRODUCT-BOUNDARY |
 | AI-001 | KEEP-SEPARATE |
-| AI-002 | KEEP-LOGICAL |
-| AI-003 | MERGE-CANDIDATE → AI-001 au pilote |
+| AI-002 | KEEP-SEPARATE — reconciled to physical boundary |
+| AI-003 | KEEP-SEPARATE — reconciled to physical boundary |
 | AI-004 | KEEP-FUTURE |
 | BIL-001 | KEEP-SEPARATE |
 | BIL-002 | KEEP-SEPARATE |
@@ -96,3 +96,11 @@ Cette revue reste une revue des services logiques. Le comptage physique canoniqu
 5. Les services BFF et plans d’administration n’entrent pas automatiquement dans le comptage des microservices métier.
 6. Les produits Analytics et Intelligence peuvent partager des moteurs internes tout en gardant leurs contrats et droits propres.
 7. Le pilote Burkina active uniquement le sous-ensemble nécessaire sans supprimer les frontières de la cible panafricaine.
+
+## Réconciliation transversale 2026-10
+
+La revue transversale des 48 microservices confirme que `MICROSERVICE_BOUNDARY_REVIEW.md` est canonique pour la frontière physique. Les anciennes décisions exploratoires DDD ont été réconciliées pour CAR-002, OPP-002, LRN-001, AI-002, AI-003 et REC-002.
+
+Deux points restent volontairement non tranchés ici :
+- INS-001 : conflit entre LOGICAL_ONLY/BFF sans agrégat et ownership de workflow durable ; ADR requis avant implémentation.
+- AI-004 : frontière DEFERRED ; les cartes qui la montrent dans le flux IA décrivent une topologie future et doivent être séparées de la topologie active avant implémentation.
