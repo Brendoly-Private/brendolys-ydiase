@@ -1,6 +1,6 @@
 # Architecture — BRENDOLYS YDIASE
 
-Ce dossier sépare désormais explicitement architecture logique, frontières physiques, contrats et exploitation. Les ADR gouvernent les choix technologiques.
+Ce dossier sépare explicitement architecture logique, frontières physiques, contrats et exploitation. Les ADR gouvernent les choix technologiques et les changements de frontière.
 
 ## Ordre de lecture architecture
 
@@ -12,15 +12,20 @@ Ce dossier sépare désormais explicitement architecture logique, frontières ph
 6. `EVENT_MAP.md`
 7. `MICROSERVICE_BOUNDARY_REVIEW.md` — passage service logique → frontière physique
 8. `SENSITIVE_MERGER_REVIEW.md`
-9. `MICROSERVICE_AUTONOMY_STANDARD.md`
-10. futur `CONTRACT_REGISTRY.md`
+9. `ADR-PRF-001-PRF-002-PHYSICAL-BOUNDARY.md` — séparation physique Profile/History
+10. `MICROSERVICE_AUTONOMY_STANDARD.md`
+11. `AUTONOMY_PROFILE_REGISTER.md`
+12. `AUTONOMY_CLOSURE_MATRIX.md`
+13. futur `CONTRACT_REGISTRY.md`
 
 ## Couches documentaires
 
 - `services/` : fiches des services logiques DDD. Elles restent valides même lorsqu’un service est fusionné physiquement.
-- `microservices/` : profils des 47 frontières métier physiques `YD-MS-*`.
-- `platform-components/` : profils des composants autonomes `YD-PLT-*`.
+- `microservices/` : profils des 48 frontières métier physiques `YD-MS-*`.
+- `platform-components/` : profils des 4 composants autonomes `YD-PLT-*`.
 - BRENDOLYS Identity : dépendance IAM externe, non possédée par YDIASE.
+
+Cible autonome actuelle : **52 frontières = 48 microservices métier + 4 composants plateforme**.
 
 ## Règle
 
