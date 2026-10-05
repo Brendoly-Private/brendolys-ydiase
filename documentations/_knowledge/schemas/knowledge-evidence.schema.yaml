@@ -1,0 +1,25 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/knowledge-evidence.schema.yaml
+title: YDIASE Knowledge Evidence
+$type: object
+type: object
+properties:
+  knowledgeMaturity:
+    enum: [K0, K1, K2, K3, K4, K5, K6]
+  knowledgeEvidence:
+    type: object
+    additionalProperties:
+      oneOf:
+        - enum: [PASS, FAIL, N/A, UNKNOWN]
+        - type: object
+          required: [state]
+          properties:
+            state: {enum: [PASS, FAIL, N/A, UNKNOWN]}
+            evidence:
+              type: array
+              items: {type: string}
+            justification: {type: string}
+            checkedAt: {type: string}
+            confidence: {enum: [E0, E1, E2, E3, E4]}
+          additionalProperties: false
+additionalProperties: true
