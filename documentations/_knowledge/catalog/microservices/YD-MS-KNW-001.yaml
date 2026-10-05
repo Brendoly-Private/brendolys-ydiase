@@ -21,9 +21,12 @@ spec:
       - documentations/13-architecture/microservices/YD-MS-KNW-001/PHASE_CLOSURE.md
       - documentations/13-architecture/microservices/YD-MS-KNW-001/AUTONOMY_PROFILE.md
       - documentations/13-architecture/microservices/YD-MS-KNW-001/KNOWLEDGE_GRAPH_PROJECTION_POLICY.md
+      - documentations/13-architecture/microservices/YD-MS-KNW-001/KNW_TO_SEARCH_PROJECTION_CONTRACT.md
+      - documentations/13-architecture/microservices/YD-MS-KNW-001/K3_CONTRACT_BASELINE.md
+      - documentations/13-architecture/microservices/YD-MS-KNW-001/ADR-KNW-001-DERIVED-KNOWLEDGE-GRAPH.md
       - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
       - documentations/13-architecture/DERIVED_RECOVERY_REGISTER.md
-  knowledgeMaturity: K2
+  knowledgeMaturity: K3
   knowledgeEvidence:
     stableId: PASS
     kind: PASS
@@ -38,7 +41,18 @@ spec:
     upstreamDownstream: {state: PASS, evidence: spec.consumesEvents + education-cross-domain.relations.yaml}
     authoritativeOwnership: {state: PASS, evidence: PHASE_CLOSURE.md confirme aucune vérité métier primaire}
     impactTraceability: {state: PASS, evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md}
-    apiOrEventContractsWhenApplicable: UNKNOWN
-    dataContracts: UNKNOWN
-    requirements: UNKNOWN
-    adrForStructuralDecisions: UNKNOWN
+    apiOrEventContractsWhenApplicable: {state: PASS, evidence: K3_CONTRACT_BASELINE.md + KNW_TO_SEARCH_PROJECTION_CONTRACT.md}
+    dataContracts: {state: PASS, evidence: K3_CONTRACT_BASELINE.md §3 + KNOWLEDGE_GRAPH_PROJECTION_POLICY.md §2-4}
+    invariants: {state: PASS, evidence: K3_CONTRACT_BASELINE.md §4 + PHASE_CLOSURE.md}
+    requirements: {state: PASS, evidence: K3_CONTRACT_BASELINE.md §5 KNW-REQ-001..010}
+    adrForStructuralDecisions: {state: PASS, evidence: ADR-KNW-001-DERIVED-KNOWLEDGE-GRAPH.md}
+    versioningRules: {state: PASS, evidence: K3_CONTRACT_BASELINE.md §6}
+    compatibilityRules: {state: PASS, evidence: K3_CONTRACT_BASELINE.md §7}
+    dataClassification: UNKNOWN
+    securityControls: UNKNOWN
+    privacyAndRetentionWhenApplicable: UNKNOWN
+    sloOrCriticality: {state: PARTIAL, evidence: C2 connue, RTO/SLO encore TBD-PREPROD}
+    observability: UNKNOWN
+    backupRecoveryWhenStateful: {state: PARTIAL, evidence: rebuild semantics définies, preuves et paramètres opérationnels absents}
+    runbookOrOperationalProcedure: UNKNOWN
+    namedOwners: UNKNOWN
