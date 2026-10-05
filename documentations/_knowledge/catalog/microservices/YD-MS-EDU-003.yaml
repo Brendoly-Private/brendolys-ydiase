@@ -34,3 +34,28 @@ spec:
       - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
   code:
     status: not-created
+  knowledgeMaturity: K1
+  knowledgeEvidence:
+    stableId: PASS
+    kind: PASS
+    name: PASS
+    responsibilityOrPurpose: PASS
+    ownerOrAuthority:
+      state: PASS
+      evidence: spec.responsibility + spec.owns
+    domainOrScope:
+      state: PASS
+      evidence: YD-DOM-EDU / YD-SYS-EDU-CATALOG
+    boundaries:
+      state: PASS
+      evidence: documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
+    sourceDocuments:
+      state: PASS
+      evidence: spec.documentation.sources
+    logicalRelations: UNKNOWN
+    dependencies: UNKNOWN
+    upstreamDownstream: UNKNOWN
+    authoritativeOwnership:
+      state: PASS
+      evidence: documentations/13-architecture/DATA_OWNERSHIP_MATRIX.md
+    impactTraceability: UNKNOWN
