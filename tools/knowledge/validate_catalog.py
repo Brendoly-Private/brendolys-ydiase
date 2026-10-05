@@ -1,227 +1,130 @@
 #!/usr/bin/env python3
-"""Validate the YDIASE machine-readable knowledge catalog.
-
-K2 compiler gate. Structural, semantic and JSON Schema checks are separated so
-migration debt remains visible without being confused with contract failures.
-"""
+"""Validate the YDIASE machine-readable knowledge catalog."""
 from __future__ import annotations
-
-import argparse
-import json
-import re
-import sys
+import argparse, json, re, sys
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
-
 import yaml
 from jsonschema import Draft202012Validator, RefResolver
 
 ID_RE = re.compile(r"^YD-[A-Z0-9-]+$")
-PREFIX_BY_KIND = {
-    "Domain": "YD-DOM-", "System": "YD-SYS-", "Microservice": "YD-MS-",
-    "API": "YD-API-", "Event": "YD-EVT-", "ADR": "YD-ADR-",
-    "Requirement": "YD-REQ-", "RelationSet": "YD-RELSET-",
-    "EventCatalog": "YD-EVTCAT-", "RequirementCatalog": "YD-REQCAT-",
-}
-SCHEMA_BY_KIND = {
-    "Domain": "domain.schema.yaml",
-    "System": "system.schema.yaml",
-    "Microservice": "microservice.schema.yaml",
-    "API": "api.schema.yaml",
-    "Event": "event.schema.yaml",
-}
-REFERENCE_KEYS = {
-    "domain", "system", "producer", "publisher", "provider", "owner", "authority",
-    "contract", "from", "to", "logicalServices", "consumers", "consumesFrom",
-    "consumesEvents", "subscribesTo", "publishes", "verifiedBy", "affectedComponents",
-    "affectedEntities", "systems", "capabilities", "dependsOn", "supersedes", "supersededBy",
-}
-AUTHORITIES = {"AUTH", "MIXED", "DERIVED"}
+PREFIX_BY_KIND = {"Domain":"YD-DOM-","System":"YD-SYS-","Microservice":"YD-MS-","API":"YD-API-","Event":"YD-EVT-","ADR":"YD-ADR-","Requirement":"YD-REQ-","RelationSet":"YD-RELSET-","EventCatalog":"YD-EVTCAT-","RequirementCatalog":"YD-REQCAT-"}
+SCHEMA_BY_KIND = {"Domain":"domain.schema.yaml","System":"system.schema.yaml","Microservice":"microservice.schema.yaml","API":"api.schema.yaml","Event":"event.schema.yaml","ADR":"decision.schema.yaml"}
+REFERENCE_KEYS = {"domain","system","producer","publisher","provider","owner","authority","contract","from","to","logicalServices","consumers","consumesFrom","consumesEvents","subscribesTo","publishes","verifiedBy","affectedComponents","affectedEntities","affects","systems","capabilities","dependsOn","supersedes","supersededBy"}
+AUTHORITIES={"AUTH","MIXED","DERIVED"}
 
+def load_yaml(path:Path)->Any:
+    with path.open("r",encoding="utf-8") as h:return yaml.safe_load(h)
 
-def load_yaml(path: Path) -> Any:
-    with path.open("r", encoding="utf-8") as handle:
-        return yaml.safe_load(handle)
+def iter_entities(document:Any):
+    if not isinstance(document,dict):return
+    md=document.get("metadata")
+    if isinstance(md,dict) and isinstance(md.get("id"),str):yield md["id"],document.get("kind"),document,True
+    spec=document.get("spec",{})
+    if document.get("kind")=="EventCatalog":
+        for item in spec.get("events",[]):
+            if isinstance(item,dict) and isinstance(item.get("id"),str):yield item["id"],"Event",item,False
+    if document.get("kind")=="RequirementCatalog":
+        for item in spec.get("requirements",[]):
+            if isinstance(item,dict) and isinstance(item.get("id"),str):yield item["id"],"Requirement",item,False
 
+def collect_references(value:Any,refs:list,path:Path,key:str|None=None)->None:
+    if isinstance(value,dict):
+        for k,v in value.items():collect_references(v,refs,path,k)
+    elif isinstance(value,list):
+        for v in value:collect_references(v,refs,path,key)
+    elif key in REFERENCE_KEYS and isinstance(value,str) and ID_RE.match(value):refs.append((key or "",value,path))
 
-def iter_entities(document: Any):
-    if not isinstance(document, dict):
-        return
-    metadata = document.get("metadata")
-    if isinstance(metadata, dict) and isinstance(metadata.get("id"), str):
-        yield metadata["id"], document.get("kind"), document, True
-    spec = document.get("spec", {})
-    if document.get("kind") == "EventCatalog":
-        for item in spec.get("events", []):
-            if isinstance(item, dict) and isinstance(item.get("id"), str):
-                yield item["id"], "Event", item, False
-    if document.get("kind") == "RequirementCatalog":
-        for item in spec.get("requirements", []):
-            if isinstance(item, dict) and isinstance(item.get("id"), str):
-                yield item["id"], "Requirement", item, False
+def normalize_event(entity):
+    spec=entity.get("spec") if isinstance(entity.get("spec"),dict) else entity
+    return spec.get("producer") or spec.get("publisher"),[v for v in (spec.get("consumers") or spec.get("subscribers") or []) if isinstance(v,str)]
 
+def schema_errors_for(path,document,schema_dir):
+    if not isinstance(document,dict):return []
+    name=SCHEMA_BY_KIND.get(document.get("kind"))
+    if not name:return []
+    sp=schema_dir/name
+    if not sp.exists():return [f"{path}: schema missing for kind {document.get('kind')}: {sp}"]
+    schema=load_yaml(sp);resolver=RefResolver(base_uri=sp.resolve().as_uri(),referrer=schema);validator=Draft202012Validator(schema,resolver=resolver)
+    out=[]
+    for e in sorted(validator.iter_errors(document),key=lambda x:list(x.absolute_path)):
+        loc=".".join(str(v) for v in e.absolute_path) or "$";out.append(f"{path}: {loc}: {e.message}")
+    return out
 
-def collect_references(value: Any, refs: list[tuple[str, str, Path]], path: Path, key: str | None = None) -> None:
-    if isinstance(value, dict):
-        for child_key, child in value.items():
-            collect_references(child, refs, path, child_key)
-    elif isinstance(value, list):
-        for child in value:
-            collect_references(child, refs, path, key)
-    elif key in REFERENCE_KEYS and isinstance(value, str) and ID_RE.match(value):
-        refs.append((key or "", value, path))
-
-
-def normalize_event(entity: dict[str, Any]) -> tuple[str | None, list[str]]:
-    spec = entity.get("spec") if isinstance(entity.get("spec"), dict) else entity
-    producer = spec.get("producer") or spec.get("publisher")
-    consumers = spec.get("consumers") or spec.get("subscribers") or []
-    return producer, [v for v in consumers if isinstance(v, str)]
-
-
-def schema_errors_for(path: Path, document: Any, schema_dir: Path) -> list[str]:
-    """Validate only top-level catalog objects. Embedded catalog rows have their own catalog contract."""
-    if not isinstance(document, dict):
-        return []
-    kind = document.get("kind")
-    schema_name = SCHEMA_BY_KIND.get(kind)
-    if not schema_name:
-        return []
-    schema_path = schema_dir / schema_name
-    if not schema_path.exists():
-        return [f"{path}: schema missing for kind {kind}: {schema_path}"]
-    schema = load_yaml(schema_path)
-    resolver = RefResolver(base_uri=schema_path.resolve().as_uri(), referrer=schema)
-    validator = Draft202012Validator(schema, resolver=resolver)
-    errors = []
-    for error in sorted(validator.iter_errors(document), key=lambda e: list(e.absolute_path)):
-        location = ".".join(str(v) for v in error.absolute_path) or "$"
-        errors.append(f"{path}: {location}: {error.message}")
+def maturity_errors_for(entity_id:str,entity:dict,path:Path)->list[str]:
+    if entity.get("kind")!="Microservice":return []
+    spec=entity.get("spec",{}) if isinstance(entity.get("spec"),dict) else {};lc=spec.get("lifecycle",{}) if isinstance(spec.get("lifecycle"),dict) else {}
+    architecture=lc.get("architecture");implementation=lc.get("implementation");deployment=lc.get("deployment");errors=[]
+    def need(field,condition=True):
+        if condition and not spec.get(field):errors.append(f"{path}: {entity_id} maturity requires spec.{field}")
+    if architecture in {"under-review","confirmed","superseded"}:
+        need("domain");need("system");need("logicalServices");need("responsibility")
+    if architecture=="confirmed":
+        need("owns")
+        if not spec.get("documentation",{}).get("root"):errors.append(f"{path}: {entity_id} confirmed architecture requires documentation.root")
+    if implementation in {"planned","in-progress","implemented"}:
+        if architecture!="confirmed":errors.append(f"{path}: {entity_id} implementation {implementation} requires architecture confirmed")
+        need("domain");need("system")
+    if deployment in {"development","staging","production"} and implementation not in {"in-progress","implemented"}:
+        errors.append(f"{path}: {entity_id} deployment {deployment} requires implementation in-progress or implemented")
+    if deployment=="production":
+        if implementation!="implemented":errors.append(f"{path}: {entity_id} production requires implementation implemented")
+        code=spec.get("code",{}) if isinstance(spec.get("code"),dict) else {}
+        if code.get("status")!="present":errors.append(f"{path}: {entity_id} production requires code.status present")
+        need("domain");need("system");need("logicalServices");need("owns")
     return errors
 
-
-def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("root", nargs="?", default="documentations/_knowledge")
-    parser.add_argument("--strict", action="store_true", help="fail on unresolved migration references")
-    parser.add_argument("--json", dest="json_path", help="write a machine-readable report")
-    parser.add_argument("--no-schema", action="store_true", help="disable JSON Schema checks")
-    args = parser.parse_args()
-
-    root = Path(args.root)
-    schema_dir = root / "schemas"
-    yaml_files = sorted(root.rglob("*.yaml"))
-    catalog_files = [p for p in yaml_files if "schemas" not in p.parts and "ontology" not in p.parts]
-    documents: list[tuple[Path, Any]] = []
-    parse_errors: list[str] = []
-    schema_errors: list[str] = []
-    ids: dict[str, tuple[str | None, Path, dict[str, Any]]] = {}
-    duplicates: list[str] = []
-    prefix_errors: list[str] = []
-    refs: list[tuple[str, str, Path]] = []
-
+def main()->int:
+    p=argparse.ArgumentParser();p.add_argument("root",nargs="?",default="documentations/_knowledge");p.add_argument("--strict",action="store_true");p.add_argument("--json",dest="json_path");p.add_argument("--no-schema",action="store_true");p.add_argument("--no-maturity",action="store_true");args=p.parse_args()
+    root=Path(args.root);schema_dir=root/"schemas";yaml_files=sorted(root.rglob("*.yaml"));catalog_files=[x for x in yaml_files if "schemas" not in x.parts and "ontology" not in x.parts]
+    documents=[];parse_errors=[];schema_errors=[];ids={};duplicates=[];prefix_errors=[];refs=[]
     for path in yaml_files:
-        try:
-            document = load_yaml(path)
-            documents.append((path, document))
-        except Exception as exc:
-            parse_errors.append(f"{path}: {exc}")
-            continue
+        try:doc=load_yaml(path);documents.append((path,doc))
+        except Exception as exc:parse_errors.append(f"{path}: {exc}");continue
         if not args.no_schema and path in catalog_files:
-            try:
-                schema_errors.extend(schema_errors_for(path, document, schema_dir))
-            except Exception as exc:
-                schema_errors.append(f"{path}: schema validation infrastructure error: {exc}")
-        for entity_id, kind, entity, _top_level in iter_entities(document):
-            if not ID_RE.match(entity_id):
-                prefix_errors.append(f"{path}: invalid YD id {entity_id}")
-                continue
-            if entity_id in ids:
-                duplicates.append(f"{entity_id}: {ids[entity_id][1]} <> {path}")
-            else:
-                ids[entity_id] = (kind, path, entity)
-            expected = PREFIX_BY_KIND.get(kind or "")
-            if expected and not entity_id.startswith(expected):
-                prefix_errors.append(f"{path}: {entity_id} must start with {expected}")
-        collect_references(document, refs, path)
-
-    relation_doc = load_yaml(root / "ontology" / "RELATION_TYPES.yaml") or {}
-    allowed_relations = {item.get("id") for item in relation_doc.get("spec", {}).get("relations", []) if isinstance(item, dict) and item.get("id")}
-    invalid_relations: list[str] = []
-    relation_edges: list[tuple[str, str, str, Path]] = []
-    for path, document in documents:
-        if not isinstance(document, dict) or document.get("kind") != "RelationSet":
-            continue
-        for relation in document.get("spec", {}).get("relations", []):
-            if not isinstance(relation, dict):
-                continue
-            source, relation_type, target = relation.get("from"), relation.get("type"), relation.get("to")
-            if relation_type and relation_type not in allowed_relations:
-                invalid_relations.append(f"{path}: {relation_type}")
-            if source and relation_type and target:
-                relation_edges.append((source, relation_type, target, path))
-
-    unresolved = sorted({(key, ref, str(path)) for key, ref, path in refs if ref not in ids})
-    ownership: dict[str, list[str]] = defaultdict(list)
-    authority_errors: list[str] = []
-    for entity_id, (kind, path, entity) in ids.items():
-        if kind != "Microservice":
-            continue
-        spec = entity.get("spec", {}) if isinstance(entity.get("spec"), dict) else {}
-        authority = spec.get("authority")
-        if authority is not None and authority not in AUTHORITIES:
-            authority_errors.append(f"{path}: invalid authority {authority}")
-        for aggregate in spec.get("owns", []) or []:
-            if isinstance(aggregate, str):
-                ownership[aggregate].append(entity_id)
-    ownership_conflicts = [f"{aggregate}: {', '.join(sorted(owners))}" for aggregate, owners in sorted(ownership.items()) if len(set(owners)) > 1]
-
-    event_errors: list[str] = []
-    relations = {(a, b, c) for a, b, c, _ in relation_edges}
-    for event_id, (kind, path, entity) in ids.items():
-        if kind != "Event":
-            continue
-        producer, consumers = normalize_event(entity)
-        if not producer:
-            event_errors.append(f"{event_id}: no producer")
-        elif producer in ids and ids[producer][0] != "Microservice":
-            event_errors.append(f"{event_id}: producer {producer} is not a Microservice")
-        if producer and producer in ids and (producer, "publishes", event_id) not in relations:
-            event_errors.append(f"{event_id}: missing publishes relation from {producer}")
+            try:schema_errors.extend(schema_errors_for(path,doc,schema_dir))
+            except Exception as exc:schema_errors.append(f"{path}: schema validation infrastructure error: {exc}")
+        for eid,kind,entity,_ in iter_entities(doc):
+            if not ID_RE.match(eid):prefix_errors.append(f"{path}: invalid YD id {eid}");continue
+            if eid in ids:duplicates.append(f"{eid}: {ids[eid][1]} <> {path}")
+            else:ids[eid]=(kind,path,entity)
+            expected=PREFIX_BY_KIND.get(kind or "")
+            if expected and not eid.startswith(expected):prefix_errors.append(f"{path}: {eid} must start with {expected}")
+        collect_references(doc,refs,path)
+    relation_doc=load_yaml(root/"ontology"/"RELATION_TYPES.yaml") or {};allowed={i.get("id") for i in relation_doc.get("spec",{}).get("relations",[]) if isinstance(i,dict) and i.get("id")};invalid_relations=[];edges=[]
+    for path,doc in documents:
+        if not isinstance(doc,dict) or doc.get("kind")!="RelationSet":continue
+        for r in doc.get("spec",{}).get("relations",[]):
+            if not isinstance(r,dict):continue
+            a,b,c=r.get("from"),r.get("type"),r.get("to")
+            if b and b not in allowed:invalid_relations.append(f"{path}: {b}")
+            if a and b and c:edges.append((a,b,c,path))
+    unresolved=sorted({(k,r,str(path)) for k,r,path in refs if r not in ids});ownership=defaultdict(list);authority_errors=[];maturity_errors=[]
+    for eid,(kind,path,entity) in ids.items():
+        if kind!="Microservice":continue
+        spec=entity.get("spec",{}) if isinstance(entity.get("spec"),dict) else {};auth=spec.get("authority")
+        if auth is not None and auth not in AUTHORITIES:authority_errors.append(f"{path}: invalid authority {auth}")
+        for agg in spec.get("owns",[]) or []:
+            if isinstance(agg,str):ownership[agg].append(eid)
+        if not args.no_maturity:maturity_errors.extend(maturity_errors_for(eid,entity,path))
+    ownership_conflicts=[f"{a}: {', '.join(sorted(o))}" for a,o in sorted(ownership.items()) if len(set(o))>1]
+    event_errors=[];relations={(a,b,c) for a,b,c,_ in edges}
+    for eid,(kind,path,entity) in ids.items():
+        if kind!="Event":continue
+        producer,consumers=normalize_event(entity)
+        if not producer:event_errors.append(f"{eid}: no producer")
+        elif producer in ids and ids[producer][0]!="Microservice":event_errors.append(f"{eid}: producer {producer} is not a Microservice")
+        if producer and producer in ids and (producer,"publishes",eid) not in relations:event_errors.append(f"{eid}: missing publishes relation from {producer}")
         for consumer in consumers:
-            if consumer in ids and ids[consumer][0] == "Microservice" and (consumer, "subscribesTo", event_id) not in relations:
-                event_errors.append(f"{event_id}: missing subscribesTo relation from {consumer}")
-
-    hard_errors = parse_errors + schema_errors + duplicates + prefix_errors + invalid_relations + authority_errors + ownership_conflicts + event_errors
-    report = {
-        "summary": {
-            "yamlFiles": len(yaml_files), "catalogFiles": len(catalog_files), "registeredIds": len(ids),
-            "references": len(refs), "schemaErrors": len(schema_errors), "hardErrors": len(hard_errors),
-            "unresolvedReferences": len(unresolved),
-        },
-        "errors": {
-            "parse": parse_errors, "schema": schema_errors, "duplicateIds": duplicates,
-            "idPrefixes": prefix_errors, "relationTypes": invalid_relations, "authority": authority_errors,
-            "ownership": ownership_conflicts, "events": event_errors,
-        },
-        "migrationDebt": [{"key": key, "reference": ref, "path": path} for key, ref, path in unresolved],
-    }
-
-    print(json.dumps(report["summary"], ensure_ascii=False, indent=2))
-    for category, errors in report["errors"].items():
-        for error in errors:
-            print(f"[{category.upper()}] {error}")
-    for item in report["migrationDebt"]:
-        print(f"[UNRESOLVED] {item['reference']} via {item['key']} in {item['path']}")
-
+            if consumer in ids and ids[consumer][0]=="Microservice" and (consumer,"subscribesTo",eid) not in relations:event_errors.append(f"{eid}: missing subscribesTo relation from {consumer}")
+    hard=parse_errors+schema_errors+duplicates+prefix_errors+invalid_relations+authority_errors+ownership_conflicts+event_errors+maturity_errors
+    report={"summary":{"yamlFiles":len(yaml_files),"catalogFiles":len(catalog_files),"registeredIds":len(ids),"references":len(refs),"schemaErrors":len(schema_errors),"maturityErrors":len(maturity_errors),"hardErrors":len(hard),"unresolvedReferences":len(unresolved)},"errors":{"parse":parse_errors,"schema":schema_errors,"duplicateIds":duplicates,"idPrefixes":prefix_errors,"relationTypes":invalid_relations,"authority":authority_errors,"ownership":ownership_conflicts,"events":event_errors,"maturity":maturity_errors},"migrationDebt":[{"key":k,"reference":r,"path":path} for k,r,path in unresolved]}
+    print(json.dumps(report["summary"],ensure_ascii=False,indent=2))
+    for cat,errs in report["errors"].items():
+        for e in errs:print(f"[{cat.upper()}] {e}")
+    for i in report["migrationDebt"]:print(f"[UNRESOLVED] {i['reference']} via {i['key']} in {i['path']}")
     if args.json_path:
-        output = Path(args.json_path)
-        output.parent.mkdir(parents=True, exist_ok=True)
-        output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-
-    return 1 if hard_errors or (args.strict and unresolved) else 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())
+        out=Path(args.json_path);out.parent.mkdir(parents=True,exist_ok=True);out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    return 1 if hard or (args.strict and unresolved) else 0
+if __name__=="__main__":sys.exit(main())
