@@ -1,0 +1,20 @@
+apiVersion: knowledge.ydiase/v1
+kind: API
+metadata:
+  id: YD-API-EDU-002
+  name: program-validation-api
+  title: Program Validation API
+  status: proposed
+spec:
+  owner: YD-MS-EDU-002
+  consumers: [YD-MS-EDU-003]
+  purpose: Valider ProgramRef, ProgramVersionRef et état avant rattachement ou publication d'un curriculum.
+  logicalMode: SYNC
+  authority: YD-MS-EDU-002
+  consistency: strong-on-link
+  failurePolicy: Un curriculum peut rester brouillon mais sa publication est bloquée sans programme valide.
+  invariants:
+    - Curriculum ne modifie jamais Program.
+    - Aucun appel transactionnel inverse de Program vers Curriculum.
+  physicalProtocol: undecided
+  adrRequired: true
