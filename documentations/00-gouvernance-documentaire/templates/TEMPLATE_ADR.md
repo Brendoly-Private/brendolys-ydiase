@@ -1,11 +1,37 @@
 # YD-ADR-XXXX — Titre
 
-## Contexte
+Statut : `DRAFT`
+Owner : `TBD-PREPROD`
+Version : `0.1.0`
+
+## Question
+
+## Contexte et forces
 
 ## Décision
 
 ## Alternatives considérées
 
-## Conséquences et seuil d’activation
+## Justification
 
-## Statut, responsable et date de revue
+## Conséquences positives
+
+## Conséquences négatives
+
+## Sécurité, conformité et données
+
+## Coût et complexité
+
+## Réversibilité et migration
+
+## Dépendances et objets affectés
+
+## Seuil ou condition d'activation
+
+## Vérifications et preuves attendues
+
+## Conditions de réexamen
+
+## Approbation et date de revue
+
+## Décisions remplacées ou liées
