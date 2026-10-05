@@ -15,18 +15,30 @@ spec:
   invariants:
     - Un fournisseur externe reste source de ses faits externes.
     - Les recommandations learning dérivées ne réécrivent pas les sources Education ou Skills.
-  knowledgeMaturity: K0
+  documentation:
+    root: documentations/13-architecture/microservices/YD-MS-LRN-001/
+    sources:
+      - documentations/13-architecture/microservices/YD-MS-LRN-001/PHASE_CLOSURE.md
+      - documentations/13-architecture/microservices/YD-MS-LRN-001/AUTONOMY_PROFILE.md
+      - documentations/13-architecture/microservices/YD-MS-LRN-001/LEARNING_DISCOVERY_POLICY.md
+      - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
+      - documentations/00-gouvernance-documentaire/AUTORITATIVE_SOURCE_REGISTRY.md
+  knowledgeMaturity: K2
   knowledgeEvidence:
     stableId: PASS
     kind: PASS
     name: PASS
     responsibilityOrPurpose: PASS
-    ownerOrAuthority: {state: PASS, evidence: spec.authority + spec.owns}
-    domainOrScope: UNKNOWN
-    boundaries: {state: PASS, evidence: spec.invariants}
-    sourceDocuments: UNKNOWN
+    ownerOrAuthority: {state: PASS, evidence: PHASE_CLOSURE.md + spec.authority + spec.owns}
+    domainOrScope: {state: PASS, evidence: MICROSERVICE_BOUNDARY_REVIEW.md classe LRN-001 dans Learning}
+    boundaries: {state: PASS, evidence: PHASE_CLOSURE.md + LEARNING_DISCOVERY_POLICY.md}
+    sourceDocuments: {state: PASS, evidence: spec.documentation.sources}
     logicalRelations: {state: PASS, evidence: education-cross-domain.relations.yaml}
-    dependencies: {state: PASS, evidence: spec.consumesFrom}
+    dependencies: {state: PASS, evidence: spec.consumesFrom + PHASE_CLOSURE.md}
     upstreamDownstream: {state: PASS, evidence: spec.consumesEvents + education-cross-domain.relations.yaml}
-    authoritativeOwnership: {state: PASS, evidence: spec.authority + spec.owns}
+    authoritativeOwnership: {state: PASS, evidence: PHASE_CLOSURE.md distingue ressources LRN et autorités EDU/MKT/SKL}
     impactTraceability: {state: PASS, evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md}
+    apiOrEventContractsWhenApplicable: UNKNOWN
+    dataContracts: UNKNOWN
+    requirements: UNKNOWN
+    adrForStructuralDecisions: UNKNOWN
