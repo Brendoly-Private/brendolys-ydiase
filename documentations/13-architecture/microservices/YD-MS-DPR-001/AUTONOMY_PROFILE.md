@@ -2,12 +2,19 @@
 
 Statut : `autonomy-profile-draft`
 
-- Autorité : releases de produits data, manifests, licences et état de publication; données sources restent owners amont.
-- Owner métier du catalogue commercial : fonction Product & Commercial YDIASE. Elle possède la définition des offres Data Product, packaging, conditions commerciales et cycle de publication commerciale. Elle ne possède ni les données sources, ni les décisions privacy, ni les entitlements techniques.
-- Séparation de responsabilités : DPR contrôle la release, le manifest, la licence et l’état de publication; ANL/DAT restent propriétaires des données amont; CNS garde l’autorité privacy; BIL garde l’autorité abonnement/facturation/entitlement.
-- C1, backup AUTH. C organisations autorisées, I, M2M. Exposition EXT gouvernée.
+- Autorité : releases Data Product, manifests, licences et état de publication; données sources restent chez leurs owners.
+- Owner métier du catalogue commercial : fonction Product & Commercial YDIASE. DPR contrôle release/manifest/licence/publication; ANL/DAT gardent les sources; CNS garde privacy; BIL garde abonnement/facturation/entitlement.
+- Criticité : C1. Reprise AUTH.
+- Licence : chaque release possède un `LicenseManifest` versionné/immuable avec license/version, product/release, catégories de consommateurs, finalités, territoires, durée, droits lecture/export/redistribution/dérivation, sous-licence, entitlement BIL, décision CNS, obligations retrait/suppression, provenance et statut.
+- Statuts licence : `DRAFT`, `APPROVED`, `SUSPENDED`, `REVOKED`, `EXPIRED`. Une release ne devient `PUBLISHED` que si licence, entitlement et décision privacy sont compatibles.
+- Privacy : DPR ne décide pas seul de la distribution. Chaque release référence un `PrivacyDistributionDecision` CNS.
+- Classes de sortie : `PUBLIC-NONPERSONAL`, `AGGREGATED`, `ANONYMIZED`, `RESTRICTED-DERIVED`, `NOT-DISTRIBUTABLE`.
+- PrivacyDistributionDecision : finalité, catégories sources, territoires, méthode de transformation, quasi-identifiants examinés, généralisation/suppression, tests de réidentification applicables, restrictions, validité, décision CNS et version.
+- Règle : données personnelles brutes, identifiants directs, données sensibles et datasets sans droits suffisants sont `NOT-DISTRIBUTABLE` par défaut. L’agrégation seule ne change pas automatiquement le statut privacy.
+- IAM : organisations autorisées, interne contrôlé et M2M. Exposition EXT gouvernée; entitlement BIL obligatoire lorsque prévu.
 - Dépendances : ANL/DAT, BIL, CNS.
-- Panne : accès fail-closed si licence, privacy ou entitlement non vérifiable; release existante reste immuable.
-- Sécurité : aucune donnée personnelle vendue; privacy review, licence, provenance et manifest obligatoires.
+- Panne : fail-closed si licence, privacy ou entitlement non vérifiable; release publiée reste immuable mais son accès peut être suspendu/révoqué.
+- Sécurité : aucune commercialisation de données personnelles; provenance et manifest obligatoires.
 - Repo : `brendolys-ydiase-data-product`.
-- Gate : nomination nominative du responsable et du suppléant Product & Commercial, licences, anonymisation/agrégation, SLO/RPO/RTO, restore.
+- Gates Contract Registry : `CLOSED` pour DPR-LICENSING et DPR-PRIVACY-AGGREGATION.
+- Gates préproduction/release : nomination nominative owner/suppléant, paramètres statistiques propres au dataset, validation Country Framework, SLO/RPO/RTO et restore test.
