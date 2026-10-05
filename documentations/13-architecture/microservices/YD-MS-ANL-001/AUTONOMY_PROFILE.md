@@ -1,6 +1,6 @@
 # YD-MS-ANL-001 — Analytics
 
-Statut : `autonomy-profile-draft`
+Statut : `C2-BASELINE / ANALYTICS-SEMANTICS-CLOSED`
 
 - Classification : `DERIVED`, criticité C2. État actuel : `REBUILD-UNVERIFIED`.
 - Autorité : métriques, agrégats et snapshots analytiques dérivés uniquement; aucune écriture transactionnelle vers les domaines.
@@ -16,3 +16,12 @@ Statut : `autonomy-profile-draft`
 - IAM : I/M2M. Repo : `brendolys-ydiase-analytics`.
 - DR/test : perte contrôlée d’un dataset puis FULL_REBUILD; mesurer durée, fraîcheur, convergence et ressources.
 - Gates : catalogue métriques; sources/versions/rétention; watermark; privacy analytique; FULL_REBUILD; `REBUILDABLE`; fraîcheur; RTO/SLO.
+
+## Baseline sémantique fermée
+- Normatif : `ANALYTICS_METRIC_POLICY.md`, `ANALYTICS_SOURCE_CONTRACT_REGISTER.md`, `PHASE_CLOSURE.md`.
+- Une métrique n'est calculable que si sa MetricDefinition versionnée déclare finalité, grain, dimensions, contrats sources, méthodologie, Privacy et traitement corrections/revocations.
+- Aucun flux « tous événements YDIASE » n'est autorisé.
+- UNKNOWN ≠ 0 ≠ NOT-APPLICABLE ≠ MISSING.
+- Un snapshot historique est restauré, jamais recalculé silencieusement avec une méthodologie courante.
+- Les familles sources sont REGISTERED-NOT-ACTIVATED jusqu'à association à une MetricDefinition approuvée.
+- État recovery maintenu : `REBUILD-UNVERIFIED`.
