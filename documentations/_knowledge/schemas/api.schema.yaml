@@ -1,0 +1,28 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/api.schema.yaml
+title: YDIASE API
+allOf:
+  - $ref: ./common.schema.yaml
+  - type: object
+    properties:
+      kind: {const: API}
+      spec:
+        type: object
+        required: [provider, protocol]
+        properties:
+          provider: {type: string}
+          system: {type: string}
+          protocol: {type: string}
+          version: {type: string}
+          contractPath: {type: string}
+          consumers:
+            type: array
+            items: {type: string}
+          data:
+            type: array
+            items: {type: string}
+          securityControls:
+            type: array
+            items: {type: string}
+          lifecycle: {type: object}
+    required: [kind, spec]
