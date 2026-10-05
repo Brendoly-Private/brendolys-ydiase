@@ -25,21 +25,19 @@ Conserver l'historique individuel éducatif et professionnel déclaré ou vérif
 
 PRF-002 est la source autoritative YDIASE de cet historique personnel. EDU reste autoritatif pour les institutions, programmes, curricula et qualifications de référence. SKL reste autoritatif pour les taxonomies et états de compétences relevant de ses frontières.
 
-## Non-reconstructibilité
+## Non-reconstructibilité et indépendance de reprise
 
 L'historique PRF-002 ne peut pas être reconstruit de manière complète depuis EDU, SKL, DAT, des pièces externes ou PRF-001.
 
-Ces sources peuvent confirmer certaines références ou preuves, mais elles ne possèdent pas nécessairement :
+Ces sources peuvent confirmer certaines références ou preuves, mais elles ne possèdent pas nécessairement la déclaration originale du sujet, les corrections successives, la temporalité complète, les états de vérification historiques, les relations entre déclarations et preuves, les décisions de retrait ou rectification et les métadonnées de provenance propres au dossier individuel.
 
-- la déclaration originale du sujet
-- les corrections successives
-- la temporalité complète
-- les états de vérification historiques
-- les relations entre déclarations et preuves
-- les décisions de retrait ou rectification
-- les métadonnées de provenance propres au dossier individuel
+En conséquence :
 
-En conséquence, un `FULL_REBUILD` depuis les services amont n'est pas une stratégie DR valide pour PRF-002.
+- un `FULL_REBUILD` depuis les services amont n'est pas une stratégie DR valide
+- `PRF-001`, `EDU` et `SKL` sont des dépendances fonctionnelles de certaines opérations, jamais des dépendances de récupération de l'autorité PRF-002
+- la restauration autoritative doit réussir avec `PRF-001`, `EDU` et `SKL` simultanément indisponibles
+- aucune lecture de leurs bases, API ou projections n'est requise pour reconstruire l'autorité sauvegardée de PRF-002
+- leur indisponibilité peut retarder la réconciliation fonctionnelle postérieure, mais pas la restauration du datastore autoritatif
 
 ## Datastore
 
@@ -54,28 +52,22 @@ En conséquence, un `FULL_REBUILD` depuis les services amont n'est pas une strat
 
 La sauvegarde est `MANDATORY-AUTH-BACKUP`.
 
-PRF-002 doit disposer avant `ready-for-production` :
+PRF-002 doit disposer avant `ready-for-production` de sauvegardes chiffrées, d'une politique indépendante de PRF-001, d'une rétention gouvernée, d'une protection contre suppression ou altération, d'identités dédiées backup/restore, de contrôles d'intégrité, d'une traçabilité, d'une procédure testée, d'une copie isolée et d'un mécanisme de restauration cohérente indépendant de PRF-001, EDU et SKL.
 
-1. de sauvegardes chiffrées du datastore autoritatif
-2. d'une politique de sauvegarde indépendante de PRF-001
-3. d'une rétention de sauvegarde documentée selon les catégories de données et les règles pays
-4. d'une protection contre la suppression ou l'altération accidentelle des sauvegardes
-5. d'un contrôle d'accès distinct pour les opérations de backup et restore
-6. d'une vérification d'intégrité des sauvegardes
-7. d'une traçabilité des opérations de sauvegarde et restauration
-8. d'une procédure de restauration documentée et testée
-9. d'une copie de secours dont le blast radius ne se confond pas avec celui du datastore actif
-10. d'un mécanisme permettant de restaurer une version cohérente de l'historique sans dépendre de la disponibilité de PRF-001
-
-Les technologies, fréquences et emplacements physiques restent soumis aux ADR d'infrastructure. Ils ne doivent pas être inventés dans ce profil.
+Les technologies et emplacements physiques restent soumis aux ADR d'infrastructure.
 
 ## RPO / RTO / SLO
 
-- RPO : `TBD-PREPROD`
-- RTO : `TBD-PREPROD`
-- SLO : `TBD-PREPROD`
+Selon `ADR-PRF002-RPO-RTO.md` :
 
-Ces valeurs doivent provenir de l'analyse de criticité C1 et du capacity planning. Aucune valeur arbitraire n'est acceptée.
+- RPO nominal : `≤ 15 minutes`
+- RTO incident courant : `≤ 1 heure`
+- RTO perte complète datastore : `≤ 4 heures`
+- RTO sinistre majeur : `≤ 8 heures`
+- corruption logique : restauration temporelle obligatoire
+- SLO applicatif : `TBD-PREPROD`
+
+Ces seuils restent soumis à confirmation BIA et à une preuve mesurée. Ils ne passent pas `VERIFIED` par simple déclaration documentaire.
 
 ## Restore gate
 
@@ -84,12 +76,12 @@ PRF-002 ne passe pas `ready-for-production` tant qu'un test de restauration ind�
 - restauration d'une sauvegarde exploitable dans un environnement isolé
 - validation d'intégrité des agrégats autoritatifs
 - conservation des identifiants durables
-- conservation de la temporalité et des versions
-- conservation des liens de preuve et références de provenance
-- absence de dépendance à une base PRF-001 pour récupérer l'historique
+- conservation de la temporalité, des versions, liens de preuve et provenance
+- restauration avec PRF-001, EDU et SKL indisponibles
+- RPO et RTO mesurés conformes aux seuils applicables
 - réconciliation contrôlée des projections et consommateurs après restauration
 - traçabilité de l'opération
-- respect des décisions Privacy applicables après restauration
+- respect et réapplication des décisions Privacy applicables
 
 Un backup jamais restauré avec succès ne ferme pas le gate REC.
 
@@ -102,7 +94,8 @@ Le runbook PRF-002 doit couvrir :
 - suppression accidentelle d'un historique
 - restauration à un point antérieur autorisé
 - divergence entre datastore autoritatif et projections aval
-- indisponibilité simultanée d'EDU ou DAT pendant la restauration
+- indisponibilité simultanée de PRF-001, EDU et SKL pendant la restauration
+- indisponibilité de DAT pendant la réconciliation de provenance lorsque pertinent
 - preuve orpheline après restauration
 - correction contestée
 - révocation Privacy reçue avant ou pendant un incident
@@ -112,15 +105,13 @@ Le runbook PRF-002 doit couvrir :
 
 Le datastore restauré reste l'autorité PRF-002. Les projections aval doivent se réconcilier depuis PRF-002 et non imposer leur état au service restauré.
 
-Toute republication d'événements doit utiliser des mécanismes idempotents et préserver les versions métier afin d'éviter la duplication ou la régression silencieuse des consommateurs.
+Toute republication d'événements doit être idempotente et préserver les versions métier. La réconciliation avec PRF-001, EDU et SKL intervient après récupération de l'autorité et ne constitue jamais une condition de restauration du datastore.
 
 ## Privacy et sauvegardes
 
 CNS-001 reste autoritatif pour les finalités, restrictions, demandes Privacy et instructions applicables de rétention ou d'effacement.
 
-La politique de backup doit documenter le traitement des données supprimées ou révoquées présentes dans des sauvegardes historiques. Une restauration ne doit pas réactiver durablement une donnée dont la suppression est devenue applicable. La procédure de reprise doit donc réappliquer les décisions Privacy pertinentes après restauration.
-
-Les conflits entre conservation probatoire et effacement exigent une règle de conformité documentée. PRF-002 ne tranche pas ce conflit implicitement.
+Une restauration ne doit pas réactiver durablement une donnée dont la suppression est devenue applicable. La procédure de reprise doit réappliquer les décisions Privacy pertinentes avant le retour normal. Les conflits entre conservation probatoire et effacement exigent une règle de conformité documentée.
 
 ## Temporalité et preuves
 
@@ -134,8 +125,7 @@ Une déclaration, une preuve et une vérification restent distinctes. Une preuve
 - Realms : `brendolys-customers` principal, `brendolys-internal` pour support ou conformité explicitement autorisés, `brendolys-networks` refusé par défaut.
 - M2M : workload identity dédiée.
 - Scopes candidats : `profile-history:read:self`, `profile-history:education:write:self`, `profile-history:experience:write:self`, `profile-history:evidence:write:self`, `profile-history:read:support`, `profile-history:projection:read`, `profile-history:verify`.
-- Les scopes finaux passent par le Contract Registry.
-- Les opérations administratives de backup/restore ne réutilisent pas les scopes utilisateur et suivent une identité opérationnelle dédiée selon l'ADR IAM/infrastructure.
+- Les opérations administratives de backup/restore utilisent une identité opérationnelle dédiée et ne réutilisent pas les scopes utilisateur.
 
 ## Autorisation
 
@@ -149,7 +139,7 @@ API : commandes de déclaration et correction des historiques, consultation auto
 
 ## Données consommées
 
-IdentityRef minimal, décisions CNS, CountryConfig, références Institution/Program/Qualification depuis EDU, taxonomies nécessaires depuis SKL et références de provenance depuis DAT-003. Ces références ne deviennent pas des copies autoritatives locales.
+IdentityRef minimal, décisions CNS, CountryConfig, références Institution/Program/Qualification depuis EDU, taxonomies nécessaires depuis SKL et références de provenance depuis DAT-003. Ces données sont des dépendances fonctionnelles selon l'opération et ne deviennent ni des copies autoritatives locales ni des prérequis de restauration de l'autorité PRF-002.
 
 ## Réseau et sécurité
 
@@ -167,7 +157,7 @@ IdentityRef minimal, décisions CNS, CountryConfig, références Institution/Pro
 
 ## Résilience
 
-La consultation du dernier état local reste possible selon politique. Une panne EDU n'efface ni ne rend faux l'historique déjà enregistré. Les nouvelles liaisons nécessitant une référence autoritative indisponible sont mises en attente ou refusées selon le contrat. Une décision Privacy obligatoire non vérifiable entraîne fail-closed pour la mutation concernée.
+La consultation du dernier état local reste possible selon `PRF002_CONTINUITY_POLICY.md`. Une panne EDU, SKL ou PRF-001 n'empêche pas la récupération de l'autorité PRF-002. Les nouvelles opérations nécessitant une référence autoritative indisponible sont mises en attente ou refusées selon leur contrat. Une décision Privacy obligatoire non vérifiable entraîne fail-closed pour la mutation concernée.
 
 ## Scaling et exploitation
 
@@ -187,16 +177,25 @@ Tout export ou remplacement du service doit préserver les identifiants durables
 
 Le retrait de PRF-002 exige une migration vérifiée de l'autorité et une preuve de restauration du système successeur avant suppression des sauvegardes encore requises.
 
+## Références normatives
+
+- `ADR-PRF-001-PRF-002-PHYSICAL-BOUNDARY.md`
+- `ADR-PRF002-RPO-RTO.md`
+- `PRF002_CONTINUITY_POLICY.md`
+- `PRF002_BACKUP_RESTORE_POLICY.md`
+
 ## Gates préproduction
 
 - owner opérationnel et suppléant
-- RPO/RTO/SLO validés
+- BIA confirmant ou corrigeant les seuils RPO/RTO
 - technologie et topologie de backup décidées par ADR
-- fréquence de sauvegarde définie
+- mécanisme démontrant RPO ≤ 15 min
 - rétention des backups définie par catégorie et pays
 - contrôle d'accès backup/restore défini
 - chiffrement et gestion des clés définis
-- preuve de restauration indépendante réussie
+- restauration temporelle opérationnelle
+- copie isolée opérationnelle
+- preuve de restauration indépendante avec PRF-001, EDU et SKL indisponibles
 - politique de pièces de preuve
 - clients OIDC physiques
 - step-up si requis
