@@ -21,9 +21,11 @@ spec:
       - documentations/13-architecture/microservices/YD-MS-REC-001/PHASE_CLOSURE.md
       - documentations/13-architecture/microservices/YD-MS-REC-001/AUTONOMY_PROFILE.md
       - documentations/13-architecture/microservices/YD-MS-REC-001/RECOMMENDATION_RANKING_POLICY.md
+      - documentations/13-architecture/microservices/YD-MS-REC-001/K3_CONTRACT_BASELINE.md
+      - documentations/13-architecture/microservices/YD-MS-REC-001/ADR-REC-001-ORGANIC-RANKING-SEPARATION.md
       - documentations/08-orientation-recommandation/README.md
       - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
-  knowledgeMaturity: K2
+  knowledgeMaturity: K3
   knowledgeEvidence:
     stableId: PASS
     kind: PASS
@@ -38,7 +40,18 @@ spec:
     upstreamDownstream: {state: PASS, evidence: spec.consumesEvents + education-cross-domain.relations.yaml}
     authoritativeOwnership: {state: PASS, evidence: PHASE_CLOSURE.md + spec.owns}
     impactTraceability: {state: PASS, evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md}
-    apiOrEventContractsWhenApplicable: UNKNOWN
-    dataContracts: UNKNOWN
-    requirements: UNKNOWN
-    adrForStructuralDecisions: UNKNOWN
+    apiOrEventContractsWhenApplicable: {state: PASS, evidence: K3_CONTRACT_BASELINE.md sections 3-4 + RECOMMENDATION_RANKING_POLICY.md}
+    dataContracts: {state: PASS, evidence: K3_CONTRACT_BASELINE.md section 5}
+    invariants: {state: PASS, evidence: K3_CONTRACT_BASELINE.md section 6 + RECOMMENDATION_RANKING_POLICY.md}
+    requirements: {state: PASS, evidence: K3_CONTRACT_BASELINE.md REC-REQ-001..010}
+    adrForStructuralDecisions: {state: PASS, evidence: ADR-REC-001-ORGANIC-RANKING-SEPARATION.md}
+    versioningRules: {state: PASS, evidence: K3_CONTRACT_BASELINE.md section 8 + RECOMMENDATION_RANKING_POLICY.md section 2}
+    compatibilityRules: {state: PASS, evidence: K3_CONTRACT_BASELINE.md section 9}
+    dataClassification: UNKNOWN
+    securityControls: PARTIAL
+    privacyAndRetentionWhenApplicable: UNKNOWN
+    sloOrCriticality: PARTIAL
+    observability: UNKNOWN
+    backupRecoveryWhenStateful: PARTIAL
+    runbookOrOperationalProcedure: UNKNOWN
+    namedOwners: UNKNOWN
