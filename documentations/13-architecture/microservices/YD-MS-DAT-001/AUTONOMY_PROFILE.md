@@ -1,6 +1,6 @@
 # YD-MS-DAT-001 — Data Source Registry
 
-Statut : `autonomy-profile-draft`
+Statut : `C1-BASELINE / SOURCE-RIGHTS-SEMANTICS-CLOSED`
 
 - Autorité : sources, droits d’usage, territoires, politiques d’accès et validité.
 - C1, backup AUTH. I/M2M.
@@ -9,3 +9,6 @@ Statut : `autonomy-profile-draft`
 - Sécurité : preuves contractuelles/réglementaires référencées, accès restreint, audit des changements de droits.
 - Repo : `brendolys-ydiase-data-source-registry`.
 - Gate : modèle droits/licences, expiration, SLO/RPO/RTO, restore, contrats DAT-002.
+
+- Politique normative : `DATA_GOVERNANCE_POLICY.md`.
+- Gates restant : modèles de droits/licences réels, IAM, SLO/RPO/RTO, restore et contrats DAT-002.
