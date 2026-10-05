@@ -1,6 +1,6 @@
 # YD-MS-SRH-001 — Search & Discovery
 
-Statut : `autonomy-profile-draft`
+Statut : `C2-BASELINE / SEARCH-DISCOVERY-SEMANTICS-CLOSED`
 
 - Classification : `DERIVED`, criticité C2. État actuel : `REBUILD-UNVERIFIED` jusqu’au premier FULL_REBUILD réussi.
 - Autorité : index uniquement; aucune autorité sur EDU, CAR, OPP, CNT ou LRN.
@@ -16,3 +16,9 @@ Statut : `autonomy-profile-draft`
 - IAM : C/N/I/M2M selon surface. Repo : `brendolys-ydiase-search-discovery`.
 - DR/test : destruction contrôlée de l’index + FULL_REBUILD obligatoire avant production; conserver durée, fraîcheur finale, positions source et anomalies.
 - Gates : contrats/versions et rétention des sources; watermark; FULL_REBUILD réussi; statut `REBUILDABLE`; seuils de fraîcheur; RTO/SLO; politique suppression.
+
+- Politiques normatives : `SEARCH_DISCOVERY_POLICY.md` et `SOURCE_PROJECTION_BASELINE.md`.
+- Contrats sources : EDU/CAR/OPP/CNT/LRN SEARCHABLE v1 ; KNW Search Enrichment v1 optionnel.
+- Ranking Search distinct de REC-001, OPP-002 et ORI ; sponsoring interdit dans le rang organique.
+- Priorité : revoke/privacy > delete/withdraw/unpublish/expire > correction > upsert > KNW enrichment.
+- Gates restant : schémas/analyzers physiques, coefficients/quality metrics, freshness/removal SLO, access/query retention, FULL_REBUILD réussi, RTO/SLO et tests sécurité.
