@@ -178,6 +178,21 @@ Cette section complète la matrice avec les IDs canoniques exacts. Une famille m
 | `YD-CTR-CAR-KNOWLEDGE-v1` | KNW-001 | DERIVED+PUBLIC-PROJ | occupation/relation version; delete | graph snapshot/catch-up | source PHYSICAL-READY + KNW rebuild evidence |
 | `YD-CTR-LAB-KNOWLEDGE-v1` | KNW-001 | DERIVED | retraction/provenance/territory | graph snapshot/catch-up | source PHYSICAL-READY + KNW rebuild evidence |
 | `YD-CTR-<DOMAIN>-ANALYTICS-v1` | ANL-001 | DERIVED | instance concrète, purpose, grain, source version | snapshot/catch-up/delete/revoke | instance enregistrée + ANL rebuild evidence |
+| `YD-CTR-EDU-ANALYTICS-v1` | ANL-001 | DERIVED | metric-scoped fields; publication/version/territory | snapshot/catch-up/delete | metric activation + ANL rebuild evidence |
+| `YD-CTR-SKL-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | aggregates only unless explicit purpose; taxonomy/version | snapshot/catch-up/revoke | metric activation + ANL rebuild evidence |
+| `YD-CTR-CAR-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | path/gap aggregates; UNKNOWN preserved | snapshot/catch-up/delete | metric activation + ANL rebuild evidence |
+| `YD-CTR-ASM-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | no raw answers by default; method/version | snapshot/catch-up/revoke | metric activation + ANL rebuild evidence |
+| `YD-CTR-ORI-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | subject minimized; state/version | replay/catch-up/revoke | metric activation + ANL rebuild evidence |
+| `YD-CTR-REC-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | policy/model/run dimensions; no commercial contamination | snapshot/catch-up/revoke | metric activation + ANL rebuild evidence |
+| `YD-CTR-LAB-ANALYTICS-v1` | ANL-001 | DERIVED | methodology/coverage/territory/version | snapshot/catch-up/retract | metric activation + ANL rebuild evidence |
+| `YD-CTR-OPP-ANALYTICS-v1` | ANL-001 | DERIVED | expire/withdraw preserved | replay/catch-up | metric activation + ANL rebuild evidence |
+| `YD-CTR-APP-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | subject minimized; transitions/version | replay/catch-up/revoke | metric activation + ANL rebuild evidence |
+| `YD-CTR-EMP-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | tenant isolation; campaign/selection aggregates | replay/catch-up/revoke | metric activation + ANL rebuild evidence |
+| `YD-CTR-LRN-ANALYTICS-v1` | ANL-001 | DERIVED | availability/version; retire preserved | snapshot/catch-up | metric activation + ANL rebuild evidence |
+| `YD-CTR-CNT-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | moderation/visibility/revoke preserved | replay/catch-up | metric activation + ANL rebuild evidence |
+| `YD-CTR-NTF-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | recipient minimized; duplicate delivery state | replay/dedupe | metric activation + ANL rebuild evidence |
+| `YD-CTR-CFG-ANALYTICS-v1` | ANL-001 | DERIVED | no implicit country; config version | snapshot/catch-up | metric activation + ANL rebuild evidence |
+| `YD-CTR-DAT-ANALYTICS-v1` | ANL-001 | DERIVED+PRIV | provenance/quality states; no raw blanket ingestion | snapshot/catch-up/revoke | metric activation + ANL rebuild evidence |
 | `YD-CTR-SRH-RETRIEVAL-v1` | AI-002 | DERIVED+PRIV | access labels/purpose; stale/revoked doc absent | index rebuild + convergence | source PHYSICAL-READY + AI corpus evidence |
 | `YD-CTR-KNW-GROUNDING-v1` | AI-002 | DERIVED+PRIV | provenance/source version; inferred≠asserted | graph rebuild + convergence | source PHYSICAL-READY + AI corpus evidence |
 | `YD-CTR-CNS-CORPUS-AUTHORIZATION-v1` | AI-002 | DERIVED+PRIV | NOT-DETERMINABLE≠ALLOW; revoke prioritaire | privacy reconciliation pendant rebuild | source PHYSICAL-READY + AI corpus evidence |
