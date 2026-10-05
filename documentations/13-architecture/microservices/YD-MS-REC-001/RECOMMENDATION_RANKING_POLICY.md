@@ -105,6 +105,8 @@ RSH-001 reste module logique tant qu'il n'a pas d'autorité académique autonome
 
 `DEFINED` : pipeline, hard constraints, UNKNOWN, pondérations versionnées, evidence snapshot, abstention, explicabilité, incertitude, biais/équité de principe, séparation sponsoring, correction, reproductibilité, limite RSH.
 
-`TBD-VALIDATION/PREPROD` : coefficients/seuils, métriques d'équité, datasets/protocoles d'évaluation, règles mineurs, Privacy/rétention, BIA/RPO/RTO/restore, IAM/IDOR, contrats/runtime/observabilité et tests automatisés de non-influence SPN.
+`DEFINED-BY-COMPANION-POLICY` : métriques/protocole d'équité et suite de tests anti-influence SPN.
 
-Statut final : `RECOMMENDATION-POLICY-CLOSED / NUMERIC-FAIRNESS-PRIVACY-PREPROD-VALIDATION-PENDING`.
+`TBD-VALIDATION/PREPROD` : coefficients/seuils de ranking, seuils numériques d'équité, datasets représentatifs/preuves d'évaluation, exécution des tests anti-influence SPN, règles mineurs, Privacy/rétention, BIA/RPO/RTO/restore, IAM/IDOR et contrats/runtime/observabilité.
+
+Statut final : `RECOMMENDATION-POLICY-CLOSED / FAIRNESS-AND-SPONSOR-GUARDS-DEFINED / PREPROD-EVIDENCE-PENDING`.
