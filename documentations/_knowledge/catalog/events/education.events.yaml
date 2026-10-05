@@ -1,0 +1,64 @@
+apiVersion: knowledge.ydiase/v1
+kind: EventCatalog
+metadata:
+  id: YD-EVTCAT-EDU-001
+  name: education-events
+  status: reviewed
+  sourceDocuments:
+    - documentations/13-architecture/EVENT_MAP.md
+spec:
+  deliverySemantics: at-least-once-logical
+  events:
+    - id: YD-EVT-EDU-001
+      canonicalId: EVT-EDU-001
+      type: institution.changed
+      producer: YD-MS-EDU-001
+      consumers: [YD-MS-EDU-002, YD-SVC-SRH-001, YD-SVC-KNW-001, YD-SVC-ANL-001, YD-SVC-INS-001]
+      aggregate: Institution
+      version: '1.0'
+      payload: [institution_ref, change_type, status, campus_refs, version]
+    - id: YD-EVT-EDU-002
+      canonicalId: EVT-EDU-002
+      type: program.changed
+      producer: YD-MS-EDU-002
+      consumers: [YD-MS-EDU-003, YD-SVC-SRH-001, YD-SVC-KNW-001, YD-SVC-ANL-001, YD-SVC-REC-001, YD-SVC-LRN-001]
+      aggregate: Program
+      version: '1.0'
+      payload: [program_ref, institution_ref, status, qualification_ref, version]
+    - id: YD-EVT-EDU-003
+      canonicalId: EVT-EDU-003
+      type: curriculum.published
+      producer: YD-MS-EDU-003
+      consumers: [YD-MS-EDU-002, YD-SVC-SKL-001, YD-SVC-KNW-001, YD-SVC-REC-001, YD-SVC-LRN-001]
+      aggregate: Curriculum
+      version: '1.0'
+      payload: [curriculum_ref, program_ref, version, module_refs, published_at]
+    - id: YD-EVT-EDU-004
+      canonicalId: EVT-EDU-004
+      type: curriculum.skill-evidence
+      producer: YD-MS-EDU-003
+      consumers: [YD-SVC-SKL-001, YD-SVC-KNW-001]
+      aggregate: Curriculum
+      version: '1.0'
+      payload: [curriculum_ref, module_ref, skill_ref, evidence_type, version]
+    - id: YD-EVT-EDU-005
+      canonicalId: EVT-EDU-005
+      type: qualification.changed
+      producer: YD-MS-EDU-004
+      consumers: [YD-MS-EDU-002, YD-SVC-PRF-002, YD-SVC-CAR-001, YD-SVC-SRH-001, YD-SVC-KNW-001]
+      aggregate: Qualification
+      version: '1.0'
+      payload: [qualification_ref, framework_ref, level_ref, change_type, version]
+  envelopeRequired:
+    - event_id
+    - event_type
+    - schema_version
+    - occurred_at
+    - producer
+    - aggregate_type
+    - aggregate_id
+    - aggregate_version
+    - correlation_id
+    - causation_id
+    - data_classification
+    - payload
