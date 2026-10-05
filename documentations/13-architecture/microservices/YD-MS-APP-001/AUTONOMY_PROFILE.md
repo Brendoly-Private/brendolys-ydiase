@@ -1,6 +1,6 @@
 # YD-MS-APP-001 — Application
 
-Statut : `autonomy-profile-draft`
+Statut : `C1-BASELINE / APPLICATION-LIFECYCLE-SEMANTICS-CLOSED`
 
 - Autorité : candidatures, états et transitions.
 - C1, backup AUTH; PII et données de recrutement sensibles.
@@ -10,3 +10,6 @@ Statut : `autonomy-profile-draft`
 - Sécurité : contrôle candidat/employeur par objet, audit complet des transitions, aucune écriture directe par Employer Workspace.
 - Repo : `brendolys-ydiase-application`.
 - Gate : machine d’état, rétention légale, scopes, SLO/RPO/RTO, restore et tests d’idempotence.
+
+- Politique normative : `APPLICATION_LIFECYCLE_POLICY.md`.
+- Gates restant : transitions par type, rétention pays, rôles/scopes, idempotence/concurrence, BIA/RPO/RTO, restore.
