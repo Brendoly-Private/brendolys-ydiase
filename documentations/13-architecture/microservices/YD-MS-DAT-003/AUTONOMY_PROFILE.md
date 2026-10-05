@@ -1,6 +1,6 @@
 # YD-MS-DAT-003 — Data Provenance
 
-Statut : `autonomy-profile-draft`
+Statut : `C1-BASELINE / PROVENANCE-LINEAGE-SEMANTICS-CLOSED`
 
 - Autorité : lineage, assertions de provenance, preuves/références et chaînes de transformation.
 - C1, backup AUTH renforcé. I/M2M.
@@ -9,3 +9,6 @@ Statut : `autonomy-profile-draft`
 - Sécurité : append/history, intégrité, audit, accès restreint aux preuves sensibles; aucune altération silencieuse.
 - Repo : `brendolys-ydiase-data-provenance`.
 - Gate : modèle lineage, immutabilité/versioning, SLO/RPO/RTO, restore vérifié et réconciliation.
+
+- Politique normative : `DATA_GOVERNANCE_POLICY.md`.
+- Gates restant : contrats physiques de lineage, intégrité, SLO/RPO/RTO, restore vérifié et réconciliation.
