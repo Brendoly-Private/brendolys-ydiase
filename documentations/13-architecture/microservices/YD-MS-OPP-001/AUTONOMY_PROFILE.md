@@ -1,6 +1,6 @@
 # YD-MS-OPP-001 — Opportunity
 
-Statut : `autonomy-profile-draft`
+Statut : `C1-BASELINE / OPPORTUNITY-SEMANTICS-CLOSED`
 
 - Autorité : opportunités, exigences, validité et politiques de candidature.
 - C1, backup AUTH. C/N/I/M2M selon création/consultation autorisée.
@@ -9,3 +9,6 @@ Statut : `autonomy-profile-draft`
 - Sécurité : anti-fraude, provenance de l’annonce, contrôle organisation, audit publication/retrait.
 - Repo : `brendolys-ydiase-opportunity`.
 - Gate : vérification employeur, expiration, modération, SLO/RPO/RTO, restore et contrats.
+
+- Politique normative : `OPPORTUNITY_LIFECYCLE_POLICY.md`.
+- Gates restant : policies par type, anti-fraude/modération, SLO retrait, IAM/tenant, BIA/RPO/RTO, restore et contrats.
