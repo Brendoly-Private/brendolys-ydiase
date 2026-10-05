@@ -1,0 +1,26 @@
+apiVersion: knowledge.ydiase/v1
+kind: ADR
+metadata:
+  id: YD-ADR-EDU-001
+  name: education-four-authoritative-boundaries
+  title: Séparation des quatre autorités Education
+  status: reviewed
+  sourceDocuments:
+    - documentations/13-architecture/DDD_REVIEW.md
+    - documentations/03-education-institutions/FRONTIERES_ET_DEPENDANCES.md
+    - documentations/13-architecture/DEPENDENCY_MAP.md
+spec:
+  decision: Maintenir Institution Catalog, Program Catalog, Curriculum & Module et Qualification Framework comme frontières autoritatives séparées.
+  rationale:
+    - Les agrégats et règles d'autorité sont distincts.
+    - Les cycles Program-Curriculum sont maîtrisés par validation unidirectionnelle et événement CurriculumPublished.
+    - Les équivalences et qualifications ne doivent pas être dupliquées dans Program.
+  consequences:
+    - Quatre microservices physiques candidats restent confirmés.
+    - Les références inter-frontières utilisent des identifiants stables et des contrats versionnés.
+    - Aucune transaction distribuée entre ces frontières.
+  alternativesRejected:
+    - Fusionner tout Education dans un service unique.
+    - Autoriser EDU-002 à posséder Curriculum.
+    - Dupliquer les équivalences de qualification dans Program.
+  affects: [YD-MS-EDU-001, YD-MS-EDU-002, YD-MS-EDU-003, YD-MS-EDU-004]
