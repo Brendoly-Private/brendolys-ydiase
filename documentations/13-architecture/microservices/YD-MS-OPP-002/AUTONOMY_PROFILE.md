@@ -1,6 +1,6 @@
 # YD-MS-OPP-002 — Opportunity Matching
 
-Statut : `autonomy-profile-draft`
+Statut : `C2-BASELINE / OPPORTUNITY-MATCHING-SEMANTICS-CLOSED`
 
 - Autorité : MatchRun/Match, score et explication; aucune autorité sur profil ou opportunité.
 - C2, backup MIXED. C/I/M2M.
@@ -9,3 +9,6 @@ Statut : `autonomy-profile-draft`
 - Sécurité : profilage minimisé, finalité contrôlée, sponsoring interdit dans score organique.
 - Repo : `brendolys-ydiase-opportunity-matching`.
 - Gate : seuils/freshness, explication, SLO/RPO/RTO, rétention runs, restore et contrats.
+
+- Politique normative : `OPPORTUNITY_MATCHING_POLICY.md`.
+- Gates restant : coefficients/seuils, métriques d'équité, règles par type, IAM/IDOR, rétention runs, BIA/RPO/RTO, restore et contrats.
