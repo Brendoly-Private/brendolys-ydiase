@@ -15,18 +15,30 @@ spec:
   invariants:
     - Le graphe n'est jamais source unique d'un fait métier primaire.
     - Toute relation sémantique conserve ses références de provenance.
-  knowledgeMaturity: K0
+  documentation:
+    root: documentations/13-architecture/microservices/YD-MS-KNW-001/
+    sources:
+      - documentations/13-architecture/microservices/YD-MS-KNW-001/PHASE_CLOSURE.md
+      - documentations/13-architecture/microservices/YD-MS-KNW-001/AUTONOMY_PROFILE.md
+      - documentations/13-architecture/microservices/YD-MS-KNW-001/KNOWLEDGE_GRAPH_PROJECTION_POLICY.md
+      - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
+      - documentations/13-architecture/DERIVED_RECOVERY_REGISTER.md
+  knowledgeMaturity: K2
   knowledgeEvidence:
     stableId: PASS
     kind: PASS
     name: PASS
     responsibilityOrPurpose: PASS
-    ownerOrAuthority: {state: PASS, evidence: spec.authority + spec.owns}
-    domainOrScope: UNKNOWN
-    boundaries: {state: PASS, evidence: spec.invariants}
-    sourceDocuments: UNKNOWN
+    ownerOrAuthority: {state: PASS, evidence: DERIVED + projection ownership}
+    domainOrScope: {state: PASS, evidence: MICROSERVICE_BOUNDARY_REVIEW.md classe KNW-001 dans Knowledge}
+    boundaries: {state: PASS, evidence: PHASE_CLOSURE.md + KNOWLEDGE_GRAPH_PROJECTION_POLICY.md}
+    sourceDocuments: {state: PASS, evidence: spec.documentation.sources}
     logicalRelations: {state: PASS, evidence: education-cross-domain.relations.yaml}
-    dependencies: {state: PASS, evidence: spec.consumesFrom}
+    dependencies: {state: PASS, evidence: spec.consumesFrom + PHASE_CLOSURE.md}
     upstreamDownstream: {state: PASS, evidence: spec.consumesEvents + education-cross-domain.relations.yaml}
-    authoritativeOwnership: {state: PASS, evidence: DERIVED authority explicitly recorded}
+    authoritativeOwnership: {state: PASS, evidence: PHASE_CLOSURE.md confirme aucune vérité métier primaire}
     impactTraceability: {state: PASS, evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md}
+    apiOrEventContractsWhenApplicable: UNKNOWN
+    dataContracts: UNKNOWN
+    requirements: UNKNOWN
+    adrForStructuralDecisions: UNKNOWN
