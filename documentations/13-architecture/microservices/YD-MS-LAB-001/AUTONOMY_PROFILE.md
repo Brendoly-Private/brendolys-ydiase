@@ -1,6 +1,6 @@
 # YD-MS-LAB-001 — Labor Signals
 
-Statut : `autonomy-profile-draft`
+Statut : `C2-BASELINE / LABOR-SIGNAL-SEMANTICS-CLOSED`
 
 - Autorité : signaux marché normalisés publiés; raw/provenance restent DAT.
 - C2, backup AUTH. I/M2M, pas d’écriture client.
@@ -9,3 +9,6 @@ Statut : `autonomy-profile-draft`
 - Sécurité : source/provenance/territoire/observedAt obligatoires; distinction observation et estimation.
 - Repo : `brendolys-ydiase-labor-signals`.
 - Gate : seuil qualité, politique expiration, SLO/RPO/RTO, restore et contrats.
+
+- Politique normative : `LABOR_SIGNAL_POLICY.md`.
+- Gates restant : seuils qualité/fraîcheur par classe, sources réelles, SLO/RPO/RTO, restore et contrats.
