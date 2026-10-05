@@ -1,0 +1,58 @@
+apiVersion: knowledge.ydiase/v1
+kind: RelationVocabulary
+metadata:
+  id: YD-ONTOLOGY-RELATION-TYPES
+  status: draft
+spec:
+  relations:
+    - id: contains
+      inverse: partOf
+    - id: partOf
+      inverse: contains
+    - id: owns
+      inverse: ownedBy
+    - id: ownedBy
+      inverse: owns
+    - id: implements
+      inverse: implementedBy
+    - id: implementedBy
+      inverse: implements
+    - id: provides
+      inverse: providedBy
+    - id: providedBy
+      inverse: provides
+    - id: consumes
+      inverse: consumedBy
+    - id: consumedBy
+      inverse: consumes
+    - id: dependsOn
+      inverse: dependencyOf
+    - id: dependencyOf
+      inverse: dependsOn
+    - id: publishes
+      inverse: publishedBy
+    - id: publishedBy
+      inverse: publishes
+    - id: subscribesTo
+    - id: governedBy
+      inverse: governs
+    - id: governs
+      inverse: governedBy
+    - id: constrainedBy
+    - id: decidedBy
+    - id: supersedes
+      inverse: supersededBy
+    - id: supersededBy
+      inverse: supersedes
+    - id: derivedFrom
+    - id: validatedBy
+    - id: verifiedBy
+    - id: deployedOn
+    - id: operatedBy
+    - id: documentedBy
+    - id: implementedIn
+  rules:
+    - New relation types require ontology review before use.
+    - Inverse relations may be generated rather than duplicated in source files.
+    - owns must respect the authoritative data ownership rules.
+    - supersededBy must resolve to an existing entity when lifecycle status is superseded.
