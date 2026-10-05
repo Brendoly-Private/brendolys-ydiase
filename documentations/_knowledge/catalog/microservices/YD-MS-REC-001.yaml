@@ -15,18 +15,30 @@ spec:
   invariants:
     - Un résultat calculé ne devient pas source autoritative du curriculum ou des compétences.
     - RecommendationEvidenceSnapshot conserve les versions utilisées pour expliquer un résultat historique.
-  knowledgeMaturity: K0
+  documentation:
+    root: documentations/13-architecture/microservices/YD-MS-REC-001/
+    sources:
+      - documentations/13-architecture/microservices/YD-MS-REC-001/PHASE_CLOSURE.md
+      - documentations/13-architecture/microservices/YD-MS-REC-001/AUTONOMY_PROFILE.md
+      - documentations/13-architecture/microservices/YD-MS-REC-001/RECOMMENDATION_RANKING_POLICY.md
+      - documentations/08-orientation-recommandation/README.md
+      - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
+  knowledgeMaturity: K2
   knowledgeEvidence:
     stableId: PASS
     kind: PASS
     name: PASS
     responsibilityOrPurpose: PASS
-    ownerOrAuthority: {state: PASS, evidence: spec.authority + spec.owns}
-    domainOrScope: UNKNOWN
-    boundaries: {state: PASS, evidence: spec.invariants}
-    sourceDocuments: UNKNOWN
+    ownerOrAuthority: {state: PASS, evidence: spec.authority + spec.owns + PHASE_CLOSURE.md}
+    domainOrScope: {state: PASS, evidence: documentations/08-orientation-recommandation/README.md}
+    boundaries: {state: PASS, evidence: AUTONOMY_PROFILE.md + PHASE_CLOSURE.md + MICROSERVICE_BOUNDARY_REVIEW.md}
+    sourceDocuments: {state: PASS, evidence: spec.documentation.sources}
     logicalRelations: {state: PASS, evidence: education-cross-domain.relations.yaml}
     dependencies: {state: PASS, evidence: spec.consumesFrom}
     upstreamDownstream: {state: PASS, evidence: spec.consumesEvents + education-cross-domain.relations.yaml}
-    authoritativeOwnership: {state: PASS, evidence: spec.authority + spec.owns}
+    authoritativeOwnership: {state: PASS, evidence: PHASE_CLOSURE.md + spec.owns}
     impactTraceability: {state: PASS, evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md}
+    apiOrEventContractsWhenApplicable: UNKNOWN
+    dataContracts: UNKNOWN
+    requirements: UNKNOWN
+    adrForStructuralDecisions: UNKNOWN
