@@ -226,9 +226,15 @@ Pour DERIVED : FULL_REBUILD + convergence restent obligatoires avant production.
 ### À détailler lors des fermetures de domaine
 Les contrats `YD-CTR-<DOMAIN>-ANALYTICS-v1` sont une famille paramétrée : ANL-001 devra enregistrer une entrée concrète par métrique/source autorisée. Les contrats AI seront approfondis lors de la fermeture AI. Les valeurs numériques de rétention/SLO/compatibilité restent PREPROD.
 
-## 17. Verdict
+## 17. Validation v1
 
-`CONTRACT-REGISTRY-BASELINE-ESTABLISHED`.
+La validation normative est définie dans `CONTRACT_V1_VALIDATION_MATRIX.md`.
+
+Aucun contrat `ACTIVE-LOGICAL` ne devient `PHYSICAL-READY`, et aucun contrat `DERIVED-SOURCE` ne devient `REBUILDABLE`, sans satisfaire les gates et preuves applicables de cette matrice. Un P0 `UNKNOWN`, `NOT-TESTED` ou `NOT-ASSESSABLE` n'est pas un PASS.
+
+## 18. Verdict
+
+`CONTRACT-REGISTRY-BASELINE-ESTABLISHED / V1-VALIDATION-BASELINE-DEFINED / EXECUTION-PENDING`.
 
 Les contrats logiques inter-frontières disposent désormais d'un registre canonique. La prochaine dette n'est plus l'identification des familles : elle est la **matérialisation des schémas physiques, contract tests, SLO et preuves de replay/rebuild**.
 
