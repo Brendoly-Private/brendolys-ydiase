@@ -15,6 +15,7 @@ Cette charte gouverne tout le corpus YDIASE. La documentation doit permettre de 
 - ne jamais utiliser l'IA conversationnelle comme source de vérité
 - ne jamais imposer une technologie sans décision justifiée
 - concevoir la cible panafricaine tout en distinguant le pilote Burkina
+- traiter la pérennité comme capacité d'évolution, de migration et de transmission, et non comme conservation indéfinie d'une implémentation
 
 ## 3. Identifiants
 
@@ -67,10 +68,28 @@ Toute contradiction suit `POLITIQUE_CONTRADICTIONS.md`. Aucune correction silenc
 
 Tout changement normatif suit `POLITIQUE_CHANGEMENT_IMPACT.md`. Une modification de fondations ou de domaine doit évaluer ses impacts sur les décisions techniques existantes.
 
-## 12. Prudence
+## 12. Doctrine de pérennité
+
+`../01-fondations-produit/DOCTRINE_PERENNITE.md` constitue une contrainte fondatrice transverse dès sa validation avec le dossier 01.
+
+Toute création ou révision importante de domaine, capacité, modèle de données, frontière, contrat, infrastructure, politique de sécurité, procédure d'exploitation ou Country Framework doit évaluer les gates de pérennité pertinents.
+
+En particulier :
+
+- une implémentation ne devient jamais un invariant produit par simple ancienneté
+- une décision technique structurante doit examiner sa réversibilité et sa stratégie de sortie
+- un changement sémantique doit rester versionné et traçable
+- les identifiants durables ne sont pas réutilisés
+- l'historique utile doit rester interprétable après migration, sous réserve des obligations de suppression et rétention
+- les 51 frontières D3 ne bénéficient d'aucune protection contre une correction métier justifiée
+- le coût déjà engagé n'est pas une preuve de validité architecturale
+
+Une exception qui crée une dépendance durable doit être explicitement documentée et gouvernée.
+
+## 13. Prudence
 
 La documentation n'invente pas API, événement, seuil, technologie, obligation réglementaire, donnée, owner ou dépendance pour remplir un modèle. Les choix non décidés restent gouvernés selon leur nature.
 
-## 13. Critère de validité
+## 14. Critère de validité
 
 Un document est utilisable comme référence uniquement si son statut, son autorité, sa version et son périmètre permettent cet usage. La présence dans le dépôt ne suffit pas.
