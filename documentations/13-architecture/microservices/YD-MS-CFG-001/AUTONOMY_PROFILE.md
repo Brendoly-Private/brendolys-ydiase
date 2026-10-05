@@ -1,6 +1,6 @@
 # YD-MS-CFG-001 — Country Configuration
 
-Statut : `autonomy-profile-draft`
+Statut : `C1-BASELINE / COUNTRY-CONFIG-SEMANTICS-DEFINED`
 
 - Autorité : pays, territoires, langues, monnaies, bindings de cadres et paramètres locaux gouvernés.
 - C1, backup AUTH. I/M2M.
@@ -8,4 +8,5 @@ Statut : `autonomy-profile-draft`
 - Panne : dernière configuration versionnée en lecture; nouvelles écritures dépendantes gelées si config requise absente.
 - Sécurité : changements à fort impact approuvés/audités, historique complet, rollout compatible.
 - Repo : `brendolys-ydiase-country-configuration`.
-- Gate : Burkina framework complet, gouvernance changements, SLO/RPO/RTO, restore.
+- Politiques normatives : `COUNTRY_CONFIGURATION_POLICY.md` et `COUNTRY_CHANGE_SAFETY_POLICY.md`.
+- Gate : preuves/configuration Burkina réellement nécessaires au pilote, gouvernance/approbations physiques, SLO/RPO/RTO, backup/restore et tests de propagation.
