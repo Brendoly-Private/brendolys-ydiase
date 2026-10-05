@@ -42,7 +42,7 @@ La cible couvre au minimum : identité et profils ; établissements, campus, pro
 | YD-SVC-LAB-003 | Labor Forecasting Service | Prévisions, scénarios et tendances du marché du travail | Marché-travail | P7 | D0 | not-started |
 | YD-SVC-OPP-001 | Opportunity Service | Stages, emplois, programmes et autres opportunités | Opportunités-recrutement | P4 | D0 | not-started |
 | YD-SVC-OPP-002 | Opportunity Matching Service | Matching profil-compétences-opportunités | Opportunités-recrutement | P4 | D0 | not-started |
-| YD-SVC-REC-002 | Application Service | Candidatures, statuts, suivi et historique | Opportunités-recrutement | P4 | D0 | not-started |
+| YD-SVC-REC-002 | Application Service | SUPERSEDED — remplacé par YD-SVC-APP-001 | Opportunités-recrutement | P4 | D2 | SUPERSEDED |
 | YD-SVC-EMP-001 | Employer Service | Organisations employeuses, profils et présence employeur | Opportunités-recrutement | P4 | D0 | not-started |
 | YD-SVC-EMP-002 | Talent & Recruitment Service | Recherche de talents, viviers et campagnes de recrutement | Opportunités-recrutement | P5 | D0 | not-started |
 | YD-SVC-CNT-001 | Content Service | Articles, vidéos, ressources et contenus éditoriaux | Contenu-communauté-learning | P5 | D0 | not-started |
