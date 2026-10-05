@@ -214,4 +214,4 @@ Les six familles précédemment `TBD-BLOCKING` passent à `DEFINED-FOR-CONTRACT-
 5. PLT-AI-IAM — fermé
 6. PLT-API-IAM — fermé
 
-Il ne reste aucun `TBD-BLOCKING` connu empêchant de commencer le Contract Registry candidat. Cette fermeture ne vaut pas autorisation de production : les `TBD-PREPROD` et `ADR-REQUIRED` restent actifs.
+Le Contract Registry canonique est désormais matérialisé dans `CONTRACT_REGISTRY.md`. Il ne reste aucun `TBD-BLOCKING` connu sur l'identification des familles contractuelles; les schémas physiques, SLO et preuves préproduction restent actifs. Cette fermeture ne vaut pas autorisation de production : les `TBD-PREPROD` et `ADR-REQUIRED` restent actifs.
