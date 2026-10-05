@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 import yaml
 from jsonschema import Draft202012Validator, RefResolver
+from maturity import calculate_knowledge, calculate_evidence
 
 ID_RE = re.compile(r"^YD-[A-Z0-9-]+$")
 PREFIX_BY_KIND = {"Domain":"YD-DOM-","System":"YD-SYS-","Microservice":"YD-MS-","API":"YD-API-","Event":"YD-EVT-","ADR":"YD-ADR-","Requirement":"YD-REQ-","RelationSet":"YD-RELSET-","EventCatalog":"YD-EVTCAT-","RequirementCatalog":"YD-REQCAT-"}
@@ -52,7 +53,7 @@ def schema_errors_for(path,document,schema_dir):
         loc=".".join(str(v) for v in e.absolute_path) or "$";out.append(f"{path}: {loc}: {e.message}")
     return out
 
-def maturity_errors_for(entity_id:str,entity:dict,path:Path)->list[str]:
+def lifecycle_maturity_errors(entity_id:str,entity:dict,path:Path)->list[str]:
     if entity.get("kind")!="Microservice":return []
     spec=entity.get("spec",{}) if isinstance(entity.get("spec"),dict) else {};lc=spec.get("lifecycle",{}) if isinstance(spec.get("lifecycle"),dict) else {}
     architecture=lc.get("architecture");implementation=lc.get("implementation");deployment=lc.get("deployment");errors=[]
@@ -74,6 +75,11 @@ def maturity_errors_for(entity_id:str,entity:dict,path:Path)->list[str]:
         if code.get("status")!="present":errors.append(f"{path}: {entity_id} production requires code.status present")
         need("domain");need("system");need("logicalServices");need("owns")
     return errors
+
+def assertion_evidence(entity:dict)->list[dict]:
+    spec=entity.get("spec",{}) if isinstance(entity.get("spec"),dict) else {}
+    values=spec.get("assertions",[])
+    return [v for v in values if isinstance(v,dict)] if isinstance(values,list) else []
 
 def main()->int:
     p=argparse.ArgumentParser();p.add_argument("root",nargs="?",default="documentations/_knowledge");p.add_argument("--strict",action="store_true");p.add_argument("--json",dest="json_path");p.add_argument("--no-schema",action="store_true");p.add_argument("--no-maturity",action="store_true");args=p.parse_args()
@@ -100,14 +106,21 @@ def main()->int:
             a,b,c=r.get("from"),r.get("type"),r.get("to")
             if b and b not in allowed:invalid_relations.append(f"{path}: {b}")
             if a and b and c:edges.append((a,b,c,path))
-    unresolved=sorted({(k,r,str(path)) for k,r,path in refs if r not in ids});ownership=defaultdict(list);authority_errors=[];maturity_errors=[]
+    unresolved=sorted({(k,r,str(path)) for k,r,path in refs if r not in ids});ownership=defaultdict(list);authority_errors=[];maturity_errors=[];knowledge_matrix=[];evidence_matrix=[]
     for eid,(kind,path,entity) in ids.items():
-        if kind!="Microservice":continue
-        spec=entity.get("spec",{}) if isinstance(entity.get("spec"),dict) else {};auth=spec.get("authority")
-        if auth is not None and auth not in AUTHORITIES:authority_errors.append(f"{path}: invalid authority {auth}")
-        for agg in spec.get("owns",[]) or []:
-            if isinstance(agg,str):ownership[agg].append(eid)
-        if not args.no_maturity:maturity_errors.extend(maturity_errors_for(eid,entity,path))
+        if kind=="Microservice":
+            spec=entity.get("spec",{}) if isinstance(entity.get("spec"),dict) else {};auth=spec.get("authority")
+            if auth is not None and auth not in AUTHORITIES:authority_errors.append(f"{path}: invalid authority {auth}")
+            for agg in spec.get("owns",[]) or []:
+                if isinstance(agg,str):ownership[agg].append(eid)
+            if not args.no_maturity:
+                maturity_errors.extend(lifecycle_maturity_errors(eid,entity,path))
+                kr=calculate_knowledge(entity);knowledge_matrix.append({"id":eid,"path":str(path),**kr})
+                for error in kr.get("errors",[]):maturity_errors.append(f"{path}: {eid} {error}")
+        if not args.no_maturity:
+            for index,assertion in enumerate(assertion_evidence(entity)):
+                er=calculate_evidence(assertion);evidence_matrix.append({"entityId":eid,"assertionIndex":index,"assertionId":assertion.get("id"),**er})
+                for error in er.get("errors",[]):maturity_errors.append(f"{path}: {eid} assertion[{index}] {error}")
     ownership_conflicts=[f"{a}: {', '.join(sorted(o))}" for a,o in sorted(ownership.items()) if len(set(o))>1]
     event_errors=[];relations={(a,b,c) for a,b,c,_ in edges}
     for eid,(kind,path,entity) in ids.items():
@@ -119,8 +132,15 @@ def main()->int:
         for consumer in consumers:
             if consumer in ids and ids[consumer][0]=="Microservice" and (consumer,"subscribesTo",eid) not in relations:event_errors.append(f"{eid}: missing subscribesTo relation from {consumer}")
     hard=parse_errors+schema_errors+duplicates+prefix_errors+invalid_relations+authority_errors+ownership_conflicts+event_errors+maturity_errors
-    report={"summary":{"yamlFiles":len(yaml_files),"catalogFiles":len(catalog_files),"registeredIds":len(ids),"references":len(refs),"schemaErrors":len(schema_errors),"maturityErrors":len(maturity_errors),"hardErrors":len(hard),"unresolvedReferences":len(unresolved)},"errors":{"parse":parse_errors,"schema":schema_errors,"duplicateIds":duplicates,"idPrefixes":prefix_errors,"relationTypes":invalid_relations,"authority":authority_errors,"ownership":ownership_conflicts,"events":event_errors,"maturity":maturity_errors},"migrationDebt":[{"key":k,"reference":r,"path":path} for k,r,path in unresolved]}
+    distribution=defaultdict(int)
+    for item in knowledge_matrix:distribution[item.get("calculated") or "NONE"]+=1
+    evidence_distribution=defaultdict(int)
+    for item in evidence_matrix:evidence_distribution[item.get("calculated") or "E0"]+=1
+    report={"summary":{"yamlFiles":len(yaml_files),"catalogFiles":len(catalog_files),"registeredIds":len(ids),"references":len(refs),"schemaErrors":len(schema_errors),"maturityErrors":len(maturity_errors),"hardErrors":len(hard),"unresolvedReferences":len(unresolved),"knowledgeEntities":len(knowledge_matrix),"evidenceAssertions":len(evidence_matrix)},"errors":{"parse":parse_errors,"schema":schema_errors,"duplicateIds":duplicates,"idPrefixes":prefix_errors,"relationTypes":invalid_relations,"authority":authority_errors,"ownership":ownership_conflicts,"events":event_errors,"maturity":maturity_errors},"maturity":{"knowledge":{"distribution":dict(sorted(distribution.items())),"entities":sorted(knowledge_matrix,key=lambda x:x["id"])},"evidence":{"distribution":dict(sorted(evidence_distribution.items())),"assertions":evidence_matrix}},"migrationDebt":[{"key":k,"reference":r,"path":path} for k,r,path in unresolved]}
     print(json.dumps(report["summary"],ensure_ascii=False,indent=2))
+    if knowledge_matrix:
+        print("Knowledge maturity:")
+        for item in sorted(knowledge_matrix,key=lambda x:x["id"]):print(f"  {item['id']}: declared={item.get('declared') or '-'} calculated={item.get('calculated') or 'NONE'}")
     for cat,errs in report["errors"].items():
         for e in errs:print(f"[{cat.upper()}] {e}")
     for i in report["migrationDebt"]:print(f"[UNRESOLVED] {i['reference']} via {i['key']} in {i['path']}")
