@@ -59,7 +59,7 @@ Cette matrice définit la propriété logique des données pour les 61 services 
 | YD-SVC-LAB-003 Labor Forecasting | `LaborForecast`, `ForecastScenario`, `ForecastModelRun`, `ForecastAssumption`, `ForecastEvaluation` | LAB-003 pour prévisions et évaluations | historical labor intelligence/signals, economic signals, occupation/skill refs, analytics datasets |
 | YD-SVC-OPP-001 Opportunity | `Opportunity`, `OpportunityVersion`, `OpportunityRequirement`, `OpportunityPublication` | OPP-001 | employer (EMP-001), occupation/skills, location/config, provenance/quality, partner feeds |
 | YD-SVC-OPP-002 Opportunity Matching | `OpportunityMatchRun`, `OpportunityMatch`, `MatchExplanation` | OPP-002 pour résultat de matching | opportunities, profile/skills/experience, occupations, consent, recommendation policies |
-| YD-SVC-REC-002 Application | `Application`, `ApplicationStatusHistory`, `ApplicationSubmission`, `CandidateResponse` | REC-002 | OpportunityRef, candidate Identity/Profile refs, employer refs, consent/privacy |
+| YD-SVC-APP-001 Application | `Application`, `ApplicationStatusHistory`, `ApplicationSubmission`, `CandidateResponse` | APP-001 | OpportunityRef, candidate Identity/Profile refs, employer refs, consent/privacy |
 | YD-SVC-EMP-001 Employer | `Employer`, `EmployerPresence`, `EmployerVerification`, `EmployerProfile` | EMP-001 | identity/account refs, partner data, country/territory, provenance/quality |
 | YD-SVC-EMP-002 Talent & Recruitment | `TalentPool`, `RecruitmentCampaign`, `CandidateSelection`, `RecruitmentPipeline` | EMP-002 | employer, opportunities/applications, permitted profile/skill projections, matching results, consent |
 
