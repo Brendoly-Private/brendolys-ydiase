@@ -1,6 +1,6 @@
 # YD-MS-CNS-001 — Consent & Privacy
 
-Statut : `autonomy-profile-draft-critical`
+Statut : `C1-BASELINE / PRIVACY-SEMANTICS-DEFINED`
 
 - Données possédées : PurposeGrant, consent/restriction state, privacy requests, retention rules et références de finalité. Données très sensibles.
 - Datastore : autoritatif privé, migrations privées, historique nécessaire aux preuves; aucun accès DB externe.
@@ -13,4 +13,5 @@ Statut : `autonomy-profile-draft-critical`
 - Scaling : clé `subject/purpose`; lectures décisionnelles séparables sans dupliquer l’autorité.
 - Repo candidat : `brendolys-ydiase-consent-privacy`; workload identity, secrets, certificats et pipeline propres.
 - Runbook/DR : corruption de grants, retard de révocation, indisponibilité IAM, replay d’événements, restauration et propagation des restrictions.
-- Gates : base légale/finalités par pays, RPO/RTO/SLO, rétention, audience/scopes/rôles, test restore, SLO de propagation de révocation.
+- Politiques normatives : `PRIVACY_DECISION_POLICY.md` et `REVOCATION_RETENTION_RECOVERY_POLICY.md`.
+- Gates restant : validation juridique par pays des bases applicables/finalités, seuils mineurs, durées de rétention, RPO/RTO/SLO, audience/scopes/rôles, test restore et SLO de propagation de révocation.
