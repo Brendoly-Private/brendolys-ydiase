@@ -150,8 +150,8 @@ Interdits :
 
 ## 10. Risques ouverts classés
 
-### R1 — HIGH — Contract Registry non matérialisé
-Les familles sont définies, mais les contrats API/event/projection physiques, compatibilité versions, schémas et SLO ne sont pas encore le registre exécutable.
+### R1 — REMEDIATED-D3 — Contract Registry canonique matérialisé
+`CONTRACT_REGISTRY.md` centralise désormais IDs, owners/consumers, types, autorité, données minimales, Privacy, idempotence, replay, compatibilité et criticité. Restent HIGH pour préproduction : schémas physiques, contract tests, SLO et preuves de replay/rebuild.
 
 ### R2 — HIGH — DERIVED non reconstruits
 5/5 sont REBUILD-UNVERIFIED.
@@ -170,11 +170,11 @@ IAM/IDOR/tenant, revocation propagation et purpose enforcement doivent être pro
 
 ## 11. Ordre recommandé après revue
 
-1. Construire `CONTRACT_REGISTRY.md` candidat à partir des dépendances/events déjà définis.
-2. Fermer `ANL-001` avant ANL-002/003.
-3. Fermer AI-002 puis AI-003 et réconcilier le rôle de AI Gateway/AI-004 deferred.
-4. Fermer Content/Community/Moderation si ces surfaces entrent dans le pilote.
-5. Fermer économie : BIL/MKT/SPN avant monétisation.
+1. Fermer `ANL-001` avant ANL-002/003 en s'appuyant sur `CONTRACT_REGISTRY.md`.
+2. Fermer AI-002 puis AI-003 et réconcilier le rôle de AI Gateway/AI-004 deferred.
+3. Fermer Content/Community/Moderation si ces surfaces entrent dans le pilote.
+4. Fermer économie : BIL/MKT/SPN avant monétisation.
+5. Matérialiser progressivement les schémas physiques et contract tests des contrats activés au pilote.
 6. Exécuter les plans de FULL_REBUILD des 5 DERIVED à l'approche de la préproduction.
 
 ## 12. Verdict global
