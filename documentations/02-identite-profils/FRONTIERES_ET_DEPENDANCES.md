@@ -2,64 +2,61 @@
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`
 
-## Frontières métier proposées
+## Frontières métier confirmées
 
 ### Identité technique et accès
 
 Responsabilité : comptes, principal technique, credentials bindings, sessions et état d'accès.
-Traduction D3 actuelle : `IDN-001`.
+Traduction D3 : `IDN-001` via BRENDOLYS Identity.
 Décision : `CONFIRM-SEPARATION`.
-
-L'identité technique ne doit pas posséder le profil métier.
 
 ### Profil courant
 
 Responsabilité : `UserProfile`, préférences, objectifs, contraintes déclarées et vues sémantiques du profil.
-Traduction D3 actuelle : `PRF-001`.
-Décision : `CONFIRM-WITH-REVIEW`.
+Traduction D3 : `PRF-001` → `YD-MS-PRF-001`.
+Décision : `KEEP-SEPARATE-PHYSICAL`.
 
 ### Historique éducatif et expérience
 
 Responsabilité : `EducationRecord`, `ExperienceRecord`, `AchievementClaim`, `ProfileEvidenceLink`.
-Traduction D3 actuelle : `PRF-002`.
-Décision : `KEEP-SEPARATE-LOGICALLY` avant décision physique définitive.
+Traduction D3 : `PRF-002` → `YD-MS-PRF-002`.
+Décision : `KEEP-SEPARATE-PHYSICAL`.
 
-La séparation logique est justifiée par temporalité, provenance, volume historique et règles de preuve différentes du profil courant. La nécessité d'un microservice physique distinct reste à réévaluer après Education, Skills et Privacy.
+La séparation physique est retenue par `ADR-PRF-001-PRF-002-PHYSICAL-BOUNDARY.md`. Les raisons principales sont la temporalité longue, la provenance, les preuves, les permissions minimales, la rétention et la réduction du rayon d'impact.
 
 ### Consentement et privacy
 
 Responsabilité : finalités, consentements, restrictions, demandes des personnes et instructions de rétention.
-Traduction D3 actuelle : `CNS-001` dans plateforme-gouvernance.
+Traduction D3 : `CNS-001`.
 Décision : `CONFIRM-SEPARATION`.
 
 ## Dépendances autorisées
 
 | Producteur | Consommateur domaine 02 | Donnée minimale | Autorité |
 |---|---|---|---|
-| IDN | Profile | `IdentityRef`, état de compte nécessaire | IDN |
-| Privacy/CNS | Profile | droits/finalités applicables | CNS |
-| Country Framework | Profile | règles pays pertinentes | Country/CFG |
-| Education | History | références institution/formation/qualification | Education |
-| Skills | History/Profile | références de taxonomie lorsque nécessaires | Skills |
-| Data Provenance | Evidence | références de source/provenance | Data |
+| IDN | PRF-001 / PRF-002 | `IdentityRef`, état de compte strictement nécessaire | IDN |
+| PRF-001 | PRF-002 | `ProfileRef` et attributs minimaux requis | PRF-001 |
+| Privacy/CNS | PRF-001 / PRF-002 | droits, finalités et restrictions applicables | CNS |
+| Country Framework | PRF-001 / PRF-002 | règles pays pertinentes | Country/CFG |
+| Education | PRF-002 | références institution/formation/qualification | Education |
+| Skills | PRF-002 | références de taxonomie lorsque nécessaires | Skills |
+| Data Provenance | PRF-002 | références de source/provenance | Data |
 
 ## Dépendances interdites
 
+- PRF-001 et PRF-002 ne partagent aucune base de données
+- PRF-001 ne modifie pas les agrégats historiques de PRF-002
+- PRF-002 ne modifie pas le profil courant PRF-001
 - Profile ne crée pas un compte IAM
-- Profile ne modifie pas une institution ou formation de référence
-- History ne crée pas une compétence autoritative
-- Recommendation ne modifie pas directement le profil comme un fait
-- un consommateur ne réplique pas tout le profil par commodité
+- PRF-002 ne crée pas une institution, formation, qualification ou compétence de référence
+- Recommendation ne transforme pas directement une inférence en fait de profil
+- un consommateur ne réplique pas le dossier complet par commodité
 - une projection analytique ne devient pas owner du profil
 
-## Incohérence D3 détectée
+## Cohérence
 
-La DDD Review antérieure classait `PRF-002` en `REVIEW-SPLIT` tandis que la revue de fusion avait validé `PRF-001 + PRF-002` sous contrôle renforcé. Le domaine confirme aujourd'hui deux responsabilités sémantiques distinctes mais ne tranche pas encore leur séparation physique.
+L'incohérence D3 antérieure est close. `DDD_REVIEW.md` et `SENSITIVE_MERGER_REVIEW.md` doivent considérer la séparation physique comme la décision canonique. Toute future proposition de fusion exige un nouvel ADR.
 
-Conséquence : la fusion physique existante ou envisagée ne doit pas être considérée comme définitivement validée avant les domaines Education, Skills et Privacy.
+## Effet sur la cible
 
-## Risque principal
-
-Concentrer profil courant, historique long, preuves et données sensibles dans une seule frontière physique augmente le rayon d'impact d'une compromission et complique rétention, migration et séparation des finalités. À l'inverse, séparer trop tôt crée des contrats et opérations supplémentaires.
-
-Décision finale : `ADR-REQUIRED` avant production Burkina.
+La cible contient désormais deux microservices métier pour ces responsabilités. Le comptage physique D3 doit passer de 47 à 48 microservices métier et de 51 à 52 frontières autonomes avec les quatre composants plateforme.
