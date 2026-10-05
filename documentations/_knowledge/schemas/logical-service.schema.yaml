@@ -1,0 +1,31 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/logical-service.schema.yaml
+title: YDIASE Logical Service
+allOf:
+  - $ref: ./common.schema.yaml
+  - type: object
+    properties:
+      kind:
+        const: LogicalService
+      spec:
+        type: object
+        required: [domain, responsibility]
+        properties:
+          domain:
+            type: string
+            pattern: '^YD-DOM-'
+          system:
+            type: string
+            pattern: '^YD-SYS-'
+          responsibility:
+            type: string
+          capabilities:
+            type: array
+            items: {type: string, pattern: '^YD-CAP-'}
+          implementedBy:
+            type: array
+            items: {type: string, pattern: '^YD-(MS|PLT)-'}
+          authoritativeDocuments:
+            type: array
+            items: {type: string}
+    required: [kind, spec]
