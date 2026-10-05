@@ -1,6 +1,6 @@
 # YD-MS-CAR-002 — Career Path & Transition — Baseline
 
-Statut : `DOCUMENTATION-BASELINE / IMPLEMENTATION-GATES-OPEN`
+Statut : `DOCUMENTATION-BASELINE / TRANSITION-SEMANTICS-DEFINED`
 Nature : `MIXED`
 Criticité : `C2`
 
@@ -29,13 +29,17 @@ ADR obligatoire si Transition acquiert durablement son propre dataset/stockage, 
 ## Récupération
 Les trajectoires/transitions persistées sont restaurées depuis la chaîne propre de YD-MS-CAR-002. Les services sources ne servent pas de backup. Réconciliation des références après restore.
 
-## Gates avant implémentation/ACTIVE
-- modèle de gap et de transition ;
-- règles d'incertitude et explicabilité ;
+## Politique de transition
+Le modèle normatif est défini dans `CAREER_GAP_TRANSITION_POLICY.md`. Il ferme les gaps multidimensionnels, statuts blocking/required/preferred, UNKNOWN/MISSING, construction d'options/plans, faisabilité, incertitude, explicabilité, correction et reproductibilité.
+
+## Gates restant avant ACTIVE
+- coefficients/pondérations et seuils validés ;
+- règles pays/réglementaires physiques ;
+- validation métier et tests de biais/équité ;
 - Privacy/finalités/rétention des snapshots ;
 - contrats physiques ;
 - IAM ;
 - RPO/RTO/SLO ;
 - restore test.
 
-Statut : `BASELINE-ESTABLISHED — TRANSITION/EXPLAINABILITY GATES OPEN`.
+Statut : `BASELINE-ESTABLISHED — TRANSITION-SEMANTICS-CLOSED / VALIDATION-PREPROD-PENDING`.
