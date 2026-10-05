@@ -8,19 +8,35 @@ allOf:
       kind: {const: Event}
       spec:
         type: object
-        required: [publisher, eventName]
+        required: [type, producer, consumers]
         properties:
-          publisher: {type: string}
-          eventName: {type: string}
+          type: {type: string, minLength: 1}
+          producer: {type: string, pattern: '^YD-MS-[A-Z0-9-]+$'}
+          consumers:
+            type: array
+            items: {type: string, pattern: '^YD-(MS|SVC)-[A-Z0-9-]+$'}
+          purpose: {type: string}
+          aggregate: {type: string}
           version: {type: string}
+          payload:
+            type: array
+            items: {type: string}
+          payloadMinimum:
+            type: array
+            items: {type: string}
+          semantics:
+            type: object
+            properties:
+              idempotenceKey: {type: string}
+              ordering: {type: string}
+              history: {type: string}
+            additionalProperties: true
+          invariants:
+            type: array
+            items: {type: string}
           schemaRef: {type: string}
-          subscribers:
-            type: array
-            items: {type: string}
-          data:
-            type: array
-            items: {type: string}
           compatibility:
             enum: [backward, forward, full, none, TBD]
           retention: {type: string}
+        additionalProperties: false
     required: [kind, spec]
