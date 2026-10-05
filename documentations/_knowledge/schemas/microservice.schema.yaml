@@ -2,11 +2,7 @@ $schema: https://json-schema.org/draft/2020-12/schema
 $id: knowledge.ydiase/schemas/microservice.schema.yaml
 title: YDIASE Microservice Knowledge Entity
 type: object
-required:
-  - apiVersion
-  - kind
-  - metadata
-  - spec
+required: [apiVersion, kind, metadata, spec]
 properties:
   apiVersion:
     const: knowledge.ydiase/v1
@@ -16,83 +12,78 @@ properties:
     type: object
     required: [id, name, status]
     properties:
-      id:
-        type: string
-        pattern: '^YD-MS-[A-Z0-9-]+$'
-      name:
-        type: string
-        minLength: 1
-      title:
-        type: string
-      status:
-        type: string
+      id: {type: string, pattern: '^YD-MS-[A-Z0-9-]+$'}
+      name: {type: string, minLength: 1}
+      title: {type: string}
+      status: {type: string}
   spec:
     type: object
-    required:
-      - domain
-      - system
-      - lifecycle
+    required: [logicalServices, responsibility]
     properties:
-      domain:
-        type: string
-      system:
-        type: string
+      domain: {type: string, pattern: '^YD-DOM-'}
+      system: {type: string, pattern: '^YD-SYS-'}
       logicalServices:
         type: array
-        items:
-          type: string
+        minItems: 1
+        items: {type: string, pattern: '^YD-SVC-'}
+      authority:
+        enum: [AUTH, MIXED, DERIVED]
+      responsibility: {type: string, minLength: 1}
       lifecycle:
         type: object
         required: [architecture, implementation, deployment]
         properties:
-          architecture:
-            enum: [candidate, under-review, confirmed, rejected, superseded]
-          implementation:
-            enum: [not-started, planned, in-progress, implemented, retired]
-          deployment:
-            enum: [not-deployed, development, staging, production, suspended, retired]
+          architecture: {enum: [candidate, under-review, confirmed, rejected, superseded]}
+          implementation: {enum: [not-started, planned, in-progress, implemented, retired]}
+          deployment: {enum: [not-deployed, development, staging, production, suspended, retired]}
+          documentation: {type: string}
       owns:
         type: array
         uniqueItems: true
-        items:
-          type: string
+        items: {type: string}
       consumes:
         type: array
         uniqueItems: true
-        items:
-          type: string
+        items: {type: string}
+      consumesFrom:
+        type: array
+        uniqueItems: true
+        items: {type: string, pattern: '^YD-MS-'}
+      consumesEvents:
+        type: array
+        uniqueItems: true
+        items: {type: string, pattern: '^YD-EVT-'}
       publishes:
         type: array
         uniqueItems: true
-        items:
-          type: string
+        items: {type: string, pattern: '^YD-EVT-'}
       subscribesTo:
         type: array
         uniqueItems: true
-        items:
-          type: string
+        items: {type: string, pattern: '^YD-EVT-'}
       decisions:
         type: array
         uniqueItems: true
-        items:
-          type: string
+        items: {type: string, pattern: '^YD-ADR-'}
       requirements:
         type: array
         uniqueItems: true
-        items:
-          type: string
+        items: {type: string, pattern: '^YD-REQ-'}
+      invariants:
+        type: array
+        items: {type: string}
       documentation:
         type: object
         properties:
-          root:
-            type: string
+          root: {type: string}
+          sources:
+            type: array
+            items: {type: string}
       code:
         type: object
         properties:
-          status:
-            enum: [not-created, planned, present, retired]
+          status: {enum: [not-created, planned, present, retired]}
           paths:
             type: array
-            items:
-              type: string
+            items: {type: string}
 additionalProperties: true
