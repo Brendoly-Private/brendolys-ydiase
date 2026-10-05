@@ -10,12 +10,23 @@ spec:
   authority: MIXED
   responsibility: Ressources et formations complémentaires liées aux écarts de compétences
   owns: [LearningResource, LearningOfferingRef, LearningRecommendationSet]
-  consumesFrom:
-    - YD-MS-EDU-003
-    - YD-MS-SKL-001
-  consumesEvents:
-    - YD-EVT-EDU-003
-    - YD-EVT-EDU-006
+  consumesFrom: [YD-MS-EDU-003, YD-MS-SKL-001]
+  consumesEvents: [YD-EVT-EDU-003, YD-EVT-EDU-006]
   invariants:
     - Un fournisseur externe reste source de ses faits externes.
     - Les recommandations learning dérivées ne réécrivent pas les sources Education ou Skills.
+  knowledgeMaturity: K0
+  knowledgeEvidence:
+    stableId: PASS
+    kind: PASS
+    name: PASS
+    responsibilityOrPurpose: PASS
+    ownerOrAuthority: {state: PASS, evidence: spec.authority + spec.owns}
+    domainOrScope: UNKNOWN
+    boundaries: {state: PASS, evidence: spec.invariants}
+    sourceDocuments: UNKNOWN
+    logicalRelations: {state: PASS, evidence: education-cross-domain.relations.yaml}
+    dependencies: {state: PASS, evidence: spec.consumesFrom}
+    upstreamDownstream: {state: PASS, evidence: spec.consumesEvents + education-cross-domain.relations.yaml}
+    authoritativeOwnership: {state: PASS, evidence: spec.authority + spec.owns}
+    impactTraceability: {state: PASS, evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md}
