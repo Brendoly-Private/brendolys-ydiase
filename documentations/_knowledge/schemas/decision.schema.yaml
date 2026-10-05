@@ -1,0 +1,31 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/decision.schema.yaml
+title: YDIASE Architecture Decision
+allOf:
+  - $ref: ./common.schema.yaml
+  - type: object
+    properties:
+      kind: {const: ADR}
+      spec:
+        type: object
+        required: [context, decision, status]
+        properties:
+          context: {type: string}
+          decision: {type: string}
+          status:
+            enum: [proposed, accepted, rejected, superseded, deprecated]
+          alternatives:
+            type: array
+            items: {type: string}
+          consequences:
+            type: array
+            items: {type: string}
+          affectedEntities:
+            type: array
+            items: {type: string}
+          supersedes: {type: string}
+          supersededBy: {type: string}
+          evidence:
+            type: array
+            items: {type: string}
+    required: [kind, spec]
