@@ -1,0 +1,39 @@
+apiVersion: knowledge.ydiase/v1
+kind: RelationSet
+metadata:
+  id: YD-RELSET-EDU-001
+  name: education-relations
+  status: draft
+  sourceDocuments:
+    - documentations/03-education-institutions/FRONTIERES_ET_DEPENDANCES.md
+    - documentations/13-architecture/DEPENDENCY_MAP.md
+    - documentations/13-architecture/EVENT_MAP.md
+    - documentations/13-architecture/DATA_OWNERSHIP_MATRIX.md
+spec:
+  scope: YD-DOM-EDU
+  relations:
+    - {from: YD-DOM-EDU, type: contains, to: YD-SYS-EDU-CATALOG}
+    - {from: YD-SYS-EDU-CATALOG, type: contains, to: YD-MS-EDU-001}
+    - {from: YD-SYS-EDU-CATALOG, type: contains, to: YD-MS-EDU-002}
+    - {from: YD-SYS-EDU-CATALOG, type: contains, to: YD-MS-EDU-003}
+    - {from: YD-SYS-EDU-CATALOG, type: contains, to: YD-MS-EDU-004}
+    - {from: YD-MS-EDU-001, type: implements, to: YD-SVC-EDU-001}
+    - {from: YD-MS-EDU-002, type: implements, to: YD-SVC-EDU-002}
+    - {from: YD-MS-EDU-003, type: implements, to: YD-SVC-EDU-003}
+    - {from: YD-MS-EDU-004, type: implements, to: YD-SVC-EDU-004}
+    - {from: YD-MS-EDU-002, type: dependsOn, to: YD-MS-EDU-001, contract: YD-API-EDU-001, consistency: strong-on-creation}
+    - {from: YD-MS-EDU-003, type: dependsOn, to: YD-MS-EDU-002, contract: YD-API-EDU-002, consistency: strong-on-link}
+    - {from: YD-MS-EDU-002, type: subscribesTo, to: YD-EVT-EDU-003}
+    - {from: YD-MS-EDU-002, type: subscribesTo, to: YD-EVT-EDU-005}
+    - {from: YD-MS-EDU-003, type: subscribesTo, to: YD-EVT-EDU-002}
+    - {from: YD-MS-EDU-001, type: publishes, to: YD-EVT-EDU-001}
+    - {from: YD-MS-EDU-002, type: publishes, to: YD-EVT-EDU-002}
+    - {from: YD-MS-EDU-003, type: publishes, to: YD-EVT-EDU-003}
+    - {from: YD-MS-EDU-003, type: publishes, to: YD-EVT-EDU-004}
+    - {from: YD-MS-EDU-004, type: publishes, to: YD-EVT-EDU-005}
+  invariants:
+    - Program never owns or mutates Institution or Campus.
+    - Curriculum never owns or mutates Program.
+    - Program consumes published Curriculum references asynchronously and never commands Curriculum inside its transaction.
+    - Qualification is authoritative in EDU-004; Program stores references, not parallel equivalence truth.
+    - No cross-microservice distributed transaction is allowed in the Education domain.
