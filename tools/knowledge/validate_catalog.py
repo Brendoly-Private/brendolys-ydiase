@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Validate the YDIASE machine-readable knowledge catalog.
 
-K2 compiler gate. It reports migration debt separately from semantic errors and
-never creates missing knowledge entities.
+K2 compiler gate. Structural, semantic and JSON Schema checks are separated so
+migration debt remains visible without being confused with contract failures.
 """
 from __future__ import annotations
 
@@ -15,19 +15,21 @@ from pathlib import Path
 from typing import Any
 
 import yaml
+from jsonschema import Draft202012Validator, RefResolver
 
 ID_RE = re.compile(r"^YD-[A-Z0-9-]+$")
 PREFIX_BY_KIND = {
-    "Domain": "YD-DOM-",
-    "System": "YD-SYS-",
-    "Microservice": "YD-MS-",
-    "API": "YD-API-",
-    "Event": "YD-EVT-",
-    "ADR": "YD-ADR-",
-    "Requirement": "YD-REQ-",
-    "RelationSet": "YD-RELSET-",
-    "EventCatalog": "YD-EVTCAT-",
-    "RequirementCatalog": "YD-REQCAT-",
+    "Domain": "YD-DOM-", "System": "YD-SYS-", "Microservice": "YD-MS-",
+    "API": "YD-API-", "Event": "YD-EVT-", "ADR": "YD-ADR-",
+    "Requirement": "YD-REQ-", "RelationSet": "YD-RELSET-",
+    "EventCatalog": "YD-EVTCAT-", "RequirementCatalog": "YD-REQCAT-",
+}
+SCHEMA_BY_KIND = {
+    "Domain": "domain.schema.yaml",
+    "System": "system.schema.yaml",
+    "Microservice": "microservice.schema.yaml",
+    "API": "api.schema.yaml",
+    "Event": "event.schema.yaml",
 }
 REFERENCE_KEYS = {
     "domain", "system", "producer", "publisher", "provider", "owner", "authority",
@@ -44,21 +46,20 @@ def load_yaml(path: Path) -> Any:
 
 
 def iter_entities(document: Any):
-    """Yield top-level and catalog-embedded YD entities."""
     if not isinstance(document, dict):
         return
     metadata = document.get("metadata")
     if isinstance(metadata, dict) and isinstance(metadata.get("id"), str):
-        yield metadata["id"], document.get("kind"), document
+        yield metadata["id"], document.get("kind"), document, True
     spec = document.get("spec", {})
     if document.get("kind") == "EventCatalog":
         for item in spec.get("events", []):
             if isinstance(item, dict) and isinstance(item.get("id"), str):
-                yield item["id"], "Event", item
+                yield item["id"], "Event", item, False
     if document.get("kind") == "RequirementCatalog":
         for item in spec.get("requirements", []):
             if isinstance(item, dict) and isinstance(item.get("id"), str):
-                yield item["id"], "Requirement", item
+                yield item["id"], "Requirement", item, False
 
 
 def collect_references(value: Any, refs: list[tuple[str, str, Path]], path: Path, key: str | None = None) -> None:
@@ -79,17 +80,42 @@ def normalize_event(entity: dict[str, Any]) -> tuple[str | None, list[str]]:
     return producer, [v for v in consumers if isinstance(v, str)]
 
 
+def schema_errors_for(path: Path, document: Any, schema_dir: Path) -> list[str]:
+    """Validate only top-level catalog objects. Embedded catalog rows have their own catalog contract."""
+    if not isinstance(document, dict):
+        return []
+    kind = document.get("kind")
+    schema_name = SCHEMA_BY_KIND.get(kind)
+    if not schema_name:
+        return []
+    schema_path = schema_dir / schema_name
+    if not schema_path.exists():
+        return [f"{path}: schema missing for kind {kind}: {schema_path}"]
+    schema = load_yaml(schema_path)
+    resolver = RefResolver(base_uri=schema_path.resolve().as_uri(), referrer=schema)
+    validator = Draft202012Validator(schema, resolver=resolver)
+    errors = []
+    for error in sorted(validator.iter_errors(document), key=lambda e: list(e.absolute_path)):
+        location = ".".join(str(v) for v in error.absolute_path) or "$"
+        errors.append(f"{path}: {location}: {error.message}")
+    return errors
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("root", nargs="?", default="documentations/_knowledge")
     parser.add_argument("--strict", action="store_true", help="fail on unresolved migration references")
     parser.add_argument("--json", dest="json_path", help="write a machine-readable report")
+    parser.add_argument("--no-schema", action="store_true", help="disable JSON Schema checks")
     args = parser.parse_args()
 
     root = Path(args.root)
+    schema_dir = root / "schemas"
     yaml_files = sorted(root.rglob("*.yaml"))
+    catalog_files = [p for p in yaml_files if "schemas" not in p.parts and "ontology" not in p.parts]
     documents: list[tuple[Path, Any]] = []
     parse_errors: list[str] = []
+    schema_errors: list[str] = []
     ids: dict[str, tuple[str | None, Path, dict[str, Any]]] = {}
     duplicates: list[str] = []
     prefix_errors: list[str] = []
@@ -102,7 +128,12 @@ def main() -> int:
         except Exception as exc:
             parse_errors.append(f"{path}: {exc}")
             continue
-        for entity_id, kind, entity in iter_entities(document):
+        if not args.no_schema and path in catalog_files:
+            try:
+                schema_errors.extend(schema_errors_for(path, document, schema_dir))
+            except Exception as exc:
+                schema_errors.append(f"{path}: schema validation infrastructure error: {exc}")
+        for entity_id, kind, entity, _top_level in iter_entities(document):
             if not ID_RE.match(entity_id):
                 prefix_errors.append(f"{path}: invalid YD id {entity_id}")
                 continue
@@ -116,10 +147,7 @@ def main() -> int:
         collect_references(document, refs, path)
 
     relation_doc = load_yaml(root / "ontology" / "RELATION_TYPES.yaml") or {}
-    allowed_relations = {
-        item.get("id") for item in relation_doc.get("spec", {}).get("relations", [])
-        if isinstance(item, dict) and item.get("id")
-    }
+    allowed_relations = {item.get("id") for item in relation_doc.get("spec", {}).get("relations", []) if isinstance(item, dict) and item.get("id")}
     invalid_relations: list[str] = []
     relation_edges: list[tuple[str, str, str, Path]] = []
     for path, document in documents:
@@ -135,7 +163,6 @@ def main() -> int:
                 relation_edges.append((source, relation_type, target, path))
 
     unresolved = sorted({(key, ref, str(path)) for key, ref, path in refs if ref not in ids})
-
     ownership: dict[str, list[str]] = defaultdict(list)
     authority_errors: list[str] = []
     for entity_id, (kind, path, entity) in ids.items():
@@ -148,10 +175,7 @@ def main() -> int:
         for aggregate in spec.get("owns", []) or []:
             if isinstance(aggregate, str):
                 ownership[aggregate].append(entity_id)
-    ownership_conflicts = [
-        f"{aggregate}: {', '.join(sorted(owners))}"
-        for aggregate, owners in sorted(ownership.items()) if len(set(owners)) > 1
-    ]
+    ownership_conflicts = [f"{aggregate}: {', '.join(sorted(owners))}" for aggregate, owners in sorted(ownership.items()) if len(set(owners)) > 1]
 
     event_errors: list[str] = []
     relations = {(a, b, c) for a, b, c, _ in relation_edges}
@@ -169,27 +193,19 @@ def main() -> int:
             if consumer in ids and ids[consumer][0] == "Microservice" and (consumer, "subscribesTo", event_id) not in relations:
                 event_errors.append(f"{event_id}: missing subscribesTo relation from {consumer}")
 
-    hard_errors = parse_errors + duplicates + prefix_errors + invalid_relations + authority_errors + ownership_conflicts + event_errors
+    hard_errors = parse_errors + schema_errors + duplicates + prefix_errors + invalid_relations + authority_errors + ownership_conflicts + event_errors
     report = {
         "summary": {
-            "yamlFiles": len(yaml_files),
-            "registeredIds": len(ids),
-            "references": len(refs),
-            "hardErrors": len(hard_errors),
+            "yamlFiles": len(yaml_files), "catalogFiles": len(catalog_files), "registeredIds": len(ids),
+            "references": len(refs), "schemaErrors": len(schema_errors), "hardErrors": len(hard_errors),
             "unresolvedReferences": len(unresolved),
         },
         "errors": {
-            "parse": parse_errors,
-            "duplicateIds": duplicates,
-            "idPrefixes": prefix_errors,
-            "relationTypes": invalid_relations,
-            "authority": authority_errors,
-            "ownership": ownership_conflicts,
-            "events": event_errors,
+            "parse": parse_errors, "schema": schema_errors, "duplicateIds": duplicates,
+            "idPrefixes": prefix_errors, "relationTypes": invalid_relations, "authority": authority_errors,
+            "ownership": ownership_conflicts, "events": event_errors,
         },
-        "migrationDebt": [
-            {"key": key, "reference": ref, "path": path} for key, ref, path in unresolved
-        ],
+        "migrationDebt": [{"key": key, "reference": ref, "path": path} for key, ref, path in unresolved],
     }
 
     print(json.dumps(report["summary"], ensure_ascii=False, indent=2))
