@@ -19,7 +19,7 @@ Cette revue évalue les 61 services logiques candidats de `SERVICE_MAP.md`. Elle
 |---|---|
 | IDN-001 | KEEP-SEPARATE |
 | PRF-001 | KEEP-SEPARATE |
-| PRF-002 | REVIEW-SPLIT |
+| PRF-002 | KEEP-SEPARATE — confirmé par `ADR-PRF-001-PRF-002-PHYSICAL-BOUNDARY.md` |
 | EDU-001 | KEEP-SEPARATE |
 | EDU-002 | KEEP-SEPARATE |
 | EDU-003 | KEEP-SEPARATE |
@@ -79,9 +79,13 @@ Cette revue évalue les 61 services logiques candidats de `SERVICE_MAP.md`. Elle
 | CFG-001 | KEEP-SEPARATE |
 | CNS-001 | KEEP-SEPARATE |
 
+## Correction PRF
+
+La décision historique `PRF-002 = REVIEW-SPLIT` est close. Le domaine 02 a confirmé des responsabilités sémantiques distinctes et l'ADR de frontière physique a retenu deux microservices autonomes. L'ancienne validation de fusion est superseded.
+
 ## Lecture du nombre de microservices
 
-La revue ne valide pas 61 microservices physiques. À ce stade, environ 45 à 50 frontières ont un argument sérieux pour une autonomie à grande échelle. Les autres restent des contextes logiques, produits, BFF ou candidats à fusion. Ce nombre doit encore passer par la revue des agrégats, dépendances, sécurité, charge, équipes et contrats.
+Cette revue reste une revue des services logiques. Le comptage physique canonique appartient à `MICROSERVICE_BOUNDARY_REVIEW.md`. Après la décision PRF, la cible physique compte 48 microservices métier et 4 composants de plateforme autonomes, soit 52 frontières autonomes, hors BRENDOLYS Identity.
 
 ## Règles de la prochaine passe
 
