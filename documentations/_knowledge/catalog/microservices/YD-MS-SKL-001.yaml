@@ -15,32 +15,29 @@ spec:
   invariants:
     - Skills ne devient jamais propriétaire des curricula sources.
     - Toute assertion dérivée conserve provenance et version source.
-  knowledgeMaturity: K0
+  documentation:
+    root: documentations/13-architecture/microservices/YD-MS-SKL-001/
+    sources:
+      - documentations/13-architecture/microservices/YD-MS-SKL-001/PHASE_CLOSURE.md
+      - documentations/13-architecture/microservices/YD-MS-SKL-001/AUTONOMY_PROFILE.md
+      - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
+      - documentations/13-architecture/AUTONOMY_PROFILE_REGISTER.md
+  knowledgeMaturity: K2
   knowledgeEvidence:
     stableId: PASS
     kind: PASS
     name: PASS
     responsibilityOrPurpose: PASS
-    ownerOrAuthority:
-      state: PASS
-      evidence: spec.authority + spec.owns
-    domainOrScope: UNKNOWN
-    boundaries:
-      state: PASS
-      evidence: spec.invariants
-    sourceDocuments: UNKNOWN
-    logicalRelations:
-      state: PASS
-      evidence: education-cross-domain.relations.yaml
-    dependencies:
-      state: PASS
-      evidence: spec.consumesFrom
-    upstreamDownstream:
-      state: PASS
-      evidence: spec.consumesEvents + education-cross-domain.relations.yaml
-    authoritativeOwnership:
-      state: PASS
-      evidence: spec.authority + spec.owns
-    impactTraceability:
-      state: PASS
-      evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md
+    ownerOrAuthority: {state: PASS, evidence: spec.authority + spec.owns + PHASE_CLOSURE.md}
+    domainOrScope: {state: PASS, evidence: MICROSERVICE_BOUNDARY_REVIEW.md classe SKL-001 dans Compétences}
+    boundaries: {state: PASS, evidence: AUTONOMY_PROFILE.md + PHASE_CLOSURE.md + spec.invariants}
+    sourceDocuments: {state: PASS, evidence: spec.documentation.sources}
+    logicalRelations: {state: PASS, evidence: education-cross-domain.relations.yaml}
+    dependencies: {state: PASS, evidence: spec.consumesFrom + PHASE_CLOSURE.md}
+    upstreamDownstream: {state: PASS, evidence: spec.consumesEvents + education-cross-domain.relations.yaml}
+    authoritativeOwnership: {state: PASS, evidence: spec.authority + spec.owns + PHASE_CLOSURE.md}
+    impactTraceability: {state: PASS, evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md}
+    apiOrEventContractsWhenApplicable: UNKNOWN
+    dataContracts: UNKNOWN
+    requirements: UNKNOWN
+    adrForStructuralDecisions: UNKNOWN
