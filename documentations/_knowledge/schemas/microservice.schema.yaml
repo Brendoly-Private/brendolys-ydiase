@@ -1,0 +1,98 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/schemas/microservice.schema.yaml
+title: YDIASE Microservice Knowledge Entity
+type: object
+required:
+  - apiVersion
+  - kind
+  - metadata
+  - spec
+properties:
+  apiVersion:
+    const: knowledge.ydiase/v1
+  kind:
+    const: Microservice
+  metadata:
+    type: object
+    required: [id, name, status]
+    properties:
+      id:
+        type: string
+        pattern: '^YD-MS-[A-Z0-9-]+$'
+      name:
+        type: string
+        minLength: 1
+      title:
+        type: string
+      status:
+        type: string
+  spec:
+    type: object
+    required:
+      - domain
+      - system
+      - lifecycle
+    properties:
+      domain:
+        type: string
+      system:
+        type: string
+      logicalServices:
+        type: array
+        items:
+          type: string
+      lifecycle:
+        type: object
+        required: [architecture, implementation, deployment]
+        properties:
+          architecture:
+            enum: [candidate, under-review, confirmed, rejected, superseded]
+          implementation:
+            enum: [not-started, planned, in-progress, implemented, retired]
+          deployment:
+            enum: [not-deployed, development, staging, production, suspended, retired]
+      owns:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+      consumes:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+      publishes:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+      subscribesTo:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+      decisions:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+      requirements:
+        type: array
+        uniqueItems: true
+        items:
+          type: string
+      documentation:
+        type: object
+        properties:
+          root:
+            type: string
+      code:
+        type: object
+        properties:
+          status:
+            enum: [not-created, planned, present, retired]
+          paths:
+            type: array
+            items:
+              type: string
+additionalProperties: true
