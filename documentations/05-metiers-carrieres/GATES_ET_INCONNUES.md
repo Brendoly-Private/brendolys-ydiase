@@ -11,23 +11,31 @@ Statut : `DOMAIN-REVIEW-CANDIDATE`
 | fusion CAR-002/CAR-003 | N/A | VALIDATED-WITH-EXTRACTION-GATE | consommateur |
 | modèle de preuve métier | TBD-VALIDATION | N/A | N/A |
 | Country Framework | TBD-PREPROD | contexte requis | contexte requis |
-| modèle de gap/transition | N/A | TBD-BEFORE-IMPLEMENTATION | consommé |
-| incertitude/explicabilité | provenance assertions | TBD-BEFORE-ACTIVE | TBD-BEFORE-ACTIVE |
+| modèle de gap/transition | N/A | **DEFINED** | consommé |
+| UNKNOWN vs MISSING | N/A | **DEFINED** | REQUIRED |
+| blocking/required/preferred | N/A | **DEFINED** | REQUIRED |
+| faisabilité | N/A | **DEFINED** | consommé |
+| incertitude/explicabilité | provenance assertions | **DEFINED** | REQUIRED |
+| reproductibilité | version/provenance | **DEFINED** | REQUIRED |
+| coefficients/pondérations | N/A | TBD-VALIDATION | TBD-VALIDATION |
+| biais/équité | N/A | TBD-VALIDATION | TBD-VALIDATION |
 | Privacy/rétention snapshots | catalogue | TBD-BEFORE-ACTIVE | TBD-BEFORE-ACTIVE |
 | RPO/RTO/SLO | TBD-PREPROD C2 | TBD-PREPROD C2 | selon frontière future |
 | restore | TBD-PREPROD | TBD-PREPROD | selon frontière future |
 | contrats physiques | TBD-PREPROD | TBD-PREPROD | TBD |
 
+## Politique normative
+
+Le calcul est défini dans `../13-architecture/microservices/YD-MS-CAR-002/CAREER_GAP_TRANSITION_POLICY.md`.
+
+Un gap est multidimensionnel. Aucun score global ne peut compenser un prérequis bloquant. `UNKNOWN` n'est jamais assimilé à `MISSING`. Une transition conserve entrées, versions, hypothèses, incertitude et explication.
+
 ## Décisions maintenues
 
-La fusion physique CAR-002 + CAR-003 reste valide conformément à `SENSITIVE_MERGER_REVIEW.md`. Une divergence durable de dataset, modèle, SLO, charge, équipe, Privacy/rétention ou cycle de déploiement déclenche un ADR.
+Fusion physique CAR-002 + CAR-003 maintenue avec gate d'extraction. CAR-004 reste logique.
 
-CAR-004 reste logique : son existence dans les services D2 n'autorise pas à créer silencieusement un nouveau microservice.
+## Restant avant ACTIVE
 
-## Blocages
+Les coefficients, seuils, règles pays physiques, validation métier, tests de biais/équité, Privacy/rétention et preuves préproduction restent ouverts.
 
-Aucun blocage n'empêche de poursuivre l'architecture des autres domaines.
-
-Avant implémentation personnalisée de CAR-002/003, le modèle de gap/transition et les règles d'incertitude/explication doivent être fermés. Avant ACTIVE, Privacy/rétention et contrats physiques doivent être validés.
-
-Statut : `DOMAIN-BASELINE-CANDIDATE`.
+Statut : `DOMAIN-BASELINE-CANDIDATE / CAREER-TRANSITION-SEMANTICS-DEFINED`.
