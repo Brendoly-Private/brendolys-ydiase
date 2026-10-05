@@ -1,6 +1,6 @@
 # R1 — Inventaire documentaire gouverné — BRENDOLYS YDIASE
 
-Statut : `R1-IN-PROGRESS / STRUCTURAL-INVENTORY-ESTABLISHED / CONTENT-CANONICALITY-PENDING-R2`
+Statut : `R1-IN-PROGRESS / STRUCTURAL-INVENTORY-ESTABLISHED / AUTHORITY-TYPING-ESTABLISHED / LOGICAL-PHYSICAL-MAPPING-ESTABLISHED / EXHAUSTIVE-TREE-PENDING`
 
 ## 1. Objet
 
@@ -35,6 +35,16 @@ Confiance :
 - `LOW` : contenu/canonicalité à lire avant toute décision.
 
 Aucun `MERGE`, `SUPERSEDE` ou `ARCHIVE` définitif n'est autorisé par R1 seul.
+
+
+
+## 2A. Registres R1 normatifs associés
+
+- `DOCUMENT_TYPE_AUTHORITY_MODEL.md` définit les types documentaires, la normativité, les couches de réalité et les règles de priorité.
+- `LOGICAL_TO_PHYSICAL_BOUNDARY_REGISTER.md` définit la navigation entre services logiques, microservices, composants plateforme, capacités LOGICAL_ONLY, plateformes externes, éléments superseded et deferred.
+- `DOCUMENTATION_INFORMATION_ARCHITECTURE_REVIEW.md` définit l'architecture d'information cible et les phases R0–R10.
+
+R1 ne doit pas recopier leurs détails : il les référence.
 
 ## 3. Vue structurelle actuelle
 
@@ -428,3 +438,28 @@ R2 devra notamment résoudre :
 - statut des documents de validation et preuves.
 
 Aucun déplacement massif n'est exécuté avant ce gate.
+
+
+## 19. État R1 après normalisation d'autorité
+
+Établi :
+- architecture d'information cible ;
+- classification structurelle des grandes zones ;
+- modèle de type/autorité documentaire ;
+- distinction normative/descriptive/evidence ;
+- distinction vision/target/design/implementation/deployment/activation/evidence ;
+- relation canonique service logique ↔ frontière physique ;
+- règle de traitement des surfaces/experiences ;
+- catégories de migration ;
+- gates empêchant les déplacements prématurés.
+
+Encore bloquant pour `R1-COMPLETE` :
+- tree physique exhaustif du repository ;
+- table exhaustive fichier par fichier ;
+- liens entrants/sortants ;
+- documents non Markdown ;
+- détection systématique des documents orphelins ;
+- canonicality de contenu, qui appartient ensuite à R2.
+
+Verdict courant :
+`R1-STRUCTURAL-BASELINE-STRONG / NO-MASS-MIGRATION-YET`.
