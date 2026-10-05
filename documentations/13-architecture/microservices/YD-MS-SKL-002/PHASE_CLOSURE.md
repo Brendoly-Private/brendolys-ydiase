@@ -1,6 +1,6 @@
 # YD-MS-SKL-002 — User Skills Profile — Baseline C1
 
-Statut : `DOCUMENTATION-BASELINE-C1 / IMPLEMENTATION-GATES-OPEN`
+Statut : `DOCUMENTATION-BASELINE-C1 / SEMANTICS-DEFINED`
 Nature : `AUTH`
 Criticité : `C1`
 Classification : profilage individuel sensible
@@ -30,13 +30,15 @@ SKL-002 doit restaurer son autorité depuis sa propre chaîne de recovery. PRF-0
 
 Les références de preuve peuvent rester non résolues après restore jusqu'à réconciliation.
 
-## Gates bloquants avant implémentation/ACTIVE
-- modèle de proficiency/niveau versionné ;
-- règles de dérivation, expiration, correction et invalidation ;
-- traitement de confiance/fraîcheur/provenance ;
+## Sémantique de dérivation
+La politique normative est définie dans `SKILL_STATE_DERIVATION_POLICY.md`. Elle ferme le modèle de proficiency, la séparation niveau/confiance/fraîcheur, les preuves, contradictions, corrections/révocations, historique append-only, inférences et reproductibilité.
+
+Restent bloquants avant ACTIVE :
+- coefficients/seuils validés des politiques de dérivation ;
+- durées de fraîcheur validées par famille/type ;
 - finalités Privacy et rétention ;
-- politique d'inférence et validation ;
-- contrôles d'accès horizontal.
+- contrôles d'accès horizontal ;
+- validations métier/psychométriques applicables.
 
 ## Gates C1 avant production
 - BIA ;
@@ -50,4 +52,4 @@ Les références de preuve peuvent rester non résolues après restore jusqu'à 
 
 Contrairement à PRF-002, ces documents C1 détaillés ne sont pas fabriqués prématurément : ils seront produits lorsque les règles de dérivation et l'architecture physique seront suffisamment stables pour générer des preuves réelles.
 
-Statut : `C1-BASELINE-ESTABLISHED — DERIVATION/PRIVACY GATES BLOCK IMPLEMENTATION`.
+Statut : `C1-BASELINE-ESTABLISHED — SEMANTICS-CLOSED / VALIDATION-PRIVACY-PREPROD-PENDING`.
