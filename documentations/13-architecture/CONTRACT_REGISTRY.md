@@ -126,6 +126,21 @@ Tout EVENT/JOB possède `event_id/request_ref` ou clé métier stable. Les chang
 | YD-CTR-CAR-KNOWLEDGE-v1 | CAR → KNW | PROJECTION | occupations/relations/version | PUBLIC/INTERNAL | snapshot/catch-up/delete | K2 | DERIVED-SOURCE |
 | YD-CTR-LAB-KNOWLEDGE-v1 | LAB → KNW | PROJECTION | governed signals/indicators/territory/version | INTERNAL/AGGREGATED | snapshot/catch-up/retract | K2 | DERIVED-SOURCE |
 | YD-CTR-<DOMAIN>-ANALYTICS-v1 | domaine enregistré → ANL-001 | PROJECTION | facts/dimensions/timestamps/versions + metric-purpose binding | CONTEXTUAL | snapshot/catch-up/delete/revoke | K2 | DERIVED-SOURCE |
+| YD-CTR-EDU-ANALYTICS-v1 | EDU → ANL-001 | PROJECTION | educational governed dimensions/versions; metric-scoped | PUBLIC/INTERNAL | snapshot/catch-up/delete | K2 | DERIVED-SOURCE |
+| YD-CTR-SKL-ANALYTICS-v1 | SKL → ANL-001 | PROJECTION | governed skill aggregates/taxonomy versions; metric-scoped | CONTEXTUAL | snapshot/catch-up/delete/revoke | K2 | DERIVED-SOURCE |
+| YD-CTR-CAR-ANALYTICS-v1 | CAR → ANL-001 | PROJECTION | occupation/path/gap aggregates; metric-scoped | CONTEXTUAL | snapshot/catch-up/delete | K2 | DERIVED-SOURCE |
+| YD-CTR-ASM-ANALYTICS-v1 | ASM → ANL-001 | PROJECTION | assessment method/result aggregates only as authorized | SENSITIVE/AGGREGATED | snapshot/catch-up/revoke | K1 | DERIVED-SOURCE |
+| YD-CTR-ORI-ANALYTICS-v1 | ORI → ANL-001 | EVENT/PROJECTION | orientation state/objective/decision aggregates | SENSITIVE/AGGREGATED | replay/catch-up/revoke | K1 | DERIVED-SOURCE |
+| YD-CTR-REC-ANALYTICS-v1 | REC → ANL-001 | PROJECTION | policy/model/abstention/coverage/uncertainty aggregates | SENSITIVE/AGGREGATED | snapshot/catch-up/revoke | K1 | DERIVED-SOURCE |
+| YD-CTR-LAB-ANALYTICS-v1 | LAB → ANL-001 | PROJECTION | governed signal/indicator/territory/period/method versions | INTERNAL/AGGREGATED | snapshot/catch-up/retract | K2 | DERIVED-SOURCE |
+| YD-CTR-OPP-ANALYTICS-v1 | OPP → ANL-001 | EVENT/PROJECTION | opportunity type/state/territory/time aggregates | INTERNAL/AGGREGATED | replay/catch-up/withdraw/expire | K2 | DERIVED-SOURCE |
+| YD-CTR-APP-ANALYTICS-v1 | APP → ANL-001 | EVENT/PROJECTION | application transition aggregates; subject minimized | VERY-SENSITIVE/AGGREGATED | replay/catch-up/revoke | K1 | DERIVED-SOURCE |
+| YD-CTR-EMP-ANALYTICS-v1 | EMP → ANL-001 | EVENT/PROJECTION | employer/recruitment governed aggregates | CONFIDENTIAL/AGGREGATED | replay/catch-up/revoke | K1 | DERIVED-SOURCE |
+| YD-CTR-LRN-ANALYTICS-v1 | LRN → ANL-001 | PROJECTION | resource/discovery availability dimensions | INTERNAL/AGGREGATED | snapshot/catch-up/retire | K2 | DERIVED-SOURCE |
+| YD-CTR-CNT-ANALYTICS-v1 | CNT/COM/MOD → ANL-001 | EVENT/PROJECTION | governed content/activity/moderation aggregates | CONTEXTUAL/AGGREGATED | replay/catch-up/revoke | K2 | DERIVED-SOURCE |
+| YD-CTR-NTF-ANALYTICS-v1 | NTF → ANL-001 | EVENT | delivery status/channel aggregates; recipient minimized | SENSITIVE-MIN/AGGREGATED | replay/dedupe | K2 | DERIVED-SOURCE |
+| YD-CTR-CFG-ANALYTICS-v1 | CFG → ANL-001 | PROJECTION | country/territory/framework/config version context | INTERNAL/PUBLIC | snapshot/catch-up | K2 | DERIVED-SOURCE |
+| YD-CTR-DAT-ANALYTICS-v1 | DAT → ANL-001 | PROJECTION | provenance/quality/validation states and versions | CONTEXTUAL | snapshot/catch-up/revoke | K2 | DERIVED-SOURCE |
 | YD-CTR-SRH-RETRIEVAL-v1 | SRH → AI-002 | PROJECTION/API | authorized search documents/source refs/versions/access labels | CONTEXTUAL | index watermark + rebuild | K2 | DERIVED-SOURCE |
 | YD-CTR-KNW-GROUNDING-v1 | KNW → AI-002 | PROJECTION/API | graph facts/relations/provenance/confidence/version | INTERNAL | graph watermark + rebuild | K2 | DERIVED-SOURCE |
 | YD-CTR-CNS-CORPUS-AUTHORIZATION-v1 | CNS → AI-002 | API/PROJECTION | purpose/corpus authorization/restrictions/decision version | VERY-SENSITIVE | decision+version; revoke priority | K1 | DERIVED-SOURCE |
@@ -224,7 +239,7 @@ Pour DERIVED : FULL_REBUILD + convergence restent obligatoires avant production.
 - Model lifecycle/AI verification/orchestration.
 
 ### À détailler lors des fermetures de domaine
-Les contrats `YD-CTR-<DOMAIN>-ANALYTICS-v1` sont une famille paramétrée : ANL-001 devra enregistrer une entrée concrète par métrique/source autorisée. Les contrats AI seront approfondis lors de la fermeture AI. Les valeurs numériques de rétention/SLO/compatibilité restent PREPROD.
+Les contrats `YD-CTR-<DOMAIN>-ANALYTICS-v1` forment une famille paramétrée. Les familles sources candidates sont désormais enregistrées dans `YD-MS-ANL-001/ANALYTICS_SOURCE_CONTRACT_REGISTER.md`; chaque activation reste limitée à une MetricDefinition approuvée et à ses champs exacts. Les contrats AI seront approfondis lors de la fermeture AI. Les valeurs numériques de rétention/SLO/compatibilité restent PREPROD.
 
 ## 17. Validation v1
 
