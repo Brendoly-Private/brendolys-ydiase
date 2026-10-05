@@ -1,0 +1,91 @@
+apiVersion: knowledge.ydiase/v1
+kind: KnowledgeMaturityModel
+metadata:
+  id: YD-KMAT-001
+  name: knowledge-maturity-k0-k6
+  status: draft
+spec:
+  principle: La maturité de connaissance mesure ce que YDIASE sait, relie, vérifie et peut exploiter de façon traçable sur une entité. Elle reste distincte de l'état d'implémentation et de déploiement.
+  levels:
+    K0:
+      name: Identifié
+      objective: L'objet existe avec une identité stable et une raison d'exister.
+      requires:
+        - stableId
+        - kind
+        - name
+        - responsibilityOrPurpose
+    K1:
+      name: Cadré
+      objective: Les frontières fonctionnelles, responsabilités et rattachements sont définis.
+      requires:
+        - K0
+        - ownerOrAuthority
+        - domainOrScope
+        - boundaries
+        - sourceDocuments
+    K2:
+      name: Relié
+      objective: L'objet appartient au graphe YDIASE et ses dépendances sont explicites.
+      requires:
+        - K1
+        - logicalRelations
+        - dependencies
+        - upstreamDownstream
+        - authoritativeOwnership
+        - impactTraceability
+    K3:
+      name: Contractualisé
+      objective: Les échanges et invariants nécessaires à l'implémentation sont définis.
+      requires:
+        - K2
+        - apiOrEventContractsWhenApplicable
+        - dataContracts
+        - invariants
+        - requirements
+        - adrForStructuralDecisions
+        - versioningRules
+        - compatibilityRules
+    K4:
+      name: Gouverné
+      objective: Sécurité, conformité, qualité, exploitation et responsabilités opérationnelles sont définies.
+      requires:
+        - K3
+        - dataClassification
+        - securityControls
+        - privacyAndRetentionWhenApplicable
+        - sloOrCriticality
+        - observability
+        - backupRecoveryWhenStateful
+        - runbookOrOperationalProcedure
+        - namedOwners
+    K5:
+      name: Vérifié
+      objective: Les contrats et exigences possèdent des preuves reproductibles.
+      requires:
+        - K4
+        - automatedValidation
+        - contractTests
+        - securityVerification
+        - restoreOrResilienceTestWhenApplicable
+        - evidenceLinks
+        - unresolvedCriticalGapsEqualsZero
+    K6:
+      name: Opérationnel et maintenu
+      objective: La connaissance reflète le système exploité et reste synchronisée avec ses changements.
+      requires:
+        - K5
+        - implementationTrace
+        - deploymentTrace
+        - productionObservabilityWhenDeployed
+        - changeImpactProcess
+        - reviewCadence
+        - deprecationAndRetirementRules
+        - driftDetection
+  rules:
+    - Un niveau K n'autorise jamais à déduire un état de déploiement.
+    - Un composant non activé peut atteindre K4 ou K5 si les éléments applicables sont documentés et vérifiés hors production.
+    - K6 exige une preuve runtime uniquement lorsqu'un composant est effectivement déployé.
+    - Une exigence non applicable doit être explicitement marquée N/A avec justification, jamais omise silencieusement.
+    - Toute régression d'une preuve peut faire redescendre le niveau calculé.
+    - Le niveau déclaré ne peut jamais dépasser le niveau calculé par le Knowledge Gate.
