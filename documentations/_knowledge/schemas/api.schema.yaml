@@ -8,16 +8,26 @@ allOf:
       kind: {const: API}
       spec:
         type: object
-        required: [provider, protocol]
+        required: [owner, consumers, purpose, logicalMode, physicalProtocol]
         properties:
-          provider: {type: string}
-          system: {type: string}
-          protocol: {type: string}
-          version: {type: string}
-          contractPath: {type: string}
+          owner: {type: string, pattern: '^YD-MS-[A-Z0-9-]+$'}
           consumers:
             type: array
+            items: {type: string, pattern: '^YD-(MS|SVC)-[A-Z0-9-]+$'}
+          purpose: {type: string, minLength: 1}
+          logicalMode:
+            enum: [SYNC, ASYNC, HYBRID]
+          authority: {type: string}
+          consistency: {type: string}
+          failurePolicy: {type: string}
+          invariants:
+            type: array
             items: {type: string}
+          physicalProtocol: {type: string}
+          adrRequired: {type: boolean}
+          system: {type: string}
+          version: {type: string}
+          contractPath: {type: string}
           data:
             type: array
             items: {type: string}
@@ -25,4 +35,5 @@ allOf:
             type: array
             items: {type: string}
           lifecycle: {type: object}
+        additionalProperties: false
     required: [kind, spec]
