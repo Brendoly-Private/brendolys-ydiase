@@ -8,7 +8,7 @@ Criticité : `C1`
 REC-001 possède RecommendationRun, RecommendationSet, RecommendationItem, RecommendationExplanation et RecommendationEvidenceSnapshot. Il ne possède aucune donnée source utilisée par le calcul.
 
 ## Politique normative
-Voir `RECOMMENDATION_RANKING_POLICY.md`.
+Voir `RECOMMENDATION_RANKING_POLICY.md`, `SPONSORED_NON_INFLUENCE_TEST_POLICY.md` et `FAIRNESS_EVALUATION_POLICY.md`.
 
 La politique ferme : eligibility, scoring organique, ranking, pondérations versionnées, evidence snapshot, abstention, explicabilité, incertitude, principes de biais/équité, correction/reproductibilité et séparation stricte entre organique et sponsoring.
 
@@ -25,9 +25,9 @@ SPN-001 ne peut jamais modifier score, rang, pondération, exclusion ou explicat
 
 ## Avant ACTIVE
 - coefficients/seuils validés ;
-- métriques et protocoles d'équité ;
+- seuils numériques d'équité et preuves sur données représentatives ;
 - tests de biais et dérive ;
-- tests automatisés garantissant la non-influence SPN ;
+- exécution préproduction de la suite anti-influence SPN avec preuves ;
 - règles mineurs ;
 - Privacy/rétention ;
 - IAM/IDOR ;
@@ -37,4 +37,4 @@ SPN-001 ne peut jamais modifier score, rang, pondération, exclusion ou explicat
 ## RSH-001
 Le module Research reste logique. Toute autorité académique durable déclenche la revue d'extraction prévue.
 
-Statut final : `C1-BASELINE-ESTABLISHED — RECOMMENDATION-POLICY-CLOSED / VALIDATION-PREPROD-PENDING`.
+Statut final : `C1-BASELINE-ESTABLISHED — RANKING-FAIRNESS-SPONSOR-ISOLATION-DEFINED / PREPROD-EVIDENCE-PENDING`.
