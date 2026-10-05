@@ -1,43 +1,76 @@
-# Charte documentaire
+# Charte documentaire — BRENDOLYS YDIASE
 
-## Identifiants
+Statut : `ACTIVE`
 
-Les préfixes autorisés incluent `YD-DOC`, `YD-REQ`, `YD-ADR`, `YD-RISK`, `YD-HYP`, `YD-SRC`, `YD-CAP`, `YD-DOM`, `YD-SVC`, `YD-EVT` et `YD-API`. Un identifiant n’est jamais réutilisé.
+## 1. Objet
 
-L’ajout d’une nouvelle famille d’identifiants doit être documenté avant son usage généralisé.
+Cette charte gouverne tout le corpus YDIASE. La documentation doit permettre de retrouver pourquoi une capacité existe, qui possède une règle ou une donnée, quelles décisions la traduisent et comment leur conformité est vérifiée.
 
-## Traçabilité
+## 2. Principes
 
-Chaque exigence critique doit pouvoir être reliée selon la chaîne applicable :
+- séparer produit, domaine, capacité, bounded context, microservice et infrastructure
+- séparer faits, hypothèses, décisions et projections
+- conserver provenance, version et historique lorsque nécessaires
+- ne jamais transformer une duplication en nouvelle source autoritative
+- ne jamais utiliser l'IA conversationnelle comme source de vérité
+- ne jamais imposer une technologie sans décision justifiée
+- concevoir la cible panafricaine tout en distinguant le pilote Burkina
 
-`vision → domaine → capacité → exigence → règle métier → bounded context → service candidat → contrat → vérification`.
+## 3. Identifiants
 
-Tous les maillons ne sont pas obligatoires dès la création d’un élément. Les liens deviennent obligatoires à mesure que la maturité documentaire progresse. Un lien normatif porte une date et un responsable lorsqu’il est enregistré dans un registre prévu à cet effet.
+La nomenclature normative est définie dans `CONVENTION_IDENTIFIANTS.md`. Un identifiant n'est jamais réutilisé.
 
-## Services cibles
+## 4. Autorité
 
-- Tout service inscrit dans `13-architecture/SERVICE_MAP.md` possède une fiche documentaire.
-- La fiche existe même lorsque le service est futur, non développé, non déployé ou inactif.
-- L’identification d’un service exige au minimum un domaine, une raison d’existence, une responsabilité principale, une frontière initiale et une phase cible ou une décision `TBD` gouvernée.
-- Les contrats détaillés ne sont pas nécessaires pour identifier un service candidat.
-- Le passage vers D2, D3 et les niveaux suivants ajoute progressivement données, dépendances, contrats, sécurité et exigences opérationnelles.
-- Un `TBD` doit exprimer une question réelle non résolue. Il ne sert pas à masquer une contradiction connue.
+`NIVEAUX_AUTORITE.md` définit l'autorité documentaire. Un document plus technique ne peut modifier implicitement une intention produit, une règle métier ou une politique transverse de niveau supérieur.
 
-## Séparation des statuts
+## 5. Traçabilité
 
-Le statut documentaire d’un service ne doit jamais être utilisé comme statut d’implémentation, de déploiement ou d’activation.
+Chaîne cible :
 
-Les quatre dimensions sont suivies séparément :
+`vision → domaine → capacité → exigence/règle métier → bounded context → frontière autonome → donnée → contrat → vérification`.
 
-- maturité documentaire
-- implémentation
-- déploiement
-- activation
+Les liens deviennent obligatoires selon la maturité. Un objet qui atteint un gate sans les liens requis ne passe pas ce gate.
 
-## Revue et succession
+## 6. Services et frontières
 
-Un propriétaire et un suppléant sont requis pour les documents normatifs lorsqu’ils atteignent le statut `ACTIVE`. Un document obsolète devient `DEPRECATED`, `RETIRED` ou `SUPERSEDED`. Le dernier statut exige un successeur explicite.
+- chaque service candidat possède une définition
+- chaque microservice autonome et composant plateforme possède son profil d'autonomie
+- une frontière future peut être documentée sans être implémentée
+- la documentation ne crée pas une frontière uniquement pour compléter un catalogue
+- une modification métier peut provoquer une revue d'une frontière déjà stabilisée
 
-## Règle de prudence
+## 7. États non résolus
 
-La documentation ne doit pas inventer une API, un événement, un seuil de performance, une technologie, une obligation réglementaire ou une dépendance uniquement pour remplir un modèle. Lorsqu’une décision manque, le document conserve le point comme `TBD`, hypothèse ou question ouverte avec sa condition de résolution.
+Les états autorisés sont :
+
+- `DEFINED`
+- `TBD-PREPROD`
+- `ADR-REQUIRED`
+- `NOT-APPLICABLE`
+
+`TBD-BLOCKING` peut être utilisé uniquement lorsqu'un gate est réellement bloqué et doit identifier la condition de fermeture. Un `TBD` générique est interdit dans les nouveaux documents normatifs.
+
+## 8. Cycle de vie
+
+Le cycle est défini dans `CYCLE_VIE_DOCUMENTAIRE.md`. Les états documentaire, implémentation, déploiement et activation restent séparés.
+
+## 9. Revue et approbation
+
+Les règles sont définies dans `POLITIQUE_REVUE_APPROBATION.md`. Tout document normatif actif possède un owner, un suppléant ou un gate explicite pour les nommer, ainsi qu'un déclencheur de revue.
+
+## 10. Contradictions
+
+Toute contradiction suit `POLITIQUE_CONTRADICTIONS.md`. Aucune correction silencieuse n'est admise.
+
+## 11. Changement et impact
+
+Tout changement normatif suit `POLITIQUE_CHANGEMENT_IMPACT.md`. Une modification de fondations ou de domaine doit évaluer ses impacts sur les décisions techniques existantes.
+
+## 12. Prudence
+
+La documentation n'invente pas API, événement, seuil, technologie, obligation réglementaire, donnée, owner ou dépendance pour remplir un modèle. Les choix non décidés restent gouvernés selon leur nature.
+
+## 13. Critère de validité
+
+Un document est utilisable comme référence uniquement si son statut, son autorité, sa version et son périmètre permettent cet usage. La présence dans le dépôt ne suffit pas.
