@@ -1,6 +1,6 @@
 # KNW-001 → SRH-001 — Search Enrichment Contract Baseline
 
-Statut : `DEPENDENCY-BASELINE / SRH-CLOSURE-PENDING`
+Statut : `DEPENDENCY-BASELINE / SRH-SEMANTIC-CLOSURE-COMPLETE`
 
 ## 1. Principe
 
@@ -68,4 +68,4 @@ Avant fermeture SRH-001, enregistrer :
 - Privacy/access labels pour documents non publics ;
 - KNW enrichment comme dépendance optionnelle, versionnée et reconstructible.
 
-Statut : `SRH-DEPENDENCIES-PREPARED / SEARCH-POLICY-NOT-YET-CLOSED`.
+Statut : `SRH-DEPENDENCIES-DEFINED / PHYSICAL-CONTRACT-AND-REBUILD-EVIDENCE-PENDING`.
