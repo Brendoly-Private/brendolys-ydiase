@@ -1,0 +1,23 @@
+apiVersion: knowledge.ydiase/v1
+kind: Microservice
+metadata:
+  id: YD-MS-REC-001
+  name: recommendation
+  title: Recommendation
+  status: draft
+spec:
+  logicalServices: [YD-SVC-REC-001, YD-SVC-RSH-001]
+  authority: MIXED
+  responsibility: Classement, recommandations explicables et états de recommandation conservés
+  owns: [RecommendationRun, RecommendationSet, RecommendationItem, RecommendationExplanation, RecommendationEvidenceSnapshot]
+  consumesFrom:
+    - YD-MS-EDU-002
+    - YD-MS-EDU-003
+    - YD-MS-SKL-001
+  consumesEvents:
+    - YD-EVT-EDU-002
+    - YD-EVT-EDU-003
+    - YD-EVT-EDU-006
+  invariants:
+    - Un résultat calculé ne devient pas source autoritative du curriculum ou des compétences.
+    - RecommendationEvidenceSnapshot conserve les versions utilisées pour expliquer un résultat historique.

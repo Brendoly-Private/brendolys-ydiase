@@ -1,0 +1,24 @@
+apiVersion: knowledge.ydiase/v1
+kind: Microservice
+metadata:
+  id: YD-MS-SKL-001
+  name: skills-knowledge
+  title: Skills Knowledge
+  status: draft
+spec:
+  logicalServices: [YD-SVC-SKL-001]
+  authority: AUTH
+  responsibility: Référentiel de compétences et connaissances
+  owns: [Skill, KnowledgeConcept, SkillRelation, SkillTaxonomyMapping]
+  consumesFrom:
+    - YD-MS-EDU-003
+    - YD-MS-DAT-005
+    - YD-MS-CAR-001
+    - YD-MS-DAT-003
+  consumesEvents:
+    - YD-EVT-EDU-003
+    - YD-EVT-EDU-004
+    - YD-EVT-EDU-006
+  invariants:
+    - Skills ne devient jamais propriétaire des curricula sources.
+    - Toute assertion dérivée conserve provenance et version source.

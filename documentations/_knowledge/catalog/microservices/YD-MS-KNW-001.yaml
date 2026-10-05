@@ -1,0 +1,22 @@
+apiVersion: knowledge.ydiase/v1
+kind: Microservice
+metadata:
+  id: YD-MS-KNW-001
+  name: knowledge-graph
+  title: Knowledge Graph
+  status: draft
+spec:
+  logicalServices: [YD-SVC-KNW-001]
+  authority: DERIVED
+  responsibility: Relations sémantiques dérivées entre éducation, compétences, métiers et marché
+  owns: [KnowledgeNodeProjection, KnowledgeEdge, SemanticAssertion, GraphVersion]
+  consumesFrom:
+    - YD-MS-EDU-003
+    - YD-MS-SKL-001
+  consumesEvents:
+    - YD-EVT-EDU-003
+    - YD-EVT-EDU-004
+    - YD-EVT-EDU-006
+  invariants:
+    - Le graphe n'est jamais source unique d'un fait métier primaire.
+    - Toute relation sémantique conserve ses références de provenance.
