@@ -156,6 +156,35 @@ Les profils évitent de recopier 30 tests sur chaque ligne.
 
 Règle : aucun service ci-dessus ne quitte `REBUILD-UNVERIFIED` sur documentation seule.
 
+
+## 7A. Couverture explicite des contrats DERIVED et Analytics
+
+Cette section complète la matrice avec les IDs canoniques exacts. Une famille mentionnée dans un scénario de rebuild ne vaut pas preuve de validation individuelle : chaque contrat source doit avoir son propre résultat.
+
+| Contract ID | Consumer/cible | Profil | P0 spécifique | P1 spécifique | Gate |
+|---|---|---|---|---|---|
+| `YD-CTR-EDU-SEARCHABLE-v1` | SRH-001 | DERIVED+PUBLIC-PROJ | version/publication/visibility; delete | snapshot + catch-up | source PHYSICAL-READY + SRH rebuild evidence |
+| `YD-CTR-CAR-SEARCHABLE-v1` | SRH-001 | DERIVED+PUBLIC-PROJ | version/visibility; withdraw | snapshot + catch-up | source PHYSICAL-READY + SRH rebuild evidence |
+| `YD-CTR-OPP-SEARCHABLE-v1` | SRH-001 | DERIVED+PUBLIC-PROJ | EXPIRE/WITHDRAW ne peut être annulé par ancien UPSERT | snapshot + catch-up | source PHYSICAL-READY + SRH rebuild evidence |
+| `YD-CTR-CNT-SEARCHABLE-v1` | SRH-001 | DERIVED+PUBLIC-PROJ | UNPUBLISH/DELETE prioritaire | snapshot + catch-up | source PHYSICAL-READY + SRH rebuild evidence |
+| `YD-CTR-LRN-SEARCHABLE-v1` | SRH-001 | DERIVED+PUBLIC-PROJ | WITHDRAW/RETIRE prioritaire | snapshot + catch-up | source PHYSICAL-READY + SRH rebuild evidence |
+| `YD-CTR-KNW-SRH-SEARCH-ENRICHMENT-v1` | SRH-001 | DERIVED | enrichment ne devient jamais source de vérité; revoke/delete | rebuild KNW puis SRH convergence | source PHYSICAL-READY + SRH rebuild evidence |
+| `YD-CTR-CNT-FEEDABLE-v1` | CNT-002 | DERIVED | visibilité/version; retire | snapshot + catch-up | source PHYSICAL-READY + Feed rebuild evidence |
+| `YD-CTR-COM-FEED-SIGNALS-v1` | CNT-002 | DERIVED+PRIV | signal personnel minimisé; duplicate | replay window + convergence | source PHYSICAL-READY + Feed rebuild evidence |
+| `YD-CTR-MOD-CONTENT-DECISION-v1` | CNT-002 | DERIVED+PRIV | BLOCK/REVOKE prioritaire | rebuild avec moderation courante | source PHYSICAL-READY + Feed rebuild evidence |
+| `YD-CTR-SPN-PLACEMENT-v1` | CNT-002/delivery | DERIVED | sponsor explicitement étiqueté; aucune influence organic | isolation regression + rebuild | source PHYSICAL-READY + Feed rebuild evidence |
+| `YD-CTR-EDU-KNOWLEDGE-v1` | KNW-001 | DERIVED+PUBLIC-PROJ | source/version/provenance; delete | graph snapshot/catch-up | source PHYSICAL-READY + KNW rebuild evidence |
+| `YD-CTR-SKL-KNOWLEDGE-v1` | KNW-001 | DERIVED+PUBLIC-PROJ | relation/mapping version; aucune équivalence implicite | graph snapshot/catch-up | source PHYSICAL-READY + KNW rebuild evidence |
+| `YD-CTR-CAR-KNOWLEDGE-v1` | KNW-001 | DERIVED+PUBLIC-PROJ | occupation/relation version; delete | graph snapshot/catch-up | source PHYSICAL-READY + KNW rebuild evidence |
+| `YD-CTR-LAB-KNOWLEDGE-v1` | KNW-001 | DERIVED | retraction/provenance/territory | graph snapshot/catch-up | source PHYSICAL-READY + KNW rebuild evidence |
+| `YD-CTR-<DOMAIN>-ANALYTICS-v1` | ANL-001 | DERIVED | instance concrète, purpose, grain, source version | snapshot/catch-up/delete/revoke | instance enregistrée + ANL rebuild evidence |
+| `YD-CTR-SRH-RETRIEVAL-v1` | AI-002 | DERIVED+PRIV | access labels/purpose; stale/revoked doc absent | index rebuild + convergence | source PHYSICAL-READY + AI corpus evidence |
+| `YD-CTR-KNW-GROUNDING-v1` | AI-002 | DERIVED+PRIV | provenance/source version; inferred≠asserted | graph rebuild + convergence | source PHYSICAL-READY + AI corpus evidence |
+| `YD-CTR-CNS-CORPUS-AUTHORIZATION-v1` | AI-002 | DERIVED+PRIV | NOT-DETERMINABLE≠ALLOW; revoke prioritaire | privacy reconciliation pendant rebuild | source PHYSICAL-READY + AI corpus evidence |
+| `YD-CTR-ANL-SNAPSHOT-v1` | ANL-002/003/INT/DPR | PROJ | methodology/source snapshot/freshness versionnés | replay/rebuild du snapshot | PHYSICAL-READY |
+| `YD-CTR-ANL-INSTITUTION-INSIGHT-v1` | institution/API | PROJ | tenant/institution isolation; édition versionnée | evidence snapshot replay | PHYSICAL-READY |
+| `YD-CTR-ANL-EMPLOYER-INSIGHT-v1` | employer/API | PROJ | tenant/employer isolation; édition versionnée | evidence snapshot replay | PHYSICAL-READY |
+
 ## 8. Matrice — économie, produits et IA
 
 | Contract | Profil | P0 spécifique | P1 spécifique | Gate |
