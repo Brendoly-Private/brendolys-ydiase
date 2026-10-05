@@ -164,9 +164,24 @@ Une compromission peut suspendre ce chronomètre opérationnel si l'état sain n
 
 Le `Maximum Tolerable Period of Disruption` candidat est :
 
-`MTPD-CANDIDATE = 8 heures pour un sinistre majeur qualifié`
+`MTPD-CANDIDATE = 24 heures`
 
 Pour les incidents courants, le seuil opérationnel est beaucoup plus bas et reste lié au RTO d'une heure.
+
+Le RTO de sinistre majeur reste inférieur ou égal à 8 h. Le MTPD de 24 h ne remplace pas cet objectif. Tout dépassement de 8 h constitue un échec du RTO et déclenche une escalade.
+
+### Gate MTPD-24H-APPROVED
+
+Le passage de MTPD-CANDIDATE = 24 h à MTPD-APPROVED = 24 h exige :
+- OWN-PRF2-BUS : analyse d'impact à 1 h, 4 h, 8 h, 12 h et 24 h ;
+- OWN-PRF2-OPS/OWN-PRF2-DR : preuve de continuité et démonstration du RTO majeur inférieur ou égal à 8 h ;
+- OWN-PRIV : confirmation qu'aucune obligation applicable n'impose une limite inférieure ;
+- OWN-PRODUCT-FIN : modèle d'impact économique et contractuel ;
+- OWN-CONSUMERS : validation des consommateurs critiques ;
+- OWN-ARCH : revue des dépendances et modes dégradés ;
+- OWN-CAPACITY : volumes, mutations et impact aux charges prévues.
+
+Le gate reste ouvert tant que les preuves et approbations obligatoires ne sont pas enregistrées. La valeur reste donc CANDIDATE jusqu'à décision formelle.
 
 Le MTPD de 8 heures doit être confirmé avant production avec les responsables métier, opérationnels, sécurité et conformité.
 
@@ -375,7 +390,7 @@ Seuils retenus comme cibles préproduction :
 - `RTO courant ≤ 1 h`
 - `RTO datastore ≤ 4 h`
 - `RTO sinistre majeur ≤ 8 h`
-- `MTPD-CANDIDATE = 8 h`
+- `MTPD-CANDIDATE = 24 h`
 - `MDL-CANDIDATE = ≤ 15 min de mutations autoritatives confirmées`
 - MBCO défini par la continuité de l'autorité et le maintien des fonctions indépendantes
 
