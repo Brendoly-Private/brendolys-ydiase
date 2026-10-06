@@ -20,7 +20,7 @@ Le mode strict est destiné au passage de gate :
 python tools/knowledge/validate_catalog.py --strict
 ```
 
-Il bloque aussi toute référence `YD-*` non enregistrée dans `_knowledge`.
+Il bloque aussi toute référence `YD-*` non enregistrée dans le catalogue canonique `documentations/_meta`.
 
 ## Analyse d'impact
 
