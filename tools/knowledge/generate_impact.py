@@ -13,7 +13,7 @@ import yaml
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("entity_id")
-    parser.add_argument("--root", default="documentations/_knowledge")
+    parser.add_argument("--root", default="documentations/_meta")
     parser.add_argument("--max-depth", type=int, default=6)
     args = parser.parse_args()
 
