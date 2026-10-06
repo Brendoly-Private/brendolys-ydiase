@@ -1,6 +1,6 @@
 # YD-MS-KNW-001 — K4 Governance Baseline
 
-Statut : K4-GOVERNANCE-BASELINE / PREPROD-VALIDATION-PENDING
+Statut : `K4-PASS / GOVERNANCE-BASELINE-CLOSED / K5-EVIDENCE-PENDING`
 Nature : DERIVED
 Criticité : C2
 
@@ -37,6 +37,23 @@ Rôles : Business/Knowledge Owner, Technical Owner, Data Governance Owner, Secur
 
 ## TBD-PREPROD
 Freshness par source, disponibilité cible, RTO/RPO, rétention, capacité/backlog, seuils confidence, mécanismes IAM et délais d'escalade. Leur méthode, owner et gate sont définis; les preuves seront exigées à K5/ACTIVE.
+
+## Évaluation du gate K4
+
+| Critère K4 | État | Preuve principale |
+|---|---|---|
+| dataClassification | PASS | section Classification |
+| securityControls | PASS | section Sécurité |
+| privacyAndRetentionWhenApplicable | PASS | section Privacy et rétention ; valeurs numériques explicitement `TBD-PREPROD` |
+| sloOrCriticality | PASS | criticité C2, méthode et gate des seuils PREPROD |
+| observability | PASS | logs, métriques et alertes définis |
+| backupRecoveryWhenStateful | PASS | reconstruction DERIVED + `DERIVED_RECOVERY_REGISTER.md` |
+| runbookOrOperationalProcedure | PASS | `07-operations/runbooks/YD-MS-KNW-001/RUNBOOK.md` |
+| namedOwners | PASS | rôles gouvernés définis ; identités nominatives externalisées au registre organisationnel |
+
+### Verdict
+
+`YD-MS-KNW-001` satisfait le gate documentaire **K4 — Gouverné**. Ce verdict ne signifie ni `REBUILDABLE`, ni PREPROD validée, ni production. Le composant reste `REBUILD-UNVERIFIED` tant que les preuves K5/runtime applicables ne sont pas produites.
 
 ## Gate K5
 Validation automatisée, tests de contrats, vérification sécurité, FULL_REBUILD/convergence, DELETE/REVOKE/out-of-order/entity-resolution, preuves observables et zéro gap critique.
