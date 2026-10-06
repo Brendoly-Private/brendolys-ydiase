@@ -82,7 +82,7 @@ def assertion_evidence(entity:dict)->list[dict]:
     return [v for v in values if isinstance(v,dict)] if isinstance(values,list) else []
 
 def main()->int:
-    p=argparse.ArgumentParser();p.add_argument("root",nargs="?",default="documentations/_knowledge");p.add_argument("--strict",action="store_true");p.add_argument("--json",dest="json_path");p.add_argument("--no-schema",action="store_true");p.add_argument("--no-maturity",action="store_true");args=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument("root",nargs="?",default="documentations/_meta");p.add_argument("--strict",action="store_true");p.add_argument("--json",dest="json_path");p.add_argument("--no-schema",action="store_true");p.add_argument("--no-maturity",action="store_true");args=p.parse_args()
     root=Path(args.root);schema_dir=root/"schemas";yaml_files=sorted(root.rglob("*.yaml"));catalog_files=[x for x in yaml_files if "schemas" not in x.parts and "ontology" not in x.parts]
     documents=[];parse_errors=[];schema_errors=[];ids={};duplicates=[];prefix_errors=[];refs=[]
     for path in yaml_files:
