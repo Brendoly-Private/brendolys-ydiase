@@ -120,15 +120,15 @@ Une décision qui échoue à un gate pertinent doit être corrigée, justifiée 
 
 ## 5. Application aux couches YDIASE
 
-- `00-gouvernance-documentaire` gouverne la transmission, les décisions et l'historique documentaire.
-- `01-fondations-produit` protège les invariants produit et cette doctrine.
+- `00-foundation/governance` gouverne la transmission, les décisions et l'historique documentaire.
+- `01-product/foundation` protège les invariants produit et cette doctrine.
 - `02` à `11` définissent des concepts métier durables et leurs évolutions.
 - `12-data-knowledge-intelligence` porte provenance, temporalité, reconstruction, connaissance et évolution des modèles analytiques/IA.
-- `13-architecture` traduit les domaines en frontières révisables et technologies remplaçables.
+- `03-systems` traduit les domaines en frontières révisables et technologies remplaçables.
 - `14-securite-conformite` encadre les droits, restrictions et évolutions réglementaires.
 - `15-exploitation-resilience` définit sauvegarde, restauration, migration, continuité et retrait.
 - `16-country-frameworks` isole les variations nationales.
-- `17-roadmap-phases` décide quand une capacité est activée sans modifier sa définition cible.
+- `01-product/roadmap` décide quand une capacité est activée sans modifier sa définition cible.
 
 ## 6. Effet sur D3
 
