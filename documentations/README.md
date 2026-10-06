@@ -4,22 +4,16 @@ Cette documentation définit BRENDOLYS YDIASE avant sa réalisation. Elle décri
 
 ## Ordre de lecture
 
-1. `01-fondations-produit/CHARTE_FONDATRICE.md`
-2. `GLOSSAIRE_METIER.md`
-3. `00-gouvernance-documentaire/CHARTE_DOCUMENTAIRE.md`
-4. `REGISTRE_DOCUMENTAIRE.md`
-5. cartes des domaines `02` à `11`
-6. `12-data-knowledge-analytics-ai/`
-7. `13-architecture/ARCHITECTURE_CIBLE.md`
-8. `13-architecture/SERVICE_MAP.md`
-9. `13-architecture/DDD_REVIEW.md`
-10. `13-architecture/DATA_OWNERSHIP_MATRIX.md`
-11. `13-architecture/DEPENDENCY_MAP.md`
-12. `13-architecture/EVENT_MAP.md`
-13. `13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md`
-14. `13-architecture/SENSITIVE_MERGER_REVIEW.md`
-15. `13-architecture/MICROSERVICE_AUTONOMY_STANDARD.md`
-16. sécurité, exploitation, country frameworks et roadmap `14` à `17`
+1. `00-foundation/`
+2. `01-product/`
+3. `02-domains/`
+4. `03-systems/architecture/`
+5. `04-contracts/`
+6. `05-decisions/`
+7. `06-trust/`
+8. `07-operations/`
+9. `08-countries/`
+10. `_meta/` pour les mécanismes de validation et de connaissance.
 
 ## Règles de référence
 
@@ -36,7 +30,7 @@ Cette documentation définit BRENDOLYS YDIASE avant sa réalisation. Elle décri
 
 `Domaine métier ≠ capacité ≠ service logique ≠ microservice physique ≠ composant de plateforme ≠ infrastructure`.
 
-Le dossier `13-architecture/services/` documente les services logiques. `13-architecture/microservices/` documente les frontières métier physiques. `13-architecture/platform-components/` documente les composants autonomes transverses.
+Le dossier `03-systems/services/` documente les services logiques. `03-systems/microservices/` documente les frontières métier physiques. `03-systems/platform-components/` documente les composants autonomes transverses.
 
 ## États documentaires
 
