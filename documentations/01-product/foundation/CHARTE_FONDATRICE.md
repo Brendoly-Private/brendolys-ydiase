@@ -40,4 +40,4 @@ Les frontières D3 existantes sont des hypothèses techniques `STABLE-CANDIDATE`
 
 ## 7. Gate
 
-Cette charte devient `ACTIVE` après validation de l'ensemble du dossier `01-fondations-produit` et contrôle de cohérence avec les domaines 02 à 11.
+Cette charte devient `ACTIVE` après validation de l'ensemble du dossier `01-product/foundation` et contrôle de cohérence avec les domaines canoniques de `02-domains/`.

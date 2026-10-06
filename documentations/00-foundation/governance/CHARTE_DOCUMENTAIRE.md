@@ -70,7 +70,7 @@ Tout changement normatif suit `POLITIQUE_CHANGEMENT_IMPACT.md`. Une modification
 
 ## 12. Doctrine de pérennité
 
-`../01-fondations-produit/DOCTRINE_PERENNITE.md` constitue une contrainte fondatrice transverse dès sa validation avec le dossier 01.
+`../../01-product/foundation/vision-strategy/DOCTRINE_PERENNITE.md` constitue une contrainte fondatrice transverse dès sa validation avec le dossier `01-product/`.
 
 Toute création ou révision importante de domaine, capacité, modèle de données, frontière, contrat, infrastructure, politique de sécurité, procédure d'exploitation ou Country Framework doit évaluer les gates de pérennité pertinents.
 
