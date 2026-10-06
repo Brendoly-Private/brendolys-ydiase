@@ -30,4 +30,4 @@ Ne sont pas automatiquement requis pour la première sortie : marketplace compl�
 
 ## Gate de sortie
 
-La composition exacte de V1 sera fixée dans `17-roadmap-phases` après validation des domaines. Aucun microservice n'est déclaré obligatoire uniquement parce qu'il existe dans D3.
+La composition exacte de V1 sera fixée dans `01-product/roadmap/` après validation des domaines. Aucun microservice n'est déclaré obligatoire uniquement parce qu'il existe dans D3.
