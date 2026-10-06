@@ -23,7 +23,7 @@ spec:
       - documentations/13-architecture/microservices/YD-MS-LRN-001/LEARNING_DISCOVERY_POLICY.md
       - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
       - documentations/00-gouvernance-documentaire/AUTORITATIVE_SOURCE_REGISTRY.md
-  knowledgeMaturity: K2
+  knowledgeMaturity: K3
   knowledgeEvidence:
     stableId: PASS
     kind: PASS
@@ -38,7 +38,17 @@ spec:
     upstreamDownstream: {state: PASS, evidence: spec.consumesEvents + education-cross-domain.relations.yaml}
     authoritativeOwnership: {state: PASS, evidence: PHASE_CLOSURE.md distingue ressources LRN et autorités EDU/MKT/SKL}
     impactTraceability: {state: PASS, evidence: EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md}
-    apiOrEventContractsWhenApplicable: UNKNOWN
-    dataContracts: UNKNOWN
-    requirements: UNKNOWN
-    adrForStructuralDecisions: UNKNOWN
+    apiOrEventContractsWhenApplicable: {state: PASS, evidence: K3_CONTRACT_BASELINE.md sections 3-4}
+    dataContracts: {state: PASS, evidence: K3_CONTRACT_BASELINE.md section 5 + LEARNING_DISCOVERY_POLICY.md}
+    requirements: {state: PASS, evidence: K3_CONTRACT_BASELINE.md LRN-REQ-001..010}
+    adrForStructuralDecisions: {state: PASS, evidence: ADR-LRN-001-DISCOVERY-AUTHORITY-BOUNDARY.md}
+    versioningRules: {state: PASS, evidence: K3_CONTRACT_BASELINE.md section 8}
+    compatibilityRules: {state: PASS, evidence: K3_CONTRACT_BASELINE.md section 9}
+    dataClassification: UNKNOWN
+    securityControls: PARTIAL
+    privacyAndRetentionWhenApplicable: UNKNOWN
+    sloOrCriticality: PARTIAL
+    observability: UNKNOWN
+    backupRecoveryWhenStateful: UNKNOWN
+    runbookOrOperationalProcedure: UNKNOWN
+    namedOwners: UNKNOWN
