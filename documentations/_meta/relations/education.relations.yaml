@@ -6,9 +6,9 @@ metadata:
   status: draft
   sourceDocuments:
     - documentations/03-education-institutions/FRONTIERES_ET_DEPENDANCES.md
-    - documentations/13-architecture/DEPENDENCY_MAP.md
-    - documentations/13-architecture/EVENT_MAP.md
-    - documentations/13-architecture/DATA_OWNERSHIP_MATRIX.md
+    - documentations/03-systems/architecture/target/DEPENDENCY_MAP.md
+    - documentations/04-contracts/events/EVENT_MAP.md
+    - documentations/03-systems/architecture/target/DATA_OWNERSHIP_MATRIX.md
 spec:
   scope: YD-DOM-EDU
   relations:
