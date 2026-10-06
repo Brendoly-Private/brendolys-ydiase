@@ -27,6 +27,6 @@ ASM-001 doit définir la structure d'une méthodologie, la validité, confiance,
 
 ORI-001 doit définir le cycle du dossier, critères/contraintes, comparaison, décision enregistrée, réouverture et traçabilité.
 
-REC-001 dispose désormais de `../13-architecture/microservices/YD-MS-REC-001/RECOMMENDATION_RANKING_POLICY.md` : pipeline eligibility/scoring/ranking/presentation, evidence snapshot, abstention, explicabilité, incertitude, principes d'équité et séparation absolue du sponsoring sont définis. Les coefficients, métriques d'équité et preuves préproduction restent à valider.
+REC-001 dispose désormais de `../../03-systems/policies/YD-MS-REC-001/RECOMMENDATION_RANKING_POLICY.md` : pipeline eligibility/scoring/ranking/presentation, evidence snapshot, abstention, explicabilité, incertitude, principes d'équité et séparation absolue du sponsoring sont définis. Les coefficients, métriques d'équité et preuves préproduction restent à valider.
 
 Statut : `DOMAIN-BASELINE-CANDIDATE / REC-RANKING-FAIRNESS-SPONSOR-GUARDS-DEFINED`.
