@@ -28,7 +28,7 @@ Statut : `DOMAIN-REVIEW-CANDIDATE`
 
 ## Décision SKL-002
 
-La sémantique de dérivation est définie dans `../13-architecture/microservices/YD-MS-SKL-002/SKILL_STATE_DERIVATION_POLICY.md`.
+La sémantique de dérivation est définie dans `../../03-systems/policies/YD-MS-SKL-002/SKILL_STATE_DERIVATION_POLICY.md`.
 
 Un UserSkill est un état versionné et reproductible. Le niveau, la confiance et la fraîcheur sont indépendants. Les preuves sont historisées ; corrections et révocations produisent de nouvelles versions au lieu d'écraser l'historique.
 

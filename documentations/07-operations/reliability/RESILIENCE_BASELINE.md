@@ -155,9 +155,9 @@ Aucune frontière exposée ne passe production sans SLO, health/readiness, alert
 
 ## 27. Articulation documentaire
 
-- `13-architecture/MICROSERVICE_AUTONOMY_STANDARD.md` — norme d’autonomie
-- `13-architecture/DEPENDENCY_MAP.md` — dépendances
-- `13-architecture/EVENT_MAP.md` — échanges asynchrones
+- `03-systems/architecture/standards/MICROSERVICE_AUTONOMY_STANDARD.md` — norme d’autonomie
+- `03-systems/architecture/target/DEPENDENCY_MAP.md` — dépendances
+- `04-contracts/events/EVENT_MAP.md` — échanges asynchrones
 - `14-securite-conformite/` — sécurité/privacy
 - `15-exploitation-resilience/` — règles transversales d’exploitation
 - futurs `AUTONOMY_PROFILE.md` — valeurs et procédures par frontière

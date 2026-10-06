@@ -127,9 +127,9 @@ Aucun service traitant des données personnelles ou confidentielles ne passe pro
 
 ## 22. Articulation documentaire
 
-- `13-architecture/MICROSERVICE_AUTONOMY_STANDARD.md` — exigences d’autonomie par frontière
-- `13-architecture/DEPENDENCY_MAP.md` — flux autorisés candidats
-- `13-architecture/EVENT_MAP.md` — événements et données propagées
+- `03-systems/architecture/standards/MICROSERVICE_AUTONOMY_STANDARD.md` — exigences d’autonomie par frontière
+- `03-systems/architecture/target/DEPENDENCY_MAP.md` — flux autorisés candidats
+- `04-contracts/events/EVENT_MAP.md` — événements et données propagées
 - `14-securite-conformite/` — politiques transversales de sécurité/privacy
 - `15-exploitation-resilience/` — continuité, SLO, backup, restore et DR
 - futurs `AUTONOMY_PROFILE.md` — application spécifique à chaque frontière

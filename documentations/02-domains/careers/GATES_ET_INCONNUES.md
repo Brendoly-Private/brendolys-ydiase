@@ -26,7 +26,7 @@ Statut : `DOMAIN-REVIEW-CANDIDATE`
 
 ## Politique normative
 
-Le calcul est défini dans `../13-architecture/microservices/YD-MS-CAR-002/CAREER_GAP_TRANSITION_POLICY.md`.
+Le calcul est défini dans `../../03-systems/policies/YD-MS-CAR-002/CAREER_GAP_TRANSITION_POLICY.md`.
 
 Un gap est multidimensionnel. Aucun score global ne peut compenser un prérequis bloquant. `UNKNOWN` n'est jamais assimilé à `MISSING`. Une transition conserve entrées, versions, hypothèses, incertitude et explication.
 

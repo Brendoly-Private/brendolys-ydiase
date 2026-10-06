@@ -91,8 +91,8 @@ Une IA ne doit jamais déduire `YD-SVC-X = YD-MS-X` par convention de nom lorsqu
 
 ## 6. Sources de décision
 
-- `13-architecture/SERVICE_MAP.md` : catalogue logique cible ;
-- `13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md` : décisions de frontière physique ;
-- `13-architecture/AUTONOMY_PROFILE_REGISTER.md` : index des frontières autonomes.
+- `03-systems/architecture/target/SERVICE_MAP.md` : catalogue logique cible ;
+- `03-systems/architecture/reviews/MICROSERVICE_BOUNDARY_REVIEW.md` : décisions de frontière physique ;
+- `03-systems/architecture/registers/AUTONOMY_PROFILE_REGISTER.md` : index des frontières autonomes.
 
 En cas de contradiction, ouvrir `CONTRADICTION-OPEN` et vérifier ADR/supersession ; ne pas résoudre par heuristique de nom.

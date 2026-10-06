@@ -22,9 +22,9 @@ Le System ne fusionne pas les quatre microservices. Il fournit un niveau de lect
 ## Sources actuelles
 
 - `documentations/03-education-institutions/README.md`
-- `documentations/13-architecture/SERVICE_MAP.md`
-- `documentations/13-architecture/DATA_OWNERSHIP_MATRIX.md`
-- `documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md`
+- `documentations/03-systems/architecture/target/SERVICE_MAP.md`
+- `documentations/03-systems/architecture/target/DATA_OWNERSHIP_MATRIX.md`
+- `documentations/03-systems/architecture/reviews/MICROSERVICE_BOUNDARY_REVIEW.md`
 - définitions `YD-SVC-EDU-*`
 - Knowledge Packs `YD-MS-EDU-*`
 
