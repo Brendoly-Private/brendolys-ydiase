@@ -3,7 +3,7 @@ name: YDIASE Knowledge Gate
 on:
   pull_request:
     paths:
-      - 'documentations/_knowledge/**'
+      - 'documentations/**'
       - 'tools/knowledge/**'
       - '.github/workflows/knowledge-gate.yml'
   push:
@@ -11,7 +11,7 @@ on:
       - main
       - 'knowledge/**'
     paths:
-      - 'documentations/_knowledge/**'
+      - 'documentations/**'
       - 'tools/knowledge/**'
       - '.github/workflows/knowledge-gate.yml'
 
