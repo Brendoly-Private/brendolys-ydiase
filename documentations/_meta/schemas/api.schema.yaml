@@ -1,0 +1,39 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/api.schema.yaml
+title: YDIASE API
+allOf:
+  - $ref: ./common.schema.yaml
+  - type: object
+    properties:
+      kind: {const: API}
+      spec:
+        type: object
+        required: [owner, consumers, purpose, logicalMode, physicalProtocol]
+        properties:
+          owner: {type: string, pattern: '^YD-MS-[A-Z0-9-]+$'}
+          consumers:
+            type: array
+            items: {type: string, pattern: '^YD-(MS|SVC)-[A-Z0-9-]+$'}
+          purpose: {type: string, minLength: 1}
+          logicalMode:
+            enum: [SYNC, ASYNC, HYBRID]
+          authority: {type: string}
+          consistency: {type: string}
+          failurePolicy: {type: string}
+          invariants:
+            type: array
+            items: {type: string}
+          physicalProtocol: {type: string}
+          adrRequired: {type: boolean}
+          system: {type: string}
+          version: {type: string}
+          contractPath: {type: string}
+          data:
+            type: array
+            items: {type: string}
+          securityControls:
+            type: array
+            items: {type: string}
+          lifecycle: {type: object}
+        additionalProperties: false
+    required: [kind, spec]

@@ -1,0 +1,53 @@
+name: YDIASE Knowledge Gate
+
+on:
+  pull_request:
+    paths:
+      - 'documentations/**'
+      - 'tools/knowledge/**'
+      - '.github/workflows/knowledge-gate.yml'
+  push:
+    branches:
+      - main
+      - 'knowledge/**'
+    paths:
+      - 'documentations/**'
+      - 'tools/knowledge/**'
+      - '.github/workflows/knowledge-gate.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  knowledge-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: tools/knowledge/requirements.txt
+
+      - name: Install knowledge compiler dependencies
+        run: pip install -r tools/knowledge/requirements.txt
+
+      - name: Validate knowledge catalog
+        run: |
+          mkdir -p artifacts/knowledge
+          python tools/knowledge/validate_catalog.py --json artifacts/knowledge/validation-report.json
+
+      - name: Generate Education impact proof
+        run: |
+          python tools/knowledge/generate_impact.py YD-MS-EDU-003 > artifacts/knowledge/education-impact.md
+
+      - name: Upload knowledge reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ydiase-knowledge-gate
+          path: artifacts/knowledge/
+          if-no-files-found: error

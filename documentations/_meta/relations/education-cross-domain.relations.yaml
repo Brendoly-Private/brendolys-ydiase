@@ -1,0 +1,25 @@
+apiVersion: knowledge.ydiase/v1
+kind: RelationSet
+metadata:
+  id: YD-RELSET-EDU-XDOMAIN-001
+  status: draft
+spec:
+  relations:
+    - {from: YD-MS-EDU-003, type: publishes, to: YD-EVT-EDU-003}
+    - {from: YD-MS-EDU-003, type: publishes, to: YD-EVT-EDU-004}
+    - {from: YD-MS-EDU-003, type: publishes, to: YD-EVT-EDU-006}
+    - {from: YD-MS-SKL-001, type: subscribesTo, to: YD-EVT-EDU-003}
+    - {from: YD-MS-SKL-001, type: subscribesTo, to: YD-EVT-EDU-004}
+    - {from: YD-MS-SKL-001, type: subscribesTo, to: YD-EVT-EDU-006}
+    - {from: YD-MS-KNW-001, type: dependsOn, to: YD-MS-SKL-001}
+    - {from: YD-MS-KNW-001, type: subscribesTo, to: YD-EVT-EDU-006}
+    - {from: YD-MS-REC-001, type: dependsOn, to: YD-MS-SKL-001}
+    - {from: YD-MS-REC-001, type: subscribesTo, to: YD-EVT-EDU-006}
+    - {from: YD-MS-LRN-001, type: dependsOn, to: YD-MS-SKL-001}
+    - {from: YD-MS-LRN-001, type: subscribesTo, to: YD-EVT-EDU-006}
+  authorityRules:
+    - YD-MS-EDU-003 remains authoritative for Curriculum.
+    - YD-MS-SKL-001 remains authoritative for Skill reference knowledge.
+    - YD-MS-KNW-001 is derived and cannot replace domain authorities.
+    - YD-MS-REC-001 preserves evidence snapshots for historical recommendations.
+    - YD-MS-LRN-001 does not become authoritative for external learning-provider facts.

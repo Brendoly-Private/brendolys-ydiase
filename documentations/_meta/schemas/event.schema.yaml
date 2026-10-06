@@ -1,0 +1,42 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: knowledge.ydiase/event.schema.yaml
+title: YDIASE Event
+allOf:
+  - $ref: ./common.schema.yaml
+  - type: object
+    properties:
+      kind: {const: Event}
+      spec:
+        type: object
+        required: [type, producer, consumers]
+        properties:
+          type: {type: string, minLength: 1}
+          producer: {type: string, pattern: '^YD-MS-[A-Z0-9-]+$'}
+          consumers:
+            type: array
+            items: {type: string, pattern: '^YD-(MS|SVC)-[A-Z0-9-]+$'}
+          purpose: {type: string}
+          aggregate: {type: string}
+          version: {type: string}
+          payload:
+            type: array
+            items: {type: string}
+          payloadMinimum:
+            type: array
+            items: {type: string}
+          semantics:
+            type: object
+            properties:
+              idempotenceKey: {type: string}
+              ordering: {type: string}
+              history: {type: string}
+            additionalProperties: true
+          invariants:
+            type: array
+            items: {type: string}
+          schemaRef: {type: string}
+          compatibility:
+            enum: [backward, forward, full, none, TBD]
+          retention: {type: string}
+        additionalProperties: false
+    required: [kind, spec]
