@@ -2,7 +2,7 @@
 
 Statut : `ACTIVE-REGISTER-SEED`
 
-Ce document recense les inconnues produit de niveau fondation. Les hypothèses suivies opérationnellement doivent être reportées dans `00-gouvernance-documentaire/REGISTRE_HYPOTHESES.md`.
+Ce document recense les inconnues produit de niveau fondation. Les hypothèses suivies opérationnellement doivent être reportées dans `00-foundation/governance/registers/REGISTRE_HYPOTHESES.md`.
 
 | ID | Hypothèse / inconnue | Validation attendue |
 |---|---|---|
