@@ -1,6 +1,6 @@
 # YDIASE Knowledge Gate — K4 Gouverné
 
-Statut : `BASELINE / PILOT`
+Statut : `PILOT-CLOSED / K4-PASS`
 
 ## Objet
 
@@ -39,6 +39,15 @@ Pour chaque microservice :
 - liste explicite des paramètres `TBD-PREPROD` ;
 - critères qui permettront K5.
 
-## Pilote
+## État du pilote
 
-Le premier pilote K4 porte sur `YD-MS-KNW-001`, puis `YD-MS-SKL-001`, `YD-MS-REC-001` et `YD-MS-LRN-001` après fermeture K3.
+| Microservice | Nature | K4 | Preuve canonique |
+|---|---|---|---|
+| `YD-MS-KNW-001` | DERIVED | PASS | `06-trust/governance/YD-MS-KNW-001/K4_GOVERNANCE_BASELINE.md` |
+| `YD-MS-SKL-001` | AUTH | PASS | `06-trust/governance/YD-MS-SKL-001/K4_GOVERNANCE_BASELINE.md` |
+| `YD-MS-REC-001` | MIXED | PASS | `06-trust/governance/YD-MS-REC-001/K4_GOVERNANCE_BASELINE.md` |
+| `YD-MS-LRN-001` | MIXED | PASS | `06-trust/governance/YD-MS-LRN-001/K4_GOVERNANCE_BASELINE.md` |
+
+Le pilote K4 est **fermé** pour ces quatre microservices. Cette fermeture reste documentaire : elle n'implique ni PREPROD, ni tests K5 exécutés, ni production.
+
+La continuation canonique du pilote se fait au niveau **K5 — Vérifié**, en commençant par `YD-MS-KNW-001`.
