@@ -24,9 +24,11 @@ spec:
       - documentations/13-architecture/microservices/YD-MS-KNW-001/KNW_TO_SEARCH_PROJECTION_CONTRACT.md
       - documentations/13-architecture/microservices/YD-MS-KNW-001/K3_CONTRACT_BASELINE.md
       - documentations/13-architecture/microservices/YD-MS-KNW-001/ADR-KNW-001-DERIVED-KNOWLEDGE-GRAPH.md
+      - documentations/13-architecture/microservices/YD-MS-KNW-001/K4_GOVERNANCE_BASELINE.md
+      - documentations/13-architecture/microservices/YD-MS-KNW-001/RUNBOOK.md
       - documentations/13-architecture/MICROSERVICE_BOUNDARY_REVIEW.md
       - documentations/13-architecture/DERIVED_RECOVERY_REGISTER.md
-  knowledgeMaturity: K3
+  knowledgeMaturity: K4
   knowledgeEvidence:
     stableId: PASS
     kind: PASS
@@ -48,11 +50,17 @@ spec:
     adrForStructuralDecisions: {state: PASS, evidence: ADR-KNW-001-DERIVED-KNOWLEDGE-GRAPH.md}
     versioningRules: {state: PASS, evidence: K3_CONTRACT_BASELINE.md §6}
     compatibilityRules: {state: PASS, evidence: K3_CONTRACT_BASELINE.md §7}
-    dataClassification: UNKNOWN
-    securityControls: UNKNOWN
-    privacyAndRetentionWhenApplicable: UNKNOWN
-    sloOrCriticality: {state: PARTIAL, evidence: C2 connue, RTO/SLO encore TBD-PREPROD}
-    observability: UNKNOWN
-    backupRecoveryWhenStateful: {state: PARTIAL, evidence: rebuild semantics définies, preuves et paramètres opérationnels absents}
-    runbookOrOperationalProcedure: UNKNOWN
-    namedOwners: UNKNOWN
+    dataClassification: {state: PASS, evidence: K4_GOVERNANCE_BASELINE.md classification}
+    securityControls: {state: PASS, evidence: K4_GOVERNANCE_BASELINE.md sécurité}
+    privacyAndRetentionWhenApplicable: {state: PASS, evidence: K4_GOVERNANCE_BASELINE.md privacy et rétention; durées numériques gated PREPROD}
+    sloOrCriticality: {state: PASS, evidence: K4_GOVERNANCE_BASELINE.md criticité C2 et méthode de fermeture SLO PREPROD}
+    observability: {state: PASS, evidence: K4_GOVERNANCE_BASELINE.md observabilité}
+    backupRecoveryWhenStateful: {state: PASS, evidence: K4_GOVERNANCE_BASELINE.md + RUNBOOK.md; reconstruction DERIVED gouvernée}
+    runbookOrOperationalProcedure: {state: PASS, evidence: RUNBOOK.md}
+    namedOwners: {state: PASS, evidence: K4_GOVERNANCE_BASELINE.md ownership par rôles gouvernés}
+    automatedValidation: UNKNOWN
+    contractTests: UNKNOWN
+    securityVerification: UNKNOWN
+    restoreOrResilienceTestWhenApplicable: UNKNOWN
+    evidenceLinks: UNKNOWN
+    unresolvedCriticalGapsEqualsZero: UNKNOWN
