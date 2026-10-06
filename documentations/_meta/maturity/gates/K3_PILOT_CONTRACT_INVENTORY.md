@@ -1,77 +1,102 @@
 # Inventaire K3 — pilote transversal
 
-Statut : `EVIDENCE-INVENTORY / GAPS-EXPLICIT`
+Statut : `EVIDENCE-INVENTORY / K3-CLOSED / IMPLEMENTATION-PENDING`
 
-## YD-MS-SKL-001
+## Objet
 
-### Preuves existantes
-- `03-systems/services/YD-SVC-SKL-001/SERVICE_DEFINITION.md` — agrégats, autorité, données consommées et incohérences.
-- `03-systems/microservices/YD-MS-SKL-001/lifecycle/PHASE_CLOSURE.md` — invariants, dépendances, provenance/version et gates différés.
-- `04-contracts/events/EVENT_MAP.md` — événements Education consommables.
-- `02-domains/skills-knowledge/FRONTIERES_ET_DEPENDANCES.md` — frontières métier.
+Cet inventaire reflète l'état courant du pilote K3 après création des baselines contractuelles canoniques. Il ne constitue pas une seconde autorité contractuelle : les contrats et baselines sous `04-contracts/` restent les sources canoniques.
 
-### État K3
-- invariants : PASS
-- API/événements : PARTIAL → UNKNOWN pour le gate, car les contrats physiques/versionnés propres à SKL restent à fermer.
-- dataContracts : UNKNOWN
-- requirements : UNKNOWN
-- ADR structurels : UNKNOWN
-- versioningRules : UNKNOWN
-- compatibilityRules : UNKNOWN
-
-## YD-MS-REC-001
-
-### Preuves existantes
-- `03-systems/policies/YD-MS-REC-001/RECOMMENDATION_RANKING_POLICY.md` — pipeline normatif et règles de ranking.
-- `FAIRNESS_EVALUATION_POLICY.md` — métriques et exigences d'équité.
-- `PHASE_CLOSURE.md` — ownership, invariants C1, séparation sponsoring/organique et préconditions ACTIVE.
-- `04-contracts/events/EVENT_MAP.md` et `03-systems/architecture/target/DEPENDENCY_MAP.md` — relations et événements transversaux.
-
-### État K3
-- invariants : PASS
-- requirements : PARTIAL → UNKNOWN pour le gate tant qu'elles ne sont pas reliées à des IDs d'exigences stables.
-- API/événements : UNKNOWN
-- dataContracts : UNKNOWN
-- ADR structurels : UNKNOWN
-- versioningRules : PARTIAL → UNKNOWN
-- compatibilityRules : UNKNOWN
+K3 signifie ici que la connaissance nécessaire à l'implémentation est contractualisée. Il ne signifie ni schéma physique final, ni code, ni déploiement, ni preuve runtime.
 
 ## YD-MS-KNW-001
 
-### Preuves existantes
+### Preuves K3
+- `04-contracts/baselines/YD-MS-KNW-001/K3_CONTRACT_BASELINE.md` — entrées/sorties, data contracts, invariants, exigences KNW-REQ-001..010, versionnement et compatibilité.
+- `YD-CTR-KNW-SRH-SEARCH-ENRICHMENT-v1` dans le Contract Registry — contrat logique KNW → Search.
 - `KNOWLEDGE_GRAPH_PROJECTION_POLICY.md` — sémantique des projections, provenance et reconstruction.
-- `KNW_TO_SEARCH_PROJECTION_CONTRACT.md` — contrat logique candidat `YD-CTR-KNW-SRH-SEARCH-ENRICHMENT-v1`, payload, usages, interdictions, fraîcheur et rebuild.
-- `PHASE_CLOSURE.md` — invariants et gates de reconstruction.
-- `DERIVED_RECOVERY_REGISTER.md` — état de reconstruction.
+- `ADR-KNW-001-DERIVED-KNOWLEDGE-GRAPH.md` — décisions structurelles.
 
 ### État K3
+- API/événements applicables : PASS
+- dataContracts : PASS
 - invariants : PASS
-- API/événements : PARTIAL → le contrat KNW→SRH est réel au niveau logique mais reste candidat et son contrat physique est explicitement en attente.
-- dataContracts : PARTIAL → UNKNOWN pour le gate, car le contrat de projection ne couvre pas encore toutes les entrées/sorties KNW.
-- requirements : PARTIAL → UNKNOWN
-- ADR structurels : UNKNOWN
-- versioningRules : PARTIAL → UNKNOWN
-- compatibilityRules : UNKNOWN
+- requirements : PASS
+- ADR structurels : PASS
+- versioningRules : PASS
+- compatibilityRules : PASS
+
+**Verdict : K3 PASS.**
+
+## YD-MS-SKL-001
+
+### Preuves K3
+- `04-contracts/baselines/YD-MS-SKL-001/K3_CONTRACT_BASELINE.md` — objets autoritatifs, contrats entrants/sortants, data contracts, invariants, exigences SKL-REQ-001..010, versionnement et compatibilité.
+- familles SKL du Contract Registry, notamment `YD-CTR-SKL-TAXONOMY-v1` et projections associées.
+- `ADR-SKL-001-AUTHORITATIVE-SKILLS-KNOWLEDGE.md` — autorité et décisions structurelles.
+- frontières métier Skills/Knowledge et profil d'autonomie associés.
+
+### État K3
+- API/événements applicables : PASS
+- dataContracts : PASS
+- invariants : PASS
+- requirements : PASS
+- ADR structurels : PASS
+- versioningRules : PASS
+- compatibilityRules : PASS
+
+**Verdict : K3 PASS.**
+
+## YD-MS-REC-001
+
+### Preuves K3
+- `04-contracts/baselines/YD-MS-REC-001/K3_CONTRACT_BASELINE.md` — contrats entrants/sortants, objets REC, invariants, exigences REC-REQ-001..010, versionnement et compatibilité.
+- familles REC du Contract Registry, notamment request/result ORI↔REC et projections/analytics associées.
+- `RECOMMENDATION_RANKING_POLICY.md` et politiques associées — règles normatives de recommandation.
+- `ADR-REC-001-ORGANIC-RANKING-SEPARATION.md` — séparation structurelle du ranking organique.
+
+### État K3
+- API/événements applicables : PASS
+- dataContracts : PASS
+- invariants : PASS
+- requirements : PASS
+- ADR structurels : PASS
+- versioningRules : PASS
+- compatibilityRules : PASS
+
+**Verdict : K3 PASS.**
 
 ## YD-MS-LRN-001
 
-### Preuves existantes
-- `LEARNING_DISCOVERY_POLICY.md` — politique normative.
-- `PHASE_CLOSURE.md` — frontières, invariants, boucle métier et préconditions ACTIVE.
-- `04-contracts/events/EVENT_MAP.md` — interactions événementielles existantes.
-- `YD-MS-SRH-001/SOURCE_PROJECTION_BASELINE.md` — famille de projection `LRN-SEARCHABLE` côté Search.
+### Preuves K3
+- `04-contracts/baselines/YD-MS-LRN-001/K3_CONTRACT_BASELINE.md` — objets, entrées/sorties, data contracts, invariants, exigences LRN-REQ-001..010, versionnement et compatibilité.
+- familles LRN du Contract Registry, notamment `YD-CTR-LRN-RESOURCE-v1`, Search/Analytics associés.
+- `LEARNING_DISCOVERY_POLICY.md` — politique normative de découverte learning.
+- `ADR-LRN-001-DISCOVERY-AUTHORITY-BOUNDARY.md` — frontière d'autorité et décisions structurelles.
 
 ### État K3
+- API/événements applicables : PASS
+- dataContracts : PASS
 - invariants : PASS
-- API/événements : PARTIAL → UNKNOWN pour le gate.
-- dataContracts : UNKNOWN
-- requirements : PARTIAL → UNKNOWN
-- ADR structurels : UNKNOWN
-- versioningRules : UNKNOWN
-- compatibilityRules : UNKNOWN
+- requirements : PASS
+- ADR structurels : PASS
+- versioningRules : PASS
+- compatibilityRules : PASS
+
+**Verdict : K3 PASS.**
+
+## Limites communes
+
+La fermeture K3 ne transforme aucun de ces contrats en `PHYSICAL-READY`. Restent notamment hors K3, selon le composant : schémas physiques finaux, protocoles, broker/datastore, IAM physique, valeurs SLO/RTO/RPO, rétention physique, contract tests exécutés, tests de reconstruction/restore et preuves runtime.
+
+Ces éléments sont traités par K4/K5, les gates PREPROD et l'implémentation lorsqu'ils deviennent applicables.
 
 ## Conclusion
 
-Aucun des quatre microservices ne doit être promu artificiellement à K3 aujourd'hui. Le dépôt possède déjà une part importante de la sémantique contractuelle, mais il manque encore des contrats complets, des exigences à identifiants stables, des règles de version/compatibilité et des ADR reliés.
+Le pilote transversal K3 est **fermé pour YD-MS-KNW-001, YD-MS-SKL-001, YD-MS-REC-001 et YD-MS-LRN-001** au niveau de connaissance contractuelle.
 
-Le prochain lot doit créer ces artefacts en priorité pour `YD-MS-KNW-001`, qui possède déjà le contrat logique le plus avancé, puis appliquer le même patron à SKL, REC et LRN.
+Le prochain travail n'est plus de recréer les contrats K3 de ces quatre composants. Il consiste à :
+- maintenir leurs baselines K3 et le Contract Registry synchronisés ;
+- fermer/maintenir K4 pour les composants concernés ;
+- produire les validations et preuves K5 sans confondre maturité documentaire et état de déploiement.
+
+Toute régression d'une preuve ou contradiction avec une source canonique doit faire recalculer le verdict au lieu de conserver artificiellement K3.
