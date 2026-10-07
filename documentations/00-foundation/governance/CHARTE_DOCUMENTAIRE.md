@@ -1,4 +1,30 @@
+---
+document_id: YD-DOC-FND-GOV-001
+title: "Charte documentaire — BRENDOLYS YDIASE"
+document_type: "documentation-charter"
+document_role: "Définit les principes de gouvernance applicables à l’ensemble du corpus documentaire YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Documentation Governance"
+depends_on:
+  - "YD-STD-DOC-META-001"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Charte documentaire — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Cette charte fixe les règles communes de création, d’autorité, de traçabilité, de changement et de validité du corpus YDIASE.
+> **Usage développement :** référence obligatoire pour toute spécification, décision, contrat ou preuve issue du développement.
 
 Statut : `ACTIVE`
 
