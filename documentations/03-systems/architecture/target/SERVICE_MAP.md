@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-TGT-007"
+title: "Service Map cible de BRENDOLYS YDIASE"
+document_type: "logical-service-catalog"
+document_role: "Définit le catalogue cible des services logiques candidats, distinct du nombre de microservices physiques."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # Service Map cible de BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit le catalogue cible des services logiques candidats, distinct du nombre de microservices physiques.
+> **Usage développement :** référence obligatoire pour les conceptions, frontières, contrats et développements relevant de son périmètre.
 
 Ce catalogue décrit les **services logiques candidats de l’architecture cible**. Il ne fixe pas le nombre final de microservices physiques. Un service peut être fusionné, scindé ou retiré après validation DDD et ADR. Chaque service retenu dans la cible doit recevoir une fiche documentaire minimale, même s’il n’est ni développé, ni déployé, ni activé.
 
