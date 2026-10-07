@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-PRN-001"
+title: "YDIASE — Cible complète et activation progressive"
+document_type: "architecture-principle"
+document_role: "Établit le principe normatif de conception complète de la cible YDIASE avec activation opérationnelle progressive et états distincts."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "architecture-principle"
+---
+
 # YDIASE — Cible complète et activation progressive
+
+> **Rôle du document**
+> Établit le principe normatif de conception complète de la cible YDIASE avec activation opérationnelle progressive et états distincts.
+> **Usage développement :** référence obligatoire pour les décisions et développements relevant de son périmètre.
 
 Statut : ARCHITECTURE-PRINCIPLE / NORMATIVE
 
