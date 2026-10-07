@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-REV-004"
+title: "Revue DDD — Domaine Entrepreneurship"
+document_type: "ddd-review"
+document_role: "Établit la revue DDD des six frontières Entrepreneurship et leurs critères d’autonomie."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # Revue DDD — Domaine Entrepreneurship
+
+> **Rôle du document**
+> Établit la revue DDD des six frontières Entrepreneurship et leurs critères d’autonomie.
+> **Usage développement :** support de décision, preuve ou traçabilité ; la cible canonique active reste autoritative.
 
 Statut : DDD-REVIEW-CLOSED / TARGET-BOUNDARIES-ACCEPTED
 Portée : ENT-001 à ENT-006
