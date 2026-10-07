@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-ENT-001-AUT"
+title: "YD-MS-ENT-001 — Venture Profile"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Entrepreneurial Project et son autorité sur projets, objectifs, hypothèses et progression entrepreneuriale."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-ENT-001 — Venture Profile
+
+> **Rôle du document**
+> Définit l’autonomie Entrepreneurial Project et son autorité sur projets, objectifs, hypothèses et progression entrepreneuriale.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : autonomy-profile-target
 Nature : AUTH
