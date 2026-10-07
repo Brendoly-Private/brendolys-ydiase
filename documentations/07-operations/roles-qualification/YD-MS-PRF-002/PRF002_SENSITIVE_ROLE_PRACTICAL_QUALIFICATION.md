@@ -1,5 +1,5 @@
 ---
-document_id: "YD-DOC-OPS-PRF-002-PRF002-SENSITIVE-ROLE-PRACTICAL-QUALIFICATION"
+document_id: "YD-DOC-OPS-PRF-002-ROLES-SENSITIVE-ROLE-QUALIFICATION"
 title: "PRF002_SENSITIVE_ROLE_PRACTICAL_QUALIFICATION"
 document_type: "operations-reference"
 document_role: "Documente la qualification pratique des rôles sensibles du périmètre PRF-002."
@@ -10,6 +10,8 @@ authority_level: "reference"
 canonical: false
 development_usage: "supporting-reference"
 metadata_adopted_at: "2026-10-07"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
 tags:
   - "operations"
 ---

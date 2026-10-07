@@ -1,5 +1,5 @@
 ---
-document_id: "YD-DOC-OPS-PRF-002-PRF002-SENSITIVE-ROLE-PRACTICAL-QUALIFICATION"
+document_id: "YD-DOC-OPS-PRF-002-CONTINUITY-SENSITIVE-ROLE-QUALIFICATION"
 title: "PRF002_SENSITIVE_ROLE_PRACTICAL_QUALIFICATION"
 document_type: "operations-reference"
 document_role: "Documente une référence opérationnelle de continuité, qualification ou analyse."
@@ -10,6 +10,8 @@ authority_level: "reference"
 canonical: false
 development_usage: "supporting-reference"
 metadata_adopted_at: "2026-10-07"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
 tags:
   - "operations"
 ---
