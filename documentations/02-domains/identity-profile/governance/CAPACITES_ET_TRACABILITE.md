@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-IDP-006"
+title: "Capacités et traçabilité — Identité et profils"
+document_type: "domain-capability-traceability"
+document_role: "Relie les capacités produit au domaine Identité et profils et explicite les partages d’autorité avec les autres domaines."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Capacités et traçabilité — Identité et profils
+
+> **Rôle du document**
+> Relie les capacités produit au domaine Identité et profils et explicite les partages d’autorité avec les autres domaines.
+> **Usage développement :** support de validation et de traçabilité ; les sources canoniques associées restent autoritatives.
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`
 
