@@ -4,7 +4,7 @@ Statut : `D3-closure-reconciled`
 
 ## 1. Objet
 
-Cette matrice contrôle la fermeture documentaire d'autonomie de la cible actuelle : **48 microservices métier + 4 composants plateforme = 52 frontières autonomes**.
+Cette matrice contrôle la fermeture documentaire d'autonomie de la cible actuelle : **54 microservices métier + 4 composants plateforme = 58 frontières autonomes**.
 
 L'ancienne closure à 51 frontières est remplacée à la suite de `ADR-PRF-001-PRF-002-PHYSICAL-BOUNDARY.md`. La séparation PRF n'annule pas les décisions déjà fermées pour les 50 autres frontières.
 
@@ -51,7 +51,7 @@ Les frontières suivantes conservent leurs décisions de closure antérieures. L
 
 `YD-MS-EDU-001`, `YD-MS-EDU-002`, `YD-MS-EDU-003`, `YD-MS-EDU-004`, `YD-MS-SKL-001`, `YD-MS-SKL-002`, `YD-MS-CAR-001`, `YD-MS-CAR-002`, `YD-MS-ASM-001`, `YD-MS-ORI-001`, `YD-MS-REC-001`, `YD-MS-SRH-001`, `YD-MS-LAB-001`, `YD-MS-LAB-002`, `YD-MS-OPP-001`, `YD-MS-OPP-002`, `YD-MS-APP-001`, `YD-MS-EMP-001`, `YD-MS-EMP-002`, `YD-MS-CNT-001`, `YD-MS-CNT-002`, `YD-MS-COM-001`, `YD-MS-LRN-001`, `YD-MS-NTF-001`, `YD-MS-PRT-001`, `YD-MS-AMB-001`, `YD-MS-DAT-001`, `YD-MS-DAT-002`, `YD-MS-DAT-003`, `YD-MS-DAT-004`, `YD-MS-DAT-005`, `YD-MS-KNW-001`, `YD-MS-ANL-001`, `YD-MS-ANL-002`, `YD-MS-ANL-003`, `YD-MS-AI-002`, `YD-MS-AI-003`, `YD-MS-BIL-001`, `YD-MS-BIL-002`, `YD-MS-MKT-001`, `YD-MS-SPN-001`, `YD-MS-DPR-001`, `YD-MS-INT-001`, `YD-MS-MOD-001`, `YD-MS-CFG-001`, `YD-MS-CNS-001`, `YD-PLT-AI-001`, `YD-PLT-MLP-001`, `YD-PLT-API-001`, `YD-PLT-AUD-001`.
 
-Le remplacement de la matrice dupliquée par cette closure différentielle est volontaire : les détails opérationnels appartiennent désormais aux 52 `AUTONOMY_PROFILE.md` et `AUTONOMY_PROFILE_REGISTER.md` sert d'index canonique. Cela évite que trois copies d'une même valeur divergent.
+Le remplacement de la matrice dupliquée par cette closure différentielle est volontaire : les détails opérationnels appartiennent désormais aux 58 `AUTONOMY_PROFILE.md` et `AUTONOMY_PROFILE_REGISTER.md` sert d'index canonique. Cela évite que trois copies d'une même valeur divergent.
 
 ## 6. Anciens blocages D3
 
@@ -73,10 +73,10 @@ Les services DERIVED restent soumis au standard de reconstruction, replay, water
 
 ## 9. Vérification post-séparation PRF
 
-- cible : 48 microservices métier
+- cible : 54 microservices métier
 - composants plateforme : 4
-- total autonome : 52
-- profils individuels attendus : 52
+- total autonome : 58
+- profils individuels attendus : 58
 - PRF-001 et PRF-002 : deux datastores privés, deux restaurations indépendantes, deux audiences IAM logiques
 - base partagée PRF-001/PRF-002 : interdite
 - accès DB croisé : interdit
@@ -88,8 +88,12 @@ Les services DERIVED restent soumis au standard de reconstruction, replay, water
 ## 10. Verdict
 
 - Frontières : `STABLE-CANDIDATE` après réconciliation PRF.
-- Profils d'autonomie : 52 attendus et indexés.
+- Profils d'autonomie : 58 attendus ; les six profils ENT sont créés.
 - Blocage pour poursuivre l'audit des domaines métier : `0`.
 - Contract Registry : reste différé jusqu'à la reprise explicite de cette étape.
 
 La prochaine revue métier peut donc commencer sur `03-education-institutions` sans conserver l'ancienne hypothèse de fusion PRF.
+
+## 11. Extension Entrepreneurship
+
+YD-MS-ENT-001 à YD-MS-ENT-006 entrent dans la closure d'autonomie. Ownership et nature sont définis ; contrats physiques, IAM physique, observabilité, SLO/RPO/RTO, recovery/rebuild, Capacity Profiles, tests de charge et preuves restent à fermer pendant la conception détaillée. Aucun de ces éléments ne vaut encore preuve K5 ou capacité 15M démontrée.
