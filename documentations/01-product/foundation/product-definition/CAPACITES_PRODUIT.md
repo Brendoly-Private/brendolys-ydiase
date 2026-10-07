@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-004"
+title: "Capacités produit — BRENDOLYS YDIASE"
+document_type: "product-capability-catalog"
+document_role: "Définit le catalogue des capacités produit et métier durables de la cible YDIASE et leur rattachement aux domaines et problèmes."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Capacités produit — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit le catalogue des capacités produit et métier durables de la cible YDIASE et leur rattachement aux domaines et problèmes.
+> **Usage développement :** référence obligatoire pour les domaines, capacités et conceptions concernées.
 
 Statut : `REVIEWED-CANDIDATE`
 
