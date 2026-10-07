@@ -1,4 +1,31 @@
+---
+document_id: YD-DOC-FND-GOV-002
+title: "Convention des identifiants YDIASE"
+document_type: "identifier-convention"
+document_role: "Définit les familles, formats et règles de stabilité des identifiants gouvernés YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Documentation Governance"
+depends_on:
+  - "YD-DOC-FND-GOV-001"
+  - "YD-STD-DOC-META-001"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Convention des identifiants YDIASE
+
+> **Rôle du document**
+> Ce document gouverne l’identification durable des documents, domaines, capacités, services, contrats, décisions, preuves et autres objets traçables.
+> **Usage développement :** référence obligatoire lors de la création ou du renommage d’un objet gouverné.
 
 Statut : `ACTIVE`
 
