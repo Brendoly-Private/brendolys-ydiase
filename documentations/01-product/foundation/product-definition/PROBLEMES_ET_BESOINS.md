@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-009"
+title: "Problèmes et besoins — BRENDOLYS YDIASE"
+document_type: "problem-needs-catalog"
+document_role: "Définit les problèmes structurants auxquels YDIASE répond et les besoins produit correspondants."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Problèmes et besoins — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit les problèmes structurants auxquels YDIASE répond et les besoins produit correspondants.
+> **Usage développement :** référence obligatoire pour les domaines, capacités et conceptions concernées.
 
 Statut : `BASELINE-CANDIDATE`
 
