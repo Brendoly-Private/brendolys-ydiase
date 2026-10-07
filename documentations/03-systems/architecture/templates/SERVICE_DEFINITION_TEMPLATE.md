@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-TPL-001"
+title: "YD-SVC-XXX — Nom du service"
+document_type: "service-definition-template"
+document_role: "Fournit le modèle de définition d’un service logique avec responsabilités, ownership, contrats, sécurité, capacité et conditions d’activation."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # YD-SVC-XXX — Nom du service
+
+> **Rôle du document**
+> Fournit le modèle de définition d’un service logique avec responsabilités, ownership, contrats, sécurité, capacité et conditions d’activation.
+> **Usage développement :** preuve ou support de fermeture ; ne remplace pas le profil canonique de la frontière.
 
 ```yaml
 service_id: YD-SVC-XXX
