@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-REG-001"
+title: "Autonomy Profile Register — BRENDOLYS YDIASE"
+document_type: "autonomy-profile-register"
+document_role: "Indexe les profils d’autonomie des frontières physiques sans dupliquer leurs exigences détaillées."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # Autonomy Profile Register — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Indexe les profils d’autonomie des frontières physiques sans dupliquer leurs exigences détaillées.
+> **Usage développement :** référence obligatoire pour les conceptions, frontières, contrats et développements relevant de son périmètre.
 
 Statut : `D3-autonomy-profile-baseline`
 
