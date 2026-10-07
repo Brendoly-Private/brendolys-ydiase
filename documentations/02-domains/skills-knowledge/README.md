@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-SKL-001"
+title: "Domaine 04 — Compétences et connaissances"
+document_type: "domain-overview"
+document_role: "Définit la séparation fondamentale entre taxonomie canonique des compétences et état individuel de compétence."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Domaine 04 — Compétences et connaissances
+
+> **Rôle du document**
+> Définit la séparation fondamentale entre taxonomie canonique des compétences et état individuel de compétence.
+> **Usage développement :** référence obligatoire pour les conceptions, contrats et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-BASELINE-CANDIDATE`
 
