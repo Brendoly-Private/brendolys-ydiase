@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-PRF-002-PRF002-CONTINUITY"
+title: "PRF002_CONTINUITY_POLICY — Continuité et mode dégradé"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de prf002 continuity pour YD-MS-PRF-002."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # PRF002_CONTINUITY_POLICY — Continuité et mode dégradé
+
+> **Rôle du document**
+> Établit les règles normatives de prf002 continuity pour YD-MS-PRF-002.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `PREPROD-CANDIDATE`
 Service : `YD-MS-PRF-002 — Education & Experience Profile`

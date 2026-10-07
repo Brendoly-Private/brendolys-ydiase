@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-ANL-001-ANALYTICS-METRIC"
+title: "YD-MS-ANL-001 — Analytics Metric Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de analytics metric pour YD-MS-ANL-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-ANL-001 — Analytics Metric Policy
+
+> **Rôle du document**
+> Établit les règles normatives de analytics metric pour YD-MS-ANL-001.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `ANALYTICS-SEMANTICS-DEFINED / METRIC-CATALOG-REGISTRATION-REQUIRED`
 

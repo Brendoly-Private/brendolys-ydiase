@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-OPP-002-OPPORTUNITY-MATCHING"
+title: "YD-MS-OPP-002 — Opportunity Matching Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de opportunity matching pour YD-MS-OPP-002."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-OPP-002 — Opportunity Matching Policy
+
+> **Rôle du document**
+> Établit les règles normatives de opportunity matching pour YD-MS-OPP-002.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-BASELINE / NUMERIC-VALIDATION-PENDING`
 Nature : `MIXED`

@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-KNW-001-KNOWLEDGE-GRAPH-PROJECTION"
+title: "YD-MS-KNW-001 — Knowledge Graph Projection Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de knowledge graph projection pour YD-MS-KNW-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-KNW-001 — Knowledge Graph Projection Policy
+
+> **Rôle du document**
+> Établit les règles normatives de knowledge graph projection pour YD-MS-KNW-001.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-BASELINE / REBUILD-EVIDENCE-PENDING`
 Classification : `DERIVED`

@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-LAB-002-LABOR-INTELLIGENCE"
+title: "YD-MS-LAB-002 — Labor Market Intelligence Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de labor intelligence pour YD-MS-LAB-002."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-LAB-002 — Labor Market Intelligence Policy
+
+> **Rôle du document**
+> Établit les règles normatives de labor intelligence pour YD-MS-LAB-002.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-BASELINE / METHODOLOGY-VALIDATION-PENDING`
 Nature : `MIXED`

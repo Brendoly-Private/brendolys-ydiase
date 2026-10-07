@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-OPP-001-OPPORTUNITY-LIFECYCLE"
+title: "YD-MS-OPP-001 — Opportunity Lifecycle & Publication Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de opportunity lifecycle pour YD-MS-OPP-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-OPP-001 — Opportunity Lifecycle & Publication Policy
+
+> **Rôle du document**
+> Établit les règles normatives de opportunity lifecycle pour YD-MS-OPP-001.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-BASELINE / IMPLEMENTATION-PENDING`
 Nature : `AUTH`

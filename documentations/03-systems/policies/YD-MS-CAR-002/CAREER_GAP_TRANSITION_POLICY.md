@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-CAR-002-CAREER-GAP-TRANSITION"
+title: "YD-MS-CAR-002 — Career Gap & Transition Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de career gap transition pour YD-MS-CAR-002."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-CAR-002 — Career Gap & Transition Policy
+
+> **Rôle du document**
+> Établit les règles normatives de career gap transition pour YD-MS-CAR-002.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `DECISION-BASELINE / IMPLEMENTATION-PENDING`
 Portée logique : `CAR-002 Career Path + CAR-003 Career Transition`
