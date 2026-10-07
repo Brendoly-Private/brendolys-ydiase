@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-ENT-006-AUT"
+title: "YD-MS-ENT-006 — Venture Progression"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Venture Progression et le suivi des étapes de création, développement et passage vers l’emploi créé."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-ENT-006 — Venture Progression
+
+> **Rôle du document**
+> Définit l’autonomie Venture Progression et le suivi des étapes de création, développement et passage vers l’emploi créé.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : autonomy-profile-target
 Nature : AUTH
