@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-ANL-001-AUT"
+title: "YD-MS-ANL-001 — Analytics"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Analytics, son caractère DERIVED, ses règles de reconstruction et sa baseline sémantique."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-ANL-001 — Analytics
+
+> **Rôle du document**
+> Définit l’autonomie Analytics, son caractère DERIVED, ses règles de reconstruction et sa baseline sémantique.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de la frontière concernée.
 
 Statut : `C2-BASELINE / ANALYTICS-SEMANTICS-CLOSED`
 
