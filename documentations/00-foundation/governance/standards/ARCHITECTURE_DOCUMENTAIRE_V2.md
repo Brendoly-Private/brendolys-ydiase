@@ -149,3 +149,21 @@ La migration se fait sans big-bang :
 Tant que cette migration n'est pas stabilisée, les promotions K4/K5/K6 ne doivent pas créer de nouvelles duplications dans l'ancienne architecture.
 
 Cette baseline remplace l'idée de maintenir durablement une documentation classique et un Knowledge Catalog documentaire parallèle.
+
+
+## 9. Métadonnées officielles obligatoires
+
+Le standard `YD-STD-DOC-META-001` dans `OFFICIAL_DOCUMENT_METADATA_STANDARD.md` gouverne désormais l'identification et la personnalisation des documents.
+
+Tout nouveau document canonique doit :
+- posséder un `document_id` stable ;
+- expliquer sa fonction avec `document_role` ;
+- référencer `BRENDOLYS YDIASE` et l'identité institutionnelle canonique ;
+- déclarer son niveau d'autorité et son usage pour le développement ;
+- relier les domaines, capacités, services, microservices, contrats ou décisions concernés lorsque applicable ;
+- séparer statut documentaire, implémentation, déploiement et activation ;
+- inclure un bloc humain « Rôle du document » lorsqu'il est substantiel.
+
+Les fichiers historiques sont migrés progressivement. Leur absence de métadonnées signifie `LEGACY-METADATA-PENDING`, sans annuler leur contenu existant.
+
+La readiness de développement doit prendre en compte les documents `mandatory-reference` applicables. Une contradiction non résolue entre références obligatoires bloque la readiness du périmètre concerné.
