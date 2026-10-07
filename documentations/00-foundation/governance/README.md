@@ -1,4 +1,33 @@
+---
+document_id: YD-DOC-FND-GOV-000
+title: "Gouvernance documentaire — BRENDOLYS YDIASE"
+document_type: "documentation-navigation"
+document_role: "Oriente la lecture du système de gouvernance documentaire et indique ses références structurantes."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "informational"
+owners:
+  - "Documentation Governance"
+depends_on:
+  - "YD-DOC-FND-GOV-001"
+  - "YD-DOC-FND-GOV-002"
+  - "YD-DOC-FND-GOV-003"
+  - "YD-STD-DOC-META-001"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Gouvernance documentaire — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Ce fichier est le point d’entrée du dossier de gouvernance documentaire et indique l’ordre de lecture des règles qui gouvernent le corpus.
+> **Usage développement :** orientation ; les obligations proviennent des documents normatifs référencés.
 
 Statut : `ACTIVE`
 
