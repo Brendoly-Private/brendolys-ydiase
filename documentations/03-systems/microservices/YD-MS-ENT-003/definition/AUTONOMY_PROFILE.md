@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-ENT-003-AUT"
+title: "YD-MS-ENT-003 — Entrepreneurship Support Ecosystem"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Entrepreneurship Support Ecosystem et l’autorité sur les ressources d’accompagnement référencées."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-ENT-003 — Entrepreneurship Support Ecosystem
+
+> **Rôle du document**
+> Définit l’autonomie Entrepreneurship Support Ecosystem et l’autorité sur les ressources d’accompagnement référencées.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : autonomy-profile-target
 Nature : AUTH
