@@ -1,4 +1,31 @@
+---
+document_id: "YD-DOC-FND-GOV-REG-000"
+title: "Registres de gouvernance — BRENDOLYS YDIASE"
+document_type: "registry-governance"
+document_role: "Définit les registres officiels YDIASE, leur contenu minimal, leurs gates et leurs règles de tenue."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Documentation Governance"
+depends_on:
+  - "YD-DOC-FND-GOV-001"
+  - "YD-STD-DOC-META-001"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "governance-register"
+---
+
 # Registres de gouvernance — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit les registres officiels YDIASE, leur contenu minimal, leurs gates et leurs règles de tenue.
+> **Usage développement :** référence obligatoire pour son périmètre.
 
 Statut : `ACTIVE`
 

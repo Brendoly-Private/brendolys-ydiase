@@ -1,4 +1,31 @@
+---
+document_id: "YD-DOC-FND-GOV-REG-004"
+title: "Registre des décisions — BRENDOLYS YDIASE"
+document_type: "decision-registry"
+document_role: "Indexe les décisions structurantes et renvoie vers leurs sources détaillées sans s’y substituer."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "view"
+canonical: false
+development_usage: "supporting-reference"
+owners:
+  - "Documentation Governance"
+depends_on:
+  - "YD-DOC-FND-GOV-001"
+  - "YD-STD-DOC-META-001"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "governance-register"
+---
+
 # Registre des décisions — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Indexe les décisions structurantes et renvoie vers leurs sources détaillées sans s’y substituer.
+> **Usage développement :** support de traçabilité ; les sources canoniques référencées restent autoritatives.
 
 Statut : `ACTIVE`
 
