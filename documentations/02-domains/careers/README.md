@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-CAR-001"
+title: "Domaine 05 — Métiers et carrières"
+document_type: "domain-overview"
+document_role: "Définit la mission, la doctrine et les frontières principales du domaine Métiers et carrières."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Domaine 05 — Métiers et carrières
+
+> **Rôle du document**
+> Définit la mission, la doctrine et les frontières principales du domaine Métiers et carrières.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-BASELINE-CANDIDATE`
 
