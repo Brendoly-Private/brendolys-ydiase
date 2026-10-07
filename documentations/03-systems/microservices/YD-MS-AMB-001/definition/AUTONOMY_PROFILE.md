@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-AMB-001-AUT"
+title: "YD-MS-AMB-001 — Ambassador Network"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie du réseau Ambassadors, l’autorité sur les mandats et les limites de validation des contributions."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-AMB-001 — Ambassador Network
+
+> **Rôle du document**
+> Définit l’autonomie du réseau Ambassadors, l’autorité sur les mandats et les limites de validation des contributions.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de la frontière concernée.
 
 Statut : `autonomy-profile-draft`
 
