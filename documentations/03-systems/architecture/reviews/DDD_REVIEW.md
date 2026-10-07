@@ -104,3 +104,10 @@ La revue transversale des 48 microservices confirme que `MICROSERVICE_BOUNDARY_R
 Deux points restent volontairement non tranchés ici :
 - INS-001 : conflit entre LOGICAL_ONLY/BFF sans agrégat et ownership de workflow durable ; ADR requis avant implémentation.
 - AI-004 : frontière DEFERRED ; les cartes qui la montrent dans le flux IA décrivent une topologie future et doivent être séparées de la topologie active avant implémentation.
+
+
+## Extension Entrepreneurship — réconciliation
+
+La revue dédiée `ENTREPRENEURSHIP_DDD_REVIEW.md` ajoute six frontières logiques à la cible : ENT-001 à ENT-006. Verdict : KEEP-SEPARATE pour les six frontières, avec ownership et dépendances réconciliés.
+
+Le comptage historique de 52 frontières autonomes décrit la baseline antérieure à l'extension Entrepreneurship. Il ne doit plus être interprété comme le nombre final de la Target Architecture. Le nouveau comptage physique canonique devra être recalculé après intégration des six frontières dans `MICROSERVICE_BOUNDARY_REVIEW.md` et validation des ADR nécessaires.
