@@ -1,0 +1,38 @@
+# YDIASE — Cible complète et activation progressive
+
+Statut : ARCHITECTURE-PRINCIPLE / NORMATIVE
+
+## Principe
+BRENDOLYS YDIASE est conçu pour sa cible fonctionnelle, data et architecturale complète. L'activation opérationnelle est progressive.
+
+Une fonctionnalité différée n'est pas une fonctionnalité non conçue.
+
+## États distincts
+CONCEIVED : comportement, frontières, données, contrats, risques et architecture cible documentés.
+IMPLEMENTED : code, schémas physiques, infrastructure et tests existent.
+DEPLOYED : artefact installé dans un environnement gouverné.
+ACTIVATED : fonctionnalité accessible à ses utilisateurs/consommateurs autorisés.
+VERIFIED : preuves exigées exécutées et acceptées.
+
+Ces états ne sont jamais synonymes.
+
+## Conséquences
+- tous les microservices cibles conservent leur documentation même non activés ;
+- leurs modules et fonctionnalités cibles sont conçus avant la fermeture de la conception globale ;
+- contrats et événements prévoient l'évolution sans obliger à déployer tous les consommateurs ;
+- une capacité inactive ne doit pas être présentée comme runtime existant ;
+- l'activation peut être pilotée par configuration, entitlement, routage ou feature flag gouverné ;
+- désactivation et activation ne changent pas l'ownership métier ;
+- les dépendances à une capacité inactive doivent avoir un comportement explicite.
+
+## Big Data
+La cible prévoit une plateforme data capable de supporter ingestion, streaming/eventing, traitements batch/stream, stockage analytique/lakehouse, recherche, Knowledge Graph, analytics et ML/IA à l'échelle YDIASE.
+
+Cette capacité est mutualisée comme plateforme lorsque pertinent. Elle ne justifie pas d'imposer Kafka, Kubernetes, Flink, un lakehouse ou plusieurs datastores à chaque microservice. Les technologies physiques sont choisies par ADR à partir des volumes, latences, résilience, sécurité, souveraineté, coût et exploitabilité.
+
+Les microservices métier publient des contrats gouvernés ; Analytics, Knowledge, Search et IA peuvent les consommer sans devenir autorités des domaines sources.
+
+## Gate de conception globale
+La conception globale n'est pas COMPLETE tant que les frontières seules sont documentées. Chaque microservice cible doit aussi disposer, selon applicabilité, de ses modules/capacités internes, fonctionnalités, cas d'usage, règles, entrées/sorties, données, algorithmes lorsqu'ils existent, architecture technique cible, sécurité, opérations, tests et plan d'implémentation.
+
+L'absence d'activation n'exempte pas cette conception.
