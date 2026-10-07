@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-PLT-MLP-001-AUT"
+title: "YD-PLT-MLP-001 — Model Lifecycle & Registry"
+document_type: "platform-component-autonomy-profile"
+document_role: "Définit l’autonomie, les responsabilités et les limites documentées du composant YD-PLT-MLP-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "platform"
+---
+
 # YD-PLT-MLP-001 — Model Lifecycle & Registry
+
+> **Rôle du document**
+> Définit l’autonomie, les responsabilités et les limites documentées du composant YD-PLT-MLP-001.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de ce composant.
 
 Statut : `autonomy-profile-draft`
 

@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-LAB-001-LABOR-SIGNAL"
+title: "YD-MS-LAB-001 — Labor Signal Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de labor signal pour YD-MS-LAB-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-LAB-001 — Labor Signal Policy
+
+> **Rôle du document**
+> Établit les règles normatives de labor signal pour YD-MS-LAB-001.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-BASELINE / IMPLEMENTATION-PENDING`
 Nature : `AUTH`

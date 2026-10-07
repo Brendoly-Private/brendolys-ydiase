@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-LRN-001-LEARNING-DISCOVERY"
+title: "YD-MS-LRN-001 — Learning Discovery Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de learning discovery pour YD-MS-LRN-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-LRN-001 — Learning Discovery Policy
+
+> **Rôle du document**
+> Établit les règles normatives de learning discovery pour YD-MS-LRN-001.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-BASELINE / IMPLEMENTATION-PENDING`
 Nature : `MIXED`

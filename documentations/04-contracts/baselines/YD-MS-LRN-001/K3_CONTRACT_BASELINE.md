@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-CON-LRN-001-K3-BASELINE"
+title: "YD-MS-LRN-001 — K3 Contract Baseline"
+document_type: "contract-baseline"
+document_role: "Fixe la baseline contractuelle K3 applicable à YD-MS-LRN-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "contracts"
+---
+
 # YD-MS-LRN-001 — K3 Contract Baseline
+
+> **Rôle du document**
+> Fixe la baseline contractuelle K3 applicable à YD-MS-LRN-001.
+> **Usage développement :** référence contractuelle obligatoire pour les implémentations et intégrations concernées.
 
 Statut : `K3-CONTRACT-BASELINE / IMPLEMENTATION-PENDING`
 Nature : `MIXED`

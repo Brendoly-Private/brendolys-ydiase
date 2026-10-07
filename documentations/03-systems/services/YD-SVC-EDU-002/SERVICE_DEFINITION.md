@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SVC-EDU-002-DEF"
+title: "YD-SVC-EDU-002 — Program Catalog Service"
+document_type: "service-definition"
+document_role: "Définit le service logique YD-SVC-EDU-002, son périmètre, ses responsabilités et ses dépendances documentées."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "service"
+---
+
 # YD-SVC-EDU-002 — Program Catalog Service
+
+> **Rôle du document**
+> Définit le service logique YD-SVC-EDU-002, son périmètre, ses responsabilités et ses dépendances documentées.
+> **Usage développement :** référence obligatoire pour cadrer ce service logique avant toute traduction en composant physique.
 
 `domain: education-institutions` · `documentation: D2` · `implementation: not-started`
 

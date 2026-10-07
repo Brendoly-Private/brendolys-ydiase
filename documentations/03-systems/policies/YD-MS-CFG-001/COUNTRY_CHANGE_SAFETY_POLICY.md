@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-CFG-001-COUNTRY-CHANGE-SAFETY"
+title: "YD-MS-CFG-001 — Country Change Safety Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de country change safety pour YD-MS-CFG-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-CFG-001 — Country Change Safety Policy
+
+> **Rôle du document**
+> Établit les règles normatives de country change safety pour YD-MS-CFG-001.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-C1-BASELINE / IMPLEMENTATION-PENDING`
 

@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SVC-NTF-001-DEF"
+title: "YD-SVC-NTF-001 — Notification Service"
+document_type: "service-definition"
+document_role: "Définit le service logique YD-SVC-NTF-001, son périmètre, ses responsabilités et ses dépendances documentées."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "service"
+---
+
 # YD-SVC-NTF-001 — Notification Service
+
+> **Rôle du document**
+> Définit le service logique YD-SVC-NTF-001, son périmètre, ses responsabilités et ses dépendances documentées.
+> **Usage développement :** référence obligatoire pour cadrer ce service logique avant toute traduction en composant physique.
 
 `domain: plateforme` · `documentation: D2` · `implementation: not-started`
 

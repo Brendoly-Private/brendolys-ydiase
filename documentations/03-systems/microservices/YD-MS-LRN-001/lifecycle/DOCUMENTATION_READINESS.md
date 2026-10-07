@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-LRN-001-RDY"
+title: "YD-MS-LRN-001 — Documentation Readiness"
+document_type: "microservice-documentation-readiness"
+document_role: "Établit la readiness documentaire de YD-MS-LRN-001 et distingue ce qui est fermé de ce qui dépend encore de l’implémentation ou de preuves."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-LRN-001 — Documentation Readiness
+
+> **Rôle du document**
+> Établit la readiness documentaire de YD-MS-LRN-001 et distingue ce qui est fermé de ce qui dépend encore de l’implémentation ou de preuves.
+> **Usage développement :** preuve de maturité documentaire ; le profil canonique et les politiques applicables restent autoritatifs.
 
 Statut : `DOCUMENTATION-READY / K5-EXECUTION-BLOCKED-BY-IMPLEMENTATION`
 

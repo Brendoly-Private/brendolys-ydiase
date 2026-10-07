@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-POL-APP-001-APPLICATION-LIFECYCLE"
+title: "YD-MS-APP-001 — Application Lifecycle Policy"
+document_type: "microservice-policy"
+document_role: "Établit les règles normatives de application lifecycle pour YD-MS-APP-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "policy"
+---
+
 # YD-MS-APP-001 — Application Lifecycle Policy
+
+> **Rôle du document**
+> Établit les règles normatives de application lifecycle pour YD-MS-APP-001.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-BASELINE / PREPROD-PENDING`
 Nature : `AUTH`

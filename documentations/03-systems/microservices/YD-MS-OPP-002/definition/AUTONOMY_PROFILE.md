@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-OPP-002-AUT"
+title: "YD-MS-OPP-002 — Opportunity Matching"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie, l’autorité et les responsabilités documentées de YD-MS-OPP-002."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-OPP-002 — Opportunity Matching
+
+> **Rôle du document**
+> Définit l’autonomie, l’autorité et les responsabilités documentées de YD-MS-OPP-002.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `C2-BASELINE / OPPORTUNITY-MATCHING-SEMANTICS-CLOSED`
 

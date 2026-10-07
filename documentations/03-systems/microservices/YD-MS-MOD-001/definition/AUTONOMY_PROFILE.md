@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-MOD-001-AUT"
+title: "YD-MS-MOD-001 — Moderation"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie et l’ownership de Moderation, avec autorité : politiques, dossiers et décisions de modération; owner métier applique l’effet sur son objet."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-MOD-001 — Moderation
+
+> **Rôle du document**
+> Définit l’autonomie et l’ownership de Moderation, avec autorité : politiques, dossiers et décisions de modération; owner métier applique l’effet sur son objet.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `autonomy-profile-draft`
 
