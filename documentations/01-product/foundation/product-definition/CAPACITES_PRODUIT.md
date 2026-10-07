@@ -71,6 +71,31 @@ Les anciennes capacités 035 à 055 ont été revues pour retirer les formulatio
 | YD-CAP-061 | feedback, contestation et correction des informations ou recommandations | transversal | 008,009 | individus, partenaires | signaler une erreur, demander correction et enrichir la qualité |
 | YD-CAP-062 | portabilité, export et récupération des informations personnelles autorisées | Identity | 004,007 | individus | conserver la maîtrise des informations personnelles selon les droits applicables |
 
+
+
+## 2A. Extension cible — Entrepreneuriat
+
+Les capacités suivantes sont ajoutées à la cible complète. Elles restent distinctes des capacités d'emploi/recrutement et sont conçues même si leur activation est différée.
+
+| ID | Capacité cible | Domaine principal | Population | Valeur |
+|---|---|---|---|---|
+| YD-CAP-063 | profil et objectifs de projet entrepreneurial | Entrepreneurship | porteurs de projet | structurer le contexte d'une initiative sans modifier le profil personnel source |
+| YD-CAP-064 | exploration d'opportunités entrepreneuriales sourcées | Entrepreneurship/Labor | individus, entrepreneurs | relier compétences, territoire et signaux économiques |
+| YD-CAP-065 | comparaison emploi/formation/indépendant/entrepreneuriat/hybride | Guidance/Entrepreneurship | individus | comparer plusieurs familles de trajectoires |
+| YD-CAP-066 | analyse d'écarts entrepreneuriaux et plan de progression | Entrepreneurship/Skills | porteurs de projet | identifier compétences, ressources et actions manquantes |
+| YD-CAP-067 | écosystème d'accompagnement entrepreneurial | Entrepreneurship/Partners | entrepreneurs | identifier incubateurs, mentors, programmes et ressources |
+| YD-CAP-068 | opportunités de financement et éligibilité sourcée | Entrepreneurship | entrepreneurs | identifier des dispositifs sans promettre leur obtention |
+| YD-CAP-069 | complémentarité fondateurs/équipe et matching gouverné | Entrepreneurship/Skills | fondateurs | identifier des complémentarités sous consentement |
+| YD-CAP-070 | plan, hypothèses, expérimentations, jalons et progression venture | Entrepreneurship | entrepreneurs | suivre apprentissages et progression du projet |
+| YD-CAP-071 | intelligence sectorielle/territoriale pour entrepreneuriat | Entrepreneurship/Labor/Data | entrepreneurs, accompagnateurs | contextualiser une opportunité avec signaux datés et provenance |
+| YD-CAP-072 | transition entrepreneur vers employeur et créateur d'opportunités | Entrepreneurship/Employers | entrepreneurs | relier croissance du projet, recrutement et besoins de compétences |
+
+Ces capacités ne confèrent pas automatiquement une frontière physique. Le découpage cible est décrit dans `02-domains/entrepreneurship/FRONTIERES_ET_DEPENDANCES.md`.
+
+## 2B. Exigence de capacité plateforme
+
+La cible produit est accompagnée d'une exigence architecturale transverse : 5 000 000 à 15 000 000 d'utilisateurs simultanément actifs. Elle n'est pas une capacité métier et ne reçoit donc pas d'ID YD-CAP. Elle est gouvernée par `03-systems/architecture/target/HYPERSCALE_CAPACITY_BASELINE.md` et déclinée en Capacity Profile par microservice.
+
 ## 3. Éléments retirés du catalogue comme capacités autonomes
 
 Les anciens éléments suivants restent obligatoires mais deviennent des exigences ou capacités de support plutôt que des capacités produit autonomes :
@@ -87,7 +112,7 @@ Leurs anciens IDs ne sont pas réutilisés pour un autre sens. Le registre docum
 - 51 capacités existantes sont conservées ou reformulées comme capacités métier/produit.
 - 4 formulations techniques ou de gouvernance ne restent plus des capacités produit autonomes.
 - 7 capacités manquantes sont ajoutées sous IDs 056 à 062.
-- le catalogue contient désormais 58 capacités actives/revues.
+- le catalogue historique revu contenait 58 capacités actives/revues ; l'extension Entrepreneurship ajoute YD-CAP-063 à YD-CAP-072, soit 68 capacités cibles actuellement cataloguées.
 - aucun nombre cible n'est figé.
 
 ## 5. Gate suivant
