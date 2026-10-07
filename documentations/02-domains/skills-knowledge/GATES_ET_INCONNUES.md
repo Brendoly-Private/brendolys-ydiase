@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-SKL-003"
+title: "Gates et inconnues — Compétences et connaissances"
+document_type: "domain-gates-unknowns"
+document_role: "Trace les gates de gouvernance, dérivation, privacy, résilience et validation restant à fermer pour Skills."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Gates et inconnues — Compétences et connaissances
+
+> **Rôle du document**
+> Trace les gates de gouvernance, dérivation, privacy, résilience et validation restant à fermer pour Skills.
+> **Usage développement :** support de validation et de traçabilité ; les sources canoniques associées restent autoritatives.
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`
 
