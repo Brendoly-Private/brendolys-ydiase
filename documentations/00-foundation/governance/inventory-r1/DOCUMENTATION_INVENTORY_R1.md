@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-INV-004"
+title: "R1 — Inventaire documentaire gouverné — BRENDOLYS YDIASE"
+document_type: "documentation-inventory"
+document_role: "Conserve l’inventaire gouverné R1 du corpus et les dispositions de migration observées pendant la restructuration documentaire."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-migration"
+---
+
 # R1 — Inventaire documentaire gouverné — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Conserve l’inventaire gouverné R1 du corpus et les dispositions de migration observées pendant la restructuration documentaire.
+> **Usage développement :** support de migration et de traçabilité ; les sources canoniques actives restent autoritatives.
 
 Statut : `R1-IN-PROGRESS / STRUCTURAL-INVENTORY-ESTABLISHED / AUTHORITY-TYPING-ESTABLISHED / LOGICAL-PHYSICAL-MAPPING-ESTABLISHED / EXHAUSTIVE-TREE-PENDING`
 
