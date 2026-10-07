@@ -111,7 +111,22 @@ Issuer OIDC : `https://sso.godinfradsby.xyz/realms/{realm}/protocol/openid-conne
 | 47 | `YD-MS-CFG-001 Country Configuration` | CFG-001 | Gouvernance multi-pays |
 | 48 | `YD-MS-CNS-001 Consent & Privacy` | CNS-001 | Privacy |
 
-**Cible confirmée actuelle : 48 microservices métier physiques.**
+**Baseline avant Entrepreneurship : 48 microservices métier physiques.**
+
+## 5A. Extension Entrepreneurship
+
+La revue DDD dédiée confirme six frontières autonomes supplémentaires :
+
+| # | Microservice physique cible | Service logique | Domaine |
+|---:|---|---|---|
+| 49 | `YD-MS-ENT-001 Venture Profile` | ENT-001 | Entrepreneurship |
+| 50 | `YD-MS-ENT-002 Entrepreneurial Opportunity Intelligence` | ENT-002 | Entrepreneurship |
+| 51 | `YD-MS-ENT-003 Entrepreneurship Support Ecosystem` | ENT-003 | Entrepreneurship |
+| 52 | `YD-MS-ENT-004 Funding Opportunity` | ENT-004 | Entrepreneurship |
+| 53 | `YD-MS-ENT-005 Founder & Team Matching` | ENT-005 | Entrepreneurship |
+| 54 | `YD-MS-ENT-006 Venture Progression` | ENT-006 | Entrepreneurship |
+
+**Cible physique actuelle : 54 microservices métier.**
 
 # 6. Composants de plateforme autonomes confirmés
 
@@ -122,7 +137,7 @@ Issuer OIDC : `https://sso.godinfradsby.xyz/realms/{realm}/protocol/openid-conne
 | P3 | `YD-PLT-API-001 External API Management` | exposition API externe, clients et quotas techniques |
 | P4 | `YD-PLT-AUD-001 Audit & Trace` | trail transverse et preuves d’audit |
 
-**Total autonome cible actuel : 52 = 48 microservices métier + 4 composants plateforme.** BRENDOLYS Identity reste externe à ce total.
+**Total autonome cible actuel : 58 = 54 microservices métier + 4 composants plateforme.** BRENDOLYS Identity reste externe à ce total.
 
 # 7. Frontières différées
 
@@ -132,7 +147,7 @@ Issuer OIDC : `https://sso.godinfradsby.xyz/realms/{realm}/protocol/openid-conne
 | `YD-MS-LAB-003 Labor Forecasting` | capacité exploitant LAB-002/Analytics | forecasting industrialisé, modèles/versioning/SLO propres |
 | `YD-PLT-AI-004 AI Orchestration` | orchestration initiale minimale autour du Gateway et des services AI | workflows multiples, état durable ou scaling propre |
 
-Si les trois frontières sont extraites, la cible passerait à **55 déploiements autonomes** : 50 microservices métier et 5 composants plateforme.
+Si les trois frontières différées sont extraites, la cible passerait à **61 déploiements autonomes** : 56 microservices métier et 5 composants plateforme.
 
 # 8. Frontières explicitement protégées contre fusion
 
@@ -171,3 +186,7 @@ Toute future fusion, séparation ou extraction exige un ADR qui documente probl�
 # 11. Réconciliation post-ADR PRF
 
 `YD-MS-PRF-002` doit être présent dans les registres d’autonomie, la closure D3, les profils individuels et les futurs contrats. Les Dependency/Event Maps historiques peuvent conserver les identifiants logiques PRF-001/PRF-002, mais toute matérialisation physique doit respecter les deux frontières autonomes.
+
+# 12. Réconciliation Entrepreneurship
+
+Le comptage cible est désormais 58 frontières autonomes : 54 YD-MS et 4 YD-PLT. Les six ENT exigent profil d'autonomie, Capacity Profile, contrats, K3/K4 et conception complète avant TARGET-DESIGN-COMPLETE.
