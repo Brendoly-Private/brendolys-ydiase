@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-TGT-009"
+title: "YDIASE — Target Flow Map"
+document_type: "target-flow-map"
+document_role: "Définit les flux cibles d’interaction, orientation, entrepreneuriat, Data, IA, événements et hyperscale."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # YDIASE — Target Flow Map
+
+> **Rôle du document**
+> Définit les flux cibles d’interaction, orientation, entrepreneuriat, Data, IA, événements et hyperscale.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de la frontière concernée.
 
 Statut : TARGET-FLOW-BASELINE / NORMATIVE
 
