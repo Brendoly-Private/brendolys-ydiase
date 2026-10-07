@@ -54,3 +54,9 @@ La duplication de vérité métier entre ces couches est interdite : les documen
 K0-K6 mesure la maturité de connaissance et de preuve. Les statuts READY-FOR-DEVELOPMENT mesurent la complétude nécessaire au développement. Ils sont complémentaires et ne se remplacent pas.
 
 K5/K6 ne sont jamais attribués parce qu'une spécification est détaillée. Inversement, DOCUMENTATION-READY de frontière ne vaut pas MICROSERVICE-READY-FOR-DEVELOPMENT.
+
+
+## Capacity Profile obligatoire
+Chaque FEATURE/MODULE/MICROSERVICE readiness doit intégrer la charge attendue lorsque pertinente. Pour MICROSERVICE-READY-FOR-DEVELOPMENT, le Capacity Profile défini par `03-systems/architecture/target/HYPERSCALE_CAPACITY_BASELINE.md` est obligatoire : scénarios de pointe, RPS/QPS, concurrence, événements, données, latence, partitionnement, backpressure, scaling, dépendances et dégradation.
+
+La cible agrégée de conception est 5 M à 15 M d'utilisateurs simultanément actifs. Une affirmation de capacité vérifiée exige des preuves de performance ; une estimation documentaire reste une hypothèse.
