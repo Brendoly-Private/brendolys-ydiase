@@ -1,3 +1,22 @@
+---
+document_id: "YD-DOC-REL-EDUCATION-RELATIONS"
+title: "education relations"
+document_type: "relations-reference"
+document_role: "Documente des relations de référence entre entités ou domaines YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "relations"
+---
+
+# Rôle du document
+# Documente des relations de référence entre entités ou domaines YDIASE.
+# Usage développement : référence de support pour la modélisation documentaire.
 apiVersion: knowledge.ydiase/v1
 kind: RelationSet
 metadata:

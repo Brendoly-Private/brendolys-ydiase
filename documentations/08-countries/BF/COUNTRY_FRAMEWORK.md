@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-CTY-BF-FRAMEWORK"
+title: "Country Framework — Burkina Faso"
+document_type: "country-framework"
+document_role: "Documente le cadre pays applicable au Burkina Faso."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "countries"
+---
+
 # Country Framework — Burkina Faso
+
+> **Rôle du document**
+> Documente le cadre pays applicable au Burkina Faso.
+> **Usage développement :** référence de support pour la conception, la vérification ou la contextualisation concernée.
 
 | Élément | État |
 |---|---|

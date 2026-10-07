@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-CON-CONTRACT-V1-VALIDATION-MATRIX"
+title: "CONTRACT v1 — Validation Matrix"
+document_type: "contract-validation-matrix"
+document_role: "Définit le contrat ou dispositif de validation CONTRACT V1 VALIDATION MATRIX dans le périmètre documentaire des contrats YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "contracts"
+---
+
 # CONTRACT v1 — Validation Matrix
+
+> **Rôle du document**
+> Définit le contrat ou dispositif de validation CONTRACT V1 VALIDATION MATRIX dans le périmètre documentaire des contrats YDIASE.
+> **Usage développement :** référence contractuelle obligatoire pour les implémentations, intégrations ou validations concernées.
 
 Statut : `VALIDATION-BASELINE-DEFINED / EXECUTION-PENDING`
 Référence : `CONTRACT_REGISTRY.md`

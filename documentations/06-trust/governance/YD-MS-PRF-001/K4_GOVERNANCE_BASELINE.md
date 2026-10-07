@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-TRU-PRF-001-K4-GOVERNANCE-BASELINE"
+title: "YD-MS-PRF-001 — K4 Governance Baseline"
+document_type: "governance-baseline"
+document_role: "Établit une règle ou baseline normative de gouvernance applicable au périmètre concerné."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "trust"
+---
+
 # YD-MS-PRF-001 — K4 Governance Baseline
+
+> **Rôle du document**
+> Établit une règle ou baseline normative de gouvernance applicable au périmètre concerné.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : K4-PASS / GOVERNANCE-BASELINE-CLOSED / K5-EVIDENCE-PENDING
 Nature : AUTH

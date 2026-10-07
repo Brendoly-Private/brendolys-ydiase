@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOC-REGISTER"
+title: "Registre documentaire"
+document_type: "document-register"
+document_role: "Maintient le registre documentaire de référence de BRENDOLYS YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "documentation"
+---
+
 # Registre documentaire
+
+> **Rôle du document**
+> Maintient le registre documentaire de référence de BRENDOLYS YDIASE.
+> **Usage développement :** référence de support pour la gouvernance ou la vérification documentaire.
 
 > **Statut : vue d’orientation non normative.**
 >

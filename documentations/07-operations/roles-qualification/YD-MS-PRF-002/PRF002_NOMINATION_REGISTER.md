@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-OPS-PRF-002-NOMINATION-REGISTER"
+title: "PRF002_NOMINATION_REGISTER — Tableau de nomination"
+document_type: "operations-reference"
+document_role: "Documente une référence opérationnelle de qualification et nomination des rôles concernés."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "operations"
+---
+
 # PRF002_NOMINATION_REGISTER — Tableau de nomination
+
+> **Rôle du document**
+> Documente une référence opérationnelle de qualification et nomination des rôles concernés.
+> **Usage développement :** référence de support pour la conception et la préparation opérationnelle.
 
 Statut : `READY-TO-FILL / NOMINATIONS-PENDING`
 Service : `YD-MS-PRF-002 — Education & Experience Profile`

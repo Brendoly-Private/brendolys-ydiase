@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-OPS-PRF-002-PRF002-DR-RUNBOOK"
+title: "PRF002_DR_RUNBOOK — Runbook de reprise exécutable"
+document_type: "operational-runbook"
+document_role: "Définit la procédure opérationnelle applicable à YD-MS-PRF-002."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "operations"
+---
+
 # PRF002_DR_RUNBOOK — Runbook de reprise exécutable
+
+> **Rôle du document**
+> Définit la procédure opérationnelle applicable à YD-MS-PRF-002.
+> **Usage développement :** référence opérationnelle obligatoire pour l’implémentation et l’exploitation concernées.
 
 Statut : `TBD-IMPLEMENTATION — PROCEDURE DEFINED, TECHNOLOGY COMMANDS TO BIND`
 Service : `YD-MS-PRF-002 — Education & Experience Profile`

@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-CON-CONTRACT-REGISTRY"
+title: "Contract Registry canonique — BRENDOLYS YDIASE"
+document_type: "contract-registry"
+document_role: "Définit le contrat ou dispositif de validation CONTRACT REGISTRY dans le périmètre documentaire des contrats YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "contracts"
+---
+
 # Contract Registry canonique — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit le contrat ou dispositif de validation CONTRACT REGISTRY dans le périmètre documentaire des contrats YDIASE.
+> **Usage développement :** référence contractuelle obligatoire pour les implémentations, intégrations ou validations concernées.
 
 Statut : `D3-CANONICAL-CONTRACT-REGISTRY / LOGICAL-CONTRACTS-DEFINED / PHYSICAL-SCHEMAS-PENDING`
 

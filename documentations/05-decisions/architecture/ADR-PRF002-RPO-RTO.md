@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-ADR-ADR-PRF002-RPO-RTO"
+title: "ADR — RPO, RTO et continuité de YD-MS-PRF-002"
+document_type: "architecture-decision-record"
+document_role: "Consigne une décision d’architecture et ses conséquences applicables."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "decisions"
+---
+
 # ADR — RPO, RTO et continuité de YD-MS-PRF-002
+
+> **Rôle du document**
+> Consigne une décision d’architecture et ses conséquences applicables.
+> **Usage développement :** référence obligatoire pour les choix d’architecture concernés.
 
 Statut : `ACCEPTED-WITH-PREPROD-PROOF`
 Date : 2026-10-05

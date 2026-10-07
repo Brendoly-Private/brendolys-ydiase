@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-OPS-RESILIENCE-BASELINE"
+title: "Exploitation & Résilience — Baseline BRENDOLYS YDIASE"
+document_type: "operations-reference"
+document_role: "Documente une référence opérationnelle de résilience, reprise, preuve ou qualification."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "operations"
+---
+
 # Exploitation & Résilience — Baseline BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Documente une référence opérationnelle de résilience, reprise, preuve ou qualification.
+> **Usage développement :** référence de support pour la conception et la préparation opérationnelle.
 
 Statut : `D3-resilience-baseline`
 

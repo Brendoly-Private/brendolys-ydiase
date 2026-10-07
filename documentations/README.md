@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOC-INDEX"
+title: "BRENDOLYS YDIASE — Documentation"
+document_type: "documentation-index"
+document_role: "Présente l’organisation et les règles de lecture du corpus documentaire."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "informational"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "documentation"
+---
+
 # BRENDOLYS YDIASE — Documentation
+
+> **Rôle du document**
+> Présente l’organisation et les règles de lecture du corpus documentaire.
+> **Usage développement :** guide de lecture et de navigation.
 
 Cette documentation définit BRENDOLYS YDIASE avant sa réalisation. Elle décrit la cible panafricaine complète, puis organise son activation progressive, notamment le pilote Burkina. La documentation sépare strictement vision cible, domaine métier, service logique, frontière physique, implémentation, déploiement et activation.
 

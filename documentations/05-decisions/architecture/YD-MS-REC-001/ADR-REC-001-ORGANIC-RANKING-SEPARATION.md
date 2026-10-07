@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-ADR-ADR-REC-001-ORGANIC-RANKING-SEPARATION"
+title: "ADR-REC-001 — Séparation du ranking organique et des influences externes"
+document_type: "architecture-decision-record"
+document_role: "Consigne une décision d’architecture et ses conséquences applicables."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "decisions"
+---
+
 # ADR-REC-001 — Séparation du ranking organique et des influences externes
+
+> **Rôle du document**
+> Consigne une décision d’architecture et ses conséquences applicables.
+> **Usage développement :** référence obligatoire pour les choix d’architecture concernés.
 
 Statut : `ACCEPTED-DOCUMENTARY-BASELINE`
 

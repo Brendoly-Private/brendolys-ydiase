@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-TRU-KNW-001-K5-SECURITY-VERIFICATION-SPEC"
+title: "YD-MS-KNW-001 — K5 Security Verification Specification"
+document_type: "verification-specification"
+document_role: "Définit un protocole ou une spécification de vérification servant de preuve contrôlée."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "trust"
+---
+
 # YD-MS-KNW-001 — K5 Security Verification Specification
+
+> **Rôle du document**
+> Définit un protocole ou une spécification de vérification servant de preuve contrôlée.
+> **Usage développement :** référence de vérification obligatoire pour le périmètre concerné.
 
 Statut : `TEST-SPEC-DEFINED / EXECUTION-PENDING`
 
