@@ -6,6 +6,7 @@ Ce catalogue décrit les **services logiques candidats de l’architecture cible
 
 - Domaine métier ≠ capacité ≠ service logique ≠ microservice physique ≠ infrastructure.
 - Le pilote Burkina n’est qu’un sous-ensemble activé de la cible.
+- La cible est conçue pour 5 à 15 millions d'utilisateurs simultanément actifs à l'échelle plateforme ; chaque service reçoit son Capacity Profile propre.
 - Les phases indiquent l’ordre de maturation fonctionnelle, pas une obligation de déploiement indépendant.
 - Data, Knowledge, Analytics et AI restent séparés.
 - Une base de données, Kafka, Flink, Kubernetes, un LLM ou tout autre produit technique n’est jamais un service métier YDIASE par nature.
@@ -13,7 +14,7 @@ Ce catalogue décrit les **services logiques candidats de l’architecture cible
 
 ## Inventaire fonctionnel ayant conduit au catalogue
 
-La cible couvre au minimum : identité et profils ; établissements, campus, programmes, curricula, modules et qualifications ; connaissances et compétences ; métiers, trajectoires et reconversion ; évaluations ; orientation et comparaison ; recherche ; recommandations ; marché du travail ; opportunités, candidatures et recrutement ; employeurs ; contenu, feed, communauté et learning ; notifications ; partenaires et ambassadeurs ; collecte, provenance, qualité et gouvernance Data ; Knowledge Graph ; analytics et forecasting ; IA ; produits Data/API/Intelligence ; abonnements, facturation, marketplace et sponsoring ; administration, modération, audit ; configuration pays et expansion panafricaine.
+La cible couvre au minimum : identité et profils ; établissements, campus, programmes, curricula, modules et qualifications ; connaissances et compétences ; métiers, trajectoires et reconversion ; évaluations ; orientation et comparaison ; recherche ; recommandations ; marché du travail et intelligence économique ; entrepreneuriat, projet venture, accompagnement, financement et équipe fondatrice ; opportunités, candidatures et recrutement ; employeurs ; contenu, feed, communauté et learning ; notifications ; partenaires et ambassadeurs ; collecte, provenance, qualité et gouvernance Data ; Knowledge Graph ; analytics et forecasting ; IA ; produits Data/API/Intelligence ; abonnements, facturation, marketplace et sponsoring ; administration, modération, audit ; configuration pays et expansion panafricaine.
 
 ## Catalogue cible — services métier et produit
 
@@ -55,6 +56,23 @@ La cible couvre au minimum : identité et profils ; établissements, campus, pro
 | YD-SVC-AMB-001 | Ambassador Network Service | Ambassadeurs, mandats, rattachements, renouvellements et contributions | Partenaires-écosystème | P1 | D0 | not-started |
 | YD-SVC-INS-001 | Institution Workspace Service | Espace établissement, validation et maintenance de ses informations | Partenaires-écosystème | P5 | D0 | not-started |
 | YD-SVC-EMP-003 | Employer Workspace Service | Espace employeur, opportunités, campagnes et intelligence associée | Partenaires-écosystème | P5 | D0 | not-started |
+
+
+
+## Extension cible — Entrepreneurship
+
+L'entrepreneuriat est désormais un domaine de premier rang. Les frontières logiques candidates suivantes sont intégrées à la cible et devront suivre la même revue DDD, autonomie, contrats, K3/K4, Capacity Profile et Development Readiness que les autres services.
+
+| ID | Service logique candidat | Responsabilité principale | Domaine | Activation | Doc | Implémentation |
+|---|---|---|---|---|---|---|
+| YD-SVC-ENT-001 | Venture Profile Service | Projet entrepreneurial, stade, objectifs, contraintes et contexte du projet | Entrepreneurship | progressive | D0 | not-started |
+| YD-SVC-ENT-002 | Entrepreneurial Opportunity Intelligence Service | Hypothèses/opportunités économiques sourcées, territoriales et sectorielles | Entrepreneurship | progressive | D0 | not-started |
+| YD-SVC-ENT-003 | Entrepreneurship Support Ecosystem Service | Incubateurs, mentors, programmes et ressources d'accompagnement | Entrepreneurship | progressive | D0 | not-started |
+| YD-SVC-ENT-004 | Funding Opportunity Service | Financements, subventions, concours, dispositifs et éligibilité | Entrepreneurship | progressive | D0 | not-started |
+| YD-SVC-ENT-005 | Founder & Team Matching Service | Besoins d'équipe, complémentarités et matching sous consentement | Entrepreneurship | progressive | D0 | not-started |
+| YD-SVC-ENT-006 | Venture Progression Service | Plans, hypothèses, expérimentations, jalons et progression | Entrepreneurship | progressive | D0 | not-started |
+
+Ces frontières ne dupliquent pas PRF, SKL, LAB, ORI, REC, PRT, EMP ou OPP. Leur ownership détaillé est défini dans `02-domains/entrepreneurship/FRONTIERES_ET_DEPENDANCES.md`.
 
 ## Catalogue cible — Data, Knowledge, Analytics et AI
 
