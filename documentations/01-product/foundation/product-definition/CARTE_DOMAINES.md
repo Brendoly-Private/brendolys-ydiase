@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-005"
+title: "Carte des domaines — BRENDOLYS YDIASE"
+document_type: "product-domain-map"
+document_role: "Définit les domaines fonctionnels de niveau produit, leurs responsabilités et leurs exclusions sans les confondre avec les frontières physiques."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Carte des domaines — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit les domaines fonctionnels de niveau produit, leurs responsabilités et leurs exclusions sans les confondre avec les frontières physiques.
+> **Usage développement :** référence obligatoire pour les domaines, capacités et conceptions concernées.
 
 Statut : `BASELINE-CANDIDATE`
 
