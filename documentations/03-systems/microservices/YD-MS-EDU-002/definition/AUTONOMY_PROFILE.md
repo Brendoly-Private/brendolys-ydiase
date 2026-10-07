@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-EDU-002-AUT"
+title: "YD-MS-EDU-002 — Program Catalog"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Program & Curriculum Catalog et son autorité sur programmes, curricula, modules et versions."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-EDU-002 — Program Catalog
+
+> **Rôle du document**
+> Définit l’autonomie Program & Curriculum Catalog et son autorité sur programmes, curricula, modules et versions.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `autonomy-profile-draft`
 
