@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-IDP-007"
+title: "Frontières et dépendances — Identité et profils"
+document_type: "domain-boundaries-dependencies"
+document_role: "Définit les frontières métier et physiques du domaine Identité et profils ainsi que ses dépendances autorisées et interdites."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Frontières et dépendances — Identité et profils
+
+> **Rôle du document**
+> Définit les frontières métier et physiques du domaine Identité et profils ainsi que ses dépendances autorisées et interdites.
+> **Usage développement :** référence obligatoire pour les conceptions, contrats et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`
 

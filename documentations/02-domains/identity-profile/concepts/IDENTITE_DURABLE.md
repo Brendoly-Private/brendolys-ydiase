@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-IDP-003"
+title: "Identité durable"
+document_type: "domain-concept"
+document_role: "Définit l’identité métier durable, PersonRef, les correspondances externes et les règles de fusion, séparation et migration."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Identité durable
+
+> **Rôle du document**
+> Définit l’identité métier durable, PersonRef, les correspondances externes et les règles de fusion, séparation et migration.
+> **Usage développement :** référence obligatoire pour les conceptions, contrats et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-BASELINE-CANDIDATE`
 

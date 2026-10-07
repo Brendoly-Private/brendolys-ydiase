@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-IDP-009"
+title: "Preuves et provenance du profil"
+document_type: "evidence-provenance-policy"
+document_role: "Définit la sémantique des déclarations, preuves, vérifications, contradictions et provenance associées au profil."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Preuves et provenance du profil
+
+> **Rôle du document**
+> Définit la sémantique des déclarations, preuves, vérifications, contradictions et provenance associées au profil.
+> **Usage développement :** référence obligatoire pour les conceptions, contrats et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-BASELINE-CANDIDATE`
 

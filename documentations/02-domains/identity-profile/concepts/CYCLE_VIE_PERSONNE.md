@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-IDP-002"
+title: "Cycle de vie de la personne dans YDIASE"
+document_type: "domain-concept"
+document_role: "Définit la sémantique du cycle de vie métier d’une personne indépendamment du cycle de vie de son compte technique."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Cycle de vie de la personne dans YDIASE
+
+> **Rôle du document**
+> Définit la sémantique du cycle de vie métier d’une personne indépendamment du cycle de vie de son compte technique.
+> **Usage développement :** référence obligatoire pour les conceptions, contrats et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-BASELINE-CANDIDATE`
 

@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-IDP-005"
+title: "Profil et temporalité"
+document_type: "domain-concept"
+document_role: "Définit la temporalité du profil, des historiques, corrections, objectifs et préférences sans créer de précision artificielle."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Profil et temporalité
+
+> **Rôle du document**
+> Définit la temporalité du profil, des historiques, corrections, objectifs et préférences sans créer de précision artificielle.
+> **Usage développement :** référence obligatoire pour les conceptions, contrats et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-BASELINE-CANDIDATE`
 

@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-IDP-008"
+title: "Gates et inconnues — Identité et profils"
+document_type: "domain-gates-unknowns"
+document_role: "Trace les gates et inconnues restant à fermer avant activation du domaine Identité et profils."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Gates et inconnues — Identité et profils
+
+> **Rôle du document**
+> Trace les gates et inconnues restant à fermer avant activation du domaine Identité et profils.
+> **Usage développement :** support de validation et de traçabilité ; les sources canoniques associées restent autoritatives.
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`
 
