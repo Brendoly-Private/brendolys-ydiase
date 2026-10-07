@@ -1,0 +1,33 @@
+schema_id: YD-SCHEMA-DOCUMENT-METADATA-001
+title: "BRENDOLYS YDIASE Document Metadata"
+required:
+  - document_id
+  - title
+  - document_type
+  - document_role
+  - product
+  - institutional_reference
+  - status
+  - authority_level
+  - canonical
+  - development_usage
+  - created_at
+  - last_reviewed_at
+enums:
+  status: [DRAFT, IN_REVIEW, APPROVED, ACTIVE, DEPRECATED, RETIRED, REJECTED, SUPERSEDED]
+  authority_level: [normative, canonical-source, reference, view, evidence, historical]
+  development_usage: [mandatory-reference, supporting-reference, informational, not-applicable]
+  implementation_status: [not-started, in-progress, implemented, not-applicable]
+  deployment_status: [not-deployed, deployed, not-applicable]
+  activation_status: [inactive, active, partial, not-applicable]
+constants:
+  product: "BRENDOLYS YDIASE"
+  institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+relations:
+  list_fields: [owners, domains, capabilities, services, microservices, platform_components, contracts, decisions, countries, depends_on, supersedes, tags]
+rules:
+  document_role_minimum_length: 10
+  stable_document_id: true
+  unknown_values_must_not_be_invented: true
+  canonical_true_requires_unique_source: true
+  mandatory_reference_blocks_readiness_on_unresolved_conflict: true
