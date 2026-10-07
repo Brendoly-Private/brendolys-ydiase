@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-PRF-002-RDY"
+title: "YD-MS-PRF-002 — Documentation Readiness"
+document_type: "microservice-documentation-readiness"
+document_role: "Établit la readiness documentaire de YD-MS-PRF-002 sans la confondre avec l’implémentation, le déploiement ou les preuves d’exécution."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-PRF-002 — Documentation Readiness
+
+> **Rôle du document**
+> Établit la readiness documentaire de YD-MS-PRF-002 sans la confondre avec l’implémentation, le déploiement ou les preuves d’exécution.
+> **Usage développement :** preuve de maturité documentaire ; les sources canoniques restent autoritatives.
 
 Statut : DOCUMENTATION-READY / K5-EXECUTION-BLOCKED-BY-IMPLEMENTATION
 Nature : AUTH

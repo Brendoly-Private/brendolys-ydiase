@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-REC-001-CLS"
+title: "YD-MS-REC-001 — Recommendation — Baseline C1"
+document_type: "microservice-phase-closure"
+document_role: "Consigne la fermeture de phase documentaire de YD-MS-REC-001 et les travaux ou preuves restant différés."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-REC-001 — Recommendation — Baseline C1
+
+> **Rôle du document**
+> Consigne la fermeture de phase documentaire de YD-MS-REC-001 et les travaux ou preuves restant différés.
+> **Usage développement :** preuve de maturité ou de fermeture ; le profil canonique et les politiques référencées restent autoritatifs.
 
 Statut : `DOCUMENTATION-BASELINE-C1 / RANKING-SEMANTICS-DEFINED`
 Nature : `MIXED`

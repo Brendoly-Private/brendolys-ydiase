@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-PLT-AI-001-AUT"
+title: "YD-PLT-AI-001 — AI Gateway"
+document_type: "platform-component-autonomy-profile"
+document_role: "Définit l’autonomie, les responsabilités et les limites documentées du composant YD-PLT-AI-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "platform"
+---
+
 # YD-PLT-AI-001 — AI Gateway
+
+> **Rôle du document**
+> Définit l’autonomie, les responsabilités et les limites documentées du composant YD-PLT-AI-001.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de ce composant.
 
 Statut : `autonomy-profile-draft`
 

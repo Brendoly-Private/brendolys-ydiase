@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-PRF-001-ANA"
+title: "YD-MS-PRF-001 — Analyse documentaire individualisée"
+document_type: "microservice-documentation-analysis"
+document_role: "Analyse individuellement la cohérence documentaire, les dépendances, invariants et inconnues de YD-MS-PRF-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-PRF-001 — Analyse documentaire individualisée
+
+> **Rôle du document**
+> Analyse individuellement la cohérence documentaire, les dépendances, invariants et inconnues de YD-MS-PRF-001.
+> **Usage développement :** analyse de support ; les sources canoniques et politiques applicables prévalent.
 
 Statut : ANALYSIS-COMPLETE / K3-K4-RECONCILIATION-REQUIRED
 Nature : AUTH

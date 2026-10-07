@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-LRN-001-AUT"
+title: "YD-MS-LRN-001 — Learning Discovery"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie et l’ownership de Learning Discovery, avec autorité : ressources learning propres et règles de découverte; program et offres marketplace restent externes."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-LRN-001 — Learning Discovery
+
+> **Rôle du document**
+> Définit l’autonomie et l’ownership de Learning Discovery, avec autorité : ressources learning propres et règles de découverte; program et offres marketplace restent externes.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `C2-BASELINE / LEARNING-DISCOVERY-SEMANTICS-CLOSED`
 

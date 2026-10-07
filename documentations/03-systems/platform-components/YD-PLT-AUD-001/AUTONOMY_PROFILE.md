@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-PLT-AUD-001-AUT"
+title: "YD-PLT-AUD-001 — Audit & Trace"
+document_type: "platform-component-autonomy-profile"
+document_role: "Définit l’autonomie, les responsabilités et les limites documentées du composant YD-PLT-AUD-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "platform"
+---
+
 # YD-PLT-AUD-001 — Audit & Trace
+
+> **Rôle du document**
+> Définit l’autonomie, les responsabilités et les limites documentées du composant YD-PLT-AUD-001.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de ce composant.
 
 Statut : `autonomy-profile-draft-critical`
 

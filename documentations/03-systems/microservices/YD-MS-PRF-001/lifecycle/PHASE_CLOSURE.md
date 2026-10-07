@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-PRF-001-CLS"
+title: "YD-MS-PRF-001 — Fermeture de phase documentaire"
+document_type: "microservice-phase-closure"
+document_role: "Consigne la fermeture de phase documentaire de YD-MS-PRF-001 et les travaux ou preuves restant différés."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-PRF-001 — Fermeture de phase documentaire
+
+> **Rôle du document**
+> Consigne la fermeture de phase documentaire de YD-MS-PRF-001 et les travaux ou preuves restant différés.
+> **Usage développement :** preuve de maturité ou de fermeture ; le profil canonique et les politiques référencées restent autoritatifs.
 
 Statut : `DOCUMENTATION-BASELINE-CLOSED / IMPLEMENTATION-PENDING`
 Service : `YD-MS-PRF-001 — Profile`

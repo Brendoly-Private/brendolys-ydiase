@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-SRH-001-AUT"
+title: "YD-MS-SRH-001 — Search & Discovery"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie, l’autorité et les responsabilités documentées de YD-MS-SRH-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-SRH-001 — Search & Discovery
+
+> **Rôle du document**
+> Définit l’autonomie, l’autorité et les responsabilités documentées de YD-MS-SRH-001.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `C2-BASELINE / SEARCH-DISCOVERY-SEMANTICS-CLOSED`
 
