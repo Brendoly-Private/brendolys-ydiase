@@ -1,4 +1,31 @@
+---
+document_id: YD-DOC-FND-GOV-003
+title: "Cycle de vie documentaire"
+document_type: "document-lifecycle-policy"
+document_role: "Définit les statuts, transitions et règles de versionnement du cycle de vie documentaire YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Documentation Governance"
+depends_on:
+  - "YD-DOC-FND-GOV-001"
+  - "YD-STD-DOC-META-001"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Cycle de vie documentaire
+
+> **Rôle du document**
+> Ce document définit comment une référence documentaire passe du brouillon à l’usage actif, puis à la dépréciation, au remplacement ou au retrait.
+> **Usage développement :** référence obligatoire pour déterminer si une documentation peut réellement gouverner une implémentation.
 
 Statut : `ACTIVE`
 
