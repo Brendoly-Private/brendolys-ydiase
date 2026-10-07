@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-FND-012"
+title: "Segments utilisateurs — BRENDOLYS YDIASE"
+document_type: "user-segment-catalog"
+document_role: "Définit les segments d’utilisateurs, organisations et réseaux opérationnels ciblés sans les confondre avec les rôles IAM ou offres commerciales."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Segments utilisateurs — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit les segments d’utilisateurs, organisations et réseaux opérationnels ciblés sans les confondre avec les rôles IAM ou offres commerciales.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `BASELINE-CANDIDATE`
 
