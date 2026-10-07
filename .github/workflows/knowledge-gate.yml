@@ -40,6 +40,11 @@ jobs:
           mkdir -p artifacts/knowledge
           python tools/knowledge/validate_catalog.py --json artifacts/knowledge/validation-report.json
 
+      - name: Run KNW K5 logical harness
+        run: |
+          mkdir -p artifacts/knowledge
+          python tools/knowledge/knw_k5_harness.py --json artifacts/knowledge/knw-k5-logical-report.json
+
       - name: Generate Education impact proof
         run: |
           python tools/knowledge/generate_impact.py YD-MS-EDU-003 > artifacts/knowledge/education-impact.md
