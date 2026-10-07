@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-INT-001-AUT"
+title: "YD-MS-INT-001 — Intelligence Product"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Intelligence et ses produits dérivés sans transférer l’autorité des données et signaux sources."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-INT-001 — Intelligence Product
+
+> **Rôle du document**
+> Définit l’autonomie Intelligence et ses produits dérivés sans transférer l’autorité des données et signaux sources.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `autonomy-profile-draft`
 
