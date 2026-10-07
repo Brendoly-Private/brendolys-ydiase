@@ -1,0 +1,424 @@
+YDIASE DOCUMENT METADATA MIGRATION MATRIX
+ID: YD-MIG-DOC-META-001
+STATUS: ACTIVE / MIGRATION-BASELINE
+STANDARD: YD-STD-DOC-META-001
+TOTAL: 415
+
+#	FILE	ROLE	AUTHORITY	DEVELOPMENT_USAGE	COMPLIANCE
+1	documentations/00-foundation/governance/CHARTE_DOCUMENTAIRE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+2	documentations/00-foundation/governance/CONVENTION_IDENTIFIANTS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+3	documentations/00-foundation/governance/CYCLE_VIE_DOCUMENTAIRE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+4	documentations/00-foundation/governance/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+5	documentations/00-foundation/governance/inventory-r1/ARCHITECTURE_CONTRACTS_DECISIONS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+6	documentations/00-foundation/governance/inventory-r1/BOUNDARIES_AND_PLATFORM.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+7	documentations/00-foundation/governance/inventory-r1/CROSS_CUTTING_DELIVERY_EXPERIENCES.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+8	documentations/00-foundation/governance/inventory-r1/DOCUMENTATION_INVENTORY_R1.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+9	documentations/00-foundation/governance/inventory-r1/FILE_CLASSIFICATION_REGISTER_R1.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+10	documentations/00-foundation/governance/inventory-r1/GOVERNANCE_PRODUCT_DOMAINS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+11	documentations/00-foundation/governance/policies/POLITIQUE_CHANGEMENT_IMPACT.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+12	documentations/00-foundation/governance/policies/POLITIQUE_CONTRADICTIONS.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+13	documentations/00-foundation/governance/policies/POLITIQUE_REVUE_APPROBATION.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+14	documentations/00-foundation/governance/registers/AUTORITATIVE_SOURCE_REGISTRY.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+15	documentations/00-foundation/governance/registers/MATRICE_TRACABILITE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+16	documentations/00-foundation/governance/registers/REFERENTIEL_EXIGENCES.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+17	documentations/00-foundation/governance/registers/REGISTRES.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+18	documentations/00-foundation/governance/registers/REGISTRE_DECISIONS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+19	documentations/00-foundation/governance/registers/REGISTRE_HYPOTHESES.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+20	documentations/00-foundation/governance/registers/REGISTRE_RISQUES.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+21	documentations/00-foundation/governance/registers/REGISTRE_SOURCES.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+22	documentations/00-foundation/governance/reviews/DOCUMENTATION_INFORMATION_ARCHITECTURE_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+23	documentations/00-foundation/governance/standards/ARCHITECTURE_DOCUMENTAIRE_V2.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+24	documentations/00-foundation/governance/standards/DOCUMENT_TYPE_AUTHORITY_MODEL.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+25	documentations/00-foundation/governance/standards/LOGICAL_TO_PHYSICAL_BOUNDARY_REGISTER.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+26	documentations/00-foundation/governance/standards/NIVEAUX_AUTORITE.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+27	documentations/00-foundation/governance/standards/OFFICIAL_DOCUMENT_METADATA_STANDARD.md	Règles normatives.	normative	mandatory-reference	BASELINE-CONFORMING
+28	documentations/00-foundation/governance/templates/TEMPLATE_ADR.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+29	documentations/00-foundation/governance/templates/TEMPLATE_CAPACITE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+30	documentations/00-foundation/governance/templates/TEMPLATE_DECISION.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+31	documentations/00-foundation/governance/templates/TEMPLATE_DOCUMENT.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+32	documentations/00-foundation/governance/templates/TEMPLATE_DOMAINE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+33	documentations/00-foundation/governance/templates/TEMPLATE_EXIGENCE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+34	documentations/00-foundation/governance/templates/TEMPLATE_HYPOTHESE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+35	documentations/00-foundation/governance/templates/TEMPLATE_REGISTRE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+36	documentations/00-foundation/governance/templates/TEMPLATE_RISQUE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+37	documentations/00-foundation/governance/templates/TEMPLATE_SOURCE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+38	documentations/00-foundation/principles/TARGET_COMPLETE_PROGRESSIVE_ACTIVATION.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+39	documentations/00-foundation/vocabulary/GLOSSAIRE_METIER.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+40	documentations/01-product/economics/MODELE_ECONOMIQUE.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+41	documentations/01-product/economics/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+42	documentations/01-product/foundation/CHARTE_FONDATRICE.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+43	documentations/01-product/foundation/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+44	documentations/01-product/foundation/assumptions/HYPOTHESES_ET_INCONNUES.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+45	documentations/01-product/foundation/pilot/PILOTE_BURKINA.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+46	documentations/01-product/foundation/product-definition/CAPACITES_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+47	documentations/01-product/foundation/product-definition/CARTE_DOMAINES.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+48	documentations/01-product/foundation/product-definition/CRITERES_SUCCES.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+49	documentations/01-product/foundation/product-definition/PERIMETRE_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+50	documentations/01-product/foundation/product-definition/PRINCIPES_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+51	documentations/01-product/foundation/product-definition/PROBLEMES_ET_BESOINS.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+52	documentations/01-product/foundation/product-definition/PROPOSITION_VALEUR.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+53	documentations/01-product/foundation/stakeholders/PARTIES_PRENANTES.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+54	documentations/01-product/foundation/stakeholders/SEGMENTS_UTILISATEURS.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+55	documentations/01-product/foundation/vision-strategy/DOCTRINE_PERENNITE.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+56	documentations/01-product/foundation/vision-strategy/HORIZONS_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+57	documentations/01-product/foundation/vision-strategy/VISION_PANAFRICAINE.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+58	documentations/01-product/foundation/vision-strategy/VISION_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+59	documentations/01-product/roadmap/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+60	documentations/01-product/roadmap/ROADMAP.md	Définition produit.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+61	documentations/02-domains/careers/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+62	documentations/02-domains/careers/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+63	documentations/02-domains/careers/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+64	documentations/02-domains/content-community-learning/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+65	documentations/02-domains/data-intelligence-ai/PRINCIPES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+66	documentations/02-domains/education/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+67	documentations/02-domains/education/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+68	documentations/02-domains/education/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+69	documentations/02-domains/entrepreneurship/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+70	documentations/02-domains/identity-profile/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+71	documentations/02-domains/identity-profile/concepts/CYCLE_VIE_PERSONNE.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+72	documentations/02-domains/identity-profile/concepts/IDENTITE_DURABLE.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+73	documentations/02-domains/identity-profile/concepts/MODELE_DOMAINE.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+74	documentations/02-domains/identity-profile/concepts/PROFIL_ET_TEMPORALITE.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+75	documentations/02-domains/identity-profile/governance/CAPACITES_ET_TRACABILITE.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+76	documentations/02-domains/identity-profile/governance/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+77	documentations/02-domains/identity-profile/governance/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+78	documentations/02-domains/identity-profile/governance/PREUVES_ET_PROVENANCE.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+79	documentations/02-domains/identity-profile/rules/REGLES_METIER.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+80	documentations/02-domains/identity-profile/rules/VISIBILITE_ET_PARTAGE.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+81	documentations/02-domains/labor-market/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+82	documentations/02-domains/opportunities-recruitment/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+83	documentations/02-domains/orientation-recommendation/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+84	documentations/02-domains/orientation-recommendation/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+85	documentations/02-domains/orientation-recommendation/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+86	documentations/02-domains/partners-ecosystem/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+87	documentations/02-domains/skills-knowledge/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+88	documentations/02-domains/skills-knowledge/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+89	documentations/02-domains/skills-knowledge/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+90	documentations/03-systems/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+91	documentations/03-systems/architecture/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+92	documentations/03-systems/architecture/matrices/AUTONOMY_CLOSURE_MATRIX.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+93	documentations/03-systems/architecture/registers/AUTONOMY_PROFILE_REGISTER.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+94	documentations/03-systems/architecture/registers/DERIVED_RECOVERY_REGISTER.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+95	documentations/03-systems/architecture/reviews/D2_INCONSISTENCIES.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+96	documentations/03-systems/architecture/reviews/D2_STATUS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+97	documentations/03-systems/architecture/reviews/DDD_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+98	documentations/03-systems/architecture/reviews/ENTREPRENEURSHIP_DDD_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+99	documentations/03-systems/architecture/reviews/MICROSERVICE_BOUNDARY_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+100	documentations/03-systems/architecture/reviews/SENSITIVE_MERGER_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+101	documentations/03-systems/architecture/reviews/TRANSVERSAL_ARCHITECTURE_REVIEW_48.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+102	documentations/03-systems/architecture/standards/MICROSERVICE_AUTONOMY_STANDARD.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+103	documentations/03-systems/architecture/target/ARCHITECTURE_CIBLE.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+104	documentations/03-systems/architecture/target/ARCHITECTURE_LOGIQUE.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+105	documentations/03-systems/architecture/target/DATA_AI_PLATFORM_ARCHITECTURE.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+106	documentations/03-systems/architecture/target/DATA_OWNERSHIP_MATRIX.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+107	documentations/03-systems/architecture/target/DEPENDENCY_MAP.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+108	documentations/03-systems/architecture/target/ENTREPRENEURSHIP_DEPENDENCY_OWNERSHIP_MAP.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+109	documentations/03-systems/architecture/target/SERVICE_MAP.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+110	documentations/03-systems/architecture/target/TARGET_ARCHITECTURE_BLUEPRINT.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+111	documentations/03-systems/architecture/target/TARGET_FLOW_MAP.md	Architecture cible.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+112	documentations/03-systems/architecture/templates/SERVICE_DEFINITION_TEMPLATE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+113	documentations/03-systems/microservices/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+114	documentations/03-systems/microservices/YD-MS-AI-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+115	documentations/03-systems/microservices/YD-MS-AI-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+116	documentations/03-systems/microservices/YD-MS-AMB-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+117	documentations/03-systems/microservices/YD-MS-ANL-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+118	documentations/03-systems/microservices/YD-MS-ANL-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+119	documentations/03-systems/microservices/YD-MS-ANL-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+120	documentations/03-systems/microservices/YD-MS-ANL-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+121	documentations/03-systems/microservices/YD-MS-APP-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+122	documentations/03-systems/microservices/YD-MS-APP-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+123	documentations/03-systems/microservices/YD-MS-ASM-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+124	documentations/03-systems/microservices/YD-MS-ASM-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+125	documentations/03-systems/microservices/YD-MS-BIL-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+126	documentations/03-systems/microservices/YD-MS-BIL-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+127	documentations/03-systems/microservices/YD-MS-CAR-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+128	documentations/03-systems/microservices/YD-MS-CAR-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+129	documentations/03-systems/microservices/YD-MS-CAR-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+130	documentations/03-systems/microservices/YD-MS-CAR-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+131	documentations/03-systems/microservices/YD-MS-CFG-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+132	documentations/03-systems/microservices/YD-MS-CFG-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+133	documentations/03-systems/microservices/YD-MS-CNS-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+134	documentations/03-systems/microservices/YD-MS-CNS-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+135	documentations/03-systems/microservices/YD-MS-CNT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+136	documentations/03-systems/microservices/YD-MS-CNT-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+137	documentations/03-systems/microservices/YD-MS-COM-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+138	documentations/03-systems/microservices/YD-MS-DAT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+139	documentations/03-systems/microservices/YD-MS-DAT-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+140	documentations/03-systems/microservices/YD-MS-DAT-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+141	documentations/03-systems/microservices/YD-MS-DAT-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+142	documentations/03-systems/microservices/YD-MS-DAT-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+143	documentations/03-systems/microservices/YD-MS-DAT-003/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+144	documentations/03-systems/microservices/YD-MS-DAT-004/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+145	documentations/03-systems/microservices/YD-MS-DAT-004/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+146	documentations/03-systems/microservices/YD-MS-DAT-005/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+147	documentations/03-systems/microservices/YD-MS-DAT-005/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+148	documentations/03-systems/microservices/YD-MS-DPR-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+149	documentations/03-systems/microservices/YD-MS-EDU-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+150	documentations/03-systems/microservices/YD-MS-EDU-001/definition/DOCUMENTATION_ANALYSIS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+151	documentations/03-systems/microservices/YD-MS-EDU-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+152	documentations/03-systems/microservices/YD-MS-EDU-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+153	documentations/03-systems/microservices/YD-MS-EDU-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+154	documentations/03-systems/microservices/YD-MS-EDU-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+155	documentations/03-systems/microservices/YD-MS-EDU-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+156	documentations/03-systems/microservices/YD-MS-EDU-003/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+157	documentations/03-systems/microservices/YD-MS-EDU-004/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+158	documentations/03-systems/microservices/YD-MS-EDU-004/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+159	documentations/03-systems/microservices/YD-MS-EMP-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+160	documentations/03-systems/microservices/YD-MS-EMP-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+161	documentations/03-systems/microservices/YD-MS-EMP-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+162	documentations/03-systems/microservices/YD-MS-EMP-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+163	documentations/03-systems/microservices/YD-MS-ENT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+164	documentations/03-systems/microservices/YD-MS-ENT-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+165	documentations/03-systems/microservices/YD-MS-ENT-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+166	documentations/03-systems/microservices/YD-MS-ENT-004/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+167	documentations/03-systems/microservices/YD-MS-ENT-005/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+168	documentations/03-systems/microservices/YD-MS-ENT-006/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+169	documentations/03-systems/microservices/YD-MS-INT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+170	documentations/03-systems/microservices/YD-MS-KNW-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+171	documentations/03-systems/microservices/YD-MS-KNW-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+172	documentations/03-systems/microservices/YD-MS-KNW-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+173	documentations/03-systems/microservices/YD-MS-LAB-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+174	documentations/03-systems/microservices/YD-MS-LAB-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+175	documentations/03-systems/microservices/YD-MS-LAB-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+176	documentations/03-systems/microservices/YD-MS-LAB-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+177	documentations/03-systems/microservices/YD-MS-LRN-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+178	documentations/03-systems/microservices/YD-MS-LRN-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+179	documentations/03-systems/microservices/YD-MS-LRN-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+180	documentations/03-systems/microservices/YD-MS-MKT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+181	documentations/03-systems/microservices/YD-MS-MOD-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+182	documentations/03-systems/microservices/YD-MS-NTF-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+183	documentations/03-systems/microservices/YD-MS-OPP-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+184	documentations/03-systems/microservices/YD-MS-OPP-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+185	documentations/03-systems/microservices/YD-MS-OPP-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+186	documentations/03-systems/microservices/YD-MS-OPP-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+187	documentations/03-systems/microservices/YD-MS-ORI-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+188	documentations/03-systems/microservices/YD-MS-ORI-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+189	documentations/03-systems/microservices/YD-MS-PRF-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+190	documentations/03-systems/microservices/YD-MS-PRF-001/definition/DOCUMENTATION_ANALYSIS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+191	documentations/03-systems/microservices/YD-MS-PRF-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+192	documentations/03-systems/microservices/YD-MS-PRF-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+193	documentations/03-systems/microservices/YD-MS-PRF-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+194	documentations/03-systems/microservices/YD-MS-PRF-002/definition/DOCUMENTATION_ANALYSIS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+195	documentations/03-systems/microservices/YD-MS-PRF-002/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+196	documentations/03-systems/microservices/YD-MS-PRF-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+197	documentations/03-systems/microservices/YD-MS-PRT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+198	documentations/03-systems/microservices/YD-MS-REC-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+199	documentations/03-systems/microservices/YD-MS-REC-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+200	documentations/03-systems/microservices/YD-MS-REC-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+201	documentations/03-systems/microservices/YD-MS-SKL-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+202	documentations/03-systems/microservices/YD-MS-SKL-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+203	documentations/03-systems/microservices/YD-MS-SKL-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+204	documentations/03-systems/microservices/YD-MS-SKL-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+205	documentations/03-systems/microservices/YD-MS-SKL-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+206	documentations/03-systems/microservices/YD-MS-SPN-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+207	documentations/03-systems/microservices/YD-MS-SRH-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+208	documentations/03-systems/microservices/YD-MS-SRH-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+209	documentations/03-systems/platform-components/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+210	documentations/03-systems/platform-components/YD-PLT-AI-001/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+211	documentations/03-systems/platform-components/YD-PLT-API-001/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+212	documentations/03-systems/platform-components/YD-PLT-AUD-001/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+213	documentations/03-systems/platform-components/YD-PLT-MLP-001/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+214	documentations/03-systems/policies/YD-MS-ANL-001/ANALYTICS_METRIC_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+215	documentations/03-systems/policies/YD-MS-APP-001/APPLICATION_LIFECYCLE_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+216	documentations/03-systems/policies/YD-MS-ASM-001/ASSESSMENT_RESULT_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+217	documentations/03-systems/policies/YD-MS-CAR-002/CAREER_GAP_TRANSITION_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+218	documentations/03-systems/policies/YD-MS-CFG-001/COUNTRY_CHANGE_SAFETY_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+219	documentations/03-systems/policies/YD-MS-CFG-001/COUNTRY_CONFIGURATION_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+220	documentations/03-systems/policies/YD-MS-EMP-002/TALENT_ACCESS_RECRUITMENT_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+221	documentations/03-systems/policies/YD-MS-KNW-001/KNOWLEDGE_GRAPH_PROJECTION_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+222	documentations/03-systems/policies/YD-MS-LAB-001/LABOR_SIGNAL_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+223	documentations/03-systems/policies/YD-MS-LAB-002/LABOR_INTELLIGENCE_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+224	documentations/03-systems/policies/YD-MS-LRN-001/LEARNING_DISCOVERY_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+225	documentations/03-systems/policies/YD-MS-OPP-001/OPPORTUNITY_LIFECYCLE_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+226	documentations/03-systems/policies/YD-MS-OPP-002/OPPORTUNITY_MATCHING_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+227	documentations/03-systems/policies/YD-MS-ORI-001/ORIENTATION_DECISION_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+228	documentations/03-systems/policies/YD-MS-PRF-002/PRF002_BACKUP_RESTORE_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+229	documentations/03-systems/policies/YD-MS-PRF-002/PRF002_CONTINUITY_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+230	documentations/03-systems/policies/YD-MS-REC-001/FAIRNESS_EVALUATION_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+231	documentations/03-systems/policies/YD-MS-REC-001/RECOMMENDATION_RANKING_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+232	documentations/03-systems/policies/YD-MS-REC-001/SPONSORED_NON_INFLUENCE_TEST_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+233	documentations/03-systems/policies/YD-MS-SKL-002/SKILL_STATE_DERIVATION_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+234	documentations/03-systems/policies/YD-MS-SRH-001/SEARCH_DISCOVERY_POLICY.md	Règles normatives.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+235	documentations/03-systems/services/YD-SVC-ADM-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+236	documentations/03-systems/services/YD-SVC-AI-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+237	documentations/03-systems/services/YD-SVC-AI-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+238	documentations/03-systems/services/YD-SVC-AI-003/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+239	documentations/03-systems/services/YD-SVC-AI-004/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+240	documentations/03-systems/services/YD-SVC-AMB-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+241	documentations/03-systems/services/YD-SVC-ANL-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+242	documentations/03-systems/services/YD-SVC-ANL-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+243	documentations/03-systems/services/YD-SVC-ANL-003/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+244	documentations/03-systems/services/YD-SVC-API-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+245	documentations/03-systems/services/YD-SVC-APP-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+246	documentations/03-systems/services/YD-SVC-ASM-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+247	documentations/03-systems/services/YD-SVC-AUD-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+248	documentations/03-systems/services/YD-SVC-BIL-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+249	documentations/03-systems/services/YD-SVC-BIL-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+250	documentations/03-systems/services/YD-SVC-CAR-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+251	documentations/03-systems/services/YD-SVC-CAR-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+252	documentations/03-systems/services/YD-SVC-CAR-003/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+253	documentations/03-systems/services/YD-SVC-CAR-004/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+254	documentations/03-systems/services/YD-SVC-CFG-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+255	documentations/03-systems/services/YD-SVC-CNS-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+256	documentations/03-systems/services/YD-SVC-CNT-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+257	documentations/03-systems/services/YD-SVC-CNT-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+258	documentations/03-systems/services/YD-SVC-COM-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+259	documentations/03-systems/services/YD-SVC-DAT-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+260	documentations/03-systems/services/YD-SVC-DAT-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+261	documentations/03-systems/services/YD-SVC-DAT-003/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+262	documentations/03-systems/services/YD-SVC-DAT-004/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+263	documentations/03-systems/services/YD-SVC-DAT-005/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+264	documentations/03-systems/services/YD-SVC-DPR-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+265	documentations/03-systems/services/YD-SVC-EDU-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+266	documentations/03-systems/services/YD-SVC-EDU-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+267	documentations/03-systems/services/YD-SVC-EDU-003/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+268	documentations/03-systems/services/YD-SVC-EDU-004/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+269	documentations/03-systems/services/YD-SVC-EMP-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+270	documentations/03-systems/services/YD-SVC-EMP-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+271	documentations/03-systems/services/YD-SVC-EMP-003/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+272	documentations/03-systems/services/YD-SVC-IDN-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+273	documentations/03-systems/services/YD-SVC-INS-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+274	documentations/03-systems/services/YD-SVC-INT-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+275	documentations/03-systems/services/YD-SVC-KNW-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+276	documentations/03-systems/services/YD-SVC-LAB-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+277	documentations/03-systems/services/YD-SVC-LAB-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+278	documentations/03-systems/services/YD-SVC-LAB-003/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+279	documentations/03-systems/services/YD-SVC-LRN-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+280	documentations/03-systems/services/YD-SVC-MKT-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+281	documentations/03-systems/services/YD-SVC-MLP-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+282	documentations/03-systems/services/YD-SVC-MOD-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+283	documentations/03-systems/services/YD-SVC-NTF-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+284	documentations/03-systems/services/YD-SVC-OPP-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+285	documentations/03-systems/services/YD-SVC-OPP-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+286	documentations/03-systems/services/YD-SVC-ORI-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+287	documentations/03-systems/services/YD-SVC-ORI-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+288	documentations/03-systems/services/YD-SVC-PRF-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+289	documentations/03-systems/services/YD-SVC-PRF-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+290	documentations/03-systems/services/YD-SVC-PRT-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+291	documentations/03-systems/services/YD-SVC-REC-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+292	documentations/03-systems/services/YD-SVC-REC-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+293	documentations/03-systems/services/YD-SVC-RSH-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+294	documentations/03-systems/services/YD-SVC-SKL-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+295	documentations/03-systems/services/YD-SVC-SKL-002/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+296	documentations/03-systems/services/YD-SVC-SPN-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+297	documentations/03-systems/services/YD-SVC-SRH-001/SERVICE_DEFINITION.md	Définition service logique.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+298	documentations/04-contracts/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+299	documentations/04-contracts/baselines/YD-MS-EDU-001/K3_CONTRACT_BASELINE.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+300	documentations/04-contracts/baselines/YD-MS-KNW-001/K3_CONTRACT_BASELINE.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+301	documentations/04-contracts/baselines/YD-MS-LRN-001/K3_CONTRACT_BASELINE.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+302	documentations/04-contracts/baselines/YD-MS-PRF-001/K3_CONTRACT_BASELINE.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+303	documentations/04-contracts/baselines/YD-MS-PRF-002/K3_CONTRACT_BASELINE.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+304	documentations/04-contracts/baselines/YD-MS-REC-001/K3_CONTRACT_BASELINE.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+305	documentations/04-contracts/baselines/YD-MS-SKL-001/K3_CONTRACT_BASELINE.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+306	documentations/04-contracts/data/YD-MS-ANL-001/ANALYTICS_SOURCE_CONTRACT_REGISTER.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+307	documentations/04-contracts/events/EVENT_MAP.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+308	documentations/04-contracts/indexes/CONTRACT_REGISTRY.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+309	documentations/04-contracts/integrations/YD-MS-KNW-001/KNW_TO_SEARCH_PROJECTION_CONTRACT.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+310	documentations/04-contracts/projections/YD-MS-SRH-001/SOURCE_PROJECTION_BASELINE.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+311	documentations/04-contracts/validation/CONTRACT_V1_VALIDATION_MATRIX.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+312	documentations/04-contracts/validation/YD-MS-KNW-001/K5_CONTRACT_TEST_SPEC.md	Contrat/intégration.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+313	documentations/05-decisions/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+314	documentations/05-decisions/architecture/ADR-PRF-001-PRF-002-PHYSICAL-BOUNDARY.md	Décision d'architecture.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+315	documentations/05-decisions/architecture/ADR-PRF002-RPO-RTO.md	Décision d'architecture.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+316	documentations/05-decisions/architecture/YD-MS-KNW-001/ADR-KNW-001-DERIVED-KNOWLEDGE-GRAPH.md	Décision d'architecture.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+317	documentations/05-decisions/architecture/YD-MS-LRN-001/ADR-LRN-001-DISCOVERY-AUTHORITY-BOUNDARY.md	Décision d'architecture.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+318	documentations/05-decisions/architecture/YD-MS-REC-001/ADR-REC-001-ORGANIC-RANKING-SEPARATION.md	Décision d'architecture.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+319	documentations/05-decisions/architecture/YD-MS-SKL-001/ADR-SKL-001-AUTHORITATIVE-SKILLS-KNOWLEDGE.md	Décision d'architecture.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+320	documentations/05-decisions/architecture/closure/D3_BLOCKING_CLOSURE_DECISIONS.md	Décision d'architecture.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+321	documentations/06-trust/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+322	documentations/06-trust/ai-governance/YD-MS-REC-001/FAIRNESS_EVALUATION_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+323	documentations/06-trust/ai-governance/YD-MS-REC-001/SPONSORED_NON_INFLUENCE_TEST_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+324	documentations/06-trust/data-governance/YD-MS-DAT-001/DATA_GOVERNANCE_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+325	documentations/06-trust/data-governance/YD-MS-DAT-002/DATA_GOVERNANCE_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+326	documentations/06-trust/data-governance/YD-MS-DAT-003/DATA_GOVERNANCE_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+327	documentations/06-trust/data-governance/YD-MS-DAT-004/DATA_GOVERNANCE_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+328	documentations/06-trust/data-governance/YD-MS-DAT-005/DATA_GOVERNANCE_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+329	documentations/06-trust/governance/YD-MS-EDU-001/K4_GOVERNANCE_BASELINE.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+330	documentations/06-trust/governance/YD-MS-KNW-001/K4_GOVERNANCE_BASELINE.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+331	documentations/06-trust/governance/YD-MS-LRN-001/K4_GOVERNANCE_BASELINE.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+332	documentations/06-trust/governance/YD-MS-PRF-001/K4_GOVERNANCE_BASELINE.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+333	documentations/06-trust/governance/YD-MS-PRF-002/K4_GOVERNANCE_BASELINE.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+334	documentations/06-trust/governance/YD-MS-PRF-002/PRIVACY_REQUIREMENTS_MAP.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+335	documentations/06-trust/governance/YD-MS-REC-001/K4_GOVERNANCE_BASELINE.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+336	documentations/06-trust/governance/YD-MS-SKL-001/K4_GOVERNANCE_BASELINE.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+337	documentations/06-trust/privacy/YD-MS-CNS-001/PRIVACY_DECISION_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+338	documentations/06-trust/privacy/YD-MS-CNS-001/REVOCATION_RETENTION_RECOVERY_POLICY.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+339	documentations/06-trust/security/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+340	documentations/06-trust/security/SECURITE_BASELINE.md	Gouvernance confiance.	normative	mandatory-reference	LEGACY-METADATA-PENDING
+341	documentations/06-trust/verification/YD-MS-EMP-001/EMPLOYER_VERIFICATION_POLICY.md	Preuve ou protocole.	evidence	mandatory-reference	LEGACY-METADATA-PENDING
+342	documentations/06-trust/verification/YD-MS-KNW-001/K5_SECURITY_VERIFICATION_SPEC.md	Preuve ou protocole.	evidence	mandatory-reference	LEGACY-METADATA-PENDING
+343	documentations/07-operations/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+344	documentations/07-operations/business-continuity/YD-MS-PRF-002/PRF002_BIA.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+345	documentations/07-operations/business-continuity/YD-MS-PRF-002/PRF002_BIA_ASSUMPTION_REGISTER.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+346	documentations/07-operations/continuity/YD-MS-PRF-002/PRF002_SENSITIVE_ROLE_PRACTICAL_QUALIFICATION.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+347	documentations/07-operations/disaster-recovery/YD-MS-PRF-002/PRF002_DR_EVIDENCE_MATRIX.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+348	documentations/07-operations/disaster-recovery/YD-MS-PRF-002/PRF002_DR_TEST_PLAN.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+349	documentations/07-operations/reliability/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+350	documentations/07-operations/reliability/RESILIENCE_BASELINE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+351	documentations/07-operations/roles-qualification/YD-MS-PRF-002/PRF002_NOMINATION_MATRIX.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+352	documentations/07-operations/roles-qualification/YD-MS-PRF-002/PRF002_NOMINATION_REGISTER.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+353	documentations/07-operations/roles-qualification/YD-MS-PRF-002/PRF002_SENSITIVE_ROLE_PRACTICAL_QUALIFICATION.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+354	documentations/07-operations/runbooks/YD-MS-EDU-001/RUNBOOK.md	Procédure opérationnelle.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+355	documentations/07-operations/runbooks/YD-MS-KNW-001/RUNBOOK.md	Procédure opérationnelle.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+356	documentations/07-operations/runbooks/YD-MS-LRN-001/RUNBOOK.md	Procédure opérationnelle.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+357	documentations/07-operations/runbooks/YD-MS-PRF-001/RUNBOOK.md	Procédure opérationnelle.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+358	documentations/07-operations/runbooks/YD-MS-PRF-002/PRF002_DR_RUNBOOK.md	Procédure opérationnelle.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+359	documentations/07-operations/runbooks/YD-MS-REC-001/RUNBOOK.md	Procédure opérationnelle.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+360	documentations/07-operations/runbooks/YD-MS-SKL-001/RUNBOOK.md	Procédure opérationnelle.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+361	documentations/07-operations/verification/YD-MS-KNW-001/FULL_REBUILD_TEST_PROTOCOL.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+362	documentations/07-operations/verification/YD-MS-KNW-001/K5_EXECUTION_PLAN.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+363	documentations/07-operations/verification/YD-MS-LRN-001/RESTORE_AND_FRESHNESS_TEST_PROTOCOL.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+364	documentations/07-operations/verification/YD-MS-REC-001/REPRODUCIBILITY_AND_RESTORE_PROTOCOL.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+365	documentations/07-operations/verification/YD-MS-SKL-001/RESTORE_TEST_PROTOCOL.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+366	documentations/08-countries/BF/COUNTRY_FRAMEWORK.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+367	documentations/08-countries/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+368	documentations/08-countries/frameworks/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+369	documentations/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+370	documentations/REGISTRE_DOCUMENTAIRE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+371	documentations/_meta/README.md	Guide de lecture.	reference	informational	LEGACY-METADATA-PENDING
+372	documentations/_meta/evidence/impact/EDUCATION_IMPACT_TEST.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+373	documentations/_meta/evidence/impact/EDUCATION_SKILLS_RECOMMENDATION_IMPACT_TEST.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+374	documentations/_meta/evidence/implementation/spec-foundation-documentaire-ydiase.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+375	documentations/_meta/evidence/migration/K2_EDUCATION_PROOF.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+376	documentations/_meta/evidence/verification/YD-MS-EDU-001/K5_EVIDENCE_MATRIX.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+377	documentations/_meta/evidence/verification/YD-MS-KNW-001/EVIDENCE_RECORD_TEMPLATE.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+378	documentations/_meta/evidence/verification/YD-MS-KNW-001/K5_EVIDENCE_MATRIX.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+379	documentations/_meta/evidence/verification/YD-MS-LRN-001/K5_EVIDENCE_MATRIX.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+380	documentations/_meta/evidence/verification/YD-MS-PRF-001/K5_EVIDENCE_MATRIX.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+381	documentations/_meta/evidence/verification/YD-MS-PRF-002/K5_EVIDENCE_MATRIX.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+382	documentations/_meta/evidence/verification/YD-MS-PRF-002/K5_EXECUTION_READINESS.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+383	documentations/_meta/evidence/verification/YD-MS-REC-001/K5_EVIDENCE_MATRIX.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+384	documentations/_meta/evidence/verification/YD-MS-SKL-001/K5_EVIDENCE_MATRIX.md	Preuve ou protocole.	evidence	supporting-reference	LEGACY-METADATA-PENDING
+385	documentations/_meta/governance/KNOWLEDGE_GATES.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+386	documentations/_meta/governance/MICROSERVICE_ANALYSIS_GRID.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+387	documentations/_meta/governance/MICROSERVICE_DEVELOPMENT_READINESS_PROTOCOL.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+388	documentations/_meta/governance/MICROSERVICE_DOCUMENTATION_CUSTOMIZATION_PROTOCOL.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+389	documentations/_meta/governance/MIGRATION_V2.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+390	documentations/_meta/identity/YDIASE_INSTITUTIONAL_IDENTITY.yaml	Identité institutionnelle.	canonical-source	mandatory-reference	BASELINE-CONFORMING
+391	documentations/_meta/maturity/EVIDENCE_CONFIDENCE.yaml	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+392	documentations/_meta/maturity/KNOWLEDGE_MATURITY.yaml	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+393	documentations/_meta/maturity/PILOT_CROSS_SERVICE_CONSISTENCY_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+394	documentations/_meta/maturity/PILOT_MATURITY_REGISTER.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+395	documentations/_meta/maturity/gates/K3_CONTRACT_GATE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+396	documentations/_meta/maturity/gates/K3_PILOT_CONTRACT_INVENTORY.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+397	documentations/_meta/maturity/gates/K4_GOVERNANCE_GATE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+398	documentations/_meta/maturity/gates/K5_VERIFICATION_GATE.md	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+399	documentations/_meta/ontology/ENTITY_TYPES.yaml	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+400	documentations/_meta/ontology/RELATION_TYPES.yaml	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+401	documentations/_meta/relations/education-cross-domain.relations.yaml	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+402	documentations/_meta/relations/education.relations.yaml	Référence de son périmètre.	reference	supporting-reference	LEGACY-METADATA-PENDING
+403	documentations/_meta/schemas/api.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+404	documentations/_meta/schemas/common.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+405	documentations/_meta/schemas/data.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+406	documentations/_meta/schemas/decision.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+407	documentations/_meta/schemas/document-metadata.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	BASELINE-CONFORMING
+408	documentations/_meta/schemas/domain.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+409	documentations/_meta/schemas/event.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+410	documentations/_meta/schemas/knowledge-evidence.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+411	documentations/_meta/schemas/logical-service.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+412	documentations/_meta/schemas/microservice.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+413	documentations/_meta/schemas/platform-component.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+414	documentations/_meta/schemas/system.schema.yaml	Schéma de validation.	canonical-source	mandatory-reference	LEGACY-METADATA-PENDING
+415	documentations/_meta/templates/DOCUMENT_TEMPLATE.md	Référence de son périmètre.	reference	supporting-reference	BASELINE-CONFORMING
+
+CLOSURE: zero LEGACY-METADATA-PENDING; unique IDs; resolved mandatory references; validation successful.
