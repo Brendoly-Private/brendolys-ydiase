@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-INV-003"
+title: "R1 — Cross-cutting, Delivery & Experiences Inventory"
+document_type: "cross-cutting-inventory-view"
+document_role: "Inventorie les zones transverses, delivery, country frameworks et expériences afin de préparer leur classement documentaire."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "view"
+canonical: false
+development_usage: "informational"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-migration"
+---
+
 # R1 — Cross-cutting, Delivery & Experiences Inventory
+
+> **Rôle du document**
+> Inventorie les zones transverses, delivery, country frameworks et expériences afin de préparer leur classement documentaire.
+> **Usage développement :** vue d’inventaire et d’orientation ; elle ne crée pas de vérité normative.
 
 Statut : `ACTIVE-R1`
 
