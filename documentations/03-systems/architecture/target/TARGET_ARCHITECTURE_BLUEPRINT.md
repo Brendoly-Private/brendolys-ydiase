@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-TGT-008"
+title: "BRENDOLYS YDIASE — Architecture cible complète"
+document_type: "target-architecture-blueprint"
+document_role: "Définit la blueprint complète de la cible YDIASE, conçue intégralement avant activation et dimensionnée pour l’hyperscale."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # BRENDOLYS YDIASE — Architecture cible complète
+
+> **Rôle du document**
+> Définit la blueprint complète de la cible YDIASE, conçue intégralement avant activation et dimensionnée pour l’hyperscale.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de la frontière concernée.
 
 Statut : TARGET-ARCHITECTURE / NORMATIVE-BASELINE
 Portée : cible complète, indépendamment de l'ordre d'activation
