@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-SYS-DEPENDENCY-MAP"
+title: "Dependency Map D3 — BRENDOLYS YDIASE"
+document_type: "target-architecture"
+document_role: "Définit une référence canonique de l’architecture cible YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "systems"
+---
+
 # Dependency Map D3 — BRENDOLYS YDIASE
 
 Cette carte décrit les dépendances logiques entre bounded contexts. Elle ne prescrit ni Kafka, ni HTTP, ni gRPC, ni broker précis. Les choix physiques relèvent des ADR. Chaque relation porte un mode logique, une autorité, une attente de cohérence, un comportement de panne, une interdiction et un risque de cycle.

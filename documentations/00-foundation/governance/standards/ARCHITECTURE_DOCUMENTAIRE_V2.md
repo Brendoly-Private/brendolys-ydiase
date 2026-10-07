@@ -1,3 +1,21 @@
+---
+document_id: "YD-DOC-FND-STD-ARCH-002"
+title: "Architecture documentaire V2 — BRENDOLYS YDIASE"
+document_type: "documentation-architecture-standard"
+document_role: "Définit la structure documentaire cible et les règles de migration vers la source documentaire gouvernée."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Architecture documentaire V2 — BRENDOLYS YDIASE
 
 **Statut :** APPROUVÉ — BASELINE DE MIGRATION  

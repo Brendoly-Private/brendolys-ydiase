@@ -1,3 +1,21 @@
+---
+document_id: "YD-DOC-FND-STD-AUTH-001"
+title: "Modèle de type et d'autorité documentaire — BRENDOLYS YDIASE"
+document_type: "document-authority-standard"
+document_role: "Définit les classes documentaires et leur modèle d’autorité."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Modèle de type et d'autorité documentaire — BRENDOLYS YDIASE
 
 Statut : `R1-BASELINE / REQUIRED-FOR-R2`

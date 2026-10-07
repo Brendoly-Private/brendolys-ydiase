@@ -1,3 +1,21 @@
+---
+document_id: "YD-DOC-FND-STD-AUTH-002"
+title: "Niveaux d'autorité documentaire"
+document_type: "document-authority-standard"
+document_role: "Définit les niveaux d’autorité et les règles de résolution des conflits documentaires."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Niveaux d'autorité documentaire
 
 Statut : `ACTIVE`

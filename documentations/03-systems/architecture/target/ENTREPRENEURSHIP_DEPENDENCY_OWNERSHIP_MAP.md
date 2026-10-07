@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-SYS-ENTREPRENEURSHIP-DEPENDENCY-OWNERSHIP-MAP"
+title: "Entrepreneurship — Ownership & Dependency Map"
+document_type: "target-architecture"
+document_role: "Définit une référence canonique de l’architecture cible YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "systems"
+---
+
 # Entrepreneurship — Ownership & Dependency Map
 
 Statut : TARGET-OWNERSHIP-BASELINE / DDD-RECONCILED
