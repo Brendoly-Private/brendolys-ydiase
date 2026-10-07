@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-ENT-005-AUT"
+title: "YD-MS-ENT-005 — Founder & Team Matching"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Founder & Cofounder Matching et la gestion gouvernée des complémentarités et mises en relation."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-ENT-005 — Founder & Team Matching
+
+> **Rôle du document**
+> Définit l’autonomie Founder & Cofounder Matching et la gestion gouvernée des complémentarités et mises en relation.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : autonomy-profile-target
 Nature : DERIVED/MIXED

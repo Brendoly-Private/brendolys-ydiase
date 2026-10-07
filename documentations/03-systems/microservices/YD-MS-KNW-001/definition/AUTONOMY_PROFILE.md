@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-KNW-001-AUT"
+title: "YD-MS-KNW-001 — Knowledge Graph"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit Knowledge Graph comme frontière DERIVED reconstructible avec provenance, fraîcheur, replay et interdiction d’autorité métier."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-KNW-001 — Knowledge Graph
+
+> **Rôle du document**
+> Définit Knowledge Graph comme frontière DERIVED reconstructible avec provenance, fraîcheur, replay et interdiction d’autorité métier.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `C2-BASELINE / KNOWLEDGE-GRAPH-SEMANTICS-CLOSED`
 

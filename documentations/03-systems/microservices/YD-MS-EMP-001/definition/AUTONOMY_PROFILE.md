@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-EMP-001-AUT"
+title: "YD-MS-EMP-001 — Employer"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Employer et son autorité sur organisations employeuses, états et références gouvernées."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-EMP-001 — Employer
+
+> **Rôle du document**
+> Définit l’autonomie Employer et son autorité sur organisations employeuses, états et références gouvernées.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `C2-BASELINE / EMPLOYER-SEMANTICS-CLOSED`
 

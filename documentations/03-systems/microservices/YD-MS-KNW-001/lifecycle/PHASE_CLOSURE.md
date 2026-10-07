@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-KNW-001-CLS"
+title: "YD-MS-KNW-001 — Knowledge Graph — Baseline C2"
+document_type: "microservice-phase-closure"
+document_role: "Consigne la fermeture de phase Knowledge Graph et les preuves K5/rebuild restant nécessaires."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-KNW-001 — Knowledge Graph — Baseline C2
+
+> **Rôle du document**
+> Consigne la fermeture de phase Knowledge Graph et les preuves K5/rebuild restant nécessaires.
+> **Usage développement :** preuve de maturité ou de fermeture ; le profil canonique et les politiques référencées restent autoritatifs.
 
 Statut : `DOCUMENTATION-BASELINE-C2 / KNOWLEDGE-GRAPH-SEMANTICS-CLOSED`
 Classification : `DERIVED`

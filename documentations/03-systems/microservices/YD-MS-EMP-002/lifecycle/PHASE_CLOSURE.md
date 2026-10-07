@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-EMP-002-CLS"
+title: "YD-MS-EMP-002 — Recruitment — Baseline C1"
+document_type: "microservice-phase-closure"
+document_role: "Consigne la fermeture documentaire Employer Workspace et les gates tenant, permissions, sécurité et recovery."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-EMP-002 — Recruitment — Baseline C1
+
+> **Rôle du document**
+> Consigne la fermeture documentaire Employer Workspace et les gates tenant, permissions, sécurité et recovery.
+> **Usage développement :** preuve de maturité ou de fermeture ; le profil canonique et les politiques référencées restent autoritatifs.
 
 Statut : `DOCUMENTATION-BASELINE-C1 / TALENT-RECRUITMENT-SEMANTICS-CLOSED`
 

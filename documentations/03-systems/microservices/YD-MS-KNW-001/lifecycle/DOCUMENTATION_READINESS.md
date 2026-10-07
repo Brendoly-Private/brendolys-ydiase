@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-KNW-001-RDY"
+title: "YD-MS-KNW-001 — Documentation Readiness"
+document_type: "microservice-documentation-readiness"
+document_role: "Établit la readiness documentaire Knowledge Graph et sépare maturité documentaire, preuves de reconstruction et runtime."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-KNW-001 — Documentation Readiness
+
+> **Rôle du document**
+> Établit la readiness documentaire Knowledge Graph et sépare maturité documentaire, preuves de reconstruction et runtime.
+> **Usage développement :** preuve de maturité ou de fermeture ; le profil canonique et les politiques référencées restent autoritatifs.
 
 Statut : `DOCUMENTATION-READY / K5-EXECUTION-BLOCKED-BY-IMPLEMENTATION`
 
