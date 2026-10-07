@@ -180,3 +180,20 @@ Chaque contrat D3 devra choisir explicitement parmi : `fail-closed`, `fail-open-
 La cible peut être rendue acyclique au niveau des commandes. Les six relations bidirectionnelles identifiées sont converties en combinaison projection + événement, ou commande + résultat corrélé. Aucun besoin fonctionnel identifié n’exige une écriture croisée de base de données ou une transaction distribuée.
 
 Cette carte est D3-candidate. Elle devient normative après création des contrats d’événements/API, définition des SLO de cohérence/fraîcheur et validation automatique de l’absence de cycles synchrones.
+
+
+## Extension D3 — Entrepreneurship
+
+| Producteur → consommateur | Données minimales | Mode logique | Autorité | Panne / règle |
+|---|---|---|---|---|
+| PRF/SKL → ENT-001/005 | refs/projections minimisées | ASYNC/PROJ ou HYBRID | PRF/SKL | ENT ne modifie jamais la source |
+| LAB → ENT-002 | signal/snapshot refs, version, territory, observed_at | ASYNC/PROJ | LAB | conserver dernier snapshot suffisamment frais ou marquer indisponible |
+| DAT/KNW → ENT-002 | provenance/relations autorisées | ASYNC/PROJ | DAT/KNW sur leurs objets | aucune hypothèse sans provenance suffisante |
+| PRT → ENT-003/004 | partner/agreement refs et scopes | ASYNC/PROJ | PRT | catalogue peut rester lisible selon fraîcheur ; publication nouvelle bloquée si droit inconnu |
+| ENT-001 → ENT-006 | VentureRef, version, stage | ASYNC/EVT | ENT-001 | progression ne réécrit pas Venture |
+| ENT-001 + PRF/SKL/CNS → ENT-005 | venture/team need + projections autorisées | HYBRID | owners respectifs | fail-closed si consentement/visibilité inconnus |
+| ENT-001..006 → ORI/REC | option/evidence/progress snapshots | ASYNC/PROJ | ENT sur objets ENT | ORI/REC peuvent fonctionner sans calcul ENT temps réel |
+| ENT → EMP/OPP | transition/employer/opportunity command refs | commande/événement gouverné | owner cible après création | aucun transfert implicite d'ownership |
+
+### Cycles interdits
+Aucun appel synchrone ENT-002 → LAB → ANL/AI → ENT-002. Aucun ORI/REC → ENT → ORI/REC synchrone. Aucun ENT-005 → PRF/SKL write-back. Les enrichissements IA restent hors chemin transactionnel autoritatif sauf ADR explicite.
