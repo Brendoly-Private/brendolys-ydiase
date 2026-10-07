@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-000"
+title: "Architecture — BRENDOLYS YDIASE"
+document_type: "architecture-navigation"
+document_role: "Oriente la lecture de l’architecture et distingue services logiques, frontières physiques, plateforme, contrats et exploitation."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "view"
+canonical: false
+development_usage: "informational"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # Architecture — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Oriente la lecture de l’architecture et distingue services logiques, frontières physiques, plateforme, contrats et exploitation.
+> **Usage développement :** document d’orientation ou d’historique ; il ne crée pas de vérité normative courante.
 
 Ce dossier sépare explicitement architecture logique, frontières physiques, contrats et exploitation. Les ADR gouvernent les choix technologiques et les changements de frontière.
 
