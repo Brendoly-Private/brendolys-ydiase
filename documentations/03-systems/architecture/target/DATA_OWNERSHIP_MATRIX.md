@@ -144,3 +144,16 @@ Les frontières suivantes sont obligatoires :
 ## Condition de passage D2
 
 Un `SERVICE_DEFINITION.md` peut passer à D2 lorsque ses agrégats ci-dessus sont confirmés, que les consommateurs ne revendiquent aucune propriété concurrente, que les données personnelles ont leur finalité et contrôle CNS identifiés, et que les dépendances nécessaires figurent dans la Dependency Map. La présente matrice sert de référence de travail pour cette validation; elle ne remplace pas les contrats D3.
+
+## Extension D2 — Entrepreneurship
+
+| Service | Agrégats possédés | Source autoritative | Données consommées |
+|---|---|---|---|
+| YD-SVC-ENT-001 | Venture, VentureObjective, VentureStage, VentureConstraint, VentureTeamRef | ENT-001 pour état du projet | PRF/SKL projections autorisées, CNS, CFG |
+| YD-SVC-ENT-002 | EntrepreneurialOpportunityHypothesis, OpportunityEvidenceSet, OpportunityAssessmentSnapshot | ENT-002 pour interprétation entrepreneuriale dérivée | LAB, DAT, KNW, CFG |
+| YD-SVC-ENT-003 | SupportOrganizationProjection, IncubatorProgram, MentorOffering, EntrepreneurshipResource | ENT-003 pour catalogue d'accompagnement | PRT, DAT, CFG |
+| YD-SVC-ENT-004 | FundingOpportunity, FundingProgram, EligibilityRuleSet, EligibilitySnapshot | ENT-004 pour catalogue/éligibilité YDIASE | PRT, DAT, CFG, CNS si personnalisation |
+| YD-SVC-ENT-005 | TeamNeed, FounderMatchRun, ComplementarityAssessment, MatchExplanation | ENT-005 pour résultat de matching | ENT-001, PRF, SKL, CNS |
+| YD-SVC-ENT-006 | VenturePlan, Milestone, Experiment, Assumption, ValidationResult, ProgressSnapshot | ENT-006 pour progression | ENT-001, SKL, EDU/LRN, ORI |
+
+Cette extension est réconciliée par `ENTREPRENEURSHIP_DEPENDENCY_OWNERSHIP_MAP.md`. Elle ne modifie aucun ownership PRF/SKL/LAB/PRT/ORI/REC/EMP/OPP existant.
