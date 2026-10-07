@@ -1,4 +1,31 @@
+---
+document_id: "YD-DOC-FND-GOV-REG-007"
+title: "Registre des sources — BRENDOLYS YDIASE"
+document_type: "source-registry"
+document_role: "Enregistre les familles de sources connues et les conditions nécessaires à leur qualification."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Documentation Governance"
+depends_on:
+  - "YD-DOC-FND-GOV-001"
+  - "YD-STD-DOC-META-001"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "governance-register"
+---
+
 # Registre des sources — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Enregistre les familles de sources connues et les conditions nécessaires à leur qualification.
+> **Usage développement :** référence obligatoire pour son périmètre.
 
 Statut : `ACTIVE-BASELINE`
 
