@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-002"
+title: "Hypothèses et inconnues — BRENDOLYS YDIASE"
+document_type: "foundation-assumption-seed"
+document_role: "Recense les hypothèses et inconnues de niveau fondation qui doivent rester distinguées des faits et être suivies dans la gouvernance."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Hypothèses et inconnues — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Recense les hypothèses et inconnues de niveau fondation qui doivent rester distinguées des faits et être suivies dans la gouvernance.
+> **Usage développement :** support de cadrage et de validation ; ne remplace pas les sources canoniques auxquelles il se rattache.
 
 Statut : `ACTIVE-REGISTER-SEED`
 

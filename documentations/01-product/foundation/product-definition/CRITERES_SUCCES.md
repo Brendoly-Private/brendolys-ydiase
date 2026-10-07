@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-006"
+title: "Critères de succès — BRENDOLYS YDIASE"
+document_type: "product-success-criteria"
+document_role: "Définit les dimensions selon lesquelles la valeur, la qualité, l’adoption, l’économie, la confiance et la résilience de YDIASE doivent être évaluées."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Critères de succès — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit les dimensions selon lesquelles la valeur, la qualité, l’adoption, l’économie, la confiance et la résilience de YDIASE doivent être évaluées.
+> **Usage développement :** référence obligatoire pour les domaines, capacités et conceptions concernées.
 
 Statut : `BASELINE-CANDIDATE`
 

@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-003"
+title: "Pilote Burkina Faso — BRENDOLYS YDIASE"
+document_type: "pilot-definition"
+document_role: "Définit le pilote Burkina comme dispositif de validation des boucles de valeur et des mécanismes de données, distinct de la cible complète."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Pilote Burkina Faso — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit le pilote Burkina comme dispositif de validation des boucles de valeur et des mécanismes de données, distinct de la cible complète.
+> **Usage développement :** support de cadrage et de validation ; ne remplace pas les sources canoniques auxquelles il se rattache.
 
 Statut : `PILOT-HYPOTHESIS`
 

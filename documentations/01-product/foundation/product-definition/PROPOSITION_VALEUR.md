@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-010"
+title: "Proposition de valeur — BRENDOLYS YDIASE"
+document_type: "value-proposition"
+document_role: "Définit la valeur recherchée par chaque catégorie de bénéficiaire et les limites applicables à l’exploitation commerciale des données."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Proposition de valeur — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit la valeur recherchée par chaque catégorie de bénéficiaire et les limites applicables à l’exploitation commerciale des données.
+> **Usage développement :** référence obligatoire pour les domaines, capacités et conceptions concernées.
 
 Statut : `BASELINE-CANDIDATE`
 

@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-008"
+title: "Principes produit — BRENDOLYS YDIASE"
+document_type: "product-principles"
+document_role: "Établit les principes produit gouvernant les capacités, données, IA, privacy, multi-pays, neutralité commerciale et réversibilité."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Principes produit — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Établit les principes produit gouvernant les capacités, données, IA, privacy, multi-pays, neutralité commerciale et réversibilité.
+> **Usage développement :** référence obligatoire pour les domaines, capacités et conceptions concernées.
 
 Statut : `BASELINE-CANDIDATE`
 
