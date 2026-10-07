@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-007"
+title: "Périmètre produit — BRENDOLYS YDIASE"
+document_type: "product-scope"
+document_role: "Définit ce qui appartient à la cible produit YDIASE, ses limites d’autorité et la séparation entre cible, infrastructure et activation."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Périmètre produit — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit ce qui appartient à la cible produit YDIASE, ses limites d’autorité et la séparation entre cible, infrastructure et activation.
+> **Usage développement :** référence obligatoire pour les domaines, capacités et conceptions concernées.
 
 Statut : `BASELINE-CANDIDATE`
 
