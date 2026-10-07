@@ -1,3 +1,22 @@
+---
+document_id: "YD-DOC-SCH-LOGICAL-SERVICE-SCHEMA"
+title: "logical service schema"
+document_type: "validation-schema"
+document_role: "Définit un schéma canonique de validation utilisé par la documentation et les contrats YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "schema"
+---
+
+# Rôle du document
+# Définit un schéma canonique de validation utilisé par la documentation et les contrats YDIASE.
+# Usage développement : référence obligatoire pour les validations concernées.
 $schema: https://json-schema.org/draft/2020-12/schema
 $id: knowledge.ydiase/logical-service.schema.yaml
 title: YDIASE Logical Service

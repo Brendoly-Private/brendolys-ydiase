@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-META-K3-CONTRACT-GATE"
+title: "YDIASE Knowledge Gate — K3 Contractualisé"
+document_type: "governance-reference"
+document_role: "Documente une référence de maturité, de gate ou d’ontologie utilisée pour qualifier le corpus YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "meta"
+---
+
 # YDIASE Knowledge Gate — K3 Contractualisé
+
+> **Rôle du document**
+> Documente une référence de maturité, de gate ou d’ontologie utilisée pour qualifier le corpus YDIASE.
+> **Usage développement :** référence de support pour la gouvernance et la qualification documentaire.
 
 Statut : `BASELINE / PILOT`
 

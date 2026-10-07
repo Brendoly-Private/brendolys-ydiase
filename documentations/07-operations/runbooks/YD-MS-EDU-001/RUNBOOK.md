@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-OPS-EDU-001-RUNBOOK"
+title: "YD-MS-EDU-001 — Runbook"
+document_type: "operational-runbook"
+document_role: "Définit la procédure opérationnelle applicable à YD-MS-EDU-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "operations"
+---
+
 # YD-MS-EDU-001 — Runbook
+
+> **Rôle du document**
+> Définit la procédure opérationnelle applicable à YD-MS-EDU-001.
+> **Usage développement :** référence opérationnelle obligatoire pour l’implémentation et l’exploitation concernées.
 
 Statut : RUNBOOK-BASELINE / IMPLEMENTATION-PENDING
 Nature : AUTH

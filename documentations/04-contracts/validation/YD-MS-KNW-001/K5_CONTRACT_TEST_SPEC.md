@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-CON-KNW-001-K5-CONTRACT-TEST-SPEC"
+title: "YD-MS-KNW-001 — K5 Contract Test Specification"
+document_type: "contract-test-spec"
+document_role: "Définit le contrat ou dispositif de validation K5 CONTRACT TEST SPEC dans le périmètre documentaire des contrats YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "contracts"
+---
+
 # YD-MS-KNW-001 — K5 Contract Test Specification
+
+> **Rôle du document**
+> Définit le contrat ou dispositif de validation K5 CONTRACT TEST SPEC dans le périmètre documentaire des contrats YDIASE.
+> **Usage développement :** référence contractuelle obligatoire pour les implémentations, intégrations ou validations concernées.
 
 Statut : `TEST-SPEC-DEFINED / EXECUTION-PENDING`
 

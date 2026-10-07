@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-CON-EVENT-MAP"
+title: "Event Map D3 — BRENDOLYS YDIASE"
+document_type: "event-contract-map"
+document_role: "Définit la carte des contrats événementiels D3 et leurs garanties logiques."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "contracts"
+---
+
 # Event Map D3 — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit la carte des contrats événementiels D3 et leurs garanties logiques.
+> **Usage développement :** référence contractuelle obligatoire pour les implémentations et intégrations concernées.
 
 Cette carte transforme la Dependency Map D3 en contrats événementiels candidats. Elle décrit le sens métier et les garanties attendues sans imposer un broker, Kafka, un format de sérialisation ou une infrastructure précise.
 

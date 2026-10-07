@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-CON-SRH-001-SOURCE-PROJECTION-BASELINE"
+title: "SRH-001 — Source Projection Baseline"
+document_type: "integration-contract"
+document_role: "Définit le contrat ou dispositif de validation SOURCE PROJECTION BASELINE dans le périmètre documentaire des contrats YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "contracts"
+---
+
 # SRH-001 — Source Projection Baseline
+
+> **Rôle du document**
+> Définit le contrat ou dispositif de validation SOURCE PROJECTION BASELINE dans le périmètre documentaire des contrats YDIASE.
+> **Usage développement :** référence contractuelle obligatoire pour les implémentations, intégrations ou validations concernées.
 
 Statut : `DEPENDENCY-BASELINE`
 

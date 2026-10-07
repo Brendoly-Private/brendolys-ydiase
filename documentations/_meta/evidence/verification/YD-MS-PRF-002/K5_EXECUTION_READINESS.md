@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-EVD-PRF-002-K5-EXECUTION-READINESS"
+title: "YD-MS-PRF-002 — K5 Execution Readiness"
+document_type: "evidence-record"
+document_role: "Documente une preuve, un modèle ou une matrice de vérification K5 du microservice concerné."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "evidence"
+---
+
 # YD-MS-PRF-002 — K5 Execution Readiness
+
+> **Rôle du document**
+> Documente une preuve, un modèle ou une matrice de vérification K5 du microservice concerné.
+> **Usage développement :** référence de support pour la vérification, la qualification et les décisions de readiness.
 
 Statut : EXECUTION-READY-WHEN-IMPLEMENTED / NO-EXECUTION-EVIDENCE
 

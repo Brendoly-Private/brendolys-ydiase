@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-EVD-EDUCATION-SKILLS-RECOMMENDATION-IMPACT-TEST"
+title: "Test d'impact transverse — Curriculum → Skills → Recommendation → Knowledge → Learning"
+document_type: "evidence-record"
+document_role: "Documente une preuve, un protocole ou une matrice de vérification de la fondation YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "evidence"
+---
+
 # Test d'impact transverse — Curriculum → Skills → Recommendation → Knowledge → Learning
+
+> **Rôle du document**
+> Documente une preuve, un protocole ou une matrice de vérification de la fondation YDIASE.
+> **Usage développement :** référence de support pour la gouvernance ou la vérification documentaire.
 
 Statut : `K2-CROSS-DOMAIN-PROOF / DRAFT`
 

@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-CON-ANL-001-SOURCE-REGISTER"
+title: "ANL-001 — Analytics Source Contract Register"
+document_type: "contract-register"
+document_role: "Enregistre les familles de contrats sources autorisables pour ANL-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "contracts"
+---
+
 # ANL-001 — Analytics Source Contract Register
+
+> **Rôle du document**
+> Enregistre les familles de contrats sources autorisables pour ANL-001.
+> **Usage développement :** référence contractuelle obligatoire pour les implémentations et intégrations concernées.
 
 Statut : `SOURCE-FAMILIES-REGISTERED / METRIC-INSTANCES-PENDING`
 

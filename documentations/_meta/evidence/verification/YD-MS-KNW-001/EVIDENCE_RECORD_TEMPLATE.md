@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-EVD-KNW-001-EVIDENCE-RECORD-TEMPLATE"
+title: "YD-MS-KNW-001 — K5 Evidence Record Template"
+document_type: "evidence-record"
+document_role: "Documente une preuve, un modèle ou une matrice de vérification K5 du microservice concerné."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "evidence"
+---
+
 # YD-MS-KNW-001 — K5 Evidence Record Template
+
+> **Rôle du document**
+> Documente une preuve, un modèle ou une matrice de vérification K5 du microservice concerné.
+> **Usage développement :** référence de support pour la vérification, la qualification et les décisions de readiness.
 
 Statut : `EVIDENCE-TEMPLATE`
 

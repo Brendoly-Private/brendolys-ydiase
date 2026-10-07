@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-META-MICROSERVICE-ANALYSIS-GRID"
+title: "YDIASE — Grille d'analyse documentaire par microservice"
+document_type: "governance-reference"
+document_role: "Documente une référence de gouvernance ou de maturité utilisée pour qualifier le corpus et les composants YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "meta"
+---
+
 # YDIASE — Grille d'analyse documentaire par microservice
+
+> **Rôle du document**
+> Documente une référence de gouvernance ou de maturité utilisée pour qualifier le corpus et les composants YDIASE.
+> **Usage développement :** référence de support pour la gouvernance et la qualification documentaire.
 
 Statut : `NORMATIVE-CHECKLIST`
 

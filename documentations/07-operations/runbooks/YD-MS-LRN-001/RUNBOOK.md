@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-OPS-LRN-001-RUNBOOK"
+title: "YD-MS-LRN-001 — Runbook"
+document_type: "operational-runbook"
+document_role: "Définit la procédure opérationnelle applicable à YD-MS-LRN-001."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "operations"
+---
+
 # YD-MS-LRN-001 — Runbook
+
+> **Rôle du document**
+> Définit la procédure opérationnelle applicable à YD-MS-LRN-001.
+> **Usage développement :** référence opérationnelle obligatoire pour l’implémentation et l’exploitation concernées.
 
 Statut : `OPERATIONAL-PROCEDURE-BASELINE / IMPLEMENTATION-PENDING`
 

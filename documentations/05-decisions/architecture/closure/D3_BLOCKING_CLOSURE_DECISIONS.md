@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-ADR-D3-BLOCKING-CLOSURE-DECISIONS"
+title: "D3 Blocking Closure Decisions — BRENDOLYS YDIASE"
+document_type: "architecture-decision-record"
+document_role: "Consigne une décision d’architecture et ses conséquences applicables."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "decisions"
+---
+
 # D3 Blocking Closure Decisions — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Consigne une décision d’architecture et ses conséquences applicables.
+> **Usage développement :** référence obligatoire pour les choix d’architecture concernés.
 
 Statut : `D3-normative`
 

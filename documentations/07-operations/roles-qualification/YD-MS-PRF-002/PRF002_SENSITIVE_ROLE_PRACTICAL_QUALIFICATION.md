@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-OPS-PRF-002-PRF002-SENSITIVE-ROLE-PRACTICAL-QUALIFICATION"
+title: "PRF002_SENSITIVE_ROLE_PRACTICAL_QUALIFICATION"
+document_type: "operations-reference"
+document_role: "Documente la qualification pratique des rôles sensibles du périmètre PRF-002."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "operations"
+---
+
 # PRF002_SENSITIVE_ROLE_PRACTICAL_QUALIFICATION
+
+> **Rôle du document**
+> Documente la qualification pratique des rôles sensibles du périmètre PRF-002.
+> **Usage développement :** référence de support pour la préparation opérationnelle.
 
 Statut : PREPROD-CANDIDATE / QUALIFICATION-REQUIRED
 Service : YD-MS-PRF-002 — Education & Experience Profile

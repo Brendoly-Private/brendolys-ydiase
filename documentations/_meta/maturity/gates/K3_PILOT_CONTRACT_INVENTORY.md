@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-META-K3-PILOT-CONTRACT-INVENTORY"
+title: "Inventaire K3 — pilote transversal"
+document_type: "governance-reference"
+document_role: "Documente une référence de maturité, de gate ou d’ontologie utilisée pour qualifier le corpus YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "meta"
+---
+
 # Inventaire K3 — pilote transversal
+
+> **Rôle du document**
+> Documente une référence de maturité, de gate ou d’ontologie utilisée pour qualifier le corpus YDIASE.
+> **Usage développement :** référence de support pour la gouvernance et la qualification documentaire.
 
 Statut : `EVIDENCE-INVENTORY / K3-CLOSED / IMPLEMENTATION-PENDING`
 

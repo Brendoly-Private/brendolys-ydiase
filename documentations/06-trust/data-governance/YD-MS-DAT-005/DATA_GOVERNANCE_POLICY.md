@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-TRU-DAT-005-DATA-GOVERNANCE-POLICY"
+title: "DAT-005 — Reference & Taxonomy Governance Policy"
+document_type: "trust-policy"
+document_role: "Établit une règle ou baseline normative de gouvernance applicable au périmètre concerné."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "trust"
+---
+
 # DAT-005 — Reference & Taxonomy Governance Policy
+
+> **Rôle du document**
+> Établit une règle ou baseline normative de gouvernance applicable au périmètre concerné.
+> **Usage développement :** référence normative obligatoire pour les implémentations concernées.
 
 Statut : `NORMATIVE-BASELINE / REFERENCE-CONTENT-PENDING`
 

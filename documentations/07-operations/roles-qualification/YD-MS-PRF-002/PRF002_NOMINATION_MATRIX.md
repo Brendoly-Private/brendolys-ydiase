@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-OPS-PRF-002-PRF002-NOMINATION-MATRIX"
+title: "PRF002_NOMINATION_MATRIX"
+document_type: "operations-reference"
+document_role: "Documente une référence opérationnelle de résilience, reprise, preuve ou qualification."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "operations"
+---
+
 # PRF002_NOMINATION_MATRIX
+
+> **Rôle du document**
+> Documente une référence opérationnelle de résilience, reprise, preuve ou qualification.
+> **Usage développement :** référence de support pour la conception et la préparation opérationnelle.
 
 Statut : PREPROD-CANDIDATE
 Service : YD-MS-PRF-002 - Education & Experience Profile

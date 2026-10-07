@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-OPS-KNW-001-K5-EXECUTION-PLAN"
+title: "YD-MS-KNW-001 — K5 Execution Plan"
+document_type: "operations-verification"
+document_role: "Définit un protocole ou plan de vérification opérationnelle servant de preuve contrôlée."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "operations"
+---
+
 # YD-MS-KNW-001 — K5 Execution Plan
+
+> **Rôle du document**
+> Définit un protocole ou plan de vérification opérationnelle servant de preuve contrôlée.
+> **Usage développement :** référence de support pour la conception, la vérification ou la contextualisation concernée.
 
 Statut : `EXECUTION-PLAN / IN-PROGRESS`
 
