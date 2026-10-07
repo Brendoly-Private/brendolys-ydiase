@@ -70,3 +70,19 @@ L’absence de détail futur doit être écrite comme `TBD` avec une condition d
 ## Condition de passage au développement
 
 Un service ne passe pas au développement uniquement parce qu’il figure dans l’architecture cible. Son passage exige au minimum une maturité documentaire compatible avec le risque, des frontières validées, les dépendances nécessaires, les exigences de sécurité applicables et une décision de phase explicite.
+
+
+## Baseline cible complète
+
+La définition détaillée de la cible est désormais portée par :
+- `TARGET_ARCHITECTURE_BLUEPRINT.md` — domaines, frontières, microservices, flux, dépendances, Data/IA et activation ;
+- `HYPERSCALE_CAPACITY_BASELINE.md` — cible 5 à 15 millions d'utilisateurs simultanément actifs et Capacity Profiles ;
+- `DATA_AI_PLATFORM_ARCHITECTURE.md` — plans Data, Knowledge, Analytics, ML et IA ;
+- `TARGET_FLOW_MAP.md` — flux transactionnels, événementiels, Data, IA, orientation et entrepreneuriat ;
+- `SERVICE_MAP.md` — inventaire des services logiques cibles, incluant Entrepreneurship.
+
+L'entrepreneuriat est un domaine de premier rang et non une extension informelle d'Orientation ou Employment.
+
+## Condition de conception complète
+
+Le statut `TARGET-DESIGN-COMPLETE` exige la conception A–Z des capacités retenues, y compris celles non activées : modules, fonctionnalités, cas d'usage, contrats, données, algorithmes applicables, NFR, Capacity Profiles, architecture technique, sécurité, résilience, opérations, tests et plan d'implémentation.
