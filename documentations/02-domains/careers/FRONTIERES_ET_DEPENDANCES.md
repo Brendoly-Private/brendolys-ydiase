@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-CAR-002"
+title: "Frontières et dépendances — Métiers et carrières"
+document_type: "domain-boundaries-dependencies"
+document_role: "Définit les responsabilités logiques et physiques du domaine Careers, ses dépendances, invariants et conditions d’extraction."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Frontières et dépendances — Métiers et carrières
+
+> **Rôle du document**
+> Définit les responsabilités logiques et physiques du domaine Careers, ses dépendances, invariants et conditions d’extraction.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`
 

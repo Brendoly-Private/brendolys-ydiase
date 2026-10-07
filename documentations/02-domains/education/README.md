@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-EDU-001"
+title: "Domaine 03 — Éducation et institutions"
+document_type: "domain-overview"
+document_role: "Définit la mission, la doctrine et les frontières autoritatives du domaine Éducation et institutions."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Domaine 03 — Éducation et institutions
+
+> **Rôle du document**
+> Définit la mission, la doctrine et les frontières autoritatives du domaine Éducation et institutions.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-BASELINE-CANDIDATE`
 

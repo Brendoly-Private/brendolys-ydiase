@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-FND-000"
+title: "Fondations produit — BRENDOLYS YDIASE"
+document_type: "product-foundation-navigation"
+document_role: "Oriente la lecture des fondations produit et explicite leur rôle avant traduction en domaines, services, contrats et infrastructure."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "view"
+canonical: false
+development_usage: "informational"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Fondations produit — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Oriente la lecture des fondations produit et explicite leur rôle avant traduction en domaines, services, contrats et infrastructure.
+> **Usage développement :** document de navigation ou d’orientation ; il ne crée pas de vérité normative.
 
 Statut : `BASELINE-CANDIDATE`
 

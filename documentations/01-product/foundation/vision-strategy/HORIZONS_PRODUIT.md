@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-FND-014"
+title: "Horizons produit — BRENDOLYS YDIASE"
+document_type: "product-horizons"
+document_role: "Exprime les horizons directionnels de développement du produit sans les transformer en promesses calendaires ou choix techniques."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Horizons produit — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Exprime les horizons directionnels de développement du produit sans les transformer en promesses calendaires ou choix techniques.
+> **Usage développement :** support de cadrage, validation ou traçabilité ; les sources canoniques associées restent autoritatives.
 
 Statut : `DIRECTIONAL`
 

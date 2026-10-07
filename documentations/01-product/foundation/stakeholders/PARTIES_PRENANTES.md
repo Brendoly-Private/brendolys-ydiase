@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-FND-011"
+title: "Parties prenantes — BRENDOLYS YDIASE"
+document_type: "stakeholder-catalog"
+document_role: "Définit les groupes de parties prenantes, leurs relations avec YDIASE et les limites de leur autorité présumée."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Parties prenantes — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit les groupes de parties prenantes, leurs relations avec YDIASE et les limites de leur autorité présumée.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `BASELINE-CANDIDATE`
 

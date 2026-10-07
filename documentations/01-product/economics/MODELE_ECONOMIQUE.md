@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-ECO-001"
+title: "Modèle économique — BRENDOLYS YDIASE"
+document_type: "business-model-hypothesis"
+document_role: "Formalise les hypothèses de modèle économique YDIASE, les payeurs potentiels, objets facturables et limites de monétisation."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Modèle économique — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Formalise les hypothèses de modèle économique YDIASE, les payeurs potentiels, objets facturables et limites de monétisation.
+> **Usage développement :** support de cadrage, validation ou traçabilité ; les sources canoniques associées restent autoritatives.
 
 Statut : `HYPOTHESIS-BASELINE`
 

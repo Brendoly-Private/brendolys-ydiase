@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-FND-015"
+title: "Vision panafricaine — BRENDOLYS YDIASE"
+document_type: "panafrican-vision"
+document_role: "Définit la vision panafricaine et les règles de variabilité pays afin qu’aucun contexte national ne devienne implicitement la norme continentale."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Vision panafricaine — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit la vision panafricaine et les règles de variabilité pays afin qu’aucun contexte national ne devienne implicitement la norme continentale.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `BASELINE-CANDIDATE`
 

@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-EDU-002"
+title: "Frontières et dépendances — Éducation et institutions"
+document_type: "domain-boundaries-dependencies"
+document_role: "Définit les quatre frontières Education, leurs ownerships, dépendances, invariants multi-pays et règles de récupération."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Frontières et dépendances — Éducation et institutions
+
+> **Rôle du document**
+> Définit les quatre frontières Education, leurs ownerships, dépendances, invariants multi-pays et règles de récupération.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`
 

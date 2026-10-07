@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-FND-016"
+title: "Vision produit — BRENDOLYS YDIASE"
+document_type: "product-vision"
+document_role: "Définit la vision durable de YDIASE comme infrastructure panafricaine reliant éducation, compétences, carrières, emploi, entrepreneuriat et réalités économiques."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Vision produit — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Définit la vision durable de YDIASE comme infrastructure panafricaine reliant éducation, compétences, carrières, emploi, entrepreneuriat et réalités économiques.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `BASELINE-CANDIDATE`
 

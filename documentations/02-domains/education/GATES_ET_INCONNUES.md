@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-DOM-EDU-003"
+title: "Gates et inconnues — Éducation et institutions"
+document_type: "domain-gates-unknowns"
+document_role: "Trace les gates, inconnues et confrontations nécessaires avant activation de la baseline Education."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Gates et inconnues — Éducation et institutions
+
+> **Rôle du document**
+> Trace les gates, inconnues et confrontations nécessaires avant activation de la baseline Education.
+> **Usage développement :** support de cadrage, validation ou traçabilité ; les sources canoniques associées restent autoritatives.
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`
 

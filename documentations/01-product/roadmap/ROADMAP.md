@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-RDM-001"
+title: "Roadmap de référence"
+document_type: "product-roadmap"
+document_role: "Structure la progression produit, les phases, gates et axes de maturité sans confondre conception cible et activation."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Roadmap de référence
+
+> **Rôle du document**
+> Structure la progression produit, les phases, gates et axes de maturité sans confondre conception cible et activation.
+> **Usage développement :** support de cadrage, validation ou traçabilité ; les sources canoniques associées restent autoritatives.
 
 ## Principe
 
