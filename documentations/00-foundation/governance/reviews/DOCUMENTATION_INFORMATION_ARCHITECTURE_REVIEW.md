@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-REV-001"
+title: "Revue d'architecture de l'information documentaire — BRENDOLYS YDIASE"
+document_type: "documentation-architecture-review"
+document_role: "Consigne la revue d’architecture de l’information ayant motivé la restructuration du corpus et ses critères de migration."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-migration"
+---
+
 # Revue d'architecture de l'information documentaire — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Consigne la revue d’architecture de l’information ayant motivé la restructuration du corpus et ses critères de migration.
+> **Usage développement :** support de migration et de traçabilité ; les sources canoniques actives restent autoritatives.
 
 Statut : `BASELINE-CANDIDATE / RESTRUCTURING-AUTHORIZED`
 
