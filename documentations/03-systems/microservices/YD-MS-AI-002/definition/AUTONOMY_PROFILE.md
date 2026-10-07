@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-AI-002-AUT"
+title: "YD-MS-AI-002 — Retrieval & Grounding"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie, recovery, sécurité, scaling et gates de Retrieval & Grounding sans lui attribuer l’autorité des faits sources."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-AI-002 — Retrieval & Grounding
+
+> **Rôle du document**
+> Définit l’autonomie, recovery, sécurité, scaling et gates de Retrieval & Grounding sans lui attribuer l’autorité des faits sources.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de la frontière concernée.
 
 Statut : `autonomy-profile-draft`
 
