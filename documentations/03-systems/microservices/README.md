@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-MS-000"
+title: "Microservices physiques YDIASE"
+document_type: "microservice-navigation"
+document_role: "Définit la séparation documentaire entre services logiques, frontières physiques et composants plateforme et oriente le corpus microservices."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "view"
+canonical: false
+development_usage: "informational"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # Microservices physiques YDIASE
+
+> **Rôle du document**
+> Définit la séparation documentaire entre services logiques, frontières physiques et composants plateforme et oriente le corpus microservices.
+> **Usage développement :** document de navigation ; il ne crée pas de vérité normative.
 
 Ce dossier documente les frontières physiques confirmées. Il complète `../services/`, qui reste le catalogue des services logiques DDD.
 
