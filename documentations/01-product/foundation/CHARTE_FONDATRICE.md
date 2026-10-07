@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-PRD-FND-001"
+title: "Charte fondatrice de BRENDOLYS YDIASE"
+document_type: "product-founding-charter"
+document_role: "Établit la nature, la finalité, le positionnement et les principes fondateurs de BRENDOLYS YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Product Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "product"
+  - "foundation"
+---
+
 # Charte fondatrice de BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Établit la nature, la finalité, le positionnement et les principes fondateurs de BRENDOLYS YDIASE.
+> **Usage développement :** référence obligatoire pour les domaines, capacités et conceptions concernées.
 
 Statut : `BASELINE-CANDIDATE`
 
