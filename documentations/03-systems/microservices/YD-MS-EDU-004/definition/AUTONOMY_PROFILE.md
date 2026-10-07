@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-EDU-004-AUT"
+title: "YD-MS-EDU-004 — Qualification Framework"
+document_type: "microservice-autonomy-profile"
+document_role: "Définit l’autonomie Qualification & Credential Catalog et son autorité sur qualifications, credentials et équivalences gouvernées."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-EDU-004 — Qualification Framework
+
+> **Rôle du document**
+> Définit l’autonomie Qualification & Credential Catalog et son autorité sur qualifications, credentials et équivalences gouvernées.
+> **Usage développement :** référence obligatoire pour la conception et l’implémentation de cette frontière.
 
 Statut : `autonomy-profile-draft`
 
