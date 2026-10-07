@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-EDU-004-CLS"
+title: "YD-MS-EDU-004 — Qualification Framework — Fermeture de phase documentaire"
+document_type: "microservice-phase-closure"
+document_role: "Consigne la fermeture documentaire EDU-004 et les validations multi-pays, contrats et recovery restant avant activation."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-EDU-004 — Qualification Framework — Fermeture de phase documentaire
+
+> **Rôle du document**
+> Consigne la fermeture documentaire EDU-004 et les validations multi-pays, contrats et recovery restant avant activation.
+> **Usage développement :** preuve de maturité ou de fermeture ; le profil canonique et les politiques référencées restent autoritatifs.
 
 Statut : `DOCUMENTATION-BASELINE-CLOSED / IMPLEMENTATION-PENDING`
 Nature : `AUTH`
