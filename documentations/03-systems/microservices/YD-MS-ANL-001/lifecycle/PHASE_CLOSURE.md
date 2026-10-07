@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-MS-ANL-001-CLS"
+title: "YD-MS-ANL-001 — Analytics — Phase Closure"
+document_type: "microservice-phase-closure"
+document_role: "Consigne ce qui est fermé sémantiquement pour Analytics et les preuves encore requises avant état REBUILDABLE ou production."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "microservice"
+---
+
 # YD-MS-ANL-001 — Analytics — Phase Closure
+
+> **Rôle du document**
+> Consigne ce qui est fermé sémantiquement pour Analytics et les preuves encore requises avant état REBUILDABLE ou production.
+> **Usage développement :** preuve ou support de fermeture ; ne remplace pas le profil canonique de la frontière.
 
 Statut : `C2-BASELINE-ESTABLISHED — ANALYTICS-SEMANTICS-CLOSED / METRIC-INSTANCES-AND-FULL-REBUILD-EVIDENCE-PENDING`
 
