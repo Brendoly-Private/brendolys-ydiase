@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-MAT-001"
+title: "D3 Autonomy Closure Matrix — BRENDOLYS YDIASE"
+document_type: "autonomy-closure-matrix"
+document_role: "Contrôle la fermeture documentaire d’autonomie des frontières physiques et les gates restant à satisfaire."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # D3 Autonomy Closure Matrix — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Contrôle la fermeture documentaire d’autonomie des frontières physiques et les gates restant à satisfaire.
+> **Usage développement :** support de décision, preuve ou traçabilité ; la cible canonique active reste autoritative.
 
 Statut : `D3-closure-reconciled`
 

@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-REV-001"
+title: "Revue D2 — décisions et frontières à surveiller"
+document_type: "architecture-review"
+document_role: "Conserve les décisions et points de vigilance issus de la revue D2 d’ownership."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "evidence"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # Revue D2 — décisions et frontières à surveiller
+
+> **Rôle du document**
+> Conserve les décisions et points de vigilance issus de la revue D2 d’ownership.
+> **Usage développement :** support de décision, preuve ou traçabilité ; la cible canonique active reste autoritative.
 
 La revue D2 a été clôturée avant construction détaillée de la carte de dépendances. Les cinq blockers d’ownership identifiés pendant l’injection ont reçu une décision explicite.
 

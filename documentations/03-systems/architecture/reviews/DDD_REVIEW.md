@@ -1,4 +1,25 @@
+---
+document_id: "YD-DOC-SYS-ARC-REV-003"
+title: "Revue DDD cible — BRENDOLYS YDIASE"
+document_type: "ddd-review"
+document_role: "Évalue les services logiques candidats et consigne leur traitement DDD sans confondre service logique et déploiement physique."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "systems"
+  - "architecture"
+---
+
 # Revue DDD cible — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Évalue les services logiques candidats et consigne leur traitement DDD sans confondre service logique et déploiement physique.
+> **Usage développement :** support de décision, preuve ou traçabilité ; la cible canonique active reste autoritative.
 
 ## Objet
 
