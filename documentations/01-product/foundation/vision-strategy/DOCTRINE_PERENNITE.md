@@ -1,4 +1,24 @@
+---
+document_id: "YD-DOC-PRD-FND-013"
+title: "Doctrine de pérennité — BRENDOLYS YDIASE"
+document_type: "durability-doctrine"
+document_role: "Établit les invariants de pérennité, gouvernance sémantique, migration, réversibilité et transmission institutionnelle de YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "DRAFT"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+metadata_adopted_at: "2026-10-07"
+tags:
+  - "product"
+---
+
 # Doctrine de pérennité — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Établit les invariants de pérennité, gouvernance sémantique, migration, réversibilité et transmission institutionnelle de YDIASE.
+> **Usage développement :** référence obligatoire pour les conceptions et décisions relevant de son périmètre.
 
 Statut : `BASELINE-CANDIDATE`
 Autorité : fondation produit transverse
