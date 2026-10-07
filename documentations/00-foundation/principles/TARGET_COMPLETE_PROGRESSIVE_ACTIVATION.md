@@ -36,3 +36,12 @@ Les microservices métier publient des contrats gouvernés ; Analytics, Knowledg
 La conception globale n'est pas COMPLETE tant que les frontières seules sont documentées. Chaque microservice cible doit aussi disposer, selon applicabilité, de ses modules/capacités internes, fonctionnalités, cas d'usage, règles, entrées/sorties, données, algorithmes lorsqu'ils existent, architecture technique cible, sécurité, opérations, tests et plan d'implémentation.
 
 L'absence d'activation n'exempte pas cette conception.
+
+
+## Hyperscale
+La cible complète est dimensionnée architecturalement pour 5 000 000 à 15 000 000 d'utilisateurs simultanément actifs à l'échelle YDIASE. Cette exigence est déclinée par microservice via un Capacity Profile ; elle ne signifie pas 15 M de requêtes simultanées sur chaque frontière.
+
+La baseline normative de capacité est `03-systems/architecture/target/HYPERSCALE_CAPACITY_BASELINE.md`.
+
+## Entrepreneuriat
+La cible complète inclut explicitement l'entrepreneuriat, l'activité indépendante et les trajectoires hybrides dans l'orientation. Ces capacités sont conçues maintenant, même si leur activation est différée. Leur modèle canonique est `02-domains/orientation-recommendation/ENTREPRENEURSHIP_ORIENTATION_MODEL.md`.
