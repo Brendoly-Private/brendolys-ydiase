@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-INV-006"
+title: "R1 — Governance, Product & Domains Inventory"
+document_type: "governance-product-domain-inventory"
+document_role: "Inventorie la gouvernance, les fondations produit et les domaines métier pour préparer leur migration structurelle."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "view"
+canonical: false
+development_usage: "informational"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-migration"
+---
+
 # R1 — Governance, Product & Domains Inventory
+
+> **Rôle du document**
+> Inventorie la gouvernance, les fondations produit et les domaines métier pour préparer leur migration structurelle.
+> **Usage développement :** vue d’inventaire et d’orientation ; elle ne crée pas de vérité normative.
 
 Statut : `ACTIVE-R1`
 

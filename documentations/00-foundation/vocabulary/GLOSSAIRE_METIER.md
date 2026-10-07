@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-VOC-001"
+title: "Glossaire métier maître"
+document_type: "master-business-glossary"
+document_role: "Définit le vocabulaire métier maître utilisé pour interpréter de manière cohérente les concepts YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "business-vocabulary"
+---
+
 # Glossaire métier maître
+
+> **Rôle du document**
+> Définit le vocabulaire métier maître utilisé pour interpréter de manière cohérente les concepts YDIASE.
+> **Usage développement :** référence obligatoire pour les décisions et développements relevant de son périmètre.
 
 | Terme | Définition de référence |
 |---|---|

@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-INV-005"
+title: "R1 — File Classification Register — BRENDOLYS YDIASE"
+document_type: "file-classification-register"
+document_role: "Enregistre la classification R1 des fichiers afin de tracer leur nature et leur disposition de migration sans décider seul de leur canonicalité."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-migration"
+---
+
 # R1 — File Classification Register — BRENDOLYS YDIASE
+
+> **Rôle du document**
+> Enregistre la classification R1 des fichiers afin de tracer leur nature et leur disposition de migration sans décider seul de leur canonicalité.
+> **Usage développement :** support de migration et de traçabilité ; les sources canoniques actives restent autoritatives.
 
 Statut : `ACTIVE-R1 / PARTIAL-PHYSICAL-VERIFICATION / NO-DELETION-AUTHORIZED`
 

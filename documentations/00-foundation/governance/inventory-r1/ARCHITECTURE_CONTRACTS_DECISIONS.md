@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-INV-001"
+title: "R1 — Architecture, Contracts & Decisions Inventory"
+document_type: "migration-inventory-view"
+document_role: "Inventorie et classe les documents d’architecture, contrats, décisions, ownership et recovery pour guider leur restructuration."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "view"
+canonical: false
+development_usage: "informational"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-migration"
+---
+
 # R1 — Architecture, Contracts & Decisions Inventory
+
+> **Rôle du document**
+> Inventorie et classe les documents d’architecture, contrats, décisions, ownership et recovery pour guider leur restructuration.
+> **Usage développement :** vue d’inventaire et d’orientation ; elle ne crée pas de vérité normative.
 
 Statut : `ACTIVE-R1`
 

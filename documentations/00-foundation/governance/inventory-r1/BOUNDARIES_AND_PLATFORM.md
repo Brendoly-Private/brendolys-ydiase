@@ -1,4 +1,28 @@
+---
+document_id: "YD-DOC-FND-INV-002"
+title: "R1 — Boundaries & Platform Inventory"
+document_type: "boundary-inventory-view"
+document_role: "Inventorie la population de frontières métier et composants plateforme observée lors de R1 et leur classification documentaire."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "view"
+canonical: false
+development_usage: "informational"
+owners:
+  - "Documentation Governance"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-migration"
+---
+
 # R1 — Boundaries & Platform Inventory
+
+> **Rôle du document**
+> Inventorie la population de frontières métier et composants plateforme observée lors de R1 et leur classification documentaire.
+> **Usage développement :** vue d’inventaire et d’orientation ; elle ne crée pas de vérité normative.
 
 Statut : `ACTIVE-R1 / REGISTER-BASED-POPULATION`
 
