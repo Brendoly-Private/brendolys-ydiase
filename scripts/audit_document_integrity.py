@@ -9,7 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "documentations"
 MATRIX = DOCS / "00-foundation/governance/registers/DOCUMENT_METADATA_MIGRATION_MATRIX.tsv"
-FIELDS = ("document_id", "title", "document_type", "institutional_reference", "created_at", "last_reviewed_at")
+FIELDS = ("document_id", "title", "document_type", "document_role", "product", "institutional_reference", "status", "authority_level", "canonical", "development_usage", "created_at", "last_reviewed_at")
 errors = []
 warnings = []
 seen = defaultdict(list)
@@ -34,6 +34,10 @@ def audit_file(path):
             errors.append(f"{rel}: {field} manquant ou placeholder")
     if meta.get("document_id"):
         seen[meta["document_id"]].append(rel)
+    if meta.get("institutional_reference") and meta["institutional_reference"] != "YDIASE-INSTITUTIONAL-IDENTITY":
+        errors.append(f"{rel}: institutional_reference invalide")
+    if meta.get("product") and meta["product"] != "BRENDOLYS YDIASE":
+        errors.append(f"{rel}: product invalide")
     for field in ("created_at", "last_reviewed_at"):
         if meta.get(field) and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta[field]):
             errors.append(f"{rel}: {field} doit être YYYY-MM-DD")
