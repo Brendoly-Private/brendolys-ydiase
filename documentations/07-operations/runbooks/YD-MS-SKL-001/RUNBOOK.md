@@ -12,6 +12,9 @@ development_usage: "mandatory-reference"
 metadata_adopted_at: "2026-10-07"
 tags:
   - "operations"
+created_at: "2026-10-06"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # YD-MS-SKL-001 — Runbook

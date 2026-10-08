@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-F35F8854FAA8C184"
+title: "AUTONOMY PROFILE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-CAR-001 — Occupation & Career Graph
 
 Statut : `autonomy-profile-draft`

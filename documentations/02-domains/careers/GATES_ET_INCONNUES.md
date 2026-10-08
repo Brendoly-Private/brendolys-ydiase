@@ -12,6 +12,9 @@ development_usage: "supporting-reference"
 metadata_adopted_at: "2026-10-07"
 tags:
   - "domain"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # Gates et inconnues — Métiers et carrières

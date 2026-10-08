@@ -13,6 +13,9 @@ metadata_adopted_at: "2026-10-07"
 tags:
   - "systems"
   - "service"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # YD-SVC-EDU-002 — Program Catalog Service

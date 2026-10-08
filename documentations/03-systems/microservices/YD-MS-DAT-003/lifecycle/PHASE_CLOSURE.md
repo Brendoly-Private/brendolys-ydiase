@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-7A7C41A51E974B79"
+title: "PHASE CLOSURE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-DAT-003 — Data Governance — Baseline C1
 
 Statut : `DOCUMENTATION-BASELINE-C1 / PROVENANCE-LINEAGE-SEMANTICS-CLOSED`

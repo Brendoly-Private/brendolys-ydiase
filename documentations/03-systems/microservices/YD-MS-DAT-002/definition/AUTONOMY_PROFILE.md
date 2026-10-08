@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-5AFAEA23147990C0"
+title: "AUTONOMY PROFILE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-DAT-002 — Data Acquisition
 
 Statut : `C2-BASELINE / ACQUISITION-RAW-SEMANTICS-CLOSED`

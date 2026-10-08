@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-3330B8198BC1496B"
+title: "PHASE CLOSURE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-DAT-002 — Data Governance — Baseline C2
 
 Statut : `DOCUMENTATION-BASELINE-C2 / ACQUISITION-RAW-SEMANTICS-CLOSED`

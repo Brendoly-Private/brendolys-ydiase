@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-FB0BCA195737AB06"
+title: "AUTONOMY PROFILE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-ANL-002 — Institution Intelligence
 
 Statut : `autonomy-profile-draft`

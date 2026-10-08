@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-6E3949E12854D70D"
+title: "PHASE CLOSURE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-EDU-001 — Institution Catalog — Fermeture de phase documentaire
 
 Statut : `DOCUMENTATION-BASELINE-CLOSED / IMPLEMENTATION-PENDING`

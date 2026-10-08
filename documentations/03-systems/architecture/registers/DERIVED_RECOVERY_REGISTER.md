@@ -13,6 +13,9 @@ metadata_adopted_at: "2026-10-07"
 tags:
   - "systems"
   - "architecture"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # DERIVED Recovery Register — BRENDOLYS YDIASE

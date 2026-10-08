@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-89FD678169DA62D0"
+title: "AUTONOMY PROFILE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-DAT-004 — Data Quality & Validation
 
 Statut : `C1-BASELINE / QUALITY-VALIDATION-SEMANTICS-CLOSED`

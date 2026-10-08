@@ -12,6 +12,9 @@ development_usage: "mandatory-reference"
 metadata_adopted_at: "2026-10-07"
 tags:
   - "trust"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # REC-001 — Sponsored Non-Influence Test Policy

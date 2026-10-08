@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-58DDE45FD3112DC4"
+title: "AUTONOMY PROFILE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-DAT-005 — Reference & Taxonomy
 
 Statut : `C2-BASELINE / REFERENCE-TAXONOMY-SEMANTICS-CLOSED`

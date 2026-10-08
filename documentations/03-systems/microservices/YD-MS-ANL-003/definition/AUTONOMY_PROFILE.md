@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-AE6C107E9FA5C4A6"
+title: "AUTONOMY PROFILE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-ANL-003 — Employer Intelligence
 
 Statut : `autonomy-profile-draft`

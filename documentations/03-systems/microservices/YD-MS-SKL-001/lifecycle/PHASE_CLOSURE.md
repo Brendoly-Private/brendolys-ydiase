@@ -13,6 +13,9 @@ metadata_adopted_at: "2026-10-07"
 tags:
   - "systems"
   - "microservice"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # YD-MS-SKL-001 — Skills Knowledge — Fermeture de phase documentaire

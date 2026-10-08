@@ -1,3 +1,13 @@
+---
+document_id: "YD-DOC-AUTO-A132F6161676D6D5"
+title: "AUTONOMY PROFILE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+---
+
 # YD-MS-DAT-001 — Data Source Registry
 
 Statut : `C1-BASELINE / SOURCE-RIGHTS-SEMANTICS-CLOSED`
