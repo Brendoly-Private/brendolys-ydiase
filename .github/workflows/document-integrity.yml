@@ -23,8 +23,6 @@ jobs:
       - name: Normalize metadata on correction branch
         if: github.event_name != 'pull_request'
         run: python3 scripts/fix_document_metadata.py
-      - name: Audit all documentation
-        run: python3 scripts/audit_document_integrity.py
       - name: Commit metadata corrections
         if: github.event_name != 'pull_request'
         run: |
@@ -35,3 +33,6 @@ jobs:
             git commit -m "docs: normalize missing document metadata"
             git push
           fi
+
+      - name: Audit all documentation
+        run: python3 scripts/audit_document_integrity.py
