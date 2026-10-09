@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "documentations"
 TODAY = date.today().isoformat()
 REQUIRED = ("document_id", "title", "document_type", "institutional_reference", "created_at", "last_reviewed_at")
+# Semantic governance fields require human review; do not fabricate their values.
 
 def first_commit_date(path):
     result = subprocess.run(["git", "log", "--follow", "--diff-filter=A", "--format=%as", "--", str(path.relative_to(ROOT))],
