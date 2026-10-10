@@ -40,6 +40,8 @@ def audit_file(path):
         seen[meta["document_id"]].append(rel)
     if meta.get("institutional_reference") and meta["institutional_reference"] != "YDIASE-INSTITUTIONAL-IDENTITY":
         errors.append(f"{rel}: institutional_reference invalide")
+    if meta.get("institutional_reference") == "YDIASE-INSTITUTIONAL-IDENTITY" and not (ROOT / "_meta/identity/YDIASE_INSTITUTIONAL_IDENTITY.yaml").is_file():
+        warnings.append(f"{rel}: source institutionnelle canonique introuvable")
     if meta.get("product") and meta["product"] != "BRENDOLYS YDIASE":
         errors.append(f"{rel}: product invalide")
     for field in ("created_at", "last_reviewed_at"):
