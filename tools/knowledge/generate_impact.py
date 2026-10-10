@@ -22,7 +22,17 @@ def main() -> int:
 
     for path in sorted((root / "relations").rglob("*.yaml")):
         with path.open("r", encoding="utf-8") as handle:
-            doc: Any = yaml.safe_load(handle) or {}
+            content = handle.read()
+        # RelationSet files contain a documentary preamble before the YAML payload.
+        marker = "apiVersion: knowledge.ydiase/v1"
+        lines = content.splitlines(keepends=True)
+        offset = 0
+        for line in lines:
+            if line.strip() == marker:
+                content = content[offset:]
+                break
+            offset += len(line)
+        doc: Any = yaml.safe_load(content) or {}
         if doc.get("kind") != "RelationSet":
             continue
         for rel in doc.get("spec", {}).get("relations", []):
