@@ -67,6 +67,11 @@ def main():
     for p, indices in paths.items():
         if len(indices) > 1:
             errors.append(f"Matrice : chemin dupliqué {p} (lignes {','.join(indices)})")
+    for index, row in enumerate(rows, 1):
+        if row[0] != str(index):
+            errors.append(f"Matrice : index incohérent à la ligne {index}: {row[0]}")
+        if not row[2].strip() or not row[3].strip() or not row[4].strip() or not row[5].strip():
+            warnings.append(f"Matrice : gouvernance incomplète à la ligne {index}: {row[1]}")
     if len(rows) != 415:
         errors.append(f"Matrice : {len(rows)} entrées, 415 attendues")
     compliance = Counter(row[5].strip() for row in rows)
