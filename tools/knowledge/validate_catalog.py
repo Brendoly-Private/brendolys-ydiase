@@ -18,10 +18,12 @@ AUTHORITIES={"AUTH","MIXED","DERIVED"}
 def load_yaml(path:Path)->Any:
     with path.open("r",encoding="utf-8") as h:
         source = h.read()
-    # Legacy ontology vocabulary embeds a Markdown governance preamble before
-    # its machine-readable YAML. Parse only the actual catalog payload.
-    if path.name == "RELATION_TYPES.yaml" and "apiVersion: knowledge.ydiase/v1" in source:
-        source = source[source.index("apiVersion: knowledge.ydiase/v1"):]
+    # Some catalog YAML files contain a documentation front matter and a
+    # human-readable role preamble before their machine-readable payload.
+    # Preserve the files and parse the actual catalog beginning at apiVersion.
+    payload = re.search(r"(?m)^apiVersion:\\s*knowledge\\.ydiase/v1\\s*$", source)
+    if payload:
+        source = source[payload.start():]
     return yaml.safe_load(source)
 
 def iter_entities(document:Any):
