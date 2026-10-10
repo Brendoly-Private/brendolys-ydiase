@@ -109,7 +109,7 @@ La décision historique `PRF-002 = REVIEW-SPLIT` est close. Le domaine 02 a conf
 
 ## Lecture du nombre de microservices
 
-Cette revue reste une revue des services logiques. Le comptage physique canonique appartient à `MICROSERVICE_BOUNDARY_REVIEW.md`. Après la décision PRF, la cible physique compte 48 microservices métier et 4 composants de plateforme autonomes, soit 52 frontières autonomes, hors BRENDOLYS Identity.
+Cette revue reste une revue des services logiques. Le comptage physique canonique appartient à `MICROSERVICE_BOUNDARY_REVIEW.md`. À l'étape post-PRF, la baseline historique comptait 48 microservices métier et 4 composants plateforme, soit 52 frontières autonomes. Après l'extension Entrepreneurship, la cible courante est de 54 microservices métier et 4 composants plateforme, soit 58 frontières candidates, hors BRENDOLYS Identity.
 
 ## Règles de la prochaine passe
 
@@ -134,4 +134,4 @@ Deux points restent volontairement non tranchés ici :
 
 La revue dédiée `ENTREPRENEURSHIP_DDD_REVIEW.md` ajoute six frontières logiques à la cible : ENT-001 à ENT-006. Verdict : KEEP-SEPARATE pour les six frontières, avec ownership et dépendances réconciliés.
 
-Le comptage historique de 52 frontières autonomes décrit la baseline antérieure à l'extension Entrepreneurship. Il ne doit plus être interprété comme le nombre final de la Target Architecture. Le nouveau comptage physique canonique devra être recalculé après intégration des six frontières dans `MICROSERVICE_BOUNDARY_REVIEW.md` et validation des ADR nécessaires.
+Le comptage historique de 52 frontières autonomes décrit la baseline antérieure à l'extension Entrepreneurship. Il ne doit plus être interprété comme le nombre final de la Target Architecture. Le comptage physique a été réconcilié dans `MICROSERVICE_BOUNDARY_REVIEW.md` : 54 YD-MS + 4 YD-PLT = 58 frontières candidates. Les profils ENT restent `DRAFT` et leurs gates de conception ne sont pas clos.
