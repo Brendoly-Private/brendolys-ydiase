@@ -4,11 +4,13 @@ title: "YD-MS-ENT-003 — Revue de consolidation documentaire"
 document_type: "microservice-phase-review"
 document_role: "Trace les acquis et les décisions ouvertes sans déclarer de clôture K3/K4."
 product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
 status: "DRAFT"
 authority_level: "evidence"
 canonical: false
 development_usage: "supporting-reference"
 created_at: "2026-10-10"
+last_reviewed_at: "2026-10-10"
 ---
 
 # YD-MS-ENT-003 — Entrepreneurship Support Ecosystem
