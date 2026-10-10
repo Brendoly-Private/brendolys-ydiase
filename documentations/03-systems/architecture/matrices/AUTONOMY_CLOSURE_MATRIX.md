@@ -114,7 +114,7 @@ Les services DERIVED restent soumis au standard de reconstruction, replay, water
 - Frontières : `STABLE-CANDIDATE` après réconciliation PRF.
 - Profils d'autonomie : 58 attendus ; les six profils ENT sont créés.
 - Blocage pour poursuivre l'audit des domaines métier : `0`.
-- Contract Registry : reste différé jusqu'à la reprise explicite de cette étape.
+- Contract Registry : désormais matérialisé et `ACTIVE` dans `04-contracts/indexes/CONTRACT_REGISTRY.md` ; contrats physiques et preuves de validation encore en attente.
 
 La prochaine revue métier peut donc commencer sur `03-education-institutions` sans conserver l'ancienne hypothèse de fusion PRF.
 
