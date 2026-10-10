@@ -21,18 +21,16 @@ def load_yaml(path:Path)->Any:
     # Some catalog YAML files contain a documentation front matter and a
     # human-readable role preamble before their machine-readable payload.
     # Preserve the files and parse the actual catalog beginning at apiVersion.
-    # YAML schema files embed JSON Schema payloads after governance front matter.
-    # Only strip a preamble when an explicit second payload is present.
-    marker = re.search(r"(?m)^apiVersion: knowledge[.]ydiase/v1[ \\t]*$", source)
-    if marker:
-        source = source[marker.start():]
-    elif source.startswith("---\\n"):
-        closing = source.find("\\n---\\n", 4)
-        if closing >= 0:
-            remainder = source[closing + len("\\n---\\n"):]
-            payload = re.search(r"(?m)^(?:\\$schema:|type: object|title:|properties:|\\$id:|apiVersion:|kind:)", remainder)
-            if payload:
-                source = remainder[payload.start():]
+    # Embedded catalog and JSON Schema documents follow a governance preamble.
+    # Anchor at their actual top-level payload key, not the front matter.
+    lines = source.splitlines(keepends=True)
+    payload_keys = ("apiVersion: knowledge.ydiase/v1", "$schema:", "$id:")
+    offset = 0
+    for line in lines:
+        if any(line.startswith(key) for key in payload_keys):
+            source = source[offset:]
+            break
+        offset += len(line)
     return yaml.safe_load(source)
 
 def iter_entities(document:Any):
