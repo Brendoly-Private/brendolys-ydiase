@@ -40,7 +40,7 @@ Ce dossier sépare explicitement architecture logique, frontières physiques, co
 10. `MICROSERVICE_AUTONOMY_STANDARD.md`
 11. `AUTONOMY_PROFILE_REGISTER.md`
 12. `AUTONOMY_CLOSURE_MATRIX.md`
-13. futur `CONTRACT_REGISTRY.md`
+13. `../../04-contracts/indexes/CONTRACT_REGISTRY.md` — registre contractuel canonique actif
 
 ## Couches documentaires
 
@@ -49,7 +49,7 @@ Ce dossier sépare explicitement architecture logique, frontières physiques, co
 - `platform-components/` : profils des 4 composants autonomes `YD-PLT-*`.
 - BRENDOLYS Identity : dépendance IAM externe, non possédée par YDIASE.
 
-Cible autonome actuelle : **52 frontières = 48 microservices métier + 4 composants plateforme**.
+Cible autonome actuelle : **58 frontières candidates = 54 microservices métier + 4 composants plateforme**, dont six frontières Entrepreneurship documentées en `DRAFT`. La baseline antérieure comptait 52 frontières.
 
 ## Règle
 
