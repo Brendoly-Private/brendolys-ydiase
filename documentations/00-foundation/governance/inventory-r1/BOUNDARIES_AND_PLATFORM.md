@@ -29,6 +29,8 @@ Statut : `ACTIVE-R1 / REGISTER-BASED-POPULATION`
 ## 1. Source
 Population tirée de `13-architecture/AUTONOMY_PROFILE_REGISTER.md` et réconciliée avec `MICROSERVICE_BOUNDARY_REVIEW.md`.
 
+La présente photographie R1 est historique et n'est pas le comptage cible courant. La cible actualisée après Entrepreneurship est de **54 YD-MS + 4 YD-PLT = 58 frontières candidates** ; voir `MICROSERVICE_BOUNDARY_REVIEW.md` et `AUTONOMY_PROFILE_REGISTER.md`.
+
 ## 2. Baseline
 - 48 microservices métier YD-MS ;
 - 4 composants plateforme YD-PLT ;
