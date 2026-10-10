@@ -1,5 +1,5 @@
 ---
-document_id: "YD-DOC-OPS-README"
+document_id: "YD-DOC-OPS-INDEX"
 title: "Operations"
 document_type: "operations-index"
 document_role: "Présente l’organisation documentaire des opérations YDIASE."
@@ -10,6 +10,8 @@ authority_level: "reference"
 canonical: false
 development_usage: "informational"
 metadata_adopted_at: "2026-10-07"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
 tags:
   - "operations"
 ---

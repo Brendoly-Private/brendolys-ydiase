@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-DOM-SKILLS-KNOWLEDGE-FRONTIERES-ET-DEPENDANCES"
+title: "Frontières et dépendances — Compétences et connaissances"
+document_type: "domain-knowledge"
+document_role: "Documente la connaissance métier et les frontières applicables au domaine concerné."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Frontières et dépendances — Compétences et connaissances
 
 Statut : `DOMAIN-REVIEW-CANDIDATE`

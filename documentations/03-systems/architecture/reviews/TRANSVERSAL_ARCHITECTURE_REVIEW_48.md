@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-SYS-TRANSVERSAL-ARCHITECTURE-REVIEW-48"
+title: "Revue transversale d'architecture — 48 microservices BRENDOLYS YDIASE"
+document_type: "architecture-review"
+document_role: "Documente une revue d’architecture servant de référence de conception."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "systems"
+---
+
 # Revue transversale d'architecture — 48 microservices BRENDOLYS YDIASE
 
 Statut : `TRANSVERSAL-REVIEW-COMPLETE / REMEDIATION-TRACKED`

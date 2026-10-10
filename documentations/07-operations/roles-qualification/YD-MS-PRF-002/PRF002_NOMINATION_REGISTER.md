@@ -12,6 +12,9 @@ development_usage: "supporting-reference"
 metadata_adopted_at: "2026-10-07"
 tags:
   - "operations"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # PRF002_NOMINATION_REGISTER — Tableau de nomination

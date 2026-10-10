@@ -1,3 +1,21 @@
+---
+document_id: "YD-DOC-FND-POL-002"
+title: "Politique de gestion des contradictions"
+document_type: "documentation-policy"
+document_role: "Gouverne la détection, l’arbitrage et la conservation des contradictions documentaires et de données."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Politique de gestion des contradictions
 
 Statut : `ACTIVE`

@@ -1,3 +1,19 @@
+---
+document_id: "YD-DOC-AUTO-CFFEB1A05C37661A"
+title: "PHASE CLOSURE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+product: "BRENDOLYS YDIASE"
+document_role: "Référence de son périmètre."
+authority_level: "reference"
+development_usage: "supporting-reference"
+canonical: false
+status: "IN_REVIEW"
+---
+
 # YD-MS-APP-001 — Recruitment — Baseline C1
 
 Statut : `DOCUMENTATION-BASELINE-C1 / APPLICATION-LIFECYCLE-SEMANTICS-CLOSED`

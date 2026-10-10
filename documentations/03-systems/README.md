@@ -10,6 +10,8 @@ authority_level: "view"
 canonical: false
 development_usage: "informational"
 metadata_adopted_at: "2026-10-07"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
 tags:
   - "systems"
   - "architecture"

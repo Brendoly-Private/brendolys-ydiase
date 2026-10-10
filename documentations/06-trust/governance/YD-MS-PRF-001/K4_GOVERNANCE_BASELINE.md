@@ -12,6 +12,9 @@ development_usage: "mandatory-reference"
 metadata_adopted_at: "2026-10-07"
 tags:
   - "trust"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # YD-MS-PRF-001 — K4 Governance Baseline

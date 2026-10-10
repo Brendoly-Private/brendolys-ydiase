@@ -1,3 +1,21 @@
+---
+document_id: "YD-DOC-FND-POL-003"
+title: "Politique de revue et d'approbation"
+document_type: "documentation-policy"
+document_role: "Gouverne les revues, approbations et réouvertures des références normatives YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Politique de revue et d'approbation
 
 Statut : `ACTIVE`

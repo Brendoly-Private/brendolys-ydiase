@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-SYS-MICROSERVICE-BOUNDARY-REVIEW"
+title: "Microservice Boundary Review — BRENDOLYS YDIASE"
+document_type: "architecture-review"
+document_role: "Documente une revue d’architecture servant de référence de conception."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "reference"
+canonical: false
+development_usage: "supporting-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "systems"
+---
+
 # Microservice Boundary Review — BRENDOLYS YDIASE
 
 Statut : `D3-boundary-target`

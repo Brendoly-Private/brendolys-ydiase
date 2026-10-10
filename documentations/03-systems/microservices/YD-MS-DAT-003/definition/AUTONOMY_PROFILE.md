@@ -1,3 +1,19 @@
+---
+document_id: "YD-DOC-AUTO-4B3F46E3D4FB6BCF"
+title: "AUTONOMY PROFILE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-04"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+product: "BRENDOLYS YDIASE"
+document_role: "Autonomie et ownership."
+authority_level: "canonical-source"
+development_usage: "mandatory-reference"
+canonical: true
+status: "IN_REVIEW"
+---
+
 # YD-MS-DAT-003 — Data Provenance
 
 Statut : `C1-BASELINE / PROVENANCE-LINEAGE-SEMANTICS-CLOSED`

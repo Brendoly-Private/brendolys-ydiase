@@ -1,3 +1,19 @@
+---
+document_id: "YD-DOC-AUTO-88FB4E6C8AF6C53E"
+title: "OFFICIAL DOCUMENT METADATA STANDARD"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+product: "BRENDOLYS YDIASE"
+document_role: "Règles normatives."
+authority_level: "normative"
+development_usage: "mandatory-reference"
+canonical: true
+status: "APPROVED"
+---
+
 # Standard officiel des métadonnées documentaires — BRENDOLYS YDIASE
 
 **ID :** YD-STD-DOC-META-001  

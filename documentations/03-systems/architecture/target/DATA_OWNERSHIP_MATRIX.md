@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-SYS-DATA-OWNERSHIP-MATRIX"
+title: "Matrice D2 — Agrégats, sources autoritatives et données consommées"
+document_type: "target-architecture"
+document_role: "Définit une référence canonique de l’architecture cible YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "systems"
+---
+
 # Matrice D2 — Agrégats, sources autoritatives et données consommées
 
 Cette matrice définit la propriété logique des données pour les 61 services candidats de BRENDOLYS YDIASE. `Autoritatif` signifie que le service est l’unique référence interne pour l’agrégat indiqué. Une projection, un index de recherche, un cache, un feature store ou un data mart ne devient jamais autoritatif par copie.

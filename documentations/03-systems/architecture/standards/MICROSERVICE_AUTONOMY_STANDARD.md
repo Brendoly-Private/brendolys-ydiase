@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-SYS-MICROSERVICE-AUTONOMY-STANDARD"
+title: "Microservice Autonomy Standard — BRENDOLYS YDIASE"
+document_type: "architecture-standard"
+document_role: "Définit une règle normative d’autonomie des microservices YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: false
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "systems"
+---
+
 # Microservice Autonomy Standard — BRENDOLYS YDIASE
 
 Statut : `D3-normative-candidate`

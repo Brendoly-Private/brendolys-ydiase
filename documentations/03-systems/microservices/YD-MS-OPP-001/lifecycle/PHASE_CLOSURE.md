@@ -13,6 +13,9 @@ metadata_adopted_at: "2026-10-07"
 tags:
   - "systems"
   - "microservice"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # YD-MS-OPP-001 — Opportunity — Baseline C1

@@ -16,7 +16,22 @@ REFERENCE_KEYS = {"domain","system","producer","publisher","provider","owner","a
 AUTHORITIES={"AUTH","MIXED","DERIVED"}
 
 def load_yaml(path:Path)->Any:
-    with path.open("r",encoding="utf-8") as h:return yaml.safe_load(h)
+    with path.open("r",encoding="utf-8") as h:
+        source = h.read()
+    # Some catalog YAML files contain a documentation front matter and a
+    # human-readable role preamble before their machine-readable payload.
+    # Preserve the files and parse the actual catalog beginning at apiVersion.
+    # Embedded catalog and JSON Schema documents follow a governance preamble.
+    # Anchor at their actual top-level payload key, not the front matter.
+    lines = source.splitlines(keepends=True)
+    payload_keys = ("apiVersion: knowledge.ydiase/v1", "$schema:", "$id:", "schema_id:")
+    offset = 0
+    for line in lines:
+        if any(line.startswith(key) for key in payload_keys):
+            source = source[offset:]
+            break
+        offset += len(line)
+    return yaml.safe_load(source)
 
 def iter_entities(document:Any):
     if not isinstance(document,dict):return

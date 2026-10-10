@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-DOM-ENTREPRENEURSHIP-FRONTIERES-ET-DEPENDANCES"
+title: "Frontières et dépendances — Entrepreneurship"
+document_type: "domain-knowledge"
+document_role: "Documente la connaissance métier et les frontières applicables au domaine concerné."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "domain"
+---
+
 # Frontières et dépendances — Entrepreneurship
 
 Statut : DOMAIN-BASELINE / TARGET-BOUNDARIES-CANDIDATE

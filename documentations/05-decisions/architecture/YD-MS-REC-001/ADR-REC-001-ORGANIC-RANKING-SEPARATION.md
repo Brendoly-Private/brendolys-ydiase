@@ -12,6 +12,9 @@ development_usage: "mandatory-reference"
 metadata_adopted_at: "2026-10-07"
 tags:
   - "decisions"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
 ---
 
 # ADR-REC-001 — Séparation du ranking organique et des influences externes

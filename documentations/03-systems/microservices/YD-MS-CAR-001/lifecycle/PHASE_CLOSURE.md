@@ -1,3 +1,19 @@
+---
+document_id: "YD-DOC-AUTO-AA38379A8FE2225D"
+title: "PHASE CLOSURE"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-05"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+product: "BRENDOLYS YDIASE"
+document_role: "Référence de son périmètre."
+authority_level: "reference"
+development_usage: "supporting-reference"
+canonical: false
+status: "IN_REVIEW"
+---
+
 # YD-MS-CAR-001 — Occupation & Career Graph — Fermeture de phase documentaire
 
 Statut : `DOCUMENTATION-BASELINE-CLOSED / IMPLEMENTATION-PENDING`

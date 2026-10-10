@@ -1,3 +1,20 @@
+---
+document_id: "YD-DOC-SYS-ARCHITECTURE-CIBLE"
+title: "Architecture cible documentaire"
+document_type: "target-architecture"
+document_role: "Définit une référence canonique de l’architecture cible YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "systems"
+---
+
 # Architecture cible documentaire
 
 ## Principe

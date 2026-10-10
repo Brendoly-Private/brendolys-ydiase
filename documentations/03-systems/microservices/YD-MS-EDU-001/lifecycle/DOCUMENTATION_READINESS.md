@@ -1,3 +1,19 @@
+---
+document_id: "YD-DOC-AUTO-A66410BBBEF755FE"
+title: "DOCUMENTATION READINESS"
+document_type: "documentation-reference"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-08"
+review_scope: "metadata-only"
+product: "BRENDOLYS YDIASE"
+document_role: "Référence de son périmètre."
+authority_level: "reference"
+development_usage: "supporting-reference"
+canonical: false
+status: "IN_REVIEW"
+---
+
 # YD-MS-EDU-001 — Documentation Readiness
 
 Statut : DOCUMENTATION-READY / K5-EXECUTION-BLOCKED-BY-IMPLEMENTATION

@@ -1,5 +1,5 @@
 ---
-document_id: YD-DOC-CHANGE-ME
+document_id: YD-DOC-META-DOCUMENT-TEMPLATE
 title: "BRENDOLYS YDIASE — Titre"
 document_type: "change-me"
 document_role: "Expliquer en une phrase à quoi sert ce fichier."
@@ -21,8 +21,8 @@ deployment_status: "not-applicable"
 activation_status: "not-applicable"
 evidence_required: false
 depends_on: []
-created_at: "YYYY-MM-DD"
-last_reviewed_at: "YYYY-MM-DD"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
 tags: []
 ---
 

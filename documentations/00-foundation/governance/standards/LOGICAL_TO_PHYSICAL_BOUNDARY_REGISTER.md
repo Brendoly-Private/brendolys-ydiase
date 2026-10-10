@@ -1,3 +1,21 @@
+---
+document_id: "YD-DOC-FND-STD-BND-001"
+title: "Logical-to-Physical Boundary Register — BRENDOLYS YDIASE"
+document_type: "boundary-register"
+document_role: "Référence la relation entre responsabilités logiques et frontières physiques YDIASE."
+product: "BRENDOLYS YDIASE"
+institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
+status: "ACTIVE"
+authority_level: "normative"
+canonical: true
+development_usage: "mandatory-reference"
+created_at: "2026-10-07"
+last_reviewed_at: "2026-10-07"
+tags:
+  - "foundation"
+  - "documentation-governance"
+---
+
 # Logical-to-Physical Boundary Register — BRENDOLYS YDIASE
 
 Statut : `R1-CANONICAL-NAVIGATION-BASELINE`
