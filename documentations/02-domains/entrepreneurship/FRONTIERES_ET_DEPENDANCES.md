@@ -54,3 +54,38 @@ Aucun ENT n'écrit PRF/SKL/LAB. REC ne crée pas de Venture. IA ne crée pas sil
 
 ## Scale
 Chaque ENT reçoit son Capacity Profile. ENT-002/005 peuvent utiliser calcul distribué asynchrone ; ENT-001/006 privilégient cohérence des agrégats ; ENT-003/004 sont fortement cacheables selon fraîcheur.
+
+
+## Consolidation K2 — ownership, interfaces et décisions ouvertes (2026-10-10)
+
+Cette section complète la baseline de domaine sans déclarer K3, K4 ou K5 acquis. Les six frontières sont des **candidats autonomes** : leurs profils individuels restent `DRAFT`. Les règles d'ownership ci-dessus priment sur les raccourcis de description des consommateurs.
+
+### Invariants transversaux
+
+1. Toute référence externe porte l'identifiant stable de son owner, et, pour les données évolutives, sa version ou son horodatage de validité ; une copie ENT n'acquiert jamais l'autorité source.
+2. Une hypothèse entrepreneuriale, une estimation d'éligibilité et une suggestion de cofondateur sont des **résultats explicables et révocables**, jamais une promesse de marché, de financement ou d'association.
+3. Les finalités, consentements, permissions de visibilité, droits de source et restrictions territoriales sont vérifiés à chaque diffusion pertinente ; un cache ou une projection ne contourne pas une révocation.
+4. Aucun appel synchrone en chaîne n'est nécessaire au fonctionnement de base de ENT-001. Les calculs ENT-002 et ENT-005 peuvent être asynchrones ; l'indisponibilité d'un dérivé ne corrompt pas les owners.
+5. Les transitions interservices reposent sur des commandes/événements/projections contractés ; aucune écriture directe dans les datastores PRF, SKL, PRT, LAB, ORI, REC, EMP ou OPP.
+
+### Interfaces logiques candidates — non assimilées à des contrats physiques
+
+| Frontière | Entrées minimales | Sorties candidates | Condition critique |
+|---|---|---|---|
+| ENT-001 | contexte PRF autorisé, CFG, CNS | VentureRef, état/version du Venture, événements de cycle de vie | contrôle d'accès par venture ; ownership indépendant du profil |
+| ENT-002 | snapshots LAB/DAT/KNW sourcés, CFG | OpportunityHypothesis et EvidenceSet versionnés | fraîcheur, provenance, incertitude, retrait source |
+| ENT-003 | références PRT, CFG et sources publiables | catalogue programmes/ressources versionné | distinguer organisation projetée et partenariat autoritatif |
+| ENT-004 | programmes externes sourcés, règles territoriales | FundingOpportunity et EligibilitySnapshot expirables | aucune garantie d'éligibilité ni décision du financeur |
+| ENT-005 | TeamNeed, VentureRef, PRF/SKL minimisés, CNS | MatchRun, explication et consentement traçable | refus, révocation, anti-exposition et minimisation |
+| ENT-006 | VentureRef, apprentissage/compétences autorisés | plan, jalons, expériences, résultats versionnés | pas de modification de l'identité du Venture |
+
+### Décisions à fermer avant contractualisation K3
+
+- **ENT-002 :** classifier précisément les agrégats `DERIVED` versus l'état `MIXED` conservé ; définir les sources reconstructibles et l'état non reconstructible, s'il existe.
+- **ENT-003 :** arbitrer l'ownership du `SupportOrganization` fonctionnel face à `SupportOrganizationProjection` : la projection ne doit pas être décrite comme une autorité primaire sur la relation PRT.
+- **ENT-004 :** distinguer l'autorité sur les entrées de catalogue et règles locales de la projection d'une décision externe ; fixer le traitement des règles `AUTH/MIXED`.
+- **ENT-005 :** séparer les `TeamNeed` persistants des résultats de matching dérivés et définir les obligations de retrait/révocation et reconstruction.
+- **ENT-001/006 :** définir les commandes et événements de création, changement d'état, suppression/retrait et progression, avec concurrence/idempotence, sans fusionner leurs datastores.
+- **Transversal :** arrêter classifications Privacy, contrats logiques, politiques de rétention, gouvernance pays, droits de source et dépendances de reconstruction ; les formats physiques et métriques de charge restent des gates ultérieurs.
+
+**Verdict documentaire :** frontières et dépendances consolidées au niveau cible K2 ; `K3-NOT-ASSESSED`, `K4-NOT-ASSESSED`, `K5-NOT-EXECUTED`. Ce verdict ne modifie pas les statuts des profils individuels.
