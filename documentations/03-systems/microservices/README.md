@@ -35,6 +35,6 @@ Une fiche physique ne remplace jamais une fiche de service logique. Une fusion d
 
 ## Cible actuelle
 
-48 microservices métier confirmés. Les 48 frontières possèdent un `AUTONOMY_PROFILE.md` individuel, dont `YD-MS-PRF-002` créé après l'ADR de séparation Profile/History. Les 4 composants de plateforme possèdent également leur profil individuel. La cible autonome actuelle compte donc 52 frontières. `AUTONOMY_PROFILE_REGISTER.md` reste la vue consolidée et le contrôle de cohérence.
+La cible actuelle comporte **54 microservices métier candidats**, dont six frontières Entrepreneurship (`YD-MS-ENT-001` à `YD-MS-ENT-006`) dont les profils sont encore `DRAFT`. La baseline antérieure comptait 48 microservices métier, incluant `YD-MS-PRF-002` après l'ADR Profile/History. Les quatre composants plateforme portent le total à **58 frontières autonomes candidates**. `AUTONOMY_PROFILE_REGISTER.md` reste la vue consolidée et le contrôle de cohérence.
 
 Les valeurs chiffrées RPO/RTO/SLO, moteurs de stockage, protocoles, DNS finaux et quotas restent à fermer par analyse de criticité et ADR avant production. Les profils ne doivent pas inventer ces valeurs.
