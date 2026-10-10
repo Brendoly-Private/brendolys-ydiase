@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Audit documentaire non destructif : chemins, identifiants et métadonnées."""
-from collections import defaultdict
+from collections import defaultdict, Counter
 from pathlib import Path
 import csv
 import re
@@ -67,6 +67,11 @@ def main():
             errors.append(f"Matrice : chemin dupliqué {p} (lignes {','.join(indices)})")
     if len(rows) != 415:
         errors.append(f"Matrice : {len(rows)} entrées, 415 attendues")
+    compliance = Counter(row[5].strip() for row in rows)
+    for status, count in sorted(compliance.items()):
+        print(f"Matrice statut {status}: {count}")
+    if compliance.get("MIGRATED-CONFORMING", 0):
+        warnings.append("Matrice : MIGRATED-CONFORMING est déclaré avant validation des champs sémantiques ; conformité complète non démontrée")
     for path in sorted(DOCS.rglob("*.md")):
         audit_file(path)
     for ident, files in seen.items():
@@ -77,6 +82,7 @@ def main():
         print("ERROR:", item)
     for item in warnings:
         print("WARN:", item)
+    print(f"REVIEW_PENDING: {len(warnings)} avertissement(s) de gouvernance à qualifier")
     print(f"Résultat : {len(errors)} erreur(s), {len(warnings)} avertissement(s)")
     return 1 if errors else 0
 
