@@ -24,7 +24,7 @@ def load_yaml(path:Path)->Any:
     # Embedded catalog and JSON Schema documents follow a governance preamble.
     # Anchor at their actual top-level payload key, not the front matter.
     lines = source.splitlines(keepends=True)
-    payload_keys = ("apiVersion: knowledge.ydiase/v1", "$schema:", "$id:")
+    payload_keys = ("apiVersion: knowledge.ydiase/v1", "$schema:", "$id:", "schema_id:")
     offset = 0
     for line in lines:
         if any(line.startswith(key) for key in payload_keys):
