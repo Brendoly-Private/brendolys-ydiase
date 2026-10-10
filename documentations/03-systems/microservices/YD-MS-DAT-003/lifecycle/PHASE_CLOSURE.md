@@ -6,6 +6,7 @@ institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
 created_at: "2026-10-05"
 last_reviewed_at: "2026-10-08"
 review_scope: "metadata-only"
+product: "BRENDOLYS YDIASE"
 ---
 
 # YD-MS-DAT-003 — Data Governance — Baseline C1

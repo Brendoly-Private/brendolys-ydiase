@@ -6,6 +6,7 @@ institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
 created_at: "2026-10-05"
 last_reviewed_at: "2026-10-08"
 review_scope: "metadata-only"
+product: "BRENDOLYS YDIASE"
 ---
 
 # YD-MS-EDU-001 — Institution Catalog — Fermeture de phase documentaire
