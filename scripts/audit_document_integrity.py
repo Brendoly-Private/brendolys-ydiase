@@ -83,8 +83,7 @@ def main():
     compliance = Counter(row[5].strip() for row in rows)
     for status, count in sorted(compliance.items()):
         print(f"Matrice statut {status}: {count}")
-    if compliance.get("MIGRATED-CONFORMING", 0):
-        warnings.append("Matrice : MIGRATED-CONFORMING est déclaré avant validation des champs sémantiques ; conformité complète non démontrée")
+    # Compare les métadonnées de chaque document à la matrice.
     for row in rows:
         relpath = row[1]
         if not relpath.endswith(".md"):
@@ -93,14 +92,25 @@ def main():
         if not p.is_file():
             continue
         raw = p.read_text(encoding="utf-8-sig")
-        fm = re.match(r"\\A---\\n(.*?)\\n---(?:\\n|\\Z)", raw, re.S)
+        fm = re.match(r"\A---\n(.*?)\n---(?:\n|\Z)", raw, re.S)
         if not fm:
             continue
-        meta = dict((m.group(1), m.group(2).strip().strip('"\\\'')) for line in fm.group(1).splitlines() if (m := re.match(r"^([A-Za-z_][\\w-]*):\\s*(.*)$", line)))
+        meta = {}
+        for line in fm.group(1).splitlines():
+            match = re.match(r"^([A-Za-z_][\w-]*):\s*(.*)$", line)
+            if match:
+                meta[match.group(1)] = match.group(2).strip().strip(chr(34) + chr(39))
         for field, expected in (("authority_level", row[3].strip()), ("development_usage", row[4].strip())):
-            actual = meta.get(field)
-            if actual and actual != expected:
-                warnings.append(f"{relpath}: matrice {field}={expected}, document={actual}")
+            if meta.get(field) != expected:
+                warnings.append(f"{relpath}: matrice {field}={expected}, document={meta.get(field, 'ABSENT')}")
+        if row[5].strip() == "MIGRATED-CONFORMING":
+            for field in SEMANTIC_FIELDS:
+                if not meta.get(field):
+                    warnings.append(f"{relpath}: MIGRATED-CONFORMING sans {field}")
+            if meta.get("canonical", "").lower() not in ("true", "false"):
+                warnings.append(f"{relpath}: canonical non booléen")
+            if meta.get("status", "").upper() not in ("DRAFT", "IN_REVIEW", "APPROVED", "ACTIVE", "DEPRECATED", "ARCHIVED"):
+                warnings.append(f"{relpath}: status non reconnu")
     for path in sorted(DOCS.rglob("*.md")):
         audit_file(path)
     for ident, files in seen.items():
