@@ -7,6 +7,9 @@ created_at: "2026-10-07"
 last_reviewed_at: "2026-10-08"
 review_scope: "metadata-only"
 product: "BRENDOLYS YDIASE"
+document_role: "Référence de son périmètre."
+authority_level: "reference"
+development_usage: "supporting-reference"
 ---
 
 # YD-MS-EDU-001 — Analyse documentaire individualisée

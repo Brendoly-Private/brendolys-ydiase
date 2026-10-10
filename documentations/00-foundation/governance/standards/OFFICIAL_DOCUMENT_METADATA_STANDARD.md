@@ -7,6 +7,9 @@ created_at: "2026-10-07"
 last_reviewed_at: "2026-10-08"
 review_scope: "metadata-only"
 product: "BRENDOLYS YDIASE"
+document_role: "Règles normatives."
+authority_level: "normative"
+development_usage: "mandatory-reference"
 ---
 
 # Standard officiel des métadonnées documentaires — BRENDOLYS YDIASE
