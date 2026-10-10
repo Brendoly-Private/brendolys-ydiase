@@ -5,27 +5,27 @@ STANDARD: YD-STD-DOC-META-001
 TOTAL: 415
 
 #	FILE	ROLE	AUTHORITY	DEVELOPMENT_USAGE	COMPLIANCE
-1	documentations/00-foundation/governance/CHARTE_DOCUMENTAIRE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-2	documentations/00-foundation/governance/CONVENTION_IDENTIFIANTS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-3	documentations/00-foundation/governance/CYCLE_VIE_DOCUMENTAIRE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+1	documentations/00-foundation/governance/CHARTE_DOCUMENTAIRE.md	Référence de son périmètre.	normative	mandatory-reference	MIGRATED-CONFORMING
+2	documentations/00-foundation/governance/CONVENTION_IDENTIFIANTS.md	Référence de son périmètre.	normative	mandatory-reference	MIGRATED-CONFORMING
+3	documentations/00-foundation/governance/CYCLE_VIE_DOCUMENTAIRE.md	Référence de son périmètre.	normative	mandatory-reference	MIGRATED-CONFORMING
 4	documentations/00-foundation/governance/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
-5	documentations/00-foundation/governance/inventory-r1/ARCHITECTURE_CONTRACTS_DECISIONS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-6	documentations/00-foundation/governance/inventory-r1/BOUNDARIES_AND_PLATFORM.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-7	documentations/00-foundation/governance/inventory-r1/CROSS_CUTTING_DELIVERY_EXPERIENCES.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+5	documentations/00-foundation/governance/inventory-r1/ARCHITECTURE_CONTRACTS_DECISIONS.md	Référence de son périmètre.	view	informational	MIGRATED-CONFORMING
+6	documentations/00-foundation/governance/inventory-r1/BOUNDARIES_AND_PLATFORM.md	Référence de son périmètre.	view	informational	MIGRATED-CONFORMING
+7	documentations/00-foundation/governance/inventory-r1/CROSS_CUTTING_DELIVERY_EXPERIENCES.md	Référence de son périmètre.	view	informational	MIGRATED-CONFORMING
 8	documentations/00-foundation/governance/inventory-r1/DOCUMENTATION_INVENTORY_R1.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
 9	documentations/00-foundation/governance/inventory-r1/FILE_CLASSIFICATION_REGISTER_R1.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-10	documentations/00-foundation/governance/inventory-r1/GOVERNANCE_PRODUCT_DOMAINS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+10	documentations/00-foundation/governance/inventory-r1/GOVERNANCE_PRODUCT_DOMAINS.md	Référence de son périmètre.	view	informational	MIGRATED-CONFORMING
 11	documentations/00-foundation/governance/policies/POLITIQUE_CHANGEMENT_IMPACT.md	Règles normatives.	normative	mandatory-reference	MIGRATED-CONFORMING
 12	documentations/00-foundation/governance/policies/POLITIQUE_CONTRADICTIONS.md	Règles normatives.	normative	mandatory-reference	MIGRATED-CONFORMING
 13	documentations/00-foundation/governance/policies/POLITIQUE_REVUE_APPROBATION.md	Règles normatives.	normative	mandatory-reference	MIGRATED-CONFORMING
-14	documentations/00-foundation/governance/registers/AUTORITATIVE_SOURCE_REGISTRY.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-15	documentations/00-foundation/governance/registers/MATRICE_TRACABILITE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-16	documentations/00-foundation/governance/registers/REFERENTIEL_EXIGENCES.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-17	documentations/00-foundation/governance/registers/REGISTRES.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-18	documentations/00-foundation/governance/registers/REGISTRE_DECISIONS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-19	documentations/00-foundation/governance/registers/REGISTRE_HYPOTHESES.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-20	documentations/00-foundation/governance/registers/REGISTRE_RISQUES.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-21	documentations/00-foundation/governance/registers/REGISTRE_SOURCES.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+14	documentations/00-foundation/governance/registers/AUTORITATIVE_SOURCE_REGISTRY.md	Référence de son périmètre.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+15	documentations/00-foundation/governance/registers/MATRICE_TRACABILITE.md	Référence de son périmètre.	view	supporting-reference	MIGRATED-CONFORMING
+16	documentations/00-foundation/governance/registers/REFERENTIEL_EXIGENCES.md	Référence de son périmètre.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+17	documentations/00-foundation/governance/registers/REGISTRES.md	Référence de son périmètre.	normative	mandatory-reference	MIGRATED-CONFORMING
+18	documentations/00-foundation/governance/registers/REGISTRE_DECISIONS.md	Référence de son périmètre.	view	supporting-reference	MIGRATED-CONFORMING
+19	documentations/00-foundation/governance/registers/REGISTRE_HYPOTHESES.md	Référence de son périmètre.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+20	documentations/00-foundation/governance/registers/REGISTRE_RISQUES.md	Référence de son périmètre.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+21	documentations/00-foundation/governance/registers/REGISTRE_SOURCES.md	Référence de son périmètre.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 22	documentations/00-foundation/governance/reviews/DOCUMENTATION_INFORMATION_ARCHITECTURE_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
 23	documentations/00-foundation/governance/standards/ARCHITECTURE_DOCUMENTAIRE_V2.md	Règles normatives.	normative	mandatory-reference	MIGRATED-CONFORMING
 24	documentations/00-foundation/governance/standards/DOCUMENT_TYPE_AUTHORITY_MODEL.md	Règles normatives.	normative	mandatory-reference	MIGRATED-CONFORMING
@@ -42,47 +42,47 @@ TOTAL: 415
 35	documentations/00-foundation/governance/templates/TEMPLATE_REGISTRE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
 36	documentations/00-foundation/governance/templates/TEMPLATE_RISQUE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
 37	documentations/00-foundation/governance/templates/TEMPLATE_SOURCE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-38	documentations/00-foundation/principles/TARGET_COMPLETE_PROGRESSIVE_ACTIVATION.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-39	documentations/00-foundation/vocabulary/GLOSSAIRE_METIER.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-40	documentations/01-product/economics/MODELE_ECONOMIQUE.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-41	documentations/01-product/economics/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
+38	documentations/00-foundation/principles/TARGET_COMPLETE_PROGRESSIVE_ACTIVATION.md	Référence de son périmètre.	normative	mandatory-reference	MIGRATED-CONFORMING
+39	documentations/00-foundation/vocabulary/GLOSSAIRE_METIER.md	Référence de son périmètre.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+40	documentations/01-product/economics/MODELE_ECONOMIQUE.md	Définition produit.	reference	supporting-reference	MIGRATED-CONFORMING
+41	documentations/01-product/economics/README.md	Guide de lecture.	view	informational	MIGRATED-CONFORMING
 42	documentations/01-product/foundation/CHARTE_FONDATRICE.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-43	documentations/01-product/foundation/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
-44	documentations/01-product/foundation/assumptions/HYPOTHESES_ET_INCONNUES.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-45	documentations/01-product/foundation/pilot/PILOTE_BURKINA.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+43	documentations/01-product/foundation/README.md	Guide de lecture.	view	informational	MIGRATED-CONFORMING
+44	documentations/01-product/foundation/assumptions/HYPOTHESES_ET_INCONNUES.md	Définition produit.	reference	supporting-reference	MIGRATED-CONFORMING
+45	documentations/01-product/foundation/pilot/PILOTE_BURKINA.md	Définition produit.	reference	supporting-reference	MIGRATED-CONFORMING
 46	documentations/01-product/foundation/product-definition/CAPACITES_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 47	documentations/01-product/foundation/product-definition/CARTE_DOMAINES.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 48	documentations/01-product/foundation/product-definition/CRITERES_SUCCES.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 49	documentations/01-product/foundation/product-definition/PERIMETRE_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-50	documentations/01-product/foundation/product-definition/PRINCIPES_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+50	documentations/01-product/foundation/product-definition/PRINCIPES_PRODUIT.md	Définition produit.	normative	mandatory-reference	MIGRATED-CONFORMING
 51	documentations/01-product/foundation/product-definition/PROBLEMES_ET_BESOINS.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 52	documentations/01-product/foundation/product-definition/PROPOSITION_VALEUR.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 53	documentations/01-product/foundation/stakeholders/PARTIES_PRENANTES.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 54	documentations/01-product/foundation/stakeholders/SEGMENTS_UTILISATEURS.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-55	documentations/01-product/foundation/vision-strategy/DOCTRINE_PERENNITE.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-56	documentations/01-product/foundation/vision-strategy/HORIZONS_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+55	documentations/01-product/foundation/vision-strategy/DOCTRINE_PERENNITE.md	Définition produit.	normative	mandatory-reference	MIGRATED-CONFORMING
+56	documentations/01-product/foundation/vision-strategy/HORIZONS_PRODUIT.md	Définition produit.	reference	supporting-reference	MIGRATED-CONFORMING
 57	documentations/01-product/foundation/vision-strategy/VISION_PANAFRICAINE.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 58	documentations/01-product/foundation/vision-strategy/VISION_PRODUIT.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-59	documentations/01-product/roadmap/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
-60	documentations/01-product/roadmap/ROADMAP.md	Définition produit.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+59	documentations/01-product/roadmap/README.md	Guide de lecture.	view	informational	MIGRATED-CONFORMING
+60	documentations/01-product/roadmap/ROADMAP.md	Définition produit.	reference	supporting-reference	MIGRATED-CONFORMING
 61	documentations/02-domains/careers/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-62	documentations/02-domains/careers/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-63	documentations/02-domains/careers/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
-64	documentations/02-domains/content-community-learning/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
-65	documentations/02-domains/data-intelligence-ai/PRINCIPES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+62	documentations/02-domains/careers/GATES_ET_INCONNUES.md	Connaissance métier.	reference	supporting-reference	MIGRATED-CONFORMING
+63	documentations/02-domains/careers/README.md	Guide de lecture.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+64	documentations/02-domains/content-community-learning/README.md	Guide de lecture.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+65	documentations/02-domains/data-intelligence-ai/PRINCIPES.md	Connaissance métier.	normative	mandatory-reference	MIGRATED-CONFORMING
 66	documentations/02-domains/education/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-67	documentations/02-domains/education/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-68	documentations/02-domains/education/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
+67	documentations/02-domains/education/GATES_ET_INCONNUES.md	Connaissance métier.	reference	supporting-reference	MIGRATED-CONFORMING
+68	documentations/02-domains/education/README.md	Guide de lecture.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 69	documentations/02-domains/entrepreneurship/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-70	documentations/02-domains/identity-profile/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
+70	documentations/02-domains/identity-profile/README.md	Guide de lecture.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 71	documentations/02-domains/identity-profile/concepts/CYCLE_VIE_PERSONNE.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 72	documentations/02-domains/identity-profile/concepts/IDENTITE_DURABLE.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 73	documentations/02-domains/identity-profile/concepts/MODELE_DOMAINE.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 74	documentations/02-domains/identity-profile/concepts/PROFIL_ET_TEMPORALITE.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-75	documentations/02-domains/identity-profile/governance/CAPACITES_ET_TRACABILITE.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+75	documentations/02-domains/identity-profile/governance/CAPACITES_ET_TRACABILITE.md	Connaissance métier.	reference	supporting-reference	MIGRATED-CONFORMING
 76	documentations/02-domains/identity-profile/governance/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-77	documentations/02-domains/identity-profile/governance/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-78	documentations/02-domains/identity-profile/governance/PREUVES_ET_PROVENANCE.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+77	documentations/02-domains/identity-profile/governance/GATES_ET_INCONNUES.md	Connaissance métier.	reference	supporting-reference	MIGRATED-CONFORMING
+78	documentations/02-domains/identity-profile/governance/PREUVES_ET_PROVENANCE.md	Connaissance métier.	normative	mandatory-reference	MIGRATED-CONFORMING
 79	documentations/02-domains/identity-profile/rules/REGLES_METIER.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 80	documentations/02-domains/identity-profile/rules/VISIBILITE_ET_PARTAGE.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 81	documentations/02-domains/labor-market/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
@@ -92,15 +92,15 @@ TOTAL: 415
 85	documentations/02-domains/orientation-recommendation/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
 86	documentations/02-domains/partners-ecosystem/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
 87	documentations/02-domains/skills-knowledge/FRONTIERES_ET_DEPENDANCES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-88	documentations/02-domains/skills-knowledge/GATES_ET_INCONNUES.md	Connaissance métier.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-89	documentations/02-domains/skills-knowledge/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
-90	documentations/03-systems/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
-91	documentations/03-systems/architecture/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
+88	documentations/02-domains/skills-knowledge/GATES_ET_INCONNUES.md	Connaissance métier.	reference	supporting-reference	MIGRATED-CONFORMING
+89	documentations/02-domains/skills-knowledge/README.md	Guide de lecture.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+90	documentations/03-systems/README.md	Guide de lecture.	view	informational	MIGRATED-CONFORMING
+91	documentations/03-systems/architecture/README.md	Guide de lecture.	view	informational	MIGRATED-CONFORMING
 92	documentations/03-systems/architecture/matrices/AUTONOMY_CLOSURE_MATRIX.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-93	documentations/03-systems/architecture/registers/AUTONOMY_PROFILE_REGISTER.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-94	documentations/03-systems/architecture/registers/DERIVED_RECOVERY_REGISTER.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-95	documentations/03-systems/architecture/reviews/D2_INCONSISTENCIES.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-96	documentations/03-systems/architecture/reviews/D2_STATUS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+93	documentations/03-systems/architecture/registers/AUTONOMY_PROFILE_REGISTER.md	Référence de son périmètre.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+94	documentations/03-systems/architecture/registers/DERIVED_RECOVERY_REGISTER.md	Référence de son périmètre.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+95	documentations/03-systems/architecture/reviews/D2_INCONSISTENCIES.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
+96	documentations/03-systems/architecture/reviews/D2_STATUS.md	Référence de son périmètre.	evidence	informational	MIGRATED-CONFORMING
 97	documentations/03-systems/architecture/reviews/DDD_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
 98	documentations/03-systems/architecture/reviews/ENTREPRENEURSHIP_DDD_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
 99	documentations/03-systems/architecture/reviews/MICROSERVICE_BOUNDARY_REVIEW.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
@@ -114,15 +114,15 @@ TOTAL: 415
 107	documentations/03-systems/architecture/target/DEPENDENCY_MAP.md	Architecture cible.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 108	documentations/03-systems/architecture/target/ENTREPRENEURSHIP_DEPENDENCY_OWNERSHIP_MAP.md	Architecture cible.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 109	documentations/03-systems/architecture/target/SERVICE_MAP.md	Architecture cible.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-110	documentations/03-systems/architecture/target/TARGET_ARCHITECTURE_BLUEPRINT.md	Architecture cible.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-111	documentations/03-systems/architecture/target/TARGET_FLOW_MAP.md	Architecture cible.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
+110	documentations/03-systems/architecture/target/TARGET_ARCHITECTURE_BLUEPRINT.md	Architecture cible.	normative	mandatory-reference	MIGRATED-CONFORMING
+111	documentations/03-systems/architecture/target/TARGET_FLOW_MAP.md	Architecture cible.	normative	mandatory-reference	MIGRATED-CONFORMING
 112	documentations/03-systems/architecture/templates/SERVICE_DEFINITION_TEMPLATE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-113	documentations/03-systems/microservices/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
+113	documentations/03-systems/microservices/README.md	Guide de lecture.	view	informational	MIGRATED-CONFORMING
 114	documentations/03-systems/microservices/YD-MS-AI-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 115	documentations/03-systems/microservices/YD-MS-AI-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 116	documentations/03-systems/microservices/YD-MS-AMB-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 117	documentations/03-systems/microservices/YD-MS-ANL-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-118	documentations/03-systems/microservices/YD-MS-ANL-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+118	documentations/03-systems/microservices/YD-MS-ANL-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 119	documentations/03-systems/microservices/YD-MS-ANL-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 120	documentations/03-systems/microservices/YD-MS-ANL-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 121	documentations/03-systems/microservices/YD-MS-APP-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
@@ -158,15 +158,15 @@ TOTAL: 415
 151	documentations/03-systems/microservices/YD-MS-EDU-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
 152	documentations/03-systems/microservices/YD-MS-EDU-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
 153	documentations/03-systems/microservices/YD-MS-EDU-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-154	documentations/03-systems/microservices/YD-MS-EDU-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+154	documentations/03-systems/microservices/YD-MS-EDU-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 155	documentations/03-systems/microservices/YD-MS-EDU-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-156	documentations/03-systems/microservices/YD-MS-EDU-003/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+156	documentations/03-systems/microservices/YD-MS-EDU-003/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 157	documentations/03-systems/microservices/YD-MS-EDU-004/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-158	documentations/03-systems/microservices/YD-MS-EDU-004/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+158	documentations/03-systems/microservices/YD-MS-EDU-004/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 159	documentations/03-systems/microservices/YD-MS-EMP-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-160	documentations/03-systems/microservices/YD-MS-EMP-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+160	documentations/03-systems/microservices/YD-MS-EMP-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 161	documentations/03-systems/microservices/YD-MS-EMP-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-162	documentations/03-systems/microservices/YD-MS-EMP-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+162	documentations/03-systems/microservices/YD-MS-EMP-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 163	documentations/03-systems/microservices/YD-MS-ENT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 164	documentations/03-systems/microservices/YD-MS-ENT-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 165	documentations/03-systems/microservices/YD-MS-ENT-003/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
@@ -175,44 +175,44 @@ TOTAL: 415
 168	documentations/03-systems/microservices/YD-MS-ENT-006/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 169	documentations/03-systems/microservices/YD-MS-INT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 170	documentations/03-systems/microservices/YD-MS-KNW-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-171	documentations/03-systems/microservices/YD-MS-KNW-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-172	documentations/03-systems/microservices/YD-MS-KNW-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+171	documentations/03-systems/microservices/YD-MS-KNW-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
+172	documentations/03-systems/microservices/YD-MS-KNW-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 173	documentations/03-systems/microservices/YD-MS-LAB-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-174	documentations/03-systems/microservices/YD-MS-LAB-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+174	documentations/03-systems/microservices/YD-MS-LAB-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 175	documentations/03-systems/microservices/YD-MS-LAB-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-176	documentations/03-systems/microservices/YD-MS-LAB-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+176	documentations/03-systems/microservices/YD-MS-LAB-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 177	documentations/03-systems/microservices/YD-MS-LRN-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-178	documentations/03-systems/microservices/YD-MS-LRN-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-179	documentations/03-systems/microservices/YD-MS-LRN-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+178	documentations/03-systems/microservices/YD-MS-LRN-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
+179	documentations/03-systems/microservices/YD-MS-LRN-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 180	documentations/03-systems/microservices/YD-MS-MKT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 181	documentations/03-systems/microservices/YD-MS-MOD-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 182	documentations/03-systems/microservices/YD-MS-NTF-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 183	documentations/03-systems/microservices/YD-MS-OPP-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-184	documentations/03-systems/microservices/YD-MS-OPP-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+184	documentations/03-systems/microservices/YD-MS-OPP-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 185	documentations/03-systems/microservices/YD-MS-OPP-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-186	documentations/03-systems/microservices/YD-MS-OPP-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+186	documentations/03-systems/microservices/YD-MS-OPP-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 187	documentations/03-systems/microservices/YD-MS-ORI-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-188	documentations/03-systems/microservices/YD-MS-ORI-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+188	documentations/03-systems/microservices/YD-MS-ORI-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 189	documentations/03-systems/microservices/YD-MS-PRF-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 190	documentations/03-systems/microservices/YD-MS-PRF-001/definition/DOCUMENTATION_ANALYSIS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-191	documentations/03-systems/microservices/YD-MS-PRF-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-192	documentations/03-systems/microservices/YD-MS-PRF-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+191	documentations/03-systems/microservices/YD-MS-PRF-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
+192	documentations/03-systems/microservices/YD-MS-PRF-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 193	documentations/03-systems/microservices/YD-MS-PRF-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 194	documentations/03-systems/microservices/YD-MS-PRF-002/definition/DOCUMENTATION_ANALYSIS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-195	documentations/03-systems/microservices/YD-MS-PRF-002/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-196	documentations/03-systems/microservices/YD-MS-PRF-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+195	documentations/03-systems/microservices/YD-MS-PRF-002/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
+196	documentations/03-systems/microservices/YD-MS-PRF-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 197	documentations/03-systems/microservices/YD-MS-PRT-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 198	documentations/03-systems/microservices/YD-MS-REC-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-199	documentations/03-systems/microservices/YD-MS-REC-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-200	documentations/03-systems/microservices/YD-MS-REC-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+199	documentations/03-systems/microservices/YD-MS-REC-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
+200	documentations/03-systems/microservices/YD-MS-REC-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 201	documentations/03-systems/microservices/YD-MS-SKL-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-202	documentations/03-systems/microservices/YD-MS-SKL-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
-203	documentations/03-systems/microservices/YD-MS-SKL-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+202	documentations/03-systems/microservices/YD-MS-SKL-001/lifecycle/DOCUMENTATION_READINESS.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
+203	documentations/03-systems/microservices/YD-MS-SKL-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 204	documentations/03-systems/microservices/YD-MS-SKL-002/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-205	documentations/03-systems/microservices/YD-MS-SKL-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+205	documentations/03-systems/microservices/YD-MS-SKL-002/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 206	documentations/03-systems/microservices/YD-MS-SPN-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 207	documentations/03-systems/microservices/YD-MS-SRH-001/definition/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
-208	documentations/03-systems/microservices/YD-MS-SRH-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	reference	supporting-reference	MIGRATED-CONFORMING
+208	documentations/03-systems/microservices/YD-MS-SRH-001/lifecycle/PHASE_CLOSURE.md	Référence de son périmètre.	evidence	supporting-reference	MIGRATED-CONFORMING
 209	documentations/03-systems/platform-components/README.md	Guide de lecture.	reference	informational	MIGRATED-CONFORMING
 210	documentations/03-systems/platform-components/YD-PLT-AI-001/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
 211	documentations/03-systems/platform-components/YD-PLT-API-001/AUTONOMY_PROFILE.md	Autonomie et ownership.	canonical-source	mandatory-reference	MIGRATED-CONFORMING
