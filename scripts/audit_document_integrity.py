@@ -72,6 +72,22 @@ def main():
         print(f"Matrice statut {status}: {count}")
     if compliance.get("MIGRATED-CONFORMING", 0):
         warnings.append("Matrice : MIGRATED-CONFORMING est déclaré avant validation des champs sémantiques ; conformité complète non démontrée")
+    for row in rows:
+        relpath = row[1]
+        if not relpath.endswith(".md"):
+            continue
+        p = ROOT / relpath
+        if not p.is_file():
+            continue
+        raw = p.read_text(encoding="utf-8-sig")
+        fm = re.match(r"\\A---\\n(.*?)\\n---(?:\\n|\\Z)", raw, re.S)
+        if not fm:
+            continue
+        meta = dict((m.group(1), m.group(2).strip().strip('"\\\'')) for line in fm.group(1).splitlines() if (m := re.match(r"^([A-Za-z_][\\w-]*):\\s*(.*)$", line)))
+        for field, expected in (("authority_level", row[3].strip()), ("development_usage", row[4].strip())):
+            actual = meta.get(field)
+            if actual and actual != expected:
+                warnings.append(f"{relpath}: matrice {field}={expected}, document={actual}")
     for path in sorted(DOCS.rglob("*.md")):
         audit_file(path)
     for ident, files in seen.items():
