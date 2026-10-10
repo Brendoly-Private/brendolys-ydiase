@@ -94,7 +94,8 @@ Sauf exceptions de la section 2, les services logiques ci-dessous se matérialis
 Baseline physique confirmée :
 - 48 `YD-MS-*` métier ;
 - 4 `YD-PLT-*` plateforme ;
-- 52 frontières autonomes au total ;
+- 58 frontières autonomes candidates au total (54 YD-MS + 4 YD-PLT), dont six ENT en `DRAFT` ;
+- baseline historique pré-Entrepreneurship : 52 frontières ;
 - BRENDOLYS Identity externe ;
 - CAR-004, LAB-003 et AI-004 deferred.
 
