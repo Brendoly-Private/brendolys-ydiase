@@ -54,3 +54,10 @@ Sources gouvernées : LAB/DAT/KNW/CFG. Les données externes sont des référenc
 
 ## Verdict
 `K3-NOT-PASS`. Le document est une **trame substantielle de contrat logique**, pas une baseline K3 approuvée. Les champs encore indéterminés bloquent explicitement la qualification K3 selon `K3_CONTRACT_GATE.md`.
+
+
+## Rattachement au registre — 2026-10-10
+
+Le `CONTRACT_REGISTRY.md` ne contient pas encore d'entrée `YD-CTR-ENT-*`. Le contrat proposé `YD-CTR-ENT-OPPORTUNITY-HYPOTHESIS-v1` est une **hypothèse de travail non canonique**, documentée dans `03-systems/architecture/reviews/ENTREPRENEURSHIP_K3_OWNERSHIP_ARBITRAGE.md`. Le rattachement aux contrats existants CFG/CNS/AUD ne remplace pas la contractualisation des entrées LAB/DAT/KNW.
+
+**Décision à approuver :** confirmer si ENT-002 possède un état éditorial non reconstructible ; sinon classer la sortie comme DERIVED, avec source_versions, watermark, droits de source et règle d'invalidation. Tant que ce point reste ouvert, K3-NOT-PASS.
