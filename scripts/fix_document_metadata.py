@@ -54,6 +54,22 @@ def normalize(path, entries):
     if row:
         grounded.update({"document_role": row[2], "authority_level": row[3],
                          "development_usage": row[4]})
+    # Governance-approved conservative classification policy (2026-10-10):
+    # canonical describes documentary authority, not implementation maturity.
+    # Non-normative documents remain in review unless their body explicitly
+    # indicates a draft; no operational ACTIVE state is inferred.
+    if row:
+        authority = row[3].strip()
+        if "canonical" not in present:
+            additions.append("canonical: " + ("true" if authority in ("normative", "canonical-source") else "false"))
+        if "status" not in present:
+            if authority == "normative":
+                doc_status = "APPROVED"
+            elif re.search(r"(?i)(?:autonomy-profile-draft|status:\\s*draft|statut\s*:\s*\\`?draft)", body):
+                doc_status = "DRAFT"
+            else:
+                doc_status = "IN_REVIEW"
+            additions.append(f'status: "{doc_status}"')
     for key, value in grounded.items():
         if key not in present and value.strip():
             safe = value.replace('"', "'")
