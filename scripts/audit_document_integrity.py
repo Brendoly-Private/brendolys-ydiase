@@ -44,6 +44,12 @@ def audit_file(path):
         warnings.append(f"{rel}: source institutionnelle canonique introuvable")
     if meta.get("product") and meta["product"] != "BRENDOLYS YDIASE":
         errors.append(f"{rel}: product invalide")
+    if meta.get("authority_level") and meta["authority_level"] not in ("normative", "canonical-source", "reference", "view", "evidence", "historical"):
+        warnings.append(f"{rel}: authority_level hors référentiel")
+    if meta.get("development_usage") and meta["development_usage"] not in ("mandatory-reference", "supporting-reference", "informational", "not-applicable"):
+        warnings.append(f"{rel}: development_usage hors référentiel")
+    if meta.get("canonical") and meta["canonical"].lower() not in ("true", "false"):
+        warnings.append(f"{rel}: canonical doit être true ou false")
     for field in ("created_at", "last_reviewed_at"):
         if meta.get(field) and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", meta[field]):
             errors.append(f"{rel}: {field} doit être YYYY-MM-DD")
