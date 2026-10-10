@@ -18,7 +18,17 @@ def first_commit_date(path):
     dates = [s.strip() for s in result.stdout.splitlines() if re.fullmatch(r"\d{4}-\d{2}-\d{2}", s.strip())]
     return dates[-1] if dates else TODAY
 
-def normalize(path):
+def matrix_entries():
+    matrix = DOCS / "00-foundation/governance/registers/DOCUMENT_METADATA_MIGRATION_MATRIX.tsv"
+    entries = {}
+    for line in matrix.read_text(encoding="utf-8-sig").splitlines():
+        if re.match(r"^\\d+\\t", line):
+            cells = line.split("\\t")
+            if len(cells) >= 6:
+                entries[cells[1]] = cells
+    return entries
+
+def normalize(path, entries):
     original = path.read_text(encoding="utf-8-sig")
     match = re.match(r"\A---\n(.*?)\n---(?:\n|\Z)", original, re.S)
     if match:
@@ -39,6 +49,15 @@ def normalize(path):
         "last_reviewed_at": TODAY,
     }
     additions = [f'{key}: "{values[key]}"' for key in REQUIRED if key not in present]
+    row = entries.get(path.relative_to(ROOT).as_posix())
+    grounded = {"product": "BRENDOLYS YDIASE"}
+    if row:
+        grounded.update({"document_role": row[2], "authority_level": row[3],
+                         "development_usage": row[4]})
+    for key, value in grounded.items():
+        if key not in present and value.strip():
+            safe = value.replace('"', "'")
+            additions.append(f'{key}: "{safe}"')
     if not additions:
         return False
     # last_reviewed_at records this automated metadata inspection, not business-content approval.
@@ -52,7 +71,8 @@ def normalize(path):
     return True
 
 def main():
-    changed = [p for p in sorted(DOCS.rglob("*.md")) if normalize(p)]
+    entries = matrix_entries()
+    changed = [p for p in sorted(DOCS.rglob("*.md")) if normalize(p, entries)]
     print(f"Metadata normalized: {len(changed)} files")
     for p in changed:
         print(p.relative_to(ROOT))
