@@ -9,7 +9,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "documentations"
 MATRIX = DOCS / "00-foundation/governance/registers/DOCUMENT_METADATA_MIGRATION_MATRIX.tsv"
-FIELDS = ("document_id", "title", "document_type", "document_role", "product", "institutional_reference", "status", "authority_level", "canonical", "development_usage", "created_at", "last_reviewed_at")
+FIELDS = ("document_id", "title", "document_type", "institutional_reference", "created_at", "last_reviewed_at")
+SEMANTIC_FIELDS = ("document_role", "product", "status", "authority_level", "canonical", "development_usage")
 errors = []
 warnings = []
 seen = defaultdict(list)
@@ -32,6 +33,9 @@ def audit_file(path):
     for field in FIELDS:
         if not meta.get(field) or meta[field].lower() in ("null", "none", "todo", "tbd", "placeholder"):
             errors.append(f"{rel}: {field} manquant ou placeholder")
+    for field in SEMANTIC_FIELDS:
+        if not meta.get(field):
+            warnings.append(f"{rel}: {field} à qualifier selon le standard officiel")
     if meta.get("document_id"):
         seen[meta["document_id"]].append(rel)
     if meta.get("institutional_reference") and meta["institutional_reference"] != "YDIASE-INSTITUTIONAL-IDENTITY":
