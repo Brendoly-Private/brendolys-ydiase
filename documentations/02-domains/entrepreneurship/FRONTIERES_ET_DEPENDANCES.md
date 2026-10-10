@@ -89,3 +89,21 @@ Cette section complète la baseline de domaine sans déclarer K3, K4 ou K5 acqui
 - **Transversal :** arrêter classifications Privacy, contrats logiques, politiques de rétention, gouvernance pays, droits de source et dépendances de reconstruction ; les formats physiques et métriques de charge restent des gates ultérieurs.
 
 **Verdict documentaire :** frontières et dépendances consolidées au niveau cible K2 ; `K3-NOT-ASSESSED`, `K4-NOT-ASSESSED`, `K5-NOT-EXECUTED`. Ce verdict ne modifie pas les statuts des profils individuels.
+
+
+## Consolidation de la frontière K2 — 2026-10-10
+
+La cible compte six frontières candidates distinctes ; leurs profils d'autonomie restent DRAFT. Ce complément n'atteste ni K3, ni K4, ni K5.
+
+| Frontière | Contrat logique à détailler | Point de décision |
+|---|---|---|
+| ENT-001 | VentureRef, changements d'état, accès par VentureId | cohérence locale, idempotence, cycle de vie |
+| ENT-002 | hypothèses, jeux de preuves, versions de sources, retrait | état DERIVED versus MIXED et reconstructibilité |
+| ENT-003 | catalogue d'accompagnement, projection organisation | ne pas confondre SupportOrganizationProjection et autorité PRT |
+| ENT-004 | programmes, règles d'éligibilité, snapshots expirables | distinguer AUTH et MIXED ; aucune décision du financeur |
+| ENT-005 | besoin d'équipe, consentement, matching, révocation | distinguer TeamNeed persistant et scores dérivés |
+| ENT-006 | VentureRef, jalons, expériences, résultats | historique autonome sans posséder l'identité Venture |
+
+Les contrats physiques, IAM, droits de source, politiques pays, capacité chiffrée, preuves de restauration/reconstruction et tests ne sont pas établis par cette consolidation. Les échanges passent exclusivement par interfaces gouvernées ; aucun datastore interservices partagé.
+
+**Verdict :** `K2-BOUNDARIES-CONSOLIDATED / K3-K4-NOT-ATTESTED / K5-NOT-EXECUTED`.
