@@ -21,9 +21,10 @@ def load_yaml(path:Path)->Any:
     # Some catalog YAML files contain a documentation front matter and a
     # human-readable role preamble before their machine-readable payload.
     # Preserve the files and parse the actual catalog beginning at apiVersion.
-    payload = re.search(r"(?m)^apiVersion:\\s*knowledge\\.ydiase/v1\\s*$", source)
-    if payload:
-        source = source[payload.start():]
+    for line in source.splitlines(keepends=True):
+        if line.strip() == "apiVersion: knowledge.ydiase/v1":
+            source = source[source.index(line):]
+            break
     return yaml.safe_load(source)
 
 def iter_entities(document:Any):
