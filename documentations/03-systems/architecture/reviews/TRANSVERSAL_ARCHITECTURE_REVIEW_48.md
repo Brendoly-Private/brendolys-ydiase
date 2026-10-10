@@ -18,6 +18,8 @@ tags:
 # Revue transversale d'architecture — 48 microservices BRENDOLYS YDIASE
 
 Statut : `TRANSVERSAL-REVIEW-COMPLETE / REMEDIATION-TRACKED`
+**Portée historique :** cette revue couvre la baseline de 48 microservices métier antérieure à l'extension Entrepreneurship. La cible actuelle est de 54 microservices métier candidats + 4 composants plateforme = 58 frontières ; les six ENT n'ont pas été audités dans cette revue. Les conclusions ci-dessous restent valables uniquement pour le périmètre effectivement examiné.
+
 Périmètre : 48 microservices métier physiques. Les 4 composants plateforme et frontières LOGICAL/DEFERRED sont contrôlés lorsqu'ils affectent ces 48.
 
 ## 1. Références canoniques
