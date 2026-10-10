@@ -10,6 +10,8 @@ product: "BRENDOLYS YDIASE"
 document_role: "Autonomie et ownership."
 authority_level: "canonical-source"
 development_usage: "mandatory-reference"
+canonical: true
+status: "IN_REVIEW"
 ---
 
 # YD-MS-CNS-001 — Consent & Privacy

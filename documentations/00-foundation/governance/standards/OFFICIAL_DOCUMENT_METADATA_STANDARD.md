@@ -10,6 +10,8 @@ product: "BRENDOLYS YDIASE"
 document_role: "Règles normatives."
 authority_level: "normative"
 development_usage: "mandatory-reference"
+canonical: true
+status: "APPROVED"
 ---
 
 # Standard officiel des métadonnées documentaires — BRENDOLYS YDIASE

@@ -10,6 +10,8 @@ product: "BRENDOLYS YDIASE"
 document_role: "Référence de son périmètre."
 authority_level: "reference"
 development_usage: "supporting-reference"
+canonical: false
+status: "IN_REVIEW"
 ---
 
 # YD-MS-DAT-002 — Data Governance — Baseline C2
