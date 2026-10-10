@@ -59,3 +59,30 @@ Ce document propose des précisions sans supplanter les sources canoniques. Les 
 
 ## Verdict
 `K3-PREPARATION-ONLY`. Aucun changement d'ownership canonique ni statut K3 PASS n'est décidé par cette revue.
+
+
+## Réconciliation explicite avec le Contract Registry — proposition non normative
+
+Vérification du registre au 2026-10-10 : aucun contrat de la famille `YD-CTR-ENT-*` n'y figure. Les contrats transversaux existants CNS, CFG et AUD sont réutilisables ; leur existence ne prouve pas l'intégration effective des consommateurs ENT. Les identifiants ci-dessous sont réservés **uniquement comme propositions**, pas comme contrats ACTIVE-LOGICAL.
+
+| ID proposé | Producteur → consommateurs candidats | Type | Payload métier minimal à valider | Privacy candidate | Criticité contractuelle |
+|---|---|---|---|---|---|
+| YD-CTR-ENT-VENTURE-v1 | ENT-001 → ENT-005/006, ORI autorisé | HYBRID | VentureRef, stage, state, version, visibility scope | SENSITIVE/CONTEXTUAL | K1 |
+| YD-CTR-ENT-OPPORTUNITY-HYPOTHESIS-v1 | ENT-002 → ORI/REC/ENT-001 autorisés | PROJECTION | hypothesis_ref, territory, sector, evidence_refs, uncertainty, source_versions, valid_until | INTERNAL/PUBLIC selon droits | K2 |
+| YD-CTR-ENT-SUPPORT-CATALOG-v1 | ENT-003 → ORI/ENT-001/006 | PROJECTION | offering_ref, organization_ref, country_scope, eligibility, source_version, status | PUBLIC/INTERNAL | K2 |
+| YD-CTR-ENT-FUNDING-CATALOG-v1 | ENT-004 → ENT-001/006, ORI autorisé | PROJECTION | funding_ref, program_ref, rule_version, deadline, source, expiry, status | PUBLIC/INTERNAL | K2 |
+| YD-CTR-ENT-FUNDING-ELIGIBILITY-v1 | ENT-004 → demandeur autorisé | API | opportunity_ref, rule_version, applicant_context_ref, assessment, evaluated_at, expiry, disclaimer | VERY-SENSITIVE si personnalisé | K1 |
+| YD-CTR-ENT-TEAM-NEED-v1 | ENT-005 → candidats autorisés | HYBRID | need_ref, venture_ref pseudonymisé si requis, skill_requirements, visibility, version | SENSITIVE | K1 |
+| YD-CTR-ENT-FOUNDER-MATCH-v1 | ENT-005 → demandeur et candidats consentants | API/PROJECTION | match_ref, need_ref, explanation, evidence_version, consent_scope, expiry | VERY-SENSITIVE | K1 |
+| YD-CTR-ENT-VENTURE-PROGRESS-v1 | ENT-006 → ENT-001/ORI autorisés | PROJECTION | venture_ref, milestone_ref, progress_state, validation_ref, version | SENSITIVE/CONTEXTUAL | K2 |
+
+### Exigences de validation pour chaque proposition
+
+- Définir consommateurs autorisés réels et finalité ; aucun consommateur ne reçoit automatiquement des données personnelles.
+- Séparer les champs obligatoires, optionnels et conditionnels, leurs types et cardinalités ; confirmer l'owner de chaque donnée.
+- Définir `DELETE/WITHDRAW/REVOKE`, tombstones, replay, version de schéma et comportement d'erreur par opération.
+- Vérifier les droits des sources LAB/DAT/KNW/PRT et l'expiration des données financières.
+- Valider les ADR sur la frontière MIXED, les événements et les projections ; faire la revue Privacy et pays.
+- Enregistrer dans `CONTRACT_REGISTRY.md` seulement après validation des décisions. Les noms de contrats et les catégories Privacy ci-dessus ne sont pas des normes adoptées.
+
+**Gate K3 : BLOQUÉ** tant que les décisions et contrats détaillés ne sont pas approuvés. Aucun statut PASS n'est induit par cette matrice.
