@@ -30,7 +30,7 @@ Statut : `D3-autonomy-profile-baseline`
 
 Ce registre est l'index canonique des profils d'autonomie. Les exigences détaillées vivent dans chaque `AUTONOMY_PROFILE.md` afin d'éviter deux sources concurrentes.
 
-Cible actuelle : **48 microservices métier + 4 composants plateforme = 52 frontières autonomes**.
+Cible actuelle : **54 microservices métier + 4 composants plateforme = 58 frontières autonomes**.
 
 La séparation `PRF-001 / PRF-002` est régie par `ADR-PRF-001-PRF-002-PHYSICAL-BOUNDARY.md`.
 
@@ -96,6 +96,19 @@ La séparation `PRF-001 / PRF-002` est régie par `ADR-PRF-001-PRF-002-PHYSICAL-
 | YD-MS-CFG-001 | AUTH | C1 | `microservices/YD-MS-CFG-001/AUTONOMY_PROFILE.md` | BASELINE |
 | YD-MS-CNS-001 | AUTH | C1 | `microservices/YD-MS-CNS-001/AUTONOMY_PROFILE.md` | BASELINE |
 
+## Extension Entrepreneurship — frontières candidates
+
+Les six profils ENT sont des cibles documentaires `DRAFT`, intégrées au décompte des frontières candidates. Leurs classifications composites `AUTH/MIXED` et `DERIVED/MIXED` doivent être arbitrées avant toute ventilation statistique par nature. Leur inscription ne vaut ni validation K5 ni activation en production.
+
+| Boundary | Nature candidate | Crit. | Profil | État |
+|---|---|---:|---|---|
+| YD-MS-ENT-001 | AUTH | C1 | `microservices/YD-MS-ENT-001/AUTONOMY_PROFILE.md` | DRAFT — TARGET |
+| YD-MS-ENT-002 | DERIVED/MIXED | C2 | `microservices/YD-MS-ENT-002/AUTONOMY_PROFILE.md` | DRAFT — TARGET |
+| YD-MS-ENT-003 | AUTH | C2 | `microservices/YD-MS-ENT-003/AUTONOMY_PROFILE.md` | DRAFT — TARGET |
+| YD-MS-ENT-004 | AUTH/MIXED | C1 | `microservices/YD-MS-ENT-004/AUTONOMY_PROFILE.md` | DRAFT — TARGET |
+| YD-MS-ENT-005 | DERIVED/MIXED | C1 | `microservices/YD-MS-ENT-005/AUTONOMY_PROFILE.md` | DRAFT — TARGET |
+| YD-MS-ENT-006 | AUTH | C1 | `microservices/YD-MS-ENT-006/AUTONOMY_PROFILE.md` | DRAFT — TARGET |
+
 ## Composants plateforme
 
 | Boundary | Nature | Crit. | Profil | État |
@@ -107,13 +120,13 @@ La séparation `PRF-001 / PRF-002` est régie par `ADR-PRF-001-PRF-002-PHYSICAL-
 
 ## Frontières différées
 
-`YD-MS-CAR-004`, `YD-MS-LAB-003` et `YD-PLT-AI-004` ne comptent pas dans les 52 tant qu'un ADR n'active pas leur extraction.
+`YD-MS-CAR-004`, `YD-MS-LAB-003` et `YD-PLT-AI-004` ne comptent pas dans les 58 tant qu'un ADR n'active pas leur extraction.
 
 ## Réconciliation PRF
 
 `YD-MS-PRF-001` ne possède plus EducationRecord, ExperienceRecord, AchievementClaim ou ProfileEvidenceLink. `YD-MS-PRF-002` possède ces agrégats et dispose de son propre datastore, backup/restore, audience IAM, secrets, réseau, observabilité, CI/CD, runbook et DR.
 
-Aucune base n'est partagée entre les deux frontières. Leurs échanges passent par des contrats gouvernés. Le futur Contract Registry doit matérialiser cette séparation.
+Aucune base n'est partagée entre les deux frontières. Leurs échanges passent par des contrats gouvernés. Le Contract Registry canonique matérialise les contrats logiques ; les contrats physiques et les preuves préproduction restent à fermer.
 
 ## Gate global
 
