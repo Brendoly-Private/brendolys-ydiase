@@ -22,8 +22,8 @@ def matrix_entries():
     matrix = DOCS / "00-foundation/governance/registers/DOCUMENT_METADATA_MIGRATION_MATRIX.tsv"
     entries = {}
     for line in matrix.read_text(encoding="utf-8-sig").splitlines():
-        if re.match(r"^\\d+\\t", line):
-            cells = line.split("\\t")
+        if re.match(r"^\d+\t", line):
+            cells = line.split("\t")
             if len(cells) >= 6:
                 entries[cells[1]] = cells
     return entries
