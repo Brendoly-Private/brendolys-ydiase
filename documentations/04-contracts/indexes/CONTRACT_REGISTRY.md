@@ -277,3 +277,21 @@ Aucun contrat `ACTIVE-LOGICAL` ne devient `PHYSICAL-READY`, et aucun contrat `DE
 Les contrats logiques inter-frontières disposent désormais d'un registre canonique. La prochaine dette n'est plus l'identification des familles : elle est la **matérialisation des schémas physiques, contract tests, SLO et preuves de replay/rebuild**.
 
 Ce registre n'autorise pas la production à lui seul.
+
+
+## Entrepreneurship — candidats enregistrés, non actifs
+
+Les huit identifiants ci-dessous sont **PROPOSED / NOT-ACTIVE**. Cet inventaire dans le registre canonique n'est **pas** une promotion `ACTIVE-LOGICAL` ; les états normatifs définis à la section 2 ne sont pas attribués tant que les approbations sont absentes. La spécification détaillée reste dans `04-contracts/baselines/YD-MS-ENT-*/K3_*_CONTRACT_SPEC.md`.
+
+| ID | Owner → consommateurs candidats | Type candidat | Autorité / données minimales | Privacy candidate | Idempotence/replay attendu | Crit. | Statut de revue |
+|---|---|---|---|---|---|---|---|
+| YD-CTR-ENT-VENTURE-v1 | ENT-001 → ENT-005/ENT-006/ORI autorisés | HYBRID | ENT-001; VentureRef,stage,state,version,visibility | SENSITIVE | ref+version; retrait/replay selon type | K1 | PROPOSED (non actif) |
+| YD-CTR-ENT-OPPORTUNITY-HYPOTHESIS-v1 | ENT-002 → ORI/REC/ENT autorisés | PROJECTION | ENT-002; hypothesis,evidence,uncertainty,source_versions,expiry | CONTEXTUAL | ref+version; retrait/replay selon type | K2 | PROPOSED (non actif) |
+| YD-CTR-ENT-SUPPORT-CATALOG-v1 | ENT-003 → ORI/ENT autorisés | PROJECTION | ENT-003; offering,organization_ref,country,status,source_version | CONTEXTUAL | ref+version; retrait/replay selon type | K2 | PROPOSED (non actif) |
+| YD-CTR-ENT-FUNDING-CATALOG-v1 | ENT-004 → ENT/ORI autorisés | PROJECTION | ENT-004; funding,program,rule_version,deadline,expiry | CONTEXTUAL | ref+version; retrait/replay selon type | K2 | PROPOSED (non actif) |
+| YD-CTR-ENT-FUNDING-ELIGIBILITY-v1 | ENT-004 → demandeur autorisé | API | ENT-004; opportunity,rule_version,assessment,disclaimer,expiry | VERY-SENSITIVE | ref+version; retrait/replay selon type | K1 | PROPOSED (non actif) |
+| YD-CTR-ENT-TEAM-NEED-v1 | ENT-005 → candidats autorisés | HYBRID | ENT-005; need,venture_ref,skills,visibility,version | SENSITIVE | ref+version; retrait/replay selon type | K1 | PROPOSED (non actif) |
+| YD-CTR-ENT-FOUNDER-MATCH-v1 | ENT-005 → demandeur/candidats autorisés | HYBRID | ENT-005; match,need,explanation,evidence_version,consent_scope | VERY-SENSITIVE | ref+version; retrait/replay selon type | K1 | PROPOSED (non actif) |
+| YD-CTR-ENT-VENTURE-PROGRESS-v1 | ENT-006 → ENT-001/ORI autorisés | PROJECTION | ENT-006; venture,milestone,progress,validation_ref,version | SENSITIVE | ref+version; retrait/replay selon type | K2 | PROPOSED (non actif) |
+
+**Promotion bloquée** jusqu'à approbation ADR, exigences métier, consommateurs réels, cardinalités, règles Privacy et revue des pays applicables. Aucune activation implicite par fusion GitHub.
