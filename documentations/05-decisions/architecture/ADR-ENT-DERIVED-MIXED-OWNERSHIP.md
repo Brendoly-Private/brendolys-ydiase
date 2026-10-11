@@ -48,3 +48,31 @@ Inventaire des états par agrégat, source et méthode de reconstruction ; matri
 
 ## Approbation et date de revue
 Approbation humaine **en attente**. La création de ce document ne constitue pas une approbation d'ADR ni K3 PASS.
+
+
+## Inventaire des états et conditions de décision — version candidate finalisée
+
+| Service | Agrégat / état | Owner de vérité | Classification proposée | Reconstruction / reprise |
+|---|---|---|---|---|
+| ENT-002 | OpportunityEvidenceSet sourcé | LAB/DAT/KNW pour les faits ; ENT-002 pour la composition | DERIVED si sources et sélection reproductibles | Replay des sources versionnées + watermark ; vérifier licence et rétractation |
+| ENT-002 | EntrepreneurialOpportunityHypothesis calculée | ENT-002 pour l'interprétation, pas les faits sources | DERIVED sous condition | Recalcul déterministe ou version de méthode et provenance |
+| ENT-002 | Annotation éditoriale irréconstructible, si introduite | ENT-002 explicitement | AUTH, **non encore démontré nécessaire** | Backup/restore ; décision spécifique avant introduction |
+| ENT-004 | FundingOpportunity/FundingProgram publiés par YDIASE | ENT-004 pour fiche publiée ; source externe pour conditions du financeur | AUTH pour publication | Backup/restore + expiration des sources |
+| ENT-004 | EligibilityRuleSet gouverné localement | ENT-004 pour la règle publiée | AUTH | Historique versionné, validation et restauration |
+| ENT-004 | EligibilitySnapshot personnalisé | ENT-004 pour résultat indicatif | DERIVED | Recalcul sous version de règle et décision CNS valable |
+| ENT-005 | TeamNeed, visibilité | ENT-005 | AUTH | Backup/restore, version et révocation |
+| ENT-005 | FounderMatchRun/ComplementarityAssessment/MatchExplanation | ENT-005 pour résultat calculé ; PRF/SKL/CNS pour entrées | DERIVED | Recalcul conditionné par versions et droits actuels ; ne pas rejouer une divulgation |
+| ENT-006 | VenturePlan/Milestone/ValidationResult | ENT-006 | AUTH | Backup/restore et historique ; VentureRef externe ENT-001 |
+
+### Décisions structurelles explicitement conservées
+
+- Aucun service DERIVED ne peut devenir autorité de PRF, SKL, LAB, DAT, KNW ou PRT.
+- Les événements en retard ne rétablissent pas un état révoqué ; les tombstones et versions sont nécessaires.
+- Une impossibilité de reconstruire ENT-002 ou les matches ENT-005 doit être traitée comme une lacune, pas masquée par le mot DERIVED.
+- Le transport, les datastores et le partitionnement physiques restent hors de cet ADR logique et requièrent des décisions séparées si non triviaux.
+
+### Validation restant nécessaire
+
+L'inventaire ci-dessus constitue la **proposition d'arbitrage technique complète**, mais pas une approbation. Avant changement de statut : signature de l'autorité d'architecture, revue des owners ENT/LAB/DAT/KNW/PRT/PRF/SKL/CNS concernés, analyse d'impact, critères de reconstruction et références de preuves. Les tests FULL_REBUILD et restore restent préproduction.
+
+**Verdict : READY-FOR-ARCHITECTURE-APPROVAL / NOT-APPROVED / K3-NOT-PASS.**

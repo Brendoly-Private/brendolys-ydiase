@@ -61,3 +61,29 @@ Ce référentiel contient les exigences transversales déjà établies. Les exig
 ## Règle d'extension
 
 La revue des fondations produit et des domaines métier doit créer les exigences absentes au lieu de forcer les décisions D3 existantes à servir de règles métier. Une exigence nouvelle peut rouvrir les éléments techniques qu'elle impacte.
+
+
+## Candidats Entrepreneurship — en attente d'approbation métier
+
+Ces lignes sont **PROPOSED**, non `ACTIVE` ; leur inscription assure traçabilité et réservation d'ID, pas adoption normative. Source : `documentations/02-domains/entrepreneurship/EXIGENCES_METIER_K3.md`.
+
+| ID | Exigence candidate | Domaine | Gate | Vérification candidate | Statut |
+|---|---|---|---|---|---|
+| ENT1-REQ-001 | Un utilisateur autorisé peut gérer plusieurs Ventures distincts | Entrepreneurship ENT1 | K3 | Deux Ventures restent indépendants | PROPOSED |
+| ENT1-REQ-002 | Transitions Venture contrôlées par permission, version et idempotence | Entrepreneurship ENT1 | K3 | Rejeu sans doublon et conflit explicite | PROPOSED |
+| ENT1-REQ-003 | Révocation de visibilité Venture propagée | Entrepreneurship ENT1 | K3 | Lecture refusée et projection invalidée | PROPOSED |
+| ENT2-REQ-001 | Hypothèse distingue signal, interprétation et incertitude | Entrepreneurship ENT2 | K3 | Provenance et incertitude traçables | PROPOSED |
+| ENT2-REQ-002 | Correction/expiration source invalide assessments | Entrepreneurship ENT2 | K3 | Aucun snapshot expiré présenté comme actuel | PROPOSED |
+| ENT2-REQ-003 | Hypothèse générique indépendante de Venture | Entrepreneurship ENT2 | K3 | Calcul sans VentureRef | PROPOSED |
+| ENT3-REQ-001 | Catalogue ENT sans ownership de Partner/Agreement PRT | Entrepreneurship ENT3 | K3 | Aucune mutation PRT par ENT | PROPOSED |
+| ENT3-REQ-002 | Publication avec territoire, source, conditions et statut | Entrepreneurship ENT3 | K3 | Offre non sourcée refusée | PROPOSED |
+| ENT3-REQ-003 | Retrait de source ou offre propagé | Entrepreneurship ENT3 | K3 | Invalidation versionnée | PROPOSED |
+| ENT4-REQ-001 | Financement publié avec source, règle versionnée et échéance | Entrepreneurship ENT4 | K3 | Offre expirée non disponible | PROPOSED |
+| ENT4-REQ-002 | Éligibilité indicative sans décision financeur | Entrepreneurship ENT4 | K3 | Disclaimer et expiration | PROPOSED |
+| ENT4-REQ-003 | Évaluation personnalisée gouvernée par CNS | Entrepreneurship ENT4 | K3 | Fail-closed si décision requise indisponible | PROPOSED |
+| ENT5-REQ-001 | TeamNeed ENT-005 distinct de Venture ENT-001 | Entrepreneurship ENT5 | K3 | Aucune mutation Venture | PROPOSED |
+| ENT5-REQ-002 | Visibilité/contact sous autorisation applicable | Entrepreneurship ENT5 | K3 | Révocation interdit exposition | PROPOSED |
+| ENT5-REQ-003 | Match dérivé explicable, daté et invalidable | Entrepreneurship ENT5 | K3 | Version preuve et retrait | PROPOSED |
+| ENT6-REQ-001 | Plan/jalons référencent Venture ENT-001 | Entrepreneurship ENT6 | K3 | VentureRef vérifiée | PROPOSED |
+| ENT6-REQ-002 | Expériences/validations versionnées et sourcées | Entrepreneurship ENT6 | K3 | Historique correction traçable | PROPOSED |
+| ENT6-REQ-003 | Progression distincte comptabilité et certification officielle | Entrepreneurship ENT6 | K3 | Aucun solde/certification émis | PROPOSED |
