@@ -104,3 +104,46 @@ Ce tableau est une **liste de décisions à obtenir**, non un registre de décis
 - Après résolution, appliquer individuellement les sept critères du `K3_CONTRACT_GATE.md` à ENT-001..006, en conservant les preuves. Aucune promotion automatique par fusion de PR.
 
 **État actuel : 12 décisions OPEN / 0 décisions approuvées dans ce registre de revue / K3-NOT-PASS.** Cela n'annule pas les décisions canoniques déjà actives ailleurs.
+
+
+## Dossier d'arbitrage prêt pour revue humaine — 2026-10-11
+
+Les propositions ci-dessous ne sont **pas** des décisions adoptées. Elles rendent la revue actionnable : pour chaque point, le responsable peut approuver, demander correction ou différer avec justification. Ne jamais déduire une approbation de la seule fusion Git.
+
+### Arbitrages architecturaux recommandés
+
+| Clé | Recommandation argumentée | Condition avant approbation |
+|---|---|---|
+| ENT-K3-D01 | Maintenir Venture AUTH dans ENT-001 ; références PRF seulement, état et visibilité versionnés | Confirmer acteurs autorisés et transitions métier exhaustives |
+| ENT-K3-D02 | ENT-002 DERIVED uniquement pour hypothèses calculables ; tout état éditorial irréconstructible est AUTH explicitement séparé | Inventaire complet des annotations et snapshots sources, test FULL_REBUILD prévu |
+| ENT-K3-D03 | ENT-003 AUTH sur les offres/programmes ; SupportOrganizationProjection est copie gouvernée de PRT, non owner de Partner | Accord des owners PRT et ENT sur corrections/retraits |
+| ENT-K3-D04 | ENT-004 AUTH pour publication des fiches/règles YDIASE, DERIVED pour EligibilitySnapshot ; aucune décision bancaire | Règles de fraîcheur, version de règle, avertissement et responsabilité de publication |
+| ENT-K3-D05 | ENT-005 MIXED : TeamNeed et visibilité AUTH, MatchRun/score/explication DERIVED ; décision CNS vérifiée avant diffusion | Schéma de révocation, cas de mineurs, reconstructibilité et restrictions par destinataire |
+| ENT-K3-D06 | ENT-006 AUTH pour plans/jalons/résultats, identité Venture exclusivement ENT-001 | États de progression et correction d'historique ratifiés |
+
+**Attention :** ENT-002 ne peut être qualifié purement DERIVED tant qu'une annotation métier non reconstructible existe sans owner AUTH. La recommandation décrit une séparation logique à confirmer, pas une reclassification effective.
+
+### Arbitrages de gouvernance recommandés
+
+| Clé | Proposition | Critère de clôture |
+|---|---|---|
+| ENT-K3-D07 | Examiner les 18 exigences métier candidates et leur identifiant stable | Validation métier, critères d'acceptation et inscription gouvernée au référentiel |
+| ENT-K3-D08 | Valider les huit interfaces une à une, sans les activer en bloc | Champs requis/types/cardinalités, erreurs, versionnement, consumers, retrait et tests de contrat documentés |
+| ENT-K3-D09 | Appliquer CNS par finalité, avec contrôle `NOT-DETERMINABLE` fail-closed | PurposeRef, catégories de données, destinataires, durée et restrictions approuvés |
+| ENT-K3-D10 | Garder Burkina Faso non activé pour les traitements nécessitant validation locale | Sources officielles, revue juridique, paramètres CFG et preuves d'autorisation pays |
+| ENT-K3-D11 | Soumettre l'ADR DERIVED/MIXED à l'instance d'architecture | ADR approuvé et impacts sur les contrats/microservices enregistrés |
+| ENT-K3-D12 | Promouvoir chaque contrat séparément après ses propres preuves | Entrée cohérente dans le Contract Registry canonique et revue compatibilité |
+
+### Séquence d'approbation proposée
+
+1. **Architecture métier** : D01–D06 avec propriétaires des agrégats et consommateurs ; résoudre les ambiguïtés d'état AUTH/DERIVED.
+2. **Exigences** : D07 avec gouvernance métier, puis ajuster la traçabilité dans les huit spécifications.
+3. **Privacy et pays** : D09–D10 ; les contraintes légales et CNS ne sont jamais auto-approuvées par l'architecture.
+4. **ADR et contrats** : D11 puis D08 et D12, en vérifiant chaque interface indépendamment.
+5. **Gate K3** : évaluer les sept critères du gate pour ENT-001..006 ; documenter toute lacune restante.
+
+### Format de preuve requis pour une clôture
+
+Pour chaque clé : `decision_id`, `verdict` (APPROVED/REJECTED/DEFERRED), `approver_role`, `approver_identity_ref`, `reviewed_at`, `evidence_refs`, `impact_refs`, `conditions`, `effective_at`. Les valeurs d'identité, de date et de preuve doivent être réellement fournies, jamais simulées.
+
+**État maintenu : 12 OPEN, aucune approbation nouvelle attestée ici ; K3-NOT-PASS.**
