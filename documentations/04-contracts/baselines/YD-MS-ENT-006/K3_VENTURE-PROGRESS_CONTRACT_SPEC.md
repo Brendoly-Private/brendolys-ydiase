@@ -51,3 +51,16 @@ Opérations/états candidats : update/correct/withdraw; venture_missing; version
 5. Faire revue humaine, puis enregistrer dans `documentations/04-contracts/indexes/CONTRACT_REGISTRY.md` avec statut approuvé.
 
 **Verdict : K3-NOT-PASS.** Aucun protocole, schéma physique ou preuve d'exécution n'est prétendu.
+
+
+## Traçabilité métier et critères de revue — 2026-10-11
+
+Référence candidate : `documentations/02-domains/entrepreneurship/EXIGENCES_METIER_K3.md` (DRAFT, exigences non enregistrées dans le référentiel canonique).
+
+- Exigences candidates associées : `ENT6-REQ-001`, `ENT6-REQ-002`, `ENT6-REQ-003`.
+- Champs de contrôle à rattacher aux opérations : `venture_ref, milestone_ref, validation_ref, observed_at`.
+- Scénarios de vérification à formaliser : external Venture identity, history, no accounting.
+- Exigences transversales à vérifier : `YD-REQ-GOV-001`, `YD-REQ-GOV-002` si données personnelles, `YD-REQ-DATA-001`, `YD-REQ-IAM-003`, `YD-REQ-CTR-001`, `YD-REQ-CTY-001`.
+- Preuve manquante : validation des exigences métier, décision Privacy/CNS applicable, validation des contraintes champ par champ et tests contractuels ; **aucune preuve d'exécution**.
+
+**Verdict inchangé : PROPOSED / NOT-REGISTERED / K3-NOT-PASS.**
