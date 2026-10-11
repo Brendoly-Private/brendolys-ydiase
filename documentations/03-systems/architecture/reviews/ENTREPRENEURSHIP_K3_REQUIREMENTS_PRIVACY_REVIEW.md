@@ -75,3 +75,32 @@ tags:
 5. Vérifier le registre canonique, puis seulement proposer promotion `ACTIVE-LOGICAL` et évaluation K3 service par service.
 
 **Ce document n'est ni une approbation Privacy ni une attestation de conformité juridique.**
+
+
+## Registre de fermeture décisionnelle — revue du 2026-10-11
+
+Ce tableau est une **liste de décisions à obtenir**, non un registre de décisions adoptées. Une fusion GitHub n'est pas une approbation métier, juridique ou architecturale implicite.
+
+| Clé de revue | Périmètre | Proposition précise | Preuve / approbateur requis | Statut |
+|---|---|---|---|---|
+| ENT-K3-D01 | ENT-001 | Venture est AUTH ; transitions versionnées, aucune identité PRF dupliquée | owner métier + revue contrat VENTURE | OPEN |
+| ENT-K3-D02 | ENT-002 | DERIVED par défaut ; toute annotation non reconstructible est inventoriée séparément comme état AUTH | owner Data/Architecture ; inventaire sources et rebuild | OPEN |
+| ENT-K3-D03 | ENT-003 | Catalogue AUTH, organisation PRT seulement projetée | owner PRT et ENT ; revue correction/retrait | OPEN |
+| ENT-K3-D04 | ENT-004 | Catalogue et règles YDIASE AUTH, estimation d'éligibilité expirante DERIVED | owner métier, source et Privacy ; pas de décision financeur | OPEN |
+| ENT-K3-D05 | ENT-005 | TeamNeed et visibilité AUTH, matches et scores DERIVED, CNS gouverne les droits | owner métier, CNS, Architecture ; revue révocation/rebuild | OPEN |
+| ENT-K3-D06 | ENT-006 | Plans et jalons AUTH ; VentureRef externe ENT-001 | owner métier ; revue commandes/versions | OPEN |
+| ENT-K3-D07 | Tous | 18 exigences métier candidates approuvées puis enregistrées dans référentiel | gouvernance des exigences ; IDs et tests de vérification | OPEN |
+| ENT-K3-D08 | Huit contrats | Types, cardinalités, nullabilité, consommateurs, opérations, erreurs et suppression ratifiés | owners producteurs et consommateurs + gouvernance contrats | OPEN |
+| ENT-K3-D09 | Privacy | Finalités, restrictions, rétention, révocation, données mineurs et destinataires approuvés | CNS et responsable conformité ; décisions versionnées | OPEN |
+| ENT-K3-D10 | Burkina Faso | Cadre pays, sources officielles, base applicable, durées et CFG validés | revue juridique BF et responsable pays | OPEN |
+| ENT-K3-D11 | Architecture | ADR DERIVED/MIXED approuvé, états non reconstructibles identifiés | approbation ADR et analyse d'impact | OPEN |
+| ENT-K3-D12 | Registre | Huit contrats inscrits après validation, statut exact par contrat | revue CONTRACT_REGISTRY, version et compatibilité | OPEN |
+
+### Critères de sortie
+
+- Chaque décision reçoit un responsable nommé, une date, une référence de preuve et un verdict explicite `APPROVED`, `REJECTED` ou `DEFERRED` avec justification ; **aucune valeur n'est présumée**.
+- Une décision rejetée entraîne une correction des propositions dépendantes et une analyse d'impact ; une décision différée qui touche un critère K3 bloque K3 PASS.
+- La conformité pays BF reste une condition d'activation locale ; ne pas confondre gate de contrat logique et autorisation légale de déploiement.
+- Après résolution, appliquer individuellement les sept critères du `K3_CONTRACT_GATE.md` à ENT-001..006, en conservant les preuves. Aucune promotion automatique par fusion de PR.
+
+**État actuel : 12 décisions OPEN / 0 décisions approuvées dans ce registre de revue / K3-NOT-PASS.** Cela n'annule pas les décisions canoniques déjà actives ailleurs.
