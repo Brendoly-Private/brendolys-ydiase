@@ -64,3 +64,52 @@ Référence candidate : `documentations/02-domains/entrepreneurship/EXIGENCES_ME
 - Preuve manquante : validation des exigences métier, décision Privacy/CNS applicable, validation des contraintes champ par champ et tests contractuels ; **aucune preuve d'exécution**.
 
 **Verdict inchangé : PROPOSED / NOT-REGISTERED / K3-NOT-PASS.**
+
+
+## Proposition détaillée des opérations v1 — revue d'approbation
+
+Les opérations ci-dessous sont des **commandes et lectures logiques candidates** ; elles n'imposent ni HTTP, ni gRPC, ni broker. Les noms, valeurs et cardinalités restent soumis à l'approbation des owners.
+
+| Opération candidate | Entrée requise proposée | Sortie / effet | Refus explicites |
+|---|---|---|---|
+| CreateVenture | request_ref, actor_scope, country_scope, initial_visibility, purpose_ref si personnel | venture_ref nouveau, resource_version=1, état initial, effective_at | UNAUTHORIZED, FORBIDDEN_PURPOSE, COUNTRY_UNSUPPORTED, VALIDATION_FAILED |
+| GetVenture | venture_ref, actor_scope, purpose_ref si personnel | projection filtrée par visibilité, resource_version | NOT_FOUND_OR_NOT_VISIBLE, FORBIDDEN_PURPOSE, WITHDRAWN |
+| ChangeVentureStage | venture_ref, expected_version, request_ref, actor_scope, stage cible | nouvel état/version ou conflit sans mutation | VERSION_CONFLICT, INVALID_TRANSITION, UNAUTHORIZED |
+| UpdateVentureVisibility | venture_ref, expected_version, request_ref, actor_scope, visibility_scope | nouvelle version et invalidation des projections exposées | VERSION_CONFLICT, UNAUTHORIZED, FORBIDDEN_PURPOSE |
+| WithdrawVenture | venture_ref, expected_version, request_ref, actor_scope, reason_code | état retiré, nouvelle version, notification logique de retrait | VERSION_CONFLICT, UNAUTHORIZED, ALREADY_WITHDRAWN |
+
+### Contrat de données candidat — cardinalités
+
+| Champ | Type logique | Cardinalité candidate | Autorité | Contraintes et visibilité |
+|---|---|---|---|---|
+| venture_ref | opaque string | 1 | ENT-001 | stable, non réutilisable, non dérivé d'un identifiant PRF |
+| resource_version | positive integer | 1 | ENT-001 | strictement croissante par agrégat |
+| stage | controlled enum | 1 | ENT-001 | liste de valeurs et transitions **à ratifier** |
+| state | controlled enum | 1 | ENT-001 | état retiré non réactivé par replay ancien |
+| visibility_scope | governed enum/ref | 1 | ENT-001 sous contraintes CNS | accès filtré par objet et finalité |
+| country_scope | country code/ref | 1..n | CFG pour activation ; ENT pour portée de Venture | aucune activation pays implicite |
+| team_refs | opaque external refs | 0..n | ENT-001 pour liens ; PRF pour identité des personnes | aucune donnée personnelle brute par défaut |
+| purpose_ref | governed reference | 1 si traitement personnel | CNS | validité, restrictions et décision contrôlées |
+| effective_at | datetime UTC | 1 | ENT-001 | date d'effet métier, distincte de occurred_at |
+
+### Enveloppe des événements candidats
+
+`VentureCreated`, `VentureStageChanged`, `VentureVisibilityChanged`, `VentureWithdrawn` : `event_id`, `venture_ref`, `aggregate_version`, `event_type`, `occurred_at`, `effective_at`, `country_scope`, `contract_version`, `trace_ref`. Les champs d'identité des personnes ne sont pas diffusés par défaut. Un événement de visibilité/retrait exige une invalidation des vues concernées ; les consommateurs appliquent version et idempotence.
+
+### Exemples de vérification documentaire et de tests futurs
+
+1. Deux `CreateVenture` avec le même `request_ref` ne produisent qu'un seul Venture ; avec des références distinctes, un même acteur autorisé peut gérer deux Ventures.
+2. `ChangeVentureStage` avec une version périmée refuse sans altérer l'agrégat.
+3. Un consommateur ORI non autorisé ne reçoit ni `team_refs` ni détails du Venture ; l'existence même peut être masquée.
+4. Après `WithdrawVenture`, un événement `VentureCreated` ancien rejoué ne restaure pas la visibilité.
+5. Sans décision CNS obligatoire vérifiable ou sans configuration pays valide, le traitement personnel concerné échoue fermé.
+
+### Questions de validation avant promotion
+
+- Qui peut créer, modifier, partager ou retirer un Venture (rôles et délégation), et quels états métier `stage/state` sont permis ?
+- `country_scope` est-il multi-pays dès v1 ou un pays primaire avec extensions explicites ?
+- Quelles catégories de `team_refs` sont autorisées et selon quelle finalité CNS ?
+- Quelles règles de conservation et de suppression s'appliquent à l'historique des Ventures et aux références externes ?
+- Quels consommateurs précis reçoivent quels événements, selon quelle politique de projection et de retrait ?
+
+**Statut : proposition détaillée à arbitrer ; aucune réponse ni approbation n'est supposée. K3-NOT-PASS.**
