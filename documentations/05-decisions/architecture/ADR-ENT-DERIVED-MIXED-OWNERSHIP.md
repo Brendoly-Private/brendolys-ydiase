@@ -1,21 +1,21 @@
 ---
 document_id: "YD-DOC-ADR-ENT-DERIVED-MIXED"
-title: "ADR candidat — ownership DERIVED/MIXED Entrepreneurship"
+title: "ADR — ownership AUTH/DERIVED/MIXED Entrepreneurship"
 document_type: "architecture-decision"
-document_role: "Documente les propositions et vérifications restantes sans modifier les sources canoniques existantes."
+document_role: "Consigne la décision de principe du porteur de projet sur la classification des états Entrepreneurship et les conditions de réalisation."
 product: "BRENDOLYS YDIASE"
 institutional_reference: "YDIASE-INSTITUTIONAL-IDENTITY"
-status: "DRAFT"
-authority_level: "reference"
-canonical: false
-development_usage: "supporting-reference"
+status: "ACTIVE"
+authority_level: "canonical-source"
+canonical: true
+development_usage: "mandatory-reference"
 created_at: "2026-10-11"
-last_reviewed_at: "2026-10-11"
+last_reviewed_at: "2026-10-14"
 ---
 
-# ADR candidat — ownership DERIVED/MIXED Entrepreneurship
+# ADR — ownership AUTH/DERIVED/MIXED Entrepreneurship
 
-Statut : **PROPOSED / NOT-APPROVED**. Ne remplace pas les classifications DDD cibles existantes.
+Statut : **APPROVED — PRINCIPES D’OWNERSHIP** par le porteur de projet dans la conversation du 14 octobre 2026. Cette décision complète les classifications DDD existantes ; elle ne certifie ni Privacy, ni pays, ni K3.
 
 ## Question
 Comment distinguer les états métier persistants et les calculs reconstructibles dans ENT-002, ENT-004 et ENT-005, sans dupliquer les autorités LAB/PRT/PRF/SKL ?
@@ -23,7 +23,7 @@ Comment distinguer les états métier persistants et les calculs reconstructible
 ## Contexte et forces
 Les profils DDD classent ENT-002 et ENT-005 DERIVED/MIXED, ENT-004 AUTH/MIXED. Le référentiel `YD-REQ-DER-001` interdit à une frontière purement DERIVED de détenir un fait irremplaçable. La confidentialité et la révocation imposent de séparer sources, autorisations et calculs.
 
-## Décision proposée
+## Décision adoptée
 - **ENT-002** : hypothèses, jeux de preuves et assessments calculés sont reconstructibles à partir de snapshots autorisés et versionnés ; tout enrichissement humain irréconstructible doit être identifié comme état AUTH distinct, sinon ne pas prétendre que le service est purement DERIVED.
 - **ENT-004** : les fiches et règles publiées/validées dans YDIASE sont l'état de catalogue propre au service ; les évaluations personnalisées sont des snapshots expirables, jamais des décisions de prêteur.
 - **ENT-005** : TeamNeed, visibilité et modifications explicites sont persistants et autoritatifs dans ENT-005 ; scores, runs et explications sont dérivés, reconstructibles ou invalidables selon les sources et autorisations disponibles.
@@ -71,8 +71,16 @@ Approbation humaine **en attente**. La création de ce document ne constitue pas
 - Une impossibilité de reconstruire ENT-002 ou les matches ENT-005 doit être traitée comme une lacune, pas masquée par le mot DERIVED.
 - Le transport, les datastores et le partitionnement physiques restent hors de cet ADR logique et requièrent des décisions séparées si non triviaux.
 
-### Validation restant nécessaire
+### Vérifications d’exécution restant nécessaires
 
 L'inventaire ci-dessus constitue la **proposition d'arbitrage technique complète**, mais pas une approbation. Avant changement de statut : signature de l'autorité d'architecture, revue des owners ENT/LAB/DAT/KNW/PRT/PRF/SKL/CNS concernés, analyse d'impact, critères de reconstruction et références de preuves. Les tests FULL_REBUILD et restore restent préproduction.
 
-**Verdict : READY-FOR-ARCHITECTURE-APPROVAL / NOT-APPROVED / K3-NOT-PASS.**
+**Verdict : OWNERSHIP-APPROVED / EXECUTION-VERIFICATION-PENDING / K3-NOT-PASS.**
+
+
+## Enregistrement de décision et non-réouverture
+
+- Décision : `D01-D06 / OWNERSHIP-PRINCIPLES-APPROVED` ; date de déclaration : `2026-10-14` ; approbateur : porteur du projet BRENDOLYS YDIASE (accord explicite en conversation ; identité nominative non consignée dans ce fichier).
+- Portée : ENT-001 et ENT-003 et ENT-006 `AUTH` ; ENT-002 `DERIVED` sous condition de reconstructibilité, `MIXED` si état éditorial irremplaçable ; ENT-004 `AUTH/MIXED` ; ENT-005 `MIXED` (TeamNeed AUTH, matching DERIVED).
+- Cette approbation n'est pas une signature de conformité CNS, une validation juridique BF, une preuve de restauration/rebuild, ni l'approbation des huit contrats.
+- Réexamen seulement si un fait nouveau documenté invalide une hypothèse ou si une modification métier affecte l'ownership. Ne pas solliciter de nouveau la même approbation sans cet élément.
